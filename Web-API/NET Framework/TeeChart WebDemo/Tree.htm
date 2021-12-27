@@ -1,0 +1,837 @@
+<html>
+	<head>
+		<title>TOC</title><SCRIPT id="ContentExpanding">function expandIt(whichEl)
+		{
+			if(document.getElementById(whichEl) != null)
+			{
+				var ImgID = whichEl + "Img";
+				var ImgID2 = whichEl + "Img2";
+				if( document.getElementById(whichEl).style.display == "none")
+				{
+					document.getElementById(whichEl).style.display = "";
+					document.getElementById(ImgID).src = "images/opened.png";
+					document.getElementById(ImgID2).src = "images/ImSpacer.png";
+				}
+				else
+				{
+					document.getElementById(whichEl).style.display = "none";
+					document.getElementById(ImgID).src = "images/closed.png";
+					document.getElementById(ImgID2).src = "images/ImSpacer.png";
+				}
+			}
+		}
+
+		function SetMouseOverColor(element)
+		{
+			element.style.textDecoration="underline";
+            element.style.cursor="hand";
+		}
+
+		function SetMouseLeaveColor(element)
+		{
+			element.style.textDecoration="none";
+            element.style.cursor="default";
+		}
+
+		var selectedElement;
+
+		function onMouseDown(element)
+		{
+			parent.onMouseDown(element);
+		}
+		
+		</SCRIPT>
+    
+        <link type="text/css" rel="stylesheet" href="Styles\ItemsStyles.css">
+
+        </head>
+
+        <body topMargin="5" leftMargin="5">
+        <table style="left:inherit" cellspacing="0" cellpadding="1" border="0" ParentFolderID="" ID="Root">
+			<tr>
+				<td width="11" nowrap ONCLICK="javascript:expandIt('ChartOverview')"><img align="center" src="images/opened.png" ID="ChartOverviewImg"></td>
+				<td width="6" nowrap ONCLICK="javascript:expandIt('ChartOverview')"><img align="center" src="images/ImSpacer.png" ID="ChartOverviewImg2"></td>
+				<td width="100%" nowrap ONCLICK="javascript:expandIt('ChartOverview')"><span Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)">Overview</span>
+			<tr>
+				<td></td>
+				<td colspan="2" nowrap><table cellspacing="0" cellpadding="1" border="0" ParentFolderID="" ID="ChartOverview">
+						<tr>
+							<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+							<td width="6"><img align="center" src="images/Overview.png"></td>
+							<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="Link1" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+										onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=Introduction&amp;ParentID=Overview&amp;Ord=0">Introduction</SPAN></A></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+
+            <tr>
+                <td width="11" nowrap ONCLICK="javascript:expandIt('MVCGuide')"><img align="center" src="images/opened.png" ID="MVCGuideImg"></td>
+                <td width="6" nowrap ONCLICK="javascript:expandIt('MVCGuide')"><img align="center" src="images/ImSpacer.png" ID="MVCGuideImg2"></td>
+                <td width="100%" nowrap ONCLICK="javascript:expandIt('MVCGuide')"><span Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)">MVC</span>
+            <tr>
+                <td></td>
+                <td colspan="2" nowrap>
+                    <table cellspacing="0" cellpadding="1" border="0" ParentFolderID="" ID="MVCGuide">
+                        <tr>
+                            <td width="11"><img align="center" src="images/ImSpacer.png"></td>
+                            <td width="6"><img align="center" src="images/Overview.png"></td>
+                            <td width="100%" nowrap Class="ContentItem">
+                                <SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)">
+                                    <A id="MVC1" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+                                       onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="http://www.steema.net/TeeChartMVC/">Guide to MVC
+                                </SPAN></A>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+			</td></tr><tr>
+				<td width="11" nowrap ONCLICK="javascript:expandIt('ChartStyles')"><img align="center" src="images/closed.png" ID="ChartStylesImg"></td>
+				<td width="6" nowrap ONCLICK="javascript:expandIt('ChartStyles')"><img align="center" src="images/ImSpacer.png" ID="ChartStylesImg2"></td>
+				<td width="100%" nowrap ONCLICK="javascript:expandIt('ChartStyles')"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)">Chart Styles</SPAN>
+			<tr>
+				<td></td>
+				<td colspan="2" nowrap><table cellspacing="0" cellpadding="1" border="0" ParentFolderID="" ID="ChartStyles" STYLE="DISPLAY:none">
+						<TBODY>
+							<tr>
+								<td width="11" nowrap ONCLICK="javascript:expandIt('StandardCharts')"><img align="center" src="images/closed.png" ID="StandardChartsImg"></td>
+								<td width="6" nowrap ONCLICK="javascript:expandIt('StandardCharts')"><img align="center" src="images/ImSpacer.png" ID="StandardChartsImg2"></td>
+								<td width="100%" nowrap ONCLICK="javascript:expandIt('StandardCharts')"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)">Standard</SPAN>
+							<tr>
+								<td></td>
+								<td colspan="2" nowrap><table cellspacing="0" cellpadding="1" border="0" ParentFolderID="ChartStyles" ID="StandardCharts"
+										STYLE="DISPLAY:none">
+                                        <tr>
+                                            <td width="11"><img align="center" src="images/ImSpacer.png"></td>
+                                            <td width="6"><IMG src="images/Sample.png" align="center"></td>
+                                            <td width="100%" nowrap Class="ContentItem">
+                                                <SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)">
+                                                    <A id="A36" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+                                                        onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=JLineChart&amp;ParentID=JScript-HTML5 Live Charts&amp;Ord=3">Line
+                                                </SPAN></A>
+                                            </td>
+                                        </tr>
+										<!--<tr>
+											<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+											<td width="6"><IMG src="images/Sample.png" align="center"></td>
+											<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="Link4" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+														onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=VHLineChart&amp;ParentID=ChartStyles&amp;Ord=3">Line and Horiz.Line</SPAN></A></td>
+										</tr>-->
+										<tr>
+											<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+											<td width="6"><img align="center" src="images/Sample.png"></td>
+											<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="Link5" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+														onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=FastLineChart&amp;ParentID=ChartStyles&amp;Ord=4">Fast Line</SPAN></A></td>
+										</tr>
+										<tr>
+											<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+											<td width="6"><img align="center" src="images/Sample.png"></td>
+											<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="A1" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+														onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=VHBarChart&amp;ParentID=ChartStyles&amp;Ord=5">Bar and Horiz. Bar</SPAN></A></td>
+										</tr>
+										<tr>
+											<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+											<td width="6"><img align="center" src="images/Sample.png"></td>
+											<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="A2" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+														onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=VHAreaChart&amp;ParentID=ChartStyles&amp;Ord=6">Area and Horiz. Area</SPAN></A></td>
+										</tr>
+										<tr>
+											<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+											<td width="6"><img align="center" src="images/Sample.png"></td>
+											<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="A13" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+														onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=BubbleChart&amp;ParentID=ChartStyles&amp;Ord=7">Bubble</SPAN></A></td>
+										</tr>
+										<tr>
+											<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+											<td width="6"><img align="center" src="images/Sample.png"></td>
+											<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="A3" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+														onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=PieChart&amp;ParentID=ChartStyles&amp;Ord=8">Pie</SPAN></A></td>
+										</tr>
+										<tr>
+											<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+											<td width="6"><img align="center" src="images/Sample.png"></td>
+											<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="A4" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+														onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=ShapeChart&amp;ParentID=ChartStyles&amp;Ord=9">Shape</SPAN></A></td>
+										</tr>
+                                        <tr>
+                                            <td width="11"><img align="center" src="images/ImSpacer.png"></td>
+                                            <td width="6"><img align="center" src="images/Sample.png"></td>
+                                            <td width="100%" nowrap Class="ContentItem">
+                                                <SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)">
+                                                    <A id="A15" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+                                                        onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=TriggerTestingMouseoverMarksContentChart&amp;ParentID=Interacting with Charts&amp;Ord=46">Gantt
+                                                </SPAN></A>
+                                            </td>
+                                        </tr>
+									</table>
+								</td>
+				</td>
+			</tr>
+			<tr>
+				<td width="11" nowrap ONCLICK="javascript:expandIt('FinancialCharts')"><img align="center" src="images/closed.png" ID="FinancialChartsImg"></td>
+				<td width="6" nowrap ONCLICK="javascript:expandIt('FinancialCharts')"><img align="center" src="images/ImSpacer.png" ID="FinancialChartsImg2"></td>
+				<td width="100%" nowrap ONCLICK="javascript:expandIt('FinancialCharts')"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)">Financial</SPAN>
+			<tr>
+				<td></td>
+				<td colspan="2" nowrap><table cellspacing="0" cellpadding="1" border="0" ParentFolderID="ChartStyles" ID="FinancialCharts"
+						STYLE="DISPLAY:none">
+                        <tr>
+                            <td width="11"><img align="center" src="images/ImSpacer.png"></td>
+                            <td width="6"><img align="center" src="images/Sample.png"></td>
+                            <td width="100%" nowrap Class="ContentItem">
+                                <SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)">
+                                    <A id="A35" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+                                        onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=Indicators&amp;ParentID=ChartStyles&amp;Ord=15">Indicators
+                                </SPAN></A>
+                            </td>
+                        </tr>
+						<tr>
+							<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+							<td width="6"><IMG src="images/Sample.png" align="center"></td>
+							<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="Link6" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+										onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=CandleChart&amp;ParentID=ChartStyles&amp;Ord=10">Candle</SPAN></A></td>
+						</tr>
+						<tr>
+							<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+							<td width="6"><img align="center" src="images/Sample.png"></td>
+							<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="A30" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+										onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=DarvasChart&amp;ParentID=ChartStyles&amp;Ord=11">Darvas</SPAN></A></td>
+						</tr>
+						<tr>
+							<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+							<td width="6"><img align="center" src="images/Sample.png"></td>
+							<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="A31" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+										onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=KagiChart&amp;ParentID=ChartStyles&amp;Ord=12">Kagi</SPAN></A></td>
+						</tr>												
+						<tr>
+							<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+							<td width="6"><img align="center" src="images/Sample.png"></td>
+							<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="Link7" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+										onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=PointFigureChart&amp;ParentID=ChartStyles&amp;Ord=13">Point and Figure</SPAN></A></td>
+						</tr>
+                        <tr>
+                            <td width="11"><img align="center" src="images/ImSpacer.png"></td>
+                            <td width="6"><img align="center" src="images/Sample.png"></td>
+                            <td width="100%" nowrap Class="ContentItem">
+                                <SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)">
+                                    <A id="Link7" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+                                        onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=EquiVolume&amp;ParentID=ChartStyles&amp;Ord=63">Equivolume
+                                </SPAN></A>
+                            </td>
+                        </tr>
+						<tr>
+							<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+							<td width="6"><img align="center" src="images/Sample.png"></td>
+							<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="A29" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+										onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=RenkoChart&amp;ParentID=ChartStyles&amp;Ord=14">Renko</SPAN></A></td>
+						</tr>						
+						<tr>
+							<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+							<td width="6"><img align="center" src="images/Sample.png"></td>
+							<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="Link8" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+										onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=VolumeChart&amp;ParentID=ChartStyles&amp;Ord=15">Volume</SPAN></A></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			</td> </tr>
+			<tr>
+				<td width="11" nowrap ONCLICK="javascript:expandIt('ExtendedCharts')"><img align="center" src="images/closed.png" ID="ExtendedChartsImg"></td>
+				<td width="6" nowrap ONCLICK="javascript:expandIt('ExtendedCharts')"><img align="center" src="images/ImSpacer.png" ID="ExtendedChartsImg2"></td>
+				<td width="100%" nowrap ONCLICK="javascript:expandIt('ExtendedCharts')"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)">Extended</SPAN>
+			<tr>
+				<td></td>
+				<td colspan="2" nowrap><table cellspacing="0" cellpadding="1" border="0" ParentFolderID="ChartStyles" ID="ExtendedCharts"
+						STYLE="DISPLAY:none">
+						<tr>
+							<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+							<td width="20"><IMG src="images/Sample.png" align="center"></td>
+							<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="Link11" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+										onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=ContourChart&amp;ParentID=ChartStyles&amp;Ord=16">Contour</SPAN></A></td>
+						</tr>
+						<tr>
+							<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+							<td width="20"><img align="center" src="images/Sample.png"></td>
+							<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="Link12" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+										onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=DonutChart&amp;ParentID=ChartStyles&amp;Ord=17">Donut</SPAN></A></td>
+						</tr>
+						<tr>
+							<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+							<td width="20"><img align="center" src="images/Sample.png"></td>
+							<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="Link13" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+										onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=PolarChart&amp;ParentID=ChartStyles&amp;Ord=18">Polar</SPAN></A></td>
+						</tr>
+						<tr>
+							<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+							<td width="20"><img align="center" src="images/Sample.png"></td>
+							<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="Link14" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+										onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=RadarChart&amp;ParentID=ChartStyles&amp;Ord=19">Radar</SPAN></A></td>
+						</tr>
+						<tr>
+							<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+							<td width="20"><img align="center" src="images/Sample.png"></td>
+							<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="Link15" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+										onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=Point3DChart&amp;ParentID=ChartStyles&amp;Ord=20">Point 3D</SPAN></A></td>
+						</tr>
+						<tr>
+							<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+							<td width="20"><img align="center" src="images/Sample.png"></td>
+							<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="A5" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+										onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=PyramidChart&amp;ParentID=ChartStyles&amp;Ord=21">Pyramid</SPAN></A></td>
+						</tr>
+						<tr>
+							<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+							<td width="20"><img align="center" src="images/Sample.png"></td>
+							<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="A6" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+										onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=SmithChart&amp;ParentID=ChartStyles&amp;Ord=22">Smith</SPAN></A></td>
+						</tr>
+						<tr>
+							<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+							<td width="20"><img align="center" src="images/Sample.png"></td>
+							<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="A7" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+										onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=SurfaceChart&amp;ParentID=ChartStyles&amp;Ord=23">Surface</SPAN></A></td>
+						</tr>
+						<tr>
+							<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+							<td width="20"><img align="center" src="images/Sample.png"></td>
+							<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="A8" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+										onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=TriSurfaceChart&amp;ParentID=ChartStyles&amp;Ord=24">Tri. Surface</SPAN></A></td>
+						</tr>
+						<tr>
+							<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+							<td width="20"><img align="center" src="images/Sample.png"></td>
+							<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="A9" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+										onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=TowerChart&amp;ParentID=ChartStyles&amp;Ord=25">Tower</SPAN></A></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			</td></tr><tr>
+				<td width="11" nowrap ONCLICK="javascript:expandIt('StatisticalCharts')"><img align="center" src="images/closed.png" ID="StatisticalChartsImg"></td>
+				<td width="6" nowrap ONCLICK="javascript:expandIt('StatisticalCharts')"><img align="center" src="images/ImSpacer.png" ID="StatisticalChartsImg2"></td>
+				<td width="100%" nowrap ONCLICK="javascript:expandIt('StatisticalCharts')"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)">Statistical</SPAN>
+			<tr>
+				<td></td>
+				<td colspan="2" nowrap><table cellspacing="0" cellpadding="1" border="0" ParentFolderID="ChartStyles" ID="StatisticalCharts"
+						STYLE="DISPLAY:none">
+						<tr>
+							<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+							<td width="6"><IMG src="images/Sample.png" align="center"></td>
+							<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="Link16" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+										onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=VHBoxPlotChart&amp;ParentID=ChartStyles&amp;Ord=26">Box-Plot</SPAN></A></td>
+						</tr>
+						<tr>
+							<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+							<td width="6"><img align="center" src="images/Sample.png"></td>
+							<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="Link17" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+										onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=ColorGridChart&amp;ParentID=ChartStyles&amp;Ord=27">Color Grid</SPAN></A></td>
+						</tr>
+						<tr>
+							<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+							<td width="6"><img align="center" src="images/Sample.png"></td>
+							<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="Link18" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+										onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=ErrorChart&amp;ParentID=ChartStyles&amp;Ord=28">Error</SPAN></A></td>
+						</tr>
+						<tr>
+							<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+							<td width="6"><img align="center" src="images/Sample.png"></td>
+							<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="Link19" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+										onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=ErrorBarChart&amp;ParentID=ChartStyles&amp;Ord=29">Error Bar</SPAN></A></td>
+						</tr>
+						<tr>
+							<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+							<td width="6"><img align="center" src="images/Sample.png"></td>
+							<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="A10" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+										onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=HighLowChart&amp;ParentID=ChartStyles&amp;Ord=30">HighLow</SPAN></A></td>
+						</tr>
+						<tr>
+							<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+							<td width="6"><img align="center" src="images/Sample.png"></td>
+							<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="A11" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+										onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=VHHistogramChart&amp;ParentID=ChartStyles&amp;Ord=31">Histogram</SPAN></A></td>
+						</tr>
+						<tr>
+							<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+							<td width="6"><img align="center" src="images/Sample.png"></td>
+							<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="A18" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+										onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=FunnelChart&amp;ParentID=ChartStyles&amp;Ord=32">Funnel</SPAN></A></td>
+						</tr>
+						<tr>
+							<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+							<td width="6"><img align="center" src="images/Sample.png"></td>
+							<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="A28" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+										onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=VolumePipeChart&amp;ParentID=ChartStyles&amp;Ord=33">VolumePipe</SPAN></A></td>
+						</tr>
+						<tr>
+							<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+							<td width="6"><img align="center" src="images/Sample.png"></td>
+							<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="A12" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+										onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=WaterfallChart&amp;ParentID=ChartStyles&amp;Ord=34">Waterfall</SPAN></A></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			</td></tr><tr>
+				<td width="11" nowrap ONCLICK="javascript:expandIt('OtherCharts')"><img align="center" src="images/closed.png" ID="OtherChartsImg"></td>
+				<td width="6" nowrap ONCLICK="javascript:expandIt('OtherCharts')"><img align="center" src="images/ImSpacer.png" ID="OtherChartsImg2"></td>
+				<td width="100%" nowrap ONCLICK="javascript:expandIt('OtherCharts')"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)">Other</SPAN>
+			<tr>
+				<td></td>
+				<td colspan="2" nowrap><table cellspacing="0" cellpadding="1" border="0" ParentFolderID="ChartStyles" ID="OtherCharts"
+						STYLE="DISPLAY:none">
+						<tr>
+							<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+							<td width="6"><IMG src="images/Sample.png" align="center"></td>
+							<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="Link20" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+										onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=Bar3DChart&amp;ParentID=ChartStyles&amp;Ord=35">Bar 3D</SPAN></A></td>
+						</tr>
+						<tr>
+							<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+							<td width="6"><img align="center" src="images/Sample.png"></td>
+							<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="Link21" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+										onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=BarJoinChart&amp;ParentID=ChartStyles&amp;Ord=36">Bar-Join</SPAN></A></td>
+						</tr>
+						<tr>
+							<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+							<td width="6"><img align="center" src="images/Sample.png"></td>
+							<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="Link22" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+										onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=CalendarChart&amp;ParentID=ChartStyles&amp;Ord=37">Calendar</SPAN></A></td>
+						</tr>
+						<tr>
+							<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+							<td width="6"><img align="center" src="images/Sample.png"></td>
+							<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="Link23" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+										onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=ClockChart&amp;ParentID=ChartStyles&amp;Ord=38">Clock</SPAN></A></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			</td></tr></td></tr></table>
+		<!--<tr>
+				<td width="11" nowrap ONCLICK="javascript:expandIt('Datasets')"><img align="center" src="images/closed.png" ID="DatasetsImg"></td>
+				<td width="6" nowrap ONCLICK="javascript:expandIt('Datasets')"><img align="center" src="images/ImSpacer.png" ID="DatasetsImg2"></td>
+				<td width="100%" nowrap ONCLICK="javascript:expandIt('Datasets')"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)">Datasets</SPAN>
+			<tr>
+				<td></td>
+				<td colspan="2" nowrap><table cellspacing="0" cellpadding="1" border="0" ParentFolderID="" ID="Datasets" STYLE="DISPLAY:none">
+						<tr>
+							<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+							<td width="6"><img align="center" src="images/Overview.png"></td>
+							<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="A32" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+										onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=DesigntimeData&amp;ParentID=Datasets&amp;Ord=39">Designtime Assigned Dataset</SPAN></A></td>
+						</tr>
+						<tr>
+							<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+							<td width="6"><img align="center" src="images/Overview.png"></td>
+							<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="A33" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+										onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=RuntimeAssignedDataset&amp;ParentID=Datasets&amp;Ord=39">Dataset Assigned At Runtime</SPAN></A></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			</td></tr>-->
+			
+		<tr>
+				<td width="11" nowrap ONCLICK="javascript:expandIt('Flash')"><img align="center" src="images/closed.png" ID="FlashImg"></td>
+				<td width="6" nowrap ONCLICK="javascript:expandIt('Flash')"><img align="center" src="images/ImSpacer.png" ID="FlashImg2"></td>
+				<td width="100%" nowrap ONCLICK="javascript:expandIt('Flash')"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)">Flex & Flash</SPAN>
+			<tr>
+				<td></td>
+				<td colspan="2" nowrap><table cellspacing="0" cellpadding="1" border="0" ParentFolderID="" ID="Flash" STYLE="DISPLAY:none">
+						<tr>
+							<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+							<td width="6"><img align="center" src="images/Overview.png"></td>
+							<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="A34" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+										onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=FlexFlash&amp;ParentID=Flash&amp;Ord=39">Compact Charts</SPAN></A></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			</td></tr>	
+
+<!- Gauges-->			
+
+		<tr>
+			<td width="11" nowrap ONCLICK="javascript:expandIt('Gauges')"><img align="center" src="images/closed.png" ID="GaugesImg"></td>
+			<td width="6" nowrap ONCLICK="javascript:expandIt('Gauges')"><img align="center" src="images/ImSpacer.png" ID="GaugesImg2"></td>
+			<td width="100%" nowrap ONCLICK="javascript:expandIt('Gauges')"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)">Gauges</SPAN>
+		<tr>
+			<td></td>
+			<td colspan="2" nowrap>
+				<table cellspacing="0" cellpadding="1" border="0" ParentFolderID="" ID="Gauges"
+							 STYLE="DISPLAY:none">
+					<tr>
+						<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+						<td width="6"><IMG src="images/Sample.png" align="center"></td>
+						<td width="100%" nowrap Class="ContentItem">
+							<SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)">
+								<A id="Link819" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+									 onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=CircularGauge&amp;ParentID=Gauges&amp;Ord=819">Circular Gauge
+							</SPAN></A>
+						</td>
+					</tr>
+					<tr>
+						<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+						<td width="6"><img align="center" src="images/Sample.png"></td>
+						<td width="100%" nowrap Class="ContentItem">
+							<SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)">
+								<A id="Link820" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+									 onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=LinearGauge&amp;ParentID=Gauges&amp;Ord=820">Linear Gauge
+							</SPAN></A>
+						</td>
+					</tr>
+					<tr>
+						<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+						<td width="6"><img align="center" src="images/Sample.png"></td>
+						<td width="100%" nowrap Class="ContentItem">
+							<SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)">
+								<A id="Link821" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+									 onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=VerticalGauge&amp;ParentID=Gauges&amp;Ord=821">Vertical Gauge
+							</SPAN></A>
+						</td>
+					</tr>
+					<tr>
+						<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+						<td width="6"><img align="center" src="images/Sample.png"></td>
+						<td width="100%" nowrap Class="ContentItem">
+							<SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)">
+								<A id="Link822" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+									 onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=ActivityGauge&amp;ParentID=Gauges&amp;Ord=822">Activity Gauge
+							</SPAN></A>
+						</td>
+					</tr>
+					<tr>
+						<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+						<td width="6"><img align="center" src="images/Sample.png"></td>
+						<td width="100%" nowrap Class="ContentItem">
+							<SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)">
+								<A id="A41" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+									 onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=JActivityGauge&amp;ParentID=JScript-HTML5 Live Charts&amp;Ord=6">Live Activity Gauge
+							</SPAN></A>
+						</td>
+					</tr>
+					<tr>
+						<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+						<td width="6"><img align="center" src="images/Sample.png"></td>
+						<td width="100%" nowrap Class="ContentItem">
+							<SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)">
+								<A id="Link823" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+									 onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=KnobGauge&amp;ParentID=Gauges&amp;Ord=823">Knob Gauge
+							</SPAN></A>
+						</td>
+					</tr>
+					<tr>
+						<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+						<td width="6"><img align="center" src="images/Sample.png"></td>
+						<td width="100%" nowrap Class="ContentItem">
+							<SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)">
+								<A id="A41" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+									 onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=JCircularGauge&amp;ParentID=JScript-HTML5 Live Charts&amp;Ord=6">Live VU Meter Gauge
+							</SPAN></A>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+
+		
+		<tr>
+			<td width="11" nowrap ONCLICK="javascript:expandIt('InteractiveWithCharts')"><img align="center" src="images/closed.png" ID="InteractiveWithChartsImg"></td>
+			<td width="6" nowrap ONCLICK="javascript:expandIt('InteractiveWithCharts')"><img align="center" src="images/ImSpacer.png" ID="InteractiveWithChartsImg2"></td>
+			<td width="100%" nowrap ONCLICK="javascript:expandIt('InteractiveWithCharts')"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)">Interacting with Charts</SPAN>
+		&nbsp;
+		<tr>
+			<td></td>
+			<td colspan="2" nowrap><table cellspacing="0" cellpadding="1" border="0" ParentFolderID="" ID="InteractiveWithCharts" STYLE="DISPLAY:none">
+			<TBODY>
+			
+			<tr>
+				<td width="11" nowrap ONCLICK="javascript:expandIt('Zooming on WebForm Charts')"><img align="center" src="images/closed.png" ID="Zooming on WebForm ChartsImg"></td>
+				<td width="6" nowrap ONCLICK="javascript:expandIt('Zooming on WebForm Charts')"><img align="center" src="images/ImSpacer.png" ID="Zooming on WebForm ChartsImg2"></td>
+				<td width="100%" nowrap ONCLICK="javascript:expandIt('Zooming on WebForm Charts')"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"> Zooming</SPAN>
+				<tr>
+					<td></td>
+					<td colspan="2" nowrap><table cellspacing="0" cellpadding="1" border="0" ParentFolderID="InteractiveWithCharts"
+							ID="Zooming on WebForm Charts" STYLE="DISPLAY:none">
+							<tr>
+								<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+								<td width="6"><img align="center" src="images/Sample.png"></td>
+								<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="A25" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+											onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=WebAppZoomChart&amp;ParentID=Interacting with Charts&amp;Ord=39">Zooming on WebForm</SPAN></A></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</td>
+		</tr>
+		
+		<tr>
+					<td width="11" nowrap ONCLICK="javascript:expandIt('Scrolling on WebForm Charts')"><img align="center" src="images/closed.png" ID="Scrolling on WebForm ChartsImg"></td>
+					<td width="6" nowrap ONCLICK="javascript:expandIt('Scrolling on WebForm Charts')"><img align="center" src="images/ImSpacer.png" ID="Scrolling on WebForm ChartsImg2"></td>
+					<td width="100%" nowrap ONCLICK="javascript:expandIt('Scrolling on WebForm Charts')"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"> Scrolling</SPAN>
+				<tr>
+					<td></td>
+					<td colspan="2" nowrap><table cellspacing="0" cellpadding="1" border="0" ParentFolderID="InteractiveWithCharts"
+							ID="Scrolling on WebForm Charts" STYLE="DISPLAY:none">
+							<tr>
+								<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+								<td width="6"><img align="center" src="images/Sample.png"></td>
+								<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="A27" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+											onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=scrolltool&amp;ParentID=Interacting with Charts&amp;Ord=40">Scrolling on WebForm</SPAN></A></td>
+							</tr>
+                            <tr>
+                                <td width="11"><img align="center" src="images/ImSpacer.png"></td>
+                                <td width="6"><img align="center" src="images/Sample.png"></td>
+                                <td width="100%" nowrap Class="ContentItem">
+                                    <SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)">
+                                        <A id="A43" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+                                        onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=JScrollerChart&amp;ParentID=JScript-HTML5 Live Charts&amp;Ord=6">Chart with Scroller
+                                    </SPAN></A>
+                                </td>
+                            </tr>
+						</table>
+					</td>
+				</tr>
+			</td>
+		</tr>
+		<tr>
+			<td width="11" nowrap ONCLICK="javascript:expandIt('DrillDown')"><img align="center" src="images/closed.png" ID="DrillDownImg"></td>
+			<td width="6" nowrap ONCLICK="javascript:expandIt('DrillDown')"><img align="center" src="images/ImSpacer.png" ID="DrillDownImg2"></td>
+			<td width="100%" nowrap ONCLICK="javascript:expandIt('DrillDown')"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"> Drill Down</SPAN>
+		<tr>
+			<td></td>
+			<td colspan="2" nowrap><table cellspacing="0" cellpadding="1" border="0" ParentFolderID="InteractiveWithCharts"
+					ID="DrillDown" STYLE="DISPLAY:none">
+					<tr>
+						<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+						<td width="6"><img align="center" src="images/Sample.png"></td>
+						<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="A23" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+									onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=SendingClicksCodeBehindChart&amp;ParentID=Interacting with Charts&amp;Ord=41">Sending Clicks to code-behind</SPAN></A></td>
+					</tr>
+					<tr>
+						<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+						<td width="6"><img align="center" src="images/Sample.png"></td>
+						<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="A22" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+									onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=AggregationAndDrillDownChart&amp;ParentID=Interacting with Charts&amp;Ord=42">Aggregation and Drill Down</SPAN></A></td>
+					</tr>
+					<tr>
+						<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+						<td width="6"><img align="center" src="images/Sample.png"></td>
+						<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="A21" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+									onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=URLLinkingChart&amp;ParentID=Interacting with Charts&amp;Ord=43">URL Linking</SPAN></A></td>
+					</tr>
+					<tr>
+						<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+						<td width="6"><img align="center" src="images/Sample.png"></td>
+						<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="Link72" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+									onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=SegmentingPiesChart&amp;ParentID=Interacting with Charts&amp;Ord=44">Segmenting Pies</SPAN></A></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		</td> </tr>
+
+        <!-- ****************** -->
+        							<tr>
+								<td width="11" nowrap ONCLICK="javascript:expandIt('JScriptHTML5')"><img align="center" src="images/closed.png" ID="JScriptHTML5Img"></td>
+								<td width="6" nowrap ONCLICK="javascript:expandIt('JScriptHTML5')"><img align="center" src="images/ImSpacer.png" ID="JScriptHTML5Img2"></td>
+								<td width="100%" nowrap ONCLICK="javascript:expandIt('JScriptHTML5')"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)">Javascript-HTML5 Charts</SPAN>
+							<tr>
+								<td></td>
+								<td colspan="2" nowrap><table cellspacing="0" cellpadding="1" border="0" ParentFolderID="JScript-HTML5 Live Charts" ID="JScriptHTML5"
+										STYLE="DISPLAY:none">
+										<tr>
+											<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+											<td width="6"><IMG src="images/Sample.png" align="center"></td>
+											<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="A42" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+														onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=Introduction&amp;ParentID=JScript-HTML5 Live Charts&amp;Ord=3">Introduction to TeeChart's HTML5 Charts</SPAN></A></td>
+										</tr>
+										<tr>
+											<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+											<td width="6"><IMG src="images/Sample.png" align="center"></td>
+											<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="A36" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+														onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=JLineChart&amp;ParentID=JScript-HTML5 Live Charts&amp;Ord=3">Line Chart</SPAN></A></td>
+										</tr>
+										<tr>
+											<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+											<td width="6"><img align="center" src="images/Sample.png"></td>
+											<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="A37" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+														onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=JBarChart&amp;ParentID=JScript-HTML5 Live Charts&amp;Ord=4">Bar Chart & Theme Control</SPAN></A></td>
+										</tr>
+										<tr>
+											<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+											<td width="6"><img align="center" src="images/Sample.png"></td>
+											<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="A38" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+														onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=JBubbleChart&amp;ParentID=JScript-HTML5 Live Charts&amp;Ord=5">Bubble Chart</SPAN></A></td>
+										</tr>
+										<tr>
+											<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+											<td width="6"><img align="center" src="images/Sample.png"></td>
+											<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="A39" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+														onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=JPieChart&amp;ParentID=JScript-HTML5 Live Charts&amp;Ord=6">Pie Chart</SPAN></A></td>
+										</tr>
+                                        <tr>
+											<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+											<td width="6"><img align="center" src="images/Sample.png"></td>
+											<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="A40" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+														onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=JPointsChart&amp;ParentID=JScript-HTML5 Live Charts&amp;Ord=6">Points Chart</SPAN></A></td>
+										</tr>
+                                        <tr>
+											<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+											<td width="6"><img align="center" src="images/Sample.png"></td>
+											<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="A41" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+														onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=JCandleChart&amp;ParentID=JScript-HTML5 Live Charts&amp;Ord=6">Financial Chart</SPAN></A></td>
+										</tr>
+
+
+										<tr>
+											<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+											<td width="6"><img align="center" src="images/Sample.png"></td>
+											<td width="100%" nowrap Class="ContentItem">
+												<SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)">
+													<A id="A41a" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+														 onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=JActivityGauge&amp;ParentID=JScript-HTML5 Live Charts&amp;Ord=6">Live Activity Gauge
+												</SPAN></A>
+											</td>
+										</tr>
+
+										<tr>
+											<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+											<td width="6"><img align="center" src="images/Sample.png"></td>
+											<td width="100%" nowrap Class="ContentItem">
+												<SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)">
+													<A id="A41b" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+														 onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=JCircularGauge&amp;ParentID=JScript-HTML5 Live Charts&amp;Ord=6">VU Meter Gauge
+												</SPAN></A>
+											</td>
+										</tr>										
+
+                                        <tr>
+											<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+											<td width="6"><img align="center" src="images/Sample.png"></td>
+											<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="A43" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+														onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=JScrollerChart&amp;ParentID=JScript-HTML5 Live Charts&amp;Ord=6">Chart with Scroller</SPAN></A></td>
+										</tr>
+                                        <tr>
+											<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+											<td width="6"><img align="center" src="images/Sample.png"></td>
+											<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="A44" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+														onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=JDrillDown&amp;ParentID=JScript-HTML5 Live Charts&amp;Ord=6">Drilling down on chart data</SPAN></A></td>
+										</tr>
+									</table>
+								</td>
+				</td>
+			</tr>
+
+        <!-- ****************** -->
+		<tr>
+			<td width="11" nowrap ONCLICK="javascript:expandIt('ClientSideScripts')"><img align="center" src="images/closed.png" ID="ClientSideScriptsImg"></td>
+			<td width="6" nowrap ONCLICK="javascript:expandIt('ClientSideScripts')"><img align="center" src="images/ImSpacer.png" ID="ClientSideScriptsImg2"></td>
+			<td width="100%" nowrap ONCLICK="javascript:expandIt('ClientSideScripts')"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)">Mouseover Hints</SPAN>
+		<tr>
+			<td></td>
+			<td colspan="2" nowrap><table cellspacing="0" cellpadding="1" border="0" ParentFolderID="InteractiveWithCharts"
+					ID="ClientSideScripts" STYLE="DISPLAY:none">
+					<tr>
+						<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+						<td width="6"><img align="center" src="images/Sample.png"></td>
+						<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="A17" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+									onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=StandardMouseoverMarkFormatsChart&amp;ParentID=Interacting with Charts&amp;Ord=45">Standard Mouseover Mark Formats</SPAN></A></td>
+					</tr>
+					<tr>
+						<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+						<td width="6"><img align="center" src="images/Sample.png"></td>
+						<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="A15" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+									onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=TriggerTestingMouseoverMarksContentChart&amp;ParentID=Interacting with Charts&amp;Ord=46">Trigger Testing Mouseover Marks</SPAN></A></td>
+					</tr>
+					<tr>
+						<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+						<td width="6"><img align="center" src="images/Sample.png"></td>
+						<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="Link79" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+									onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=CustomisingMouseoverMarksChart&amp;ParentID=Interacting with Charts&amp;Ord=47">Customising Mouseover Marks</SPAN></A></td>
+					</tr>
+					<tr>
+						<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+						<td width="6"><img align="center" src="images/Sample.png"></td>
+						<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="A14" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+									onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=ClickElementsChart&amp;ParentID=Interacting with Charts&amp;Ord=48">Click Elements</SPAN></A></td>
+					</tr>
+					<tr>
+						<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+						<td width="6"><img align="center" src="images/Sample.png"></td>
+						<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="A19" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+									onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=ModifyStandardMarkTextChart&amp;ParentID=Interacting with Charts&amp;Ord=49">Modify Standard Mark Text</SPAN></A></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td width="11" nowrap ONCLICK="javascript:expandIt('mapindex')"><img align="center" src="images/closed.png" ID="mapindexImg"></td>
+			<td width="6" nowrap ONCLICK="javascript:expandIt('mapindex')"><img align="center" src="images/ImSpacer.png" ID="mapindexImg2"></td>
+			<td width="100%" nowrap ONCLICK="javascript:expandIt('mapindex')"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"> Mapping</SPAN>
+		<tr>
+			<td></td>
+			<td colspan="2" nowrap><table cellspacing="0" cellpadding="1" border="0" ParentFolderID="InteractiveWithCharts"
+					ID="mapindex" STYLE="DISPLAY:none">
+					<tr>
+						<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+						<td width="6"><img align="center" src="images/Sample.png"></td>
+						<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="A24" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+										onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=mapindex&amp;ParentID=Interacting with Charts&amp;Ord=50">Interactive Maps</SPAN></A></SPAN></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td width="11" nowrap ONCLICK="javascript:expandIt('ChartEvents')" vAlign="middle"><img align="center" src="images/closed.png" ID="ChartEventsImg"></td>
+			<td width="6" nowrap ONCLICK="javascript:expandIt('ChartEvents')" vAlign="bottom"><img align="center" src="images/ImSpacer.png" ID="ChartEventsImg2"></td>
+			<td width="100%" nowrap ONCLICK="javascript:expandIt('ChartEvents')" vAlign="bottom">
+				<P align="left"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)">Chart Events</SPAN></P>
+		<tr>
+			<td></td>
+			<td colspan="2" nowrap>
+				<TABLE id="ChartEvents" style="DISPLAY: none" cellSpacing="0" cellPadding="1" border="0"
+					ParentFolderID="InteractiveWithCharts">
+					<tr>
+						<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+						<td width="6"><img align="center" src="images/Sample.png"></td>
+						<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="A16" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+									onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=AfterDrawImageAndTextChart&amp;ParentID=Interacting with Charts&amp;Ord=51">AfterDraw Image and Text</SPAN></A></td>
+					</tr>
+					<tr>
+						<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+						<td width="6"><img align="center" src="images/Sample.png"></td>
+						<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="Link71" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+									onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=GetAxisLabelChart&amp;ParentID=Interacting with Charts&amp;Ord=52">GetAxisLabel</SPAN></A></td>
+					</tr>
+					<tr>
+						<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+						<td width="6"><img align="center" src="images/Sample.png"></td>
+						<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="A20" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+									onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=GetLegendChart&amp;ParentID=Interacting with Charts&amp;Ord=53">GetLegend</SPAN></A></td>
+					</tr>
+				</TABLE>
+			</td>
+		</tr>
+		<tr>
+			<td width="11" nowrap ONCLICK="javascript:expandIt('ChartAsImage')" vAlign="middle"><img align="center" src="images/closed.png" ID="ChartAsImageImg"></td>
+			<td width="6" nowrap ONCLICK="javascript:expandIt('ChartAsImage')" vAlign="bottom"><img align="center" src="images/ImSpacer.png" ID="ChartAsImageImg2"></td>
+			<td width="100%" nowrap ONCLICK="javascript:expandIt('ChartAsImage')" vAlign="bottom">
+				<P align="left"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)">Chart as Image</SPAN></P>
+		<tr>
+			<td></td>
+			<td colspan="2" nowrap>
+				<TABLE id="ChartAsImage" style="DISPLAY: none" cellSpacing="0" cellPadding="1" border="0" ParentFolderID="InteractiveWithCharts">
+					<tr>
+						<td width="11"><img align="center" src="images/ImSpacer.png"></td>
+						<td width="6"><img align="center" src="images/Sample.png"></td>
+						<td width="100%" nowrap Class="ContentItem"><SPAN Class="ContentItem" onmouseover="SetMouseOverColor(this)" onmouseout="SetMouseLeaveColor(this)"><A id="A26" style="COLOR:#000000;TEXT-DECORATION:none" onmouseover="SetMouseOverColor(this)"
+									onmouseout="SetMouseLeaveColor(this)" onmousedown="onMouseDown(this)" Class="ContentItem" TARGET="Content" HREF="content.aspx?SampleID=SeriesTypes&amp;ParentID=Interacting with Charts&amp;Ord=54">Series Types as Image</SPAN></A></td>
+					</tr>
+				</TABLE>
+			</td>
+		</tr>
+		</tr> </td> </tr> 
+		</td></tr></TBODY></table></td></tr></td></tr></TBODY></TABLE><SCRIPT id="ContentExpanding2">parent.onMouseDown(document.getElementById(parent.selectedElementID));</SCRIPT></body></html>

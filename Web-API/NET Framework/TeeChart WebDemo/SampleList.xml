@@ -1,0 +1,540 @@
+<SampleList>
+  <Sample ID="Introduction">
+	<ParentNodes ParentID="Overview" ParentNodePath="Overview">
+		<Title>Introduction</Title>
+	    <SamplePage>Overview.htm</SamplePage>
+	    <SeqOrd>0</SeqOrd>
+	</ParentNodes>
+  </Sample>
+  <Sample ID="Features">
+	<ParentNodes ParentID="Overview" ParentNodePath="Overview">
+		<Title>Features</Title>
+	    <SamplePage>Features.htm</SamplePage>
+	    <SeqOrd>1</SeqOrd>    
+	</ParentNodes>
+  </Sample>
+  <Sample ID="Testimonials">
+	<ParentNodes ParentID="Testimonials" ParentNodePath="Overview">
+		<Title>Testimonials</Title>
+	    <SamplePage>Testimonials.htm</SamplePage>
+		<SeqOrd>2</SeqOrd>	    
+	</ParentNodes>
+  </Sample>
+  <Sample ID="VHLineChart">
+	<ParentNodes ParentID="ChartStyles" ParentNodePath="Chart Styles\Standard">
+		<Title>Line and Horiz. Line Chart</Title>
+	    <SamplePage>VHLineChart.aspx</SamplePage>
+		<SeqOrd>3</SeqOrd>	    	    
+	</ParentNodes>
+  </Sample>
+  <Sample ID="FastLineChart">
+	<ParentNodes ParentID="ChartStyles" ParentNodePath="Chart Styles\Standard">
+		<Title>Fast Line Chart</Title>
+	    <SamplePage>FastLineChart.aspx</SamplePage>
+	    <SeqOrd>4</SeqOrd>	    	    
+	</ParentNodes>
+  </Sample>
+  <Sample ID="VHBarChart">
+	<ParentNodes ParentID="ChartStyles" ParentNodePath="Chart Styles\Standard">
+		<Title>Bar and Horiz. Bar Chart</Title>
+	    <SamplePage>VHBarChart.aspx</SamplePage>
+	    <SeqOrd>5</SeqOrd>	    	    	    
+	</ParentNodes>
+  </Sample>
+  <Sample ID="VHAreaChart">
+	<ParentNodes ParentID="ChartStyles" ParentNodePath="Chart Styles\Standard">
+		<Title>Area and Horiz. Area Chart</Title>
+	    <SamplePage>VHAreaChart.aspx</SamplePage>
+	    <SeqOrd>6</SeqOrd>	    	    	    	    
+	</ParentNodes>
+  </Sample>
+  <Sample ID="BubbleChart">
+	<ParentNodes ParentID="ChartStyles" ParentNodePath="Chart Styles\Standard">
+		<Title>Bubble Chart</Title>
+	    <SamplePage>BubbleChart.aspx</SamplePage>
+	    <SeqOrd>7</SeqOrd>	    	    	    
+	</ParentNodes>
+  </Sample>
+  <Sample ID="PieChart">
+	<ParentNodes ParentID="ChartStyles" ParentNodePath="Chart Styles\Standard">
+		<Title>Pie Chart</Title>
+	    <SamplePage>PieChart.aspx</SamplePage>
+	    <SeqOrd>8</SeqOrd>	    	    	    
+	</ParentNodes>
+  </Sample>
+  <Sample ID="ShapeChart">
+	<ParentNodes ParentID="ChartStyles" ParentNodePath="Chart Styles\Standard">
+		<Title>Shape Chart</Title>
+	    <SamplePage>ShapeChart.aspx</SamplePage>
+	    <SeqOrd>9</SeqOrd>	    	    	    
+	</ParentNodes>
+  </Sample>
+  <Sample ID="Indicators">
+    <ParentNodes ParentID="ChartStyles" ParentNodePath="Chart Styles\Financial">
+      <Title>Financial Indicators</Title>
+      <SamplePage>indicators.aspx</SamplePage>
+      <SeqOrd>33</SeqOrd>
+    </ParentNodes>
+  </Sample> 
+  <Sample ID="CandleChart">
+	<ParentNodes ParentID="ChartStyles" ParentNodePath="Chart Styles\Financial">
+		<Title>Candle Chart</Title>
+	    <SamplePage>CandleChart.aspx</SamplePage>
+	    <SeqOrd>10</SeqOrd>	    	    	    
+	</ParentNodes>
+  </Sample>
+  <Sample ID="DarvasChart">
+    <ParentNodes ParentID="ChartStyles" ParentNodePath="Chart Styles\Financial">
+      <Title>Darvas Chart</Title>
+      <SamplePage>DarvasChart.aspx</SamplePage>
+      <SeqOrd>11</SeqOrd>
+    </ParentNodes>
+  </Sample>
+  <Sample ID="KagiChart">
+    <ParentNodes ParentID="ChartStyles" ParentNodePath="Chart Styles\Financial">
+      <Title>Kagi Chart</Title>
+      <SamplePage>KagiChart.aspx</SamplePage>
+      <SeqOrd>12</SeqOrd>
+    </ParentNodes>
+  </Sample>  
+  <Sample ID="PointFigureChart">
+	<ParentNodes ParentID="ChartStyles" ParentNodePath="Chart Styles\Financial">
+		<Title>Point Figure Chart</Title>
+	    <SamplePage>PointFigureChart.aspx</SamplePage>
+	    <SeqOrd>13</SeqOrd>	    	    	    
+	</ParentNodes>
+  </Sample>
+  <Sample ID="EquiVolume">
+    <ParentNodes ParentID="ChartStyles" ParentNodePath="Chart Styles\Financial">
+      <Title>Equivolume Chart</Title>
+      <SamplePage>equivolume.aspx</SamplePage>
+      <SeqOrd>63</SeqOrd>
+    </ParentNodes>
+  </Sample>  
+  <Sample ID="RenkoChart">
+    <ParentNodes ParentID="ChartStyles" ParentNodePath="Chart Styles\Financial">
+      <Title>Renko Chart</Title>
+      <SamplePage>RenkoChart.aspx</SamplePage>
+      <SeqOrd>14</SeqOrd>
+    </ParentNodes>
+  </Sample>  
+  <Sample ID="VolumeChart">
+	<ParentNodes ParentID="ChartStyles" ParentNodePath="Chart Styles\Financial">
+		<Title>Volume Chart</Title>
+	    <SamplePage>VolumeChart.aspx</SamplePage>
+	    <SeqOrd>15</SeqOrd>	    	    	    
+	</ParentNodes>
+  </Sample>
+  <Sample ID="ContourChart">
+	<ParentNodes ParentID="ChartStyles" ParentNodePath="Chart Styles\Extended">
+		<Title>Contour Chart</Title>
+	    <SamplePage>ContourChart.aspx</SamplePage>
+	    <SeqOrd>16</SeqOrd>	    	    	    
+	</ParentNodes>
+  </Sample>
+  <Sample ID="DonutChart">
+	<ParentNodes ParentID="ChartStyles" ParentNodePath="Chart Styles\Extended">
+		<Title>Donut Chart</Title>
+	    <SamplePage>DonutChart.aspx</SamplePage>
+	    <SeqOrd>17</SeqOrd>	    	    	    
+	</ParentNodes>
+  </Sample>
+  <Sample ID="PolarChart">
+	<ParentNodes ParentID="ChartStyles" ParentNodePath="Chart Styles\Extended">
+		<Title>Polar Chart</Title>
+	    <SamplePage>PolarChart.aspx</SamplePage>
+	    <SeqOrd>18</SeqOrd>	    	    	    
+	</ParentNodes>
+  </Sample>
+  <Sample ID="RadarChart">
+	<ParentNodes ParentID="ChartStyles" ParentNodePath="Chart Styles\Extended">
+		<Title>Radar Chart</Title>
+	    <SamplePage>RadarChart.aspx</SamplePage>
+	    <SeqOrd>19</SeqOrd>	    	    	    
+	</ParentNodes>
+  </Sample>
+  <Sample ID="Point3DChart">
+	<ParentNodes ParentID="ChartStyles" ParentNodePath="Chart Styles\Extended">
+		<Title>Ponit3D Chart</Title>
+	    <SamplePage>Point3DChart.aspx</SamplePage>
+	    <SeqOrd>20</SeqOrd>	    	    	    
+	</ParentNodes>
+  </Sample>
+  <Sample ID="PyramidChart">
+	<ParentNodes ParentID="ChartStyles" ParentNodePath="Chart Styles\Extended">
+		<Title>Pyramid Chart</Title>
+	    <SamplePage>PyramidChart.aspx</SamplePage>
+	    <SeqOrd>21</SeqOrd>	    	    	    
+	</ParentNodes>
+  </Sample>
+  <Sample ID="SmithChart">
+	<ParentNodes ParentID="ChartStyles" ParentNodePath="Chart Styles\Extended">
+		<Title>Smith Chart</Title>
+	    <SamplePage>SmithChart.aspx</SamplePage>
+	    <SeqOrd>22</SeqOrd>	    	    	    
+	</ParentNodes>
+  </Sample>
+  <Sample ID="SurfaceChart">
+	<ParentNodes ParentID="ChartStyles" ParentNodePath="Chart Styles\Extended">
+		<Title>Surface Chart</Title>
+	    <SamplePage>SurfaceChart.aspx</SamplePage>
+	    <SeqOrd>23</SeqOrd>	    	    	    
+	</ParentNodes>
+  </Sample>
+  <Sample ID="TriSurfaceChart">
+	<ParentNodes ParentID="ChartStyles" ParentNodePath="Chart Styles\Extended">
+		<Title>Tri. Surface Chart</Title>
+	    <SamplePage>TriSurfaceChart.aspx</SamplePage>
+	    <SeqOrd>24</SeqOrd>	    	    	    
+	</ParentNodes>
+  </Sample>
+  <Sample ID="TowerChart">
+	<ParentNodes ParentID="ChartStyles" ParentNodePath="Chart Styles\Extended">
+		<Title>Tower Chart</Title>
+	    <SamplePage>TowerChart.aspx</SamplePage>
+	    <SeqOrd>25</SeqOrd>	    	    	    
+	</ParentNodes>
+  </Sample>
+  <Sample ID="VHBoxPlotChart">
+	<ParentNodes ParentID="ChartStyles" ParentNodePath="Chart Styles\Statistical">
+		<Title>Box-Plot Chart</Title>
+	    <SamplePage>VHBoxPlotChart.aspx</SamplePage>
+	    <SeqOrd>26</SeqOrd>	    	    	    
+	</ParentNodes>
+  </Sample>
+  <Sample ID="ColorGridChart">
+	<ParentNodes ParentID="ChartStyles" ParentNodePath="Chart Styles\Statistical">
+		<Title>ColorGrid Chart</Title>
+	    <SamplePage>ColorGridChart.aspx</SamplePage>
+	    <SeqOrd>27</SeqOrd>	    	    	    
+	</ParentNodes>
+  </Sample>
+  <Sample ID="ErrorChart">
+	<ParentNodes ParentID="ChartStyles" ParentNodePath="Chart Styles\Statistical">
+		<Title>Error Chart</Title>
+	    <SamplePage>ErrorChart.aspx</SamplePage>
+	    <SeqOrd>28</SeqOrd>	    	    	    
+	</ParentNodes>
+  </Sample>
+  <Sample ID="ErrorBarChart">
+	<ParentNodes ParentID="ChartStyles" ParentNodePath="Chart Styles\Statistical">
+		<Title>ErrorBar Chart</Title>
+	    <SamplePage>ErrorBarChart.aspx</SamplePage>
+	    <SeqOrd>29</SeqOrd>	    	    	    
+	</ParentNodes>
+  </Sample>
+  <Sample ID="HighLowChart">
+	<ParentNodes ParentID="ChartStyles" ParentNodePath="Chart Styles\Statistical">
+		<Title>Hugh-Low Chart</Title>
+	    <SamplePage>HighLowChart.aspx</SamplePage>
+	    <SeqOrd>30</SeqOrd>	    	    	    
+	</ParentNodes>
+  </Sample>
+  <Sample ID="VHHistogramChart">
+	<ParentNodes ParentID="ChartStyles" ParentNodePath="Chart Styles\Statistical">
+		<Title>Histogram Chart</Title>
+	    <SamplePage>VHHistogramChart.aspx</SamplePage>
+	    <SeqOrd>31</SeqOrd>	    	    	    
+	</ParentNodes>
+  </Sample>
+  <Sample ID="FunnelChart">
+	<ParentNodes ParentID="ChartStyles" ParentNodePath="Chart Styles\Statistical">
+		<Title>Funnel Chart</Title>
+	    <SamplePage>FunnelChart.aspx</SamplePage>
+	    <SeqOrd>32</SeqOrd>	    	    	    
+	</ParentNodes>
+  </Sample>
+  <Sample ID="VolumePipeChart">
+    <ParentNodes ParentID="ChartStyles" ParentNodePath="Chart Styles\Statistical">
+      <Title>VolumePipe Chart</Title>
+      <SamplePage>volumePipeChart.aspx</SamplePage>
+      <SeqOrd>33</SeqOrd>
+    </ParentNodes>
+  </Sample>
+  <Sample ID="WaterfallChart">
+	<ParentNodes ParentID="ChartStyles" ParentNodePath="Chart Styles\Statistical">
+		<Title>WaterFall Chart</Title>
+	    <SamplePage>WaterfallChart.aspx</SamplePage>
+	    <SeqOrd>34</SeqOrd>	    	    	    
+	</ParentNodes>
+  </Sample>
+  <Sample ID="Bar3DChart">
+	<ParentNodes ParentID="ChartStyles" ParentNodePath="Chart Styles\Other">
+		<Title>Bar3D Chart</Title>
+	    <SamplePage>Bar3DChart.aspx</SamplePage>
+	    <SeqOrd>35</SeqOrd>	    	    	    
+	</ParentNodes>
+  </Sample>
+  <Sample ID="BarJoinChart">
+	<ParentNodes ParentID="ChartStyles" ParentNodePath="Chart Styles\Other">
+		<Title>Bar-Join Chart</Title>
+	    <SamplePage>BarJoinChart.aspx</SamplePage>
+	    <SeqOrd>36</SeqOrd>	    	    	    
+	</ParentNodes>
+  </Sample>
+  <Sample ID="CalendarChart">
+	<ParentNodes ParentID="ChartStyles" ParentNodePath="Chart Styles\Other">
+		<Title>Calendar Chart</Title>
+	    <SamplePage>CalendarChart.aspx</SamplePage>
+	    <SeqOrd>37</SeqOrd>	    	    	    
+	</ParentNodes>
+  </Sample>
+  <Sample ID="ClockChart">
+	<ParentNodes ParentID="ChartStyles" ParentNodePath="Chart Styles\Other">
+		<Title>Clock Chart</Title>
+	    <SamplePage>ClockChart.aspx</SamplePage>
+	    <SeqOrd>38</SeqOrd>	    	    	    
+	</ParentNodes>
+  </Sample>
+  <Sample ID="DesigntimeData">
+    <ParentNodes ParentID="Datasets" ParentNodePath="Datasets">
+      <Title>Designtime Data</Title>
+      <SamplePage>designtime.aspx</SamplePage>
+      <SeqOrd>39</SeqOrd>
+    </ParentNodes>
+  </Sample>
+  <Sample ID="RuntimeAssignedDataset">
+    <ParentNodes ParentID="Datasets" ParentNodePath="Datasets">
+      <Title>Runtime Assigned Dataset</Title>
+      <SamplePage>runtimedataset.aspx</SamplePage>
+      <SeqOrd>40</SeqOrd>
+    </ParentNodes>
+  </Sample>
+  <Sample ID="FlexFlash">
+    <ParentNodes ParentID="Flash" ParentNodePath="Flash">
+      <Title>Chart Generated by TeeChart and Flex</Title>
+      <SamplePage>flexflash.aspx</SamplePage>
+      <SeqOrd>41</SeqOrd>
+    </ParentNodes>
+  </Sample>
+  
+	<Sample ID="CircularGauge">
+		<ParentNodes ParentID="Gauges" ParentNodePath="Gauges">
+			<Title>TeeChart Circular Gauge</Title>
+			<SamplePage>CircularGauge.aspx</SamplePage>
+			<SeqOrd>811</SeqOrd>
+		</ParentNodes>
+	</Sample>
+	<Sample ID="LinearGauge">
+		<ParentNodes ParentID="Gauges" ParentNodePath="Gauges">
+			<Title>TeeChart Linear Gauge</Title>
+			<SamplePage>LinearGauge.aspx</SamplePage>
+			<SeqOrd>812</SeqOrd>
+		</ParentNodes>
+	</Sample>
+	<Sample ID="VerticalGauge">
+		<ParentNodes ParentID="Gauges" ParentNodePath="Gauges">
+			<Title>TeeChart Vertical Gauge</Title>
+			<SamplePage>VerticalGauge.aspx</SamplePage>
+			<SeqOrd>813</SeqOrd>
+		</ParentNodes>
+	</Sample>
+	<Sample ID="ActivityGauge">
+		<ParentNodes ParentID="Gauges" ParentNodePath="Gauges">
+			<Title>TeeChart Activity Gauge</Title>
+			<SamplePage>ActivityGauge.aspx</SamplePage>
+			<SeqOrd>814</SeqOrd>
+		</ParentNodes>
+	</Sample>
+	<Sample ID="KnobGauge">
+		<ParentNodes ParentID="Gauges" ParentNodePath="Gauges">
+			<Title>TeeChart Knob Gauge</Title>
+			<SamplePage>KnobGauge.aspx</SamplePage>
+			<SeqOrd>815</SeqOrd>
+		</ParentNodes>
+	</Sample>
+  
+  
+  <Sample ID="WebAppZoomChart">
+	<ParentNodes ParentID="Interacting with Charts" ParentNodePath="Interacting with Charts\Zooming">
+		<Title>WebApp Zoom Chart</Title>
+	    <SamplePage>WebAppZoomChart.aspx</SamplePage>
+	    <SeqOrd>39</SeqOrd>	    	    	    
+	</ParentNodes>
+  </Sample>
+  <Sample ID="scrolltool">
+    <ParentNodes ParentID="Interacting with Charts" ParentNodePath="Interacting with Charts\Scrolling">
+      <Title>WebApp Scroll Chart</Title>
+      <SamplePage>scrolltool.aspx</SamplePage>
+      <SeqOrd>40</SeqOrd>
+    </ParentNodes>
+  </Sample>  
+  <Sample ID="SendingClicksCodeBehindChart">
+	<ParentNodes ParentID="Interacting with Charts" ParentNodePath="Interacting with Charts\Drill Down\SendingClicksCodeBehind">
+		<Title>Sending Clicks to code-behind</Title>
+	    <SamplePage>SendingClicksCodeBehindChart.aspx</SamplePage>
+	    <SeqOrd>41</SeqOrd>	    	    	    
+	</ParentNodes>
+  </Sample>
+  <Sample ID="AggregationAndDrillDownChart">
+	<ParentNodes ParentID="Interacting with Charts" ParentNodePath="Interacting with Charts\Drill Down\AggregationAndDrillDown">
+		<Title>Aggregation And Drill Down Chart</Title>
+	    <SamplePage>AggregationAndDrillDownChart.aspx</SamplePage>
+	    <SeqOrd>42</SeqOrd>	    	    	    
+	</ParentNodes>
+  </Sample>
+  <Sample ID="URLLinkingChart">
+	<ParentNodes ParentID="Interacting with Charts" ParentNodePath="Interacting with Charts\Drill Down\URLLinking">
+		<Title>URL Linking</Title>
+	    <SamplePage>URLLinkingChart.aspx</SamplePage>
+	    <SeqOrd>43</SeqOrd>	    	    	    
+	</ParentNodes>
+  </Sample>
+  <Sample ID="SegmentingPiesChart">
+	<ParentNodes ParentID="Interacting with Charts" ParentNodePath="Interacting with Charts\Drill Down\SegmentingPies">
+		<Title>Segmenting Pies Chart</Title>
+	    <SamplePage>SegmentingPiesChart.aspx</SamplePage>
+	    <SeqOrd>44</SeqOrd>	    	    	    
+	</ParentNodes>
+  </Sample>
+  <Sample ID="StandardMouseoverMarkFormatsChart">
+	<ParentNodes ParentID="Interacting with Charts" ParentNodePath="Interacting with Charts\Mouseover Hints">
+		<Title>Standard Mouseover Mark Formats Chart</Title>
+	    <SamplePage>StandardMouseoverMarkFormatsChart.aspx</SamplePage>
+	    <SeqOrd>45</SeqOrd>	    	    	    
+	</ParentNodes>
+  </Sample>  
+  <Sample ID="TriggerTestingMouseoverMarksContentChart">
+	<ParentNodes ParentID="Interacting with Charts" ParentNodePath="Interacting with Charts\Mouseover Hints">
+		<Title>TriggerTestingMouseoverMarksContentChart</Title>
+	    <SamplePage>TriggerTestingMouseoverMarksContentChart.aspx</SamplePage>
+	    <SeqOrd>46</SeqOrd>	    	    	    
+	</ParentNodes>
+  </Sample>
+  <Sample ID="CustomisingMouseoverMarksChart">
+	<ParentNodes ParentID="Interacting with Charts" ParentNodePath="Interacting with Charts\Mouseover Hints\CustomisingMouseoverMarks">
+		<Title>Customising Mouseover Marks Chart</Title>
+	    <SamplePage>CustomisingMouseoverMarksChart.aspx</SamplePage>
+	    <SeqOrd>47</SeqOrd>	    	    	    
+	</ParentNodes>
+  </Sample>
+  <Sample ID="ClickElementsChart">
+	<ParentNodes ParentID="Interacting with Charts" ParentNodePath="Interacting with Charts\Mouseover Hints\ClickElements">
+		<Title>Click Elements Chart</Title>
+	    <SamplePage>ClickElementsChart.aspx</SamplePage>
+	    <SeqOrd>48</SeqOrd>	    	    	    
+	</ParentNodes>
+  </Sample>
+  <Sample ID="ModifyStandardMarkTextChart">
+	<ParentNodes ParentID="Interacting with Charts" ParentNodePath="Interacting with Charts\Mouseover Hints\ModifyStandardMarkText">
+		<Title>Modify Standard Mark Text Chart</Title>
+	    <SamplePage>ModifyStandardMarkTextChart.aspx</SamplePage>
+	    <SeqOrd>49</SeqOrd>	    	    	    
+	</ParentNodes>
+  </Sample>  
+  <Sample ID="mapindex">
+	<ParentNodes ParentID="Interacting with Charts" ParentNodePath="Interacting with Charts\Mapping">
+		<Title>Interactive Map</Title>
+	    <SamplePage>mapindex.htm</SamplePage>
+	    <SeqOrd>50</SeqOrd>	    	    	    
+	</ParentNodes>
+  </Sample>  
+  <Sample ID="AfterDrawImageAndTextChart">
+	<ParentNodes ParentID="Interacting with Charts" ParentNodePath="Interacting with Charts\Chart events">
+		<Title>AfterDraw Image And Text Chart</Title>
+	    <SamplePage>AfterDrawImageAndTextChart.aspx</SamplePage>
+	    <SeqOrd>51</SeqOrd>	    	    	    
+	</ParentNodes>
+  </Sample>  
+  <Sample ID="GetAxisLabelChart">
+	<ParentNodes ParentID="Interacting with Charts" ParentNodePath="Interacting with Charts\Chart events">
+		<Title>GetAxisLabel Chart</Title>
+	    <SamplePage>GetAxisLabelChart.aspx</SamplePage>
+	    <SeqOrd>52</SeqOrd>	    	    	    
+	</ParentNodes>
+  </Sample>
+  <Sample ID="GetLegendChart">
+	<ParentNodes ParentID="Interacting with Charts" ParentNodePath="Interacting with Charts\Chart events">
+		<Title>GetLegend Chart</Title>
+	    <SamplePage>GetLegendChart.aspx</SamplePage>
+	    <SeqOrd>53</SeqOrd>	    	    	    
+	</ParentNodes>
+  </Sample>
+  <Sample ID="SeriesTypes">
+	<ParentNodes ParentID="Interacting with Charts" ParentNodePath="Interacting with Charts\Chart as Image">
+		<Title>Series Types as Image</Title>
+	    <SamplePage>SeriesTypes.aspx</SamplePage>
+	    <SeqOrd>54</SeqOrd>	    	    	    
+	</ParentNodes>
+  </Sample>
+  <Sample ID="Introduction">
+    <ParentNodes ParentID="JScript-HTML5 Live Charts" ParentNodePath="Interacting with Charts\JScript-HTML5 Live Charts">
+      <Title>TeeChart Introduction to .NET's Webform Javascript/HTML5 Library</Title>
+      <SamplePage>Introduction.aspx</SamplePage>
+      <SeqOrd>55</SeqOrd>
+    </ParentNodes>
+  </Sample>
+  <Sample ID="JBarChart">
+  <ParentNodes ParentID="JScript-HTML5 Live Charts" ParentNodePath="Interacting with Charts\JScript-HTML5 Live Charts">
+      <Title>TeeChart Javascript/HTML5 Library Bar Chart</Title>
+      <SamplePage>JBarChart.aspx</SamplePage>
+      <SeqOrd>56</SeqOrd>
+  </ParentNodes>
+  </Sample>
+  <Sample ID="JBubbleChart">
+    <ParentNodes ParentID="JScript-HTML5 Live Charts" ParentNodePath="Interacting with Charts\JScript-HTML5 Live Charts">
+      <Title>TeeChart Javascript/HTML5 Library Bubble Chart</Title>
+      <SamplePage>JBubbleChart.aspx</SamplePage>
+      <SeqOrd>57</SeqOrd>
+    </ParentNodes>
+  </Sample>
+  <Sample ID="JLineChart">
+    <ParentNodes ParentID="JScript-HTML5 Live Charts" ParentNodePath="Interacting with Charts\JScript-HTML5 Live Charts">
+      <Title>TeeChart Javascript/HTML5 Library Line Chart</Title>
+      <SamplePage>JLineChart.aspx</SamplePage>
+      <SeqOrd>58</SeqOrd>
+    </ParentNodes>
+  </Sample>
+  <Sample ID="JPieChart">
+    <ParentNodes ParentID="JScript-HTML5 Live Charts" ParentNodePath="Interacting with Charts\JScript-HTML5 Live Charts">
+      <Title>TeeChart Javascript/HTML5 Library Pie Chart</Title>
+      <SamplePage>JPieChart.aspx</SamplePage>
+      <SeqOrd>59</SeqOrd>
+    </ParentNodes>
+  </Sample>
+  <Sample ID="JPointsChart">
+    <ParentNodes ParentID="JScript-HTML5 Live Charts" ParentNodePath="Interacting with Charts\JScript-HTML5 Live Charts">
+      <Title>TeeChart Javascript/HTML5 Library Points Chart</Title>
+      <SamplePage>JPointsChart.aspx</SamplePage>
+      <SeqOrd>60</SeqOrd>
+    </ParentNodes>
+  </Sample>
+  <Sample ID="JCandleChart">
+    <ParentNodes ParentID="JScript-HTML5 Live Charts" ParentNodePath="Interacting with Charts\JScript-HTML5 Live Charts">
+      <Title>TeeChart Javascript/HTML5 Library Financial Chart</Title>
+      <SamplePage>JCandleChart.aspx</SamplePage>
+      <SeqOrd>61</SeqOrd>
+    </ParentNodes>    
+  </Sample>
+  
+  <Sample ID="JCircularGauge">
+		<ParentNodes ParentID="JScript-HTML5 Live Charts" ParentNodePath="Interacting with Charts\JScript-HTML5 Live Charts">
+			<Title>TeeChart Javascript/VU Meter CircularGauge</Title>
+			<SamplePage>JCircularGauge.aspx</SamplePage>
+			<SeqOrd>611</SeqOrd>
+		</ParentNodes>
+  </Sample>
+  <Sample ID="JActivityGauge">
+		<ParentNodes ParentID="JScript-HTML5 Live Charts" ParentNodePath="Interacting with Charts\JScript-HTML5 Live Charts">
+			<Title>TeeChart Javascript ActivityGauge</Title>
+			<SamplePage>JActivityGauge.aspx</SamplePage>
+			<SeqOrd>612</SeqOrd>
+		</ParentNodes>
+  </Sample>  
+  
+  <Sample ID="JScrollerChart">
+    <ParentNodes ParentID="JScript-HTML5 Live Charts" ParentNodePath="Interacting with Charts\JScript-HTML5 Live Charts">
+      <Title>TeeChart Javascript/HTML5 Library Scroller Example</Title>
+      <SamplePage>JScrollerChart.aspx</SamplePage>
+      <SeqOrd>62</SeqOrd>
+    </ParentNodes>
+  </Sample>
+  <Sample ID="JDrillDown">
+    <ParentNodes ParentID="JScript-HTML5 Live Charts" ParentNodePath="Interacting with Charts\JScript-HTML5 Live Charts">
+      <Title>TeeChart Javascript/HTML5 Library DrillDown Example</Title>
+      <SamplePage>JDrillDown.aspx</SamplePage>
+      <SeqOrd>63</SeqOrd>
+    </ParentNodes>
+  </Sample>
+</SampleList>
+

@@ -1,0 +1,25 @@
+<%@ Page language="c#" Inherits="WebDemo.Chart_Styles.Financial.RenkoChart" CodeFile="renkochart.aspx.cs" %>
+<%@ Register TagPrefix="tchart" Namespace="Steema.TeeChart.Web" Assembly="TeeChart" %>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	<HEAD>
+		<title>RenkoChart</title>
+		<LINK href="..\..\Styles\ContentStyles.css" type="text/css" rel="stylesheet">
+		<meta content="Microsoft Visual Studio .NET 7.1" name="GENERATOR">
+		<meta content="C#" name="CODE_LANGUAGE">
+		<meta content="JavaScript" name="vs_defaultClientScript">
+		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
+	</HEAD>
+	<body>
+		<form id="Form1" method="post" runat="server">
+			<tchart:WebChart id="WebChart1" style="Z-INDEX: 101; LEFT: 24px; POSITION: absolute; TOP: 60px" runat="server"
+				Width="432px" Height="290px" Config="AAEAAAD/////AQAAAAAAAAAMAgAAAFJUZWVDaGFydCwgVmVyc2lvbj0zLjAuMjY4MC4yODU5MCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj05YzgxMjYyNzZjNzdiZGI3DAMAAABRU3lzdGVtLkRyYXdpbmcsIFZlcnNpb249Mi4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iMDNmNWY3ZjExZDUwYTNhBQEAAAAVU3RlZW1hLlRlZUNoYXJ0LkNoYXJ0MAAAABUuV2FsbHMuQmFjay5QZW4uQ29sb3IXLldhbGxzLkJhY2suQnJ1c2guQ29sb3InLldhbGxzLkJhY2suQnJ1c2guR3JhZGllbnQuVHJhbnNwYXJlbmN5Ey5XYWxscy5MZWZ0LlZpc2libGUVLldhbGxzLkJvdHRvbS5WaXNpYmxlDi5Bc3BlY3QuVmlldzNEDy5MZWdlbmQuVmlzaWJsZRkuTGVnZW5kLlRpdGxlLlBlbi5WaXNpYmxlEC5QYW5lbC5QZW4uQ29sb3ISLlBhbmVsLlBlbi5WaXNpYmxlES5QYW5lbC5QZW4uRW5kQ2FwFS5QYW5lbC5CZXZlbC5Db2xvck9uZRUuUGFuZWwuQmV2ZWwuQ29sb3JUd28SLlBhbmVsLkJldmVsLk91dGVyEi5QYW5lbC5CZXZlbC5Jbm5lch0uUGFuZWwuSW1hZ2VCZXZlbC5CcnVzaC5Db2xvchcuUGFuZWwuSW1hZ2VCZXZlbC5XaWR0aB0uUGFuZWwuSW1hZ2VCZXZlbC5QZW4uVmlzaWJsZSEuUGFuZWwuQnJ1c2guR3JhZGllbnQuTWlkZGxlQ29sb3IgLlBhbmVsLkJydXNoLkdyYWRpZW50LlN0YXJ0Q29sb3IVLlBhbmVsLlNoYWRvdy5WaXNpYmxlDS5IZWFkZXIuTGluZXMRLkhlYWRlci5Gb250LlNpemUfLkhlYWRlci5Gb250LlNoYWRvdy5CcnVzaC5Db2xvchouSGVhZGVyLkZvbnQuU2hhZG93LkhlaWdodBkuSGVhZGVyLkZvbnQuU2hhZG93LldpZHRoGy5IZWFkZXIuRm9udC5TaGFkb3cuVmlzaWJsZRguSGVhZGVyLkZvbnQuQnJ1c2guQ29sb3IRLkhlYWRlci5Gb250Lk5hbWUWLkhlYWRlci5Gb250LlNpemVGbG9hdBguQXhlcy5MZWZ0LkxhYmVscy5PbkF4aXMiLkF4ZXMuTGVmdC5MYWJlbHMuRm9udC5CcnVzaC5Db2xvchguQXhlcy5MZWZ0Lk1heGltdW1PZmZzZXQdLkF4ZXMuTGVmdC5NaW5vclRpY2tzLlZpc2libGUYLkF4ZXMuTGVmdC5BeGlzUGVuLldpZHRoFi5BeGVzLkxlZnQuRW5kUG9zaXRpb24RLkF4ZXMuVG9wLlZpc2libGUXLkF4ZXMuVG9wLkF4aXNQZW4uV2lkdGgZLkF4ZXMuRGVwdGguQXhpc1Blbi5XaWR0aBouQXhlcy5Cb3R0b20uTGFiZWxzLk9uQXhpcyQuQXhlcy5Cb3R0b20uTGFiZWxzLkZvbnQuQnJ1c2guQ29sb3IdLkF4ZXMuQm90dG9tLlJlbGF0aXZlUG9zaXRpb24aLkF4ZXMuQm90dG9tLk1heGltdW1PZmZzZXQfLkF4ZXMuQm90dG9tLk1pbm9yVGlja3MuVmlzaWJsZRouQXhlcy5Cb3R0b20uQXhpc1Blbi5XaWR0aBkuQXhlcy5SaWdodC5BeGlzUGVuLldpZHRoGS5BeGVzLlJpZ2h0LlN0YXJ0UG9zaXRpb24cLkF4ZXMuRGVwdGhUb3AuQXhpc1Blbi5XaWR0aAQEAAAAAAAABAAEBAQEBAQAAAQEAAYABAAAAAQBAAAEAAAAAAAAAAAEAAAAAAAAABRTeXN0ZW0uRHJhd2luZy5Db2xvcgMAAAAUU3lzdGVtLkRyYXdpbmcuQ29sb3IDAAAACAEBAQEBFFN5c3RlbS5EcmF3aW5nLkNvbG9yAwAAAAEgU3lzdGVtLkRyYXdpbmcuRHJhd2luZzJELkxpbmVDYXADAAAAFFN5c3RlbS5EcmF3aW5nLkNvbG9yAwAAABRTeXN0ZW0uRHJhd2luZy5Db2xvcgMAAAAjU3RlZW1hLlRlZUNoYXJ0LkRyYXdpbmcuQmV2ZWxTdHlsZXMCAAAAI1N0ZWVtYS5UZWVDaGFydC5EcmF3aW5nLkJldmVsU3R5bGVzAgAAABRTeXN0ZW0uRHJhd2luZy5Db2xvcgMAAAAIARRTeXN0ZW0uRHJhd2luZy5Db2xvcgMAAAAUU3lzdGVtLkRyYXdpbmcuQ29sb3IDAAAAAQgUU3lzdGVtLkRyYXdpbmcuQ29sb3IDAAAACAgBFFN5c3RlbS5EcmF3aW5nLkNvbG9yAwAAAAsBFFN5c3RlbS5EcmF3aW5nLkNvbG9yAwAAAAgBCAYBCAgBFFN5c3RlbS5EcmF3aW5nLkNvbG9yAwAAAAYIAQgIBggCAAAABfz///8UU3lzdGVtLkRyYXdpbmcuQ29sb3IEAAAABG5hbWUFdmFsdWUKa25vd25Db2xvcgVzdGF0ZQEAAAAJBwcDAAAACqmpqf4AAAAAAAACAAH7/////P///wrA//9mAAAAAAAAAgA8AAAAAAAAAAAB+v////z///8KgAAA/gAAAAAAAAIAAQX5////IFN5c3RlbS5EcmF3aW5nLkRyYXdpbmcyRC5MaW5lQ2FwAQAAAAd2YWx1ZV9fAAgDAAAAAgAAAAH4/////P///wqAAAD+AAAAAAAAAgAB9/////z///8KgAAA/gAAAAAAAAIABfb///8jU3RlZW1hLlRlZUNoYXJ0LkRyYXdpbmcuQmV2ZWxTdHlsZXMBAAAAB3ZhbHVlX18ACAIAAAABAAAAAfX////2////AgAAAAH0/////P///wr/6Oj+AAAAAAAAAgACAAAAAAHz/////P///wr/6ur+AAAAAAAAAgAB8v////z///8K/+rq/gAAAAAAAAIAAQkPAAAADAAAAAHw/////P///wrAwMD+AAAAAAAAAgACAAAAAgAAAAEB7/////z///8KgAAA/gAAAAAAAAIABhIAAAAGVGFob21hAABAQQAB7f////z///8KgICA/gAAAAAAAAIALQAAAAABAAAAAAAAAAAASUAAAQAAAAEAAAAAAez////8////CoCAgP4AAAAAAAACAAAAAAAAAElACAAAAAABAAAAAQAAAAAAAAAAAElAAQAAABEPAAAAAQAAAAYVAAAAC1JlbmtvIENoYXJ0Cw=="
+				TempChart="Httphandler" AutoPostback="False" GetChartFile="/TeeChartForNET/GetChart.aspx"></tchart:WebChart>
+			<asp:Label id="Label3" style="Z-INDEX: 102; LEFT: 28px; POSITION: absolute; TOP: 16px" runat="server"
+				Width="584px" Height="36px"> Renko Chart Type</asp:Label>
+			<DIV style="Z-INDEX: 103; LEFT: 24px; WIDTH: 560px; POSITION: absolute; TOP: 376px; HEIGHT: 13px"></DIV>
+			<asp:Button id="Button1" style="Z-INDEX: 104; LEFT: 468px; POSITION: absolute; TOP: 64px" runat="server"
+				Text="Update Chart"></asp:Button>
+		</form>
+	</body>
+</HTML>

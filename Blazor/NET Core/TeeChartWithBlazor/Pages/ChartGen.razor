@@ -1,0 +1,83 @@
+﻿@using Steema.TeeChart;
+@using System.IO;
+@using System.Drawing;
+@using TeeChartOnBlazor.Data;  //the project data
+
+@code {
+
+	public string chartName;
+
+	public Task<String> GetChart(WeatherForecast[] forecasts, int width, int height)
+	{
+		Steema.TeeChart.Chart mChart = new Chart();
+		Steema.TeeChart.Styles.Bar mBar = new Steema.TeeChart.Styles.Bar();
+
+		mChart.Header.Text = "TeeChart in Blazor example";
+
+		mChart.Series.Add(mBar);
+
+		//mBar.FillSampleValues();
+		foreach (WeatherForecast forecast in forecasts)
+		{
+			int aDate = (int)Math.Truncate(forecast.Date.ToOADate()); //day stamp
+			mBar.Add(aDate, forecast.TemperatureC);
+		}
+
+		mBar.Origin = 0;
+
+		mBar.XValues.DateTime = true;
+		//mChart.Axes.Bottom.Labels.Angle = 90;
+		mChart.Axes.Bottom.Increment = Steema.TeeChart.Utils.GetDateTimeStep(DateTimeSteps.OneDay);
+		mChart.Axes.Left.Title.Text = "ºC";
+
+		MemoryStream ms = new MemoryStream();
+		mChart.Export.Image.JPEG.Width = width;
+		mChart.Export.Image.JPEG.Height = height;
+		mChart.Export.Image.JPEG.Save(ms);
+		Image img = Image.FromStream(ms);
+
+		String str = Convert.ToBase64String(ms.ToArray());
+
+		return Task.FromResult("data:image/bmp;base64," + str);
+	}
+
+	public Task<string> GetJSChart(WeatherForecast[] forecasts, int width, int height)
+	{
+		Steema.TeeChart.Chart mChart = new Chart();
+		Steema.TeeChart.Styles.Bar mBar = new Steema.TeeChart.Styles.Bar();
+
+		mChart.Header.Text = "TeeChart in Blazor example";
+
+		mChart.Series.Add(mBar);
+
+		//mBar.FillSampleValues();
+		foreach (WeatherForecast forecast in forecasts)
+		{
+			int aDate = (int)Math.Truncate(forecast.Date.ToOADate()); //day stamp
+			mBar.Add(aDate, forecast.TemperatureC);
+		}
+
+		mBar.XValues.DateTime = true;
+		//mChart.Axes.Bottom.Labels.Angle = 90;
+		mChart.Axes.Bottom.Increment = Steema.TeeChart.Utils.GetDateTimeStep(DateTimeSteps.OneDay);
+		mChart.Axes.Left.Title.Text = "ºC";
+
+		chartName = "dynoTeeChart";
+		mChart.Export.Image.JScript.ChartName = chartName;
+
+		MemoryStream ms = new MemoryStream();
+		mChart.Export.Image.JScript.Width = width;
+		mChart.Export.Image.JScript.Height = height;
+		mChart.Export.Image.JScript.DoFullPage = false; //inline, no page <html> header tags
+		mChart.Export.Image.JScript.CustomCode = new string[] { "resize("+chartName+");" };
+		mChart.Export.Image.JScript.Save(ms);
+
+		ms.Position = 0;
+
+		StreamReader reader = new StreamReader(ms);
+		//setup our chart name, here 'dynoChartName'.
+		string result = "<script> var "+chartName+"; " + reader.ReadToEnd() + "</script>";
+
+		return Task.FromResult(result);
+	}
+}

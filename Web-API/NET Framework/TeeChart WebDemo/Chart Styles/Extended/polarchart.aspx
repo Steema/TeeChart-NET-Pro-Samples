@@ -1,0 +1,33 @@
+<%@ Register TagPrefix="tchart" Namespace="Steema.TeeChart.Web" Assembly="TeeChart" %>
+<%@ Page language="c#" Inherits="WebDemo.Chart_Styles.Extended.PolarChart" CodeFile="PolarChart.aspx.cs" %>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	<HEAD>
+		<title>PolarChart</title>
+		<LINK href="..\..\Styles\ContentStyles.css" type="text/css" rel="stylesheet">
+		<meta content="Microsoft Visual Studio .NET 7.1" name="GENERATOR">
+		<meta content="C#" name="CODE_LANGUAGE">
+		<meta content="JavaScript" name="vs_defaultClientScript">
+		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
+	</HEAD>
+	<body>
+		<form id="Form1" method="post" runat="server">
+			<asp:label id="Label1" style="Z-INDEX: 101; LEFT: 460px; POSITION: absolute; TOP: 64px" runat="server">Transparency :</asp:label>
+			<asp:TextBox id="TextBox3" style="Z-INDEX: 110; LEFT: 536px; POSITION: absolute; TOP: 136px"
+				runat="server" Width="38px">30</asp:TextBox>
+			<asp:TextBox id="TextBox2" style="Z-INDEX: 109; LEFT: 536px; POSITION: absolute; TOP: 112px"
+				runat="server" Width="38px">50</asp:TextBox>
+			<asp:label id="Label5" style="Z-INDEX: 107; LEFT: 472px; POSITION: absolute; TOP: 140px" runat="server">Polar 3 :</asp:label>
+			<asp:label id="Label4" style="Z-INDEX: 106; LEFT: 472px; POSITION: absolute; TOP: 116px" runat="server">Polar 2 :</asp:label>
+			<asp:label id="Label2" style="Z-INDEX: 105; LEFT: 472px; POSITION: absolute; TOP: 92px" runat="server">Polar 1 :</asp:label><asp:button id="Button2" style="Z-INDEX: 100; LEFT: 472px; POSITION: absolute; TOP: 168px" runat="server"
+				Text="Do !" onclick="Button2_Click"></asp:button>
+			<tchart:WebChart id="WebChart1" style="Z-INDEX: 102; LEFT: 24px; POSITION: absolute; TOP: 60px; width:432px; height:290px;" runat="server"
+				Width="432px" Height="290px" Config="AAEAAAD/////AQAAAAAAAAAMAgAAAAhUZWVDaGFydAwDAAAADlN5c3RlbS5EcmF3aW5nBQEAAAAVU3RlZW1hLlRlZUNoYXJ0LkNoYXJ0QgAAAAYuV2lkdGgSLlBhbmVsLlBlbi5WaXNpYmxlES5QYW5lbC5QZW4uRW5kQ2FwEC5QYW5lbC5QZW4uQ29sb3IXLlBhbmVsLkdyYWRpZW50LlZpc2libGUZLlBhbmVsLkdyYWRpZW50LlVzZU1pZGRsZRouUGFuZWwuR3JhZGllbnQuU3RhcnRDb2xvchsuUGFuZWwuR3JhZGllbnQuTWlkZGxlQ29sb3IdLlBhbmVsLkJydXNoLkdyYWRpZW50LlZpc2libGUfLlBhbmVsLkJydXNoLkdyYWRpZW50LlVzZU1pZGRsZSAuUGFuZWwuQnJ1c2guR3JhZGllbnQuU3RhcnRDb2xvciEuUGFuZWwuQnJ1c2guR3JhZGllbnQuTWlkZGxlQ29sb3IdLlBhbmVsLkltYWdlQmV2ZWwuQnJ1c2guQ29sb3IdLlBhbmVsLkltYWdlQmV2ZWwuUGVuLlZpc2libGUXLlBhbmVsLkltYWdlQmV2ZWwuV2lkdGgVLlBhbmVsLlNoYWRvdy5WaXNpYmxlFS5QYW5lbC5CZXZlbC5Db2xvck9uZRUuUGFuZWwuQmV2ZWwuQ29sb3JUd28SLlBhbmVsLkJldmVsLk91dGVyEi5QYW5lbC5CZXZlbC5Jbm5lchUuV2FsbHMuQmFjay5QZW4uQ29sb3IVLldhbGxzLkJvdHRvbS5WaXNpYmxlEy5XYWxscy5MZWZ0LlZpc2libGUZLkFzcGVjdC5UZXh0UmVuZGVyaW5nSGludAwuQXNwZWN0Llpvb20OLkFzcGVjdC5WaWV3M0QVLkFzcGVjdC5TbW9vdGhpbmdNb2RlDS5IZWFkZXIuTGluZXMRLkhlYWRlci5Gb250LlNpemURLkhlYWRlci5Gb250Lk5hbWUbLkhlYWRlci5Gb250LlNoYWRvdy5WaXNpYmxlGS5IZWFkZXIuRm9udC5TaGFkb3cuV2lkdGgaLkhlYWRlci5Gb250LlNoYWRvdy5IZWlnaHQfLkhlYWRlci5Gb250LlNoYWRvdy5CcnVzaC5Db2xvchguSGVhZGVyLkZvbnQuQnJ1c2guQ29sb3IPLkxlZ2VuZC5WaXNpYmxlBy5IZWlnaHQTLkdyYXBoaWNzM0QuWENlbnRlchUuR3JhcGhpY3MzRC5QZW4uQ29sb3IVLkdyYXBoaWNzM0QuUGVuLlN0eWxlEy5HcmFwaGljczNELllDZW50ZXIaLkdyYXBoaWNzM0QuU3VwcG9ydHMzRFRleHQcLkdyYXBoaWNzM0QuUm90YXRpb25DZW50ZXIuWRwuR3JhcGhpY3MzRC5Sb3RhdGlvbkNlbnRlci5aHC5HcmFwaGljczNELlJvdGF0aW9uQ2VudGVyLlgdLkdyYXBoaWNzM0QuVGV4dFJlbmRlcmluZ0hpbnQVLkdyYXBoaWNzM0QuQmFja0NvbG9yFS5HcmFwaGljczNELlVzZUJ1ZmZlchkuR3JhcGhpY3MzRC5CcnVzaC5WaXNpYmxlFy5HcmFwaGljczNELkJydXNoLkNvbG9yGS5HcmFwaGljczNELlNtb290aGluZ01vZGUTLkF4ZXMuUmlnaHQuVmlzaWJsZRsuQXhlcy5SaWdodC5BeGlzUGVuLlZpc2libGUZLkF4ZXMuUmlnaHQuQXhpc1Blbi5XaWR0aBouQXhlcy5Cb3R0b20uTGFiZWxzLk9uQXhpcxwuQXhlcy5Cb3R0b20uQXhpc1Blbi5WaXNpYmxlGi5BeGVzLkJvdHRvbS5BeGlzUGVuLldpZHRoHy5BeGVzLkJvdHRvbS5NaW5vclRpY2tzLlZpc2libGUZLkF4ZXMuRGVwdGguQXhpc1Blbi5XaWR0aBguQXhlcy5MZWZ0LkxhYmVscy5PbkF4aXMaLkF4ZXMuTGVmdC5BeGlzUGVuLlZpc2libGUYLkF4ZXMuTGVmdC5BeGlzUGVuLldpZHRoHS5BeGVzLkxlZnQuTWlub3JUaWNrcy5WaXNpYmxlGS5BeGVzLlRvcC5BeGlzUGVuLlZpc2libGUXLkF4ZXMuVG9wLkF4aXNQZW4uV2lkdGgcLkF4ZXMuRGVwdGhUb3AuQXhpc1Blbi5XaWR0aAAABAQAAAQEAAAEBAQAAAAEBAQEBAAABAAABAYAAQAAAAQEAAAABAQAAAAAAAQEAAAEBAAAAAAAAAAAAAAAAAAAAAgBIFN5c3RlbS5EcmF3aW5nLkRyYXdpbmcyRC5MaW5lQ2FwAwAAABRTeXN0ZW0uRHJhd2luZy5Db2xvcgMAAAABARRTeXN0ZW0uRHJhd2luZy5Db2xvcgMAAAAUU3lzdGVtLkRyYXdpbmcuQ29sb3IDAAAAAQEUU3lzdGVtLkRyYXdpbmcuQ29sb3IDAAAAFFN5c3RlbS5EcmF3aW5nLkNvbG9yAwAAABRTeXN0ZW0uRHJhd2luZy5Db2xvcgMAAAABCAEUU3lzdGVtLkRyYXdpbmcuQ29sb3IDAAAAFFN5c3RlbS5EcmF3aW5nLkNvbG9yAwAAACNTdGVlbWEuVGVlQ2hhcnQuRHJhd2luZy5CZXZlbFN0eWxlcwIAAAAjU3RlZW1hLlRlZUNoYXJ0LkRyYXdpbmcuQmV2ZWxTdHlsZXMCAAAAFFN5c3RlbS5EcmF3aW5nLkNvbG9yAwAAAAEBJVN5c3RlbS5EcmF3aW5nLlRleHQuVGV4dFJlbmRlcmluZ0hpbnQDAAAACAEmU3lzdGVtLkRyYXdpbmcuRHJhd2luZzJELlNtb290aGluZ01vZGUDAAAACAEICBRTeXN0ZW0uRHJhd2luZy5Db2xvcgMAAAAUU3lzdGVtLkRyYXdpbmcuQ29sb3IDAAAAAQgIFFN5c3RlbS5EcmF3aW5nLkNvbG9yAwAAACJTeXN0ZW0uRHJhd2luZy5EcmF3aW5nMkQuRGFzaFN0eWxlAwAAAAgBCAgIJVN5c3RlbS5EcmF3aW5nLlRleHQuVGV4dFJlbmRlcmluZ0hpbnQDAAAAFFN5c3RlbS5EcmF3aW5nLkNvbG9yAwAAAAEBFFN5c3RlbS5EcmF3aW5nLkNvbG9yAwAAACZTeXN0ZW0uRHJhd2luZy5EcmF3aW5nMkQuU21vb3RoaW5nTW9kZQMAAAABAQgBAQgBCAEBCAEBCAgCAAAAsAEAAAEF/P///yBTeXN0ZW0uRHJhd2luZy5EcmF3aW5nMkQuTGluZUNhcAEAAAAHdmFsdWVfXwAIAwAAAAIAAAAF+////xRTeXN0ZW0uRHJhd2luZy5Db2xvcgQAAAAFdmFsdWUKa25vd25Db2xvcgVzdGF0ZQRuYW1lAAAAAQkHBwMAAACAAAD+AAAAAAAAAgAKAQEB+v////v/////6ur+AAAAAAAAAgAKAfn////7/////+rq/gAAAAAAAAIACgEBAfj////7/////+rq/gAAAAAAAAIACgH3////+//////q6v4AAAAAAAACAAoB9v////v/////6Oj+AAAAAAAAAgAKAAIAAAABAfX////7////gAAA/gAAAAAAAAIACgH0////+////4AAAP4AAAAAAAACAAoF8////yNTdGVlbWEuVGVlQ2hhcnQuRHJhd2luZy5CZXZlbFN0eWxlcwEAAAAHdmFsdWVfXwAIAgAAAAEAAAAB8v////P///8CAAAAAfH////7////qamp/gAAAAAAAAIACgAABfD///8lU3lzdGVtLkRyYXdpbmcuVGV4dC5UZXh0UmVuZGVyaW5nSGludAEAAAAHdmFsdWVfXwAIAwAAAAUAAABXAAAAAAXv////JlN5c3RlbS5EcmF3aW5nLkRyYXdpbmcyRC5TbW9vdGhpbmdNb2RlAQAAAAd2YWx1ZV9fAAgDAAAAAgAAAAkSAAAADAAAAAYTAAAABlRhaG9tYQECAAAAAgAAAAHs////+////8DAwP4AAAAAAAACAAoB6/////v///+AAAD+AAAAAAAAAgAKACIBAADYAAAAAer////7////AAAAAAAAAAA0AAEACgXp////IlN5c3RlbS5EcmF3aW5nLkRyYXdpbmcyRC5EYXNoU3R5bGUBAAAAB3ZhbHVlX18ACAMAAAACAAAAnQAAAAAAAAAAAAAAAAAAAAAB6P////D///8FAAAAAef////7////AAAAAAAAAAA0AAEACgEAAeb////7////AAAAAAAAAAA0AAEACgHl////7////wIAAAAAAAEAAAAAAAEAAAAAAQAAAAAAAQAAAAAAAQAAAAEAAAAREgAAAAEAAAAGHAAAABFQb2xhciBDaGFydCBTdHlsZQs="
+				TempChart="Httphandler" AutoPostback="False" GetChartFile="/TeeChartForNET/GetChart.aspx"></tchart:WebChart>
+			<asp:Label id="Label3" style="Z-INDEX: 103; LEFT: 28px; POSITION: absolute; TOP: 16px" runat="server"
+				Width="584px" Height="36px">Polar Chart Style</asp:Label>
+			<asp:TextBox id="TextBox1" style="Z-INDEX: 108; LEFT: 536px; POSITION: absolute; TOP: 88px" runat="server"
+				Width="38px">80</asp:TextBox>
+		</form>
+	</body>
+</HTML>

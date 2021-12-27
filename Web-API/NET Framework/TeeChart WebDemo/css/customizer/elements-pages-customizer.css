@@ -1,0 +1,194 @@
+@charset "utf-8";
+
+#top-box .top-box-wrapper,
+.carousel-box .next:hover,
+.carousel-box .prev:hover,
+.product .product-hover,
+#footer .up:hover,
+.btn,
+.btn:visited,
+.slider .slider-nav,
+.panel-group .active.panel .panel-heading > .panel-title > a,
+.panel-group .active.panel .panel-heading > .panel-title > a:hover,
+.banner-set .pagination a:hover,
+.employee .employee-hover,
+.carousel-box .pagination a:hover,
+.sidebar .menu li.active > a,
+.pagination > li > a:hover,
+.pagination > li > a:focus,
+.sidebar .tags a:hover,
+.sidebar .banners .banner-text,
+#catalog .category-img .description,
+.product-bottom .related-products header:before,
+.slider.rs-slider .tparrows,
+.slider.rs-slider .tparrows:hover,
+.toolbar .sort-catalog .dropdown-toggle,
+.toolbar .grid-list .grid,
+.toolbar .grid-list .list,
+.toolbar .up-down,
+.toolbar .up-down.active,
+.toolbar .grid-list a.grid:hover,
+.toolbar .grid-list a.list:hover,
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > span:hover,
+.sidebar .tags a,
+.sidebar .menu li.parent > a .open-sub:before,
+.sidebar .menu li.parent > a .open-sub:after,
+.panel-group .panel-default .panel-heading > .panel-title > a:before,
+.panel-group .panel-default .panel-heading > .panel-title > a:after,
+.new-radio.checked span,
+.list .product .actions a:hover,
+.product-page .col-md-7 .actions a:hover,
+.product-page .image-box .thumblist-box .prev:hover,
+.product-page .image-box .thumblist-box .next:hover,
+.accordion-tab > li > a .open-sub:before,
+.accordion-tab > li > a .open-sub:after,
+.products-tab .accordion-tab > li > a .open-sub:before,
+.products-tab .accordion-tab > li > a .open-sub:after,
+.sidebar .calendar-wrap caption,
+.btn-group.open .btn.dropdown-toggle,
+.product .limit-offer,
+.product .not-rotation-actions,
+.fancybox-nav span:hover,
+.header .primary .navbar .btn-navbar .icon-bar,
+.progressive-slider-two .pagination a,
+.progressive-slider-two .pagination a:hover,
+.progressive-slider-two .pagination .selected,
+.minimized-menu .primary .navbar .nav > .parent.active > a,
+.minimized-menu .primary .navbar .nav > .parent.active:hover > a,
+.minimized-menu .primary .navbar .nav .open-sub span {
+  background-color: #f89406;
+}
+.slider .slider-nav {
+  background-color: rgba(248,148,6,.97);
+}
+.product .limit-offer,
+.product .not-rotation-actions {
+  background-color: rgba(248,148,6,.9);
+}
+.btn:hover,
+.btn:focus,
+.btn:active,
+.btn.active,
+.btn.disabled,
+.btn[disabled] {
+  background-color: #f89406;
+  background-color: rgba(248,148,6,.8);
+}
+#catalog .category-img .description,
+.toolbar .sort-catalog .dropdown-toggle,
+.toolbar .grid-list .grid,
+.toolbar .grid-list .list,
+.toolbar .up-down,
+.toolbar .up-down.active,
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > span:hover,
+.sidebar .tags a,
+.btn-group.open .btn.dropdown-toggle {
+  background-color: rgba(248,148,6,.7);
+}
+.sidebar .banners .banner-text {
+  background-color: rgba(248,148,6,.65);
+}
+.slider.rs-slider .tparrows,
+.product-page .add-cart-form .number .regulator a:hover,
+.progressive-slider-two .pagination a {
+  background-color: rgba(248,148,6,.5);
+}
+.pricing .bottom-box {
+  background-color: rgba(248,148,6,.05);
+}
+.pricing:before {
+  background-color: rgba(248,148,6,.06);
+}
+.btn.btn-border,
+.minimized-menu .primary .navbar .nav > .parent.active > a,
+.minimized-menu .primary .navbar .nav > .parent.active:hover > a {
+  border-color: #f89406;
+}
+.pricing .options li,
+.pricing .bottom-box {
+  border-color: rgba(248,148,6,.1);
+}
+.header .cart-header .dropdown-toggle,
+#footer .newsletter input:focus + .submit,
+.icon,
+.big-icon,
+.big-icon:visited,
+.service .icon,
+.close:hover,
+.close:focus,
+.img-thumbnail:hover .bg-images i:before,
+.box-404 h1,
+.gallery-images:hover .bg-images i:before,
+.features-block .header-box .icon-box,
+.features-block .header-box,
+.sidebar .newsletter input:focus + .submit,
+.sidebar .section .selected .close:hover,
+.package .title a,
+.package .price-box .price,
+.package .price-box .icon,
+.pricing .title a,
+.pricing .options li span,
+.pricing .options li.active,
+.banner-set .next:hover,
+.banner-set .prev:hover,
+.btn.btn-border,
+.btn.btn-border .caret,
+.product-remove:hover,
+.one-page .header .primary .navbar .nav .active {
+  color: #f89406;
+}
+.pricing .bottom-box .more {
+  color: rgba(248,148,6,.7);
+}
+.pricing .options li {
+  color: rgba(248,148,6,.4);
+}
+.phone-header a svg path,
+.search-header a svg path,
+.product .actions a svg path,
+.sidebar .wishlist .add-cart:hover path,
+.header .cart-header .dropdown-toggle .icon svg path,
+.header .search-form .search-submit svg path,
+.new-checkbox svg polygon,
+.product-bottom .related-products li .button-box .wishlist:hover svg path,
+.jslider .jslider-pointer svg path,
+.rating-box .rating svg polygon,
+.search-result .search-form .search-submit svg path {
+  fill: #f89406;
+}
+.carousel-box .pagination a.selected,
+.banner-set .pagination a.selected {
+  background: #ccc;
+  background: rgba(0,0,0,.3);
+}
+@media (max-width: 979px) {
+  .header .primary .navbar .nav > .parent.active > a,
+  .header .primary .navbar .nav > .parent.active:hover > a,
+  .header .primary .navbar .nav .open-sub span,
+  .accordion-tab > li.active > a,
+  .accordion-tab > li.active > a:hover,
+  .accordion-tab > li.active > a:focus,
+  .accordion-tab > li.active:hover > a,
+  .products-tab .accordion-tab > li.active > a,
+  .products-tab .accordion-tab > li.active:hover > a {
+    background-color: #f89406;
+  }
+  .header .primary .navbar .nav > .parent.active > a,
+  .header .primary .navbar .nav > .parent.active:hover > a {
+    border-color: #f89406;
+  }
+}
+.top-navbar .nav > li a,
+.btn-group.btn-select .dropdown-toggle,
+.product .product-hover,
+.employee .employee-hover,
+.slider .slid-content{
+  color: #fff;
+}
+.product .product-hover ul li {
+  background-image: url("../../img/svg/check-icon-white.svg"), none;
+}
