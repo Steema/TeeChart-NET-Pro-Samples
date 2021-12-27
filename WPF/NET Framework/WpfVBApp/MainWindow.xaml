@@ -1,0 +1,18 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfVBApp"
+        xmlns:WPF="clr-namespace:Steema.TeeChart.WPF;assembly=TeeChart.WPF" x:Class="MainWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="657.692" Width="1076.923">
+    <Grid Margin="0,0,-313,-206">
+
+        <WPF:TChart Name="Chart" HorizontalAlignment="Left" Margin="115,63,-76,-68" VerticalAlignment="Top" Height="424" Width="753"/>
+        <Button Content="Fill data" HorizontalAlignment="Left" Margin="139,543,0,0" VerticalAlignment="Top" Width="106" Height="32" Click="Button_Click"/>
+        <Button Content="Add Average" HorizontalAlignment="Left" Margin="440,543,0,0" VerticalAlignment="Top" Width="106" Height="32" Click="Button_Click_1"/>
+        <Button Content="Refresh" HorizontalAlignment="Left" Margin="736,543,0,0" VerticalAlignment="Top" Width="106" Height="32" Click="Button_Click_2"/>
+
+    </Grid>
+</Window>
