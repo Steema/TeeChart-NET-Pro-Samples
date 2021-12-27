@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeeChartBuilderUnified", "TeeChartBuilderUnified.csproj", "{48791E6C-1037-49D8-BBAC-9E8CFB8AD00E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		AdHoc|iPhone = AdHoc|iPhone
+		AdHoc|iPhoneSimulator = AdHoc|iPhoneSimulator
+		AppStore|iPhone = AppStore|iPhone
+		AppStore|iPhoneSimulator = AppStore|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Distribution|iPhone = Distribution|iPhone
+		Distribution|iPhoneSimulator = Distribution|iPhoneSimulator
+		Release|iPhone = Release|iPhone
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{48791E6C-1037-49D8-BBAC-9E8CFB8AD00E}.AdHoc|iPhone.ActiveCfg = Release|iPhone
+		{48791E6C-1037-49D8-BBAC-9E8CFB8AD00E}.AdHoc|iPhone.Build.0 = Release|iPhone
+		{48791E6C-1037-49D8-BBAC-9E8CFB8AD00E}.AdHoc|iPhoneSimulator.ActiveCfg = Distribution|iPhoneSimulator
+		{48791E6C-1037-49D8-BBAC-9E8CFB8AD00E}.AdHoc|iPhoneSimulator.Build.0 = Distribution|iPhoneSimulator
+		{48791E6C-1037-49D8-BBAC-9E8CFB8AD00E}.AppStore|iPhone.ActiveCfg = Release|iPhone
+		{48791E6C-1037-49D8-BBAC-9E8CFB8AD00E}.AppStore|iPhone.Build.0 = Release|iPhone
+		{48791E6C-1037-49D8-BBAC-9E8CFB8AD00E}.AppStore|iPhoneSimulator.ActiveCfg = Distribution|iPhoneSimulator
+		{48791E6C-1037-49D8-BBAC-9E8CFB8AD00E}.AppStore|iPhoneSimulator.Build.0 = Distribution|iPhoneSimulator
+		{48791E6C-1037-49D8-BBAC-9E8CFB8AD00E}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{48791E6C-1037-49D8-BBAC-9E8CFB8AD00E}.Debug|iPhone.Build.0 = Debug|iPhone
+		{48791E6C-1037-49D8-BBAC-9E8CFB8AD00E}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{48791E6C-1037-49D8-BBAC-9E8CFB8AD00E}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{48791E6C-1037-49D8-BBAC-9E8CFB8AD00E}.Distribution|iPhone.ActiveCfg = Distribution|iPhone
+		{48791E6C-1037-49D8-BBAC-9E8CFB8AD00E}.Distribution|iPhone.Build.0 = Distribution|iPhone
+		{48791E6C-1037-49D8-BBAC-9E8CFB8AD00E}.Distribution|iPhoneSimulator.ActiveCfg = Distribution|iPhone
+		{48791E6C-1037-49D8-BBAC-9E8CFB8AD00E}.Release|iPhone.ActiveCfg = Release|iPhone
+		{48791E6C-1037-49D8-BBAC-9E8CFB8AD00E}.Release|iPhone.Build.0 = Release|iPhone
+		{48791E6C-1037-49D8-BBAC-9E8CFB8AD00E}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{48791E6C-1037-49D8-BBAC-9E8CFB8AD00E}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = None
+		$1.ResourceNamePolicy = FileFormatDefault
+		$0.TextStylePolicy = $2
+		$2.FileWidth = 120
+		$2.TabsToSpaces = False
+		$2.inheritsSet = VisualStudio
+		$2.inheritsScope = text/plain
+		description = @TeeChart Builder Mobile is a simple and powerful tool which allows you to create 2D and 3D interactive charts and graphs from given data. \nYou can customize the appearance and theme, color palette and lots more characteristics.\nThis application also allows you to export the Chart generated to image, send it by e-mail or print it. \nEnjoy it !
+		version = 2,0
+		StartupItem = TeeChartBuilder.csproj
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

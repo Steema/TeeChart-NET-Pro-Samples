@@ -1,0 +1,18 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Distribution|iPhone" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.Josep" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../../Sources/TeeChart/TeeChart.cs">
+    <Files>
+      <File FileName="ChartViewController.xib.cs" Line="1" Column="1" />
+      <File FileName="../../../Sources/TeeChart/TeeChart.cs" Line="29" Column="29" />
+      <File FileName="../../../Sources/TeeChart/Chart.cs" Line="1" Column="1" />
+      <File FileName="../../../Sources/TeeChart/Series.cs" Line="1" Column="1" />
+      <File FileName="../../../Sources/TeeChart/Utils.cs" Line="1" Column="1" />
+      <File FileName="../../../Sources/TeeChart/ZoomScroll.cs" Line="1" Column="1" />
+      <File FileName="About/AboutViewController.xib.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

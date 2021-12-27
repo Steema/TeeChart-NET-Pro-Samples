@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{48791E6C-1037-49D8-BBAC-9E8CFB8AD00E}</ProjectGuid>
+    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>com.steema</RootNamespace>
+    <AssemblyName>TeeChartBuilder</AssemblyName>
+    <StartupObject>TeeChartBuilder.Application</StartupObject>
+    <ReleaseVersion>1.2</ReleaseVersion>
+    <Description>TeeChart Builder Mobile is a simple and powerful tool which allows you to create 2D and 3D interactive charts and graphs from given data. 
+You can customize the appearance and theme, color palette and lots more characteristics.
+This application also allows you to export the Chart generated to image, send it by e-mail or print it. 
+Enjoy it !</Description>
+    <ApplicationIcon>TeeChartExamples.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>None</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+    <ConsolePause>false</ConsolePause>
+    <MtouchUseArmv7>false</MtouchUseArmv7>
+    <MtouchI18n>
+    </MtouchI18n>
+    <ApplicationIcon>images\logo114x114.png</ApplicationIcon>
+    <MtouchArch>ARMv7</MtouchArch>
+    <StartupObject>TChartFeatures.Application</StartupObject>
+    <MtouchExtraArgs>--registrar=static</MtouchExtraArgs>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>None</MtouchLink>
+    <ConsolePause>false</ConsolePause>
+    <MtouchUseArmv7>false</MtouchUseArmv7>
+    <ApplicationIcon>images\logo114x114.png</ApplicationIcon>
+    <MtouchI18n>
+    </MtouchI18n>
+    <MtouchArch>ARMv7</MtouchArch>
+    <StartupObject>TChartFeatures.Application</StartupObject>
+    <MtouchExtraArgs>--registrar=static</MtouchExtraArgs>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer: MARC MEUMANN (CTHAA979QZ)</CodesignKey>
+    <ConsolePause>false</ConsolePause>
+    <MtouchUseArmv7>false</MtouchUseArmv7>
+    <MtouchI18n>
+    </MtouchI18n>
+    <IpaPackageName>
+    </IpaPackageName>
+    <ApplicationIcon>images\logo114x114.png</ApplicationIcon>
+    <MtouchDebug>true</MtouchDebug>
+    <CrashReportingApiKey>
+    </CrashReportingApiKey>
+    <MtouchArch>ARMv7</MtouchArch>
+    <StartupObject>TChartFeatures.Application</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer: MARC MEUMANN (CTHAA979QZ)</CodesignKey>
+    <MtouchUseArmv7>false</MtouchUseArmv7>
+    <MtouchI18n>
+    </MtouchI18n>
+    <ApplicationIcon>images\logo114x114.png</ApplicationIcon>
+    <IpaPackageName>
+    </IpaPackageName>
+    <CrashReportingApiKey>
+    </CrashReportingApiKey>
+    <MtouchArch>ARMv7</MtouchArch>
+    <DebugSymbols>true</DebugSymbols>
+    <StartupObject>TChartFeatures.Application</StartupObject>
+    <MtouchExtraArgs>--registrar=static</MtouchExtraArgs>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Distribution|iPhone' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Distribution</OutputPath>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Distribution: STEEMA SOFTWARE, S.L. (DF775JD7L6)</CodesignKey>
+    <CodesignProvision>7977e045-5174-4c5f-98cb-e2f8553fd071</CodesignProvision>
+    <MtouchI18n>
+    </MtouchI18n>
+    <MtouchArch>ARMv7</MtouchArch>
+    <IpaPackageName>
+    </IpaPackageName>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="monotouch" />
+    <Reference Include="MonoTouch.Dialog-1" />
+    <Reference Include="AlertCenter.IOS">
+      <HintPath>Components\alert-center-1.0.1\lib\ios\AlertCenter.IOS.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="MainWindow.xib.designer.cs">
+      <DependentUpon>MainWindow.xib</DependentUpon>
+    </Compile>
+    <Compile Include="RootViewController.xib.cs">
+      <DependentUpon>RootViewController.xib</DependentUpon>
+    </Compile>
+    <Compile Include="RootViewController.xib.designer.cs">
+      <DependentUpon>RootViewController.xib</DependentUpon>
+    </Compile>
+    <Compile Include="ChartViewController.xib.cs">
+      <DependentUpon>ChartViewController.xib</DependentUpon>
+    </Compile>
+    <Compile Include="ChartViewController.xib.designer.cs">
+      <DependentUpon>ChartViewController.xib</DependentUpon>
+    </Compile>
+    <Compile Include="Themes\ThemesDataSource.cs" />
+    <Compile Include="Aspect\AspectDataSource.cs" />
+    <Compile Include="Aspect\AspectController.cs" />
+    <Compile Include="Aspect\AspectDelegate.cs" />
+    <Compile Include="Functions\FunctionsDataSource.cs" />
+    <Compile Include="Legend\LegendController.cs" />
+    <Compile Include="Legend\LegendDataSource.cs" />
+    <Compile Include="Legend\LegendDelegate.cs" />
+    <Compile Include="Functions\FunctionsController.cs" />
+    <Compile Include="Functions\FunctionsDelegate.cs" />
+    <Compile Include="Themes\ThemesController.cs" />
+    <Compile Include="Themes\ThemesDelegate.cs" />
+    <Compile Include="Tools\ToolsController.cs" />
+    <Compile Include="Tools\ToolsDataSource.cs" />
+    <Compile Include="Tools\ToolsDelegate.cs" />
+    <Compile Include="ColorPalette\ColorPalettesController.cs" />
+    <Compile Include="ColorPalette\ColorPalettesDataSource.cs" />
+    <Compile Include="ColorPalette\ColorPalettesDelegate.cs" />
+    <Compile Include="SeriesData\DataControllerCell.cs" />
+    <Compile Include="SeriesData\DataControllerController.cs" />
+    <Compile Include="SeriesData\DataControllerSource.cs" />
+    <Compile Include="SeriesData\SeriesData.cs" />
+    <Compile Include="Styles\SeriesStylesController.xib.cs">
+      <DependentUpon>SeriesStylesController.xib</DependentUpon>
+    </Compile>
+    <Compile Include="Styles\SeriesStylesController.xib.designer.cs">
+      <DependentUpon>SeriesStylesController.xib</DependentUpon>
+    </Compile>
+    <Compile Include="Styles\SeriesTypesDelegate.cs" />
+    <Compile Include="Styles\TypesTableCell.cs" />
+    <Compile Include="Styles\TypesTableController.cs" />
+    <Compile Include="Styles\TypesTableSource.cs" />
+    <Compile Include="Settings\SettingsController.cs" />
+    <Compile Include="Settings\SettingsDelegate.cs" />
+    <Compile Include="Settings\SettingsSource.cs" />
+    <Compile Include="About\AboutViewController.xib.cs">
+      <DependentUpon>AboutViewController.xib</DependentUpon>
+    </Compile>
+    <Compile Include="About\AboutViewController.xib.designer.cs">
+      <DependentUpon>AboutViewController.xib</DependentUpon>
+    </Compile>
+    <Compile Include="SeriesData\DataDelegate.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="MainWindow.xib" xmlns="" />
+    <InterfaceDefinition Include="RootViewController.xib" xmlns="" />
+    <InterfaceDefinition Include="ChartViewController.xib" xmlns="" />
+    <InterfaceDefinition Include="Styles\SeriesStylesController.xib" />
+    <InterfaceDefinition Include="About\AboutViewController.xib" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
+  <ItemGroup>
+    <Content Include="images\Chart1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\TeeChartNETForIPhone111x80.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\SteemaWhite127x80.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\area.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\bar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\bubbles.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\candle.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\circulargauge.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\colorgrid.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\contour.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\fastline.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\horizbar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\isosurface.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\line.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\lineargauge.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\map.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\pie.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\Points.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\polar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\radar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\smith.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\Surface.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\tower.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\arrow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\donut.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\funnel.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\gantt.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\horizarea.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\horizline.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\org.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\pointnfigure.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\pyramid.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\shape.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\volumepipe.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\bar3D.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\clock.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\darvas.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\histogram.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\horizhistogram.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\kagi.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\knobgauge.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\numericgauge.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\point3D.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\polarbar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\PolarGrid.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\renko.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\tagcloud.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\vertgauge.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\box.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\error.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\errorbar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\errorpoint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\highlow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\horizbox.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\ternary.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\volume.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\barjoin.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\bezier.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\waterfall.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\vector3D.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\windrose.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\calendar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SeriesIcons\linepoint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\logo627x627.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\logo58x58.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\logo57x57.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\logo29x29.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\logo114x114.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\logo50x50.png" />
+    <Content Include="images\logo72x72.png" />
+    <Content Include="images\TeeChartBuilder.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="images\" />
+    <Folder Include="Themes\" />
+    <Folder Include="Aspect\" />
+    <Folder Include="Functions\" />
+    <Folder Include="Legend\" />
+    <Folder Include="Tools\" />
+    <Folder Include="ColorPalette\" />
+    <Folder Include="SeriesData\" />
+    <Folder Include="Styles\" />
+    <Folder Include="Settings\" />
+    <Folder Include="About\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ITunesArtwork Include="images\logo512x512.png" />
+    <ITunesArtwork Include="iTunesArtwork%402x" />
+  </ItemGroup>
+  <ItemGroup>
+    <XamarinComponentReference Include="alert-center">
+      <Version>1.0.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\logo120x120.png" />
+    <BundleResource Include="images\logo80x80.png" />
+    <BundleResource Include="Resources\Default-568h%402x.png" />
+    <BundleResource Include="images\logo_320x480.png" />
+    <BundleResource Include="images\logo_640x960.png" />
+    <BundleResource Include="Resources\Default.png" />
+    <BundleResource Include="Resources\Default%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Sources\TeeChart.iOS\TeeChart.iOS20.csproj">
+      <Project>{0C636370-38A4-49F8-BE6C-8FA9638974C9}</Project>
+      <Name>TeeChart.iOS20</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>
