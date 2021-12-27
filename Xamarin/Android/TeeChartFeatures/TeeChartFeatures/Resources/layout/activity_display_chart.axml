@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+	android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="0dp"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways"
+			app:titleTextColor="@android:color/white"
+			app:title="Standard Charts"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        </android.support.v7.widget.Toolbar>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+			app:tabMode="scrollable"
+			app:tabIndicatorColor="@android:color/white"
+			app:tabSelectedTextColor="@android:color/white">
+			
+		</android.support.design.widget.TabLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+	<LinearLayout android:id="@+id/parentViewPagerLayout"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@android:color/white"
+		android:orientation="vertical">
+		<!--
+		<android.support.v4.view.ViewPager
+			android:layout_weight="1"
+			android:id="@+id/viewPager"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+		-->
+	</LinearLayout>
+
+</LinearLayout>

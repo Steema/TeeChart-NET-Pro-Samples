@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:id="@+id/customSearchView"
+	android:orientation="horizontal"
+	android:layout_width="match_parent"
+	android:background="@color/colorPrimary"
+	android:layout_height="@dimen/searchbar_height">
+
+	<android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+		app:cardUseCompatPadding="true"
+		android:layout_marginRight="2dp"	
+		android:layout_marginLeft="1dp"
+		app:cardCornerRadius="4dp"
+		app:cardBackgroundColor="@android:color/white"
+        app:cardElevation="5dp">
+
+		<LinearLayout 
+			android:background="@android:color/transparent"
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+	
+			<ImageButton android:id="@+id/backButton"
+				android:background="@android:color/transparent"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_gravity="center_vertical"
+				android:adjustViewBounds="true"
+				android:paddingLeft="3dp"
+				android:clickable="true"
+				android:src="@drawable/ic_arrow_back_black"/>
+
+			<EditText android:id="@+id/edt_search_chart"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:inputType="text"
+				android:imeOptions="actionSearch"
+				android:hint="@string/abc_search_hint"
+				android:paddingLeft="5dp"
+				android:paddingRight="8dp"
+				android:lines="1"
+				android:textColorHint="@color/colorHintEditText"
+				android:textColor="@android:color/black"
+				android:textSize="18sp"
+				android:gravity="center_vertical"
+				android:layout_marginLeft="5dp"
+				android:background="@android:color/transparent"
+				android:textCursorDrawable="@drawable/cursor_search_view"/>
+
+			<ImageButton android:id="@+id/search_clear_text"
+				android:layout_width="25dp"
+				android:layout_height="match_parent"
+				android:background="@android:color/transparent"
+				android:adjustViewBounds="true"
+				android:layout_gravity="center_vertical"
+				android:visibility="gone"
+				android:layout_marginRight="12dp"
+				android:clickable="true"
+				android:src="@drawable/abc_ic_clear_material"/>
+
+		</LinearLayout>
+
+	</android.support.v7.widget.CardView>
+
+</LinearLayout>

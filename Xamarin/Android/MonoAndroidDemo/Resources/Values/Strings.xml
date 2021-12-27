@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="Hello">Hello World, Click Me!</string>
+  <string name="ApplicationName">MonoAndroidDemo</string>
+  <string name="Aspect">Chart aspect</string>
+  <string name="Zoom_Style">Zoom style</string>
+  <string name="itAbout">About us</string>
+  <string name="itEMail">E-Mail</string>
+  <string name="itWeb">Web Site</string>
+  <string name="tvAboutSteema">Steema Software has been providing developers with tools for charting since 1995. The TeeChart for Android Library forms part of ongoing development to make available for Android application development all of the charting features that form part of the TeeChart Libraries. This preview application shows a few of the possibilities available to developers. The Pie style shows values displayed as slices of a cheese or pie. Options include 2D and 3D, moving the slices, marks, patterns, ellipse shape, border, shadow, grouping of small values, partial pies, multiple pies, etc.</string>
+  <string name="itCall">Call us</string>
+</resources>

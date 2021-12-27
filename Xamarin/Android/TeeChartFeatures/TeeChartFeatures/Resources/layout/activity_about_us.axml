@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:background="@android:color/white">
+
+	<android.support.v7.widget.CardView android:id="@+id/cardViewBarLayout"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		app:cardElevation="0dp">
+
+		<android.support.design.widget.AppBarLayout
+			android:id="@+id/topbarLayout"
+			android:layout_width="match_parent"
+			android:layout_height="?android:attr/actionBarSize"
+			android:theme="@style/Base.Theme.AppCompat.Light"
+			android:backgroundTint="@android:color/white">
+
+			<android.support.v7.widget.Toolbar
+				android:id="@+id/toolbar"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				
+				app:popupTheme="@style/AppTheme.PopupOverlay">
+
+				<LinearLayout android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="vertical">
+
+					<FrameLayout android:layout_width="match_parent"
+						android:layout_height="wrap_content">
+
+						<TextView android:id="@+id/txtViewTitleAboutUs" 
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:textSize="22dp"
+							android:paddingRight="50dp"
+							android:textColor="@color/colorPrimaryDark"
+							android:gravity="center"
+							android:layout_gravity="center"
+							android:text="Steema Software"/>
+
+					</FrameLayout>
+
+				</LinearLayout>
+
+			</android.support.v7.widget.Toolbar>
+
+		</android.support.design.widget.AppBarLayout>
+
+	</android.support.v7.widget.CardView>
+
+	<ScrollView android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:overScrollMode="never"
+		android:id="@id/scrollView">
+
+		<LinearLayout android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+
+			<android.support.v7.widget.CardView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				app:cardElevation="2dp"
+				app:cardCornerRadius="5dp"
+				app:cardUseCompatPadding="true"
+				android:layout_marginLeft="6dp"
+				android:layout_marginRight="6dp"
+				android:layout_marginTop="5dp">
+
+				<LinearLayout android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_margin="10dp"
+					android:orientation="vertical">
+
+					<TextView android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:textSize="20dp"
+						android:text="Information"
+						android:textColor="@color/colorPrimaryDark"/>
+
+					<TextView android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:textSize="14dp"
+						android:layout_marginTop="5dp"
+						android:justificationMode="inter_word"
+						android:textAlignment="textStart"
+						android:text="@string/steemaDescription"/>
+
+				</LinearLayout>
+
+			</android.support.v7.widget.CardView>
+
+			<android.support.v7.widget.CardView 
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				app:cardElevation="2dp"
+				app:cardCornerRadius="5dp"
+				app:cardUseCompatPadding="true"
+				android:layout_marginLeft="6dp"
+				android:layout_marginRight="6dp">
+
+				<LinearLayout android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="vertical"
+					android:layout_margin="10dp">
+
+					<TextView android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:textSize="20dp"
+							android:text="Social"
+							android:textColor="@color/colorPrimaryDark"/>
+
+					<LinearLayout android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:orientation="horizontal"
+						android:layout_margin="5dp">
+
+						<LinearLayout android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:orientation="vertical"
+							android:layout_marginTop="10dp"
+							android:layout_weight="7">
+
+							<ImageView android:layout_width="wrap_content"
+								android:layout_height="50dp"
+								android:layout_marginBottom="5dp"
+								android:src="@drawable/iconFacebook"/>
+							<ImageView android:layout_width="wrap_content"
+								android:layout_height="50dp"
+								android:layout_marginBottom="5dp"
+								android:src="@drawable/iconTwitter"/>
+							<ImageView android:layout_width="wrap_content"
+								android:layout_height="50dp"
+								android:layout_marginBottom="5dp"
+								android:src="@drawable/iconGooglePlus"/>
+							<ImageView android:layout_width="wrap_content"
+								android:layout_height="50dp"
+								android:layout_marginBottom="5dp"
+								android:src="@drawable/iconLinkedin"/>
+
+						</LinearLayout>
+
+						<LinearLayout android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:orientation="vertical"
+							android:layout_marginTop="10dp"
+							android:layout_weight="1">
+
+							<Button android:id="@+id/btnFacebook"
+								android:layout_width="match_parent"
+								android:layout_height="50dp"
+								android:text="Facebook"
+								android:layout_marginBottom="5dp"
+								style="@android:style/Widget.Material.Button.Borderless"
+								android:background="@drawable/cardview_shape"
+								android:foreground="?android:attr/selectableItemBackground"
+								android:clickable="true"
+								android:stateListAnimator="@null"
+								android:elevation="0dp"/>
+							<Button android:id="@+id/btnTwitter"
+								android:layout_width="match_parent"
+								android:layout_height="50dp"
+								android:text="Twitter"
+								android:layout_marginBottom="5dp"
+								style="@android:style/Widget.Material.Button.Borderless"
+								android:foreground="?android:attr/selectableItemBackground"
+								android:clickable="true"
+								android:background="@drawable/cardview_shape"
+								android:stateListAnimator="@null"
+								android:elevation="0dp"/>
+							<Button android:id="@+id/btnGooglePlus"
+								android:layout_width="match_parent"
+								android:layout_height="50dp"
+								android:text="Google+"
+								android:layout_marginBottom="5dp"
+								android:foreground="?android:attr/selectableItemBackground"
+								android:clickable="true"
+								style="@android:style/Widget.Material.Button.Borderless"
+								android:background="@drawable/cardview_shape"
+								android:stateListAnimator="@null"
+								android:elevation="0dp"/>
+							<Button android:id="@+id/btnLinkedin"
+								android:layout_width="match_parent"
+								android:layout_height="50dp"
+								android:text="Linkedin"
+								android:layout_marginBottom="5dp"
+								android:foreground="?android:attr/selectableItemBackground"
+								android:clickable="true"
+								style="@android:style/Widget.Material.Button.Borderless"
+								android:background="@drawable/cardview_shape"
+								android:stateListAnimator="@null"
+								android:elevation="0dp"/>
+
+						</LinearLayout>
+
+					</LinearLayout>
+
+				</LinearLayout>
+
+			</android.support.v7.widget.CardView>
+
+			<android.support.v7.widget.CardView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				app:cardElevation="2dp"
+				app:cardCornerRadius="5dp"
+				app:cardUseCompatPadding="true"
+				android:layout_marginLeft="6dp"
+				android:layout_marginRight="6dp"
+				android:layout_marginTop="5dp"
+				android:layout_marginBottom="10dp">
+
+				<LinearLayout android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal"
+					android:padding="10dp">
+
+					<TextView android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:textSize="20dp"
+						android:text="Version"
+						android:layout_weight="2"
+						android:layout_marginLeft="2dp"
+						android:textColor="@color/colorPrimaryDark"/>
+
+					<TextView android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:textSize="20dp"
+						android:text="@string/app_version"
+						android:gravity="end"
+						android:layout_weight="1"
+						android:layout_marginRight="7dp"
+						android:textColor="@android:color/black"/>
+
+				</LinearLayout>
+
+			</android.support.v7.widget.CardView>
+			<!--
+			<android.support.v7.widget.CardView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				app:cardElevation="2dp"
+				app:cardCornerRadius="5dp"
+				app:cardUseCompatPadding="true"
+				android:layout_marginBottom="10dp"
+				android:layout_marginLeft="6dp"
+				android:layout_marginRight="6dp"
+				android:layout_marginTop="5dp">
+
+				<Button android:id="@+id/btnContactUs"
+					android:layout_width="match_parent"
+					android:layout_height="50dp"
+					android:text="Contact Us"
+					android:foreground="?android:attr/selectableItemBackground"
+					android:clickable="true"
+					style="@android:style/Widget.Material.Button.Borderless"
+					android:background="@android:color/white"
+					android:stateListAnimator="@null"
+					android:elevation="0dp"/>
+
+			</android.support.v7.widget.CardView>
+			-->
+
+		</LinearLayout>
+
+	</ScrollView>
+
+</LinearLayout>

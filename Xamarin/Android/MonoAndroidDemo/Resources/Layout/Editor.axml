@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <CheckBox
+        android:text="3D view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cb3D"
+        android:layout_marginTop="15.0dp" />
+    <TextView
+        android:text="@string/Zoom_Style"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:layout_marginTop="15dp" />
+    <Spinner
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinnerZoomStyle" />
+</LinearLayout>

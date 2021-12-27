@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:padding="2dp">
+	<android.support.v7.widget.CardView
+		android:id="@+id/cardViewGroupStyles"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		app:cardElevation="2dp"
+		app:cardCornerRadius="1dp"
+		app:cardUseCompatPadding="true"
+		android:focusable="true"
+		android:foreground="?android:attr/selectableItemBackground">
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="horizontal"
+			android:padding="11dp"
+			android:background="@drawable/cardview_shape">
+			<ImageView android:layout_weight="1"
+				android:id="@+id/cardViewImage"
+				android:layout_gravity="left"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"/>
+			<LinearLayout android:layout_weight="4"
+				android:gravity="right"
+				android:layout_marginLeft="3dp"
+				android:orientation="vertical"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+				<TextView
+					android:id="@+id/cardViewTitle"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:textAppearance="?android:attr/textAppearanceMedium"
+					android:textColor="#333333"
+					android:text="Caption"
+					android:layout_gravity="center_horizontal"
+					android:layout_marginLeft="4dp"/>
+				<TextView
+					android:id="@+id/cardViewDescription"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:text="Hola Mundo"
+					android:layout_gravity="center_horizontal"
+					android:layout_marginLeft="4dp"
+					android:layout_marginTop="4dp"/>
+				</LinearLayout>
+		</LinearLayout>
+	</android.support.v7.widget.CardView>
+</FrameLayout>

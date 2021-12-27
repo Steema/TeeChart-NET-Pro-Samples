@@ -1,0 +1,9 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:id="@+id/search_toolbar_item"
+        android:icon="@mipmap/ic_search_white_24dp"
+        android:title="@string/icon_search_text"
+        app:showAsAction="ifRoom|collapseActionView"/>
+</menu>

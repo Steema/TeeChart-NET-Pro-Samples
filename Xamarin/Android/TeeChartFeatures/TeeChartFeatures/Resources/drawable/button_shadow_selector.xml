@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+  <item>
+    <layer-list>
+      <item android:right="4dp" android:top="4dp">
+        <shape>
+          <corners android:radius="4dp" />
+          <solid android:color="#dedede" />
+        </shape>
+      </item>
+      <item android:bottom="2dp" android:left="2dp">
+        <shape xmlns:android="http://schemas.android.com/apk/res/android">
+          <stroke android:color="#aaaaaa" android:width="1dp"/>
+          <solid android:color="#ffffff"/>
+          <corners android:radius="5dp"/>
+        </shape>
+      </item>
+    </layer-list>
+  </item>
+</selector>
+-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+  <item>
+    <layer-list>
+      <item android:top="4dp" android:left="4dp">
+        <shape>
+          <corners android:radius="4dp" />
+          <gradient android:angle="180" android:endColor="#ffffff" android:startColor="#dddddd"/>
+        </shape>
+      </item>
+      <item android:bottom="1dp" android:left="0dp">
+        <shape xmlns:android="http://schemas.android.com/apk/res/android">
+          <stroke android:color="#aaaaaa" android:width="1dp"/>
+          <solid android:color="#ffffff"/>
+          <corners android:radius="5dp"/>
+        </shape>
+      </item>
+    </layer-list>
+  </item>
+</selector>

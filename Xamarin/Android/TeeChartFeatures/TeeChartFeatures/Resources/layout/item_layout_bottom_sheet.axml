@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout id="@+id/layoutTitleItemBottomSheet"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+	<Button android:id="@+id/txtViewTitleItem"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:textSize="20dp"
+		android:text="default text"
+		android:paddingTop="13dp"
+		android:paddingBottom="13dp"
+		style="@android:style/Widget.Material.Light.Button.Borderless"
+		android:textColor="@android:color/black"/>
+
+</LinearLayout>

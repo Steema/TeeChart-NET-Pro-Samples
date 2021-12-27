@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<resources>
+    <string-array name="aspect">
+        <item>2D</item>
+        <item>3D</item>
+    </string-array>	
+	
+    <string-array name="zoom_styles">
+      <item>Classic</item>
+      <item>FullChart</item>
+      <item>InChart</item>
+    </string-array>
+</resources>	

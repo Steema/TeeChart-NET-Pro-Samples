@@ -1,0 +1,134 @@
+<resources>
+  <string name="app_name">TeeChart Features</string>
+  <string name="navigation_drawer_open">Open navigation drawer</string>
+  <string name="navigation_drawer_close">Close navigation drawer</string>
+  <string name="icon_search_text">Search</string>
+  <string name="icon_bottom_menu">More charts</string>
+
+  <string name="app_version">1.1</string>
+
+  <!-- Title for RecyclerViewer main windows (cardview) -->
+  
+  <string name="titleStdCharts">Standard Charts</string>
+  <string name="titleProCharts">Pro Charts</string>
+  <string name="titleCircularGauge">Circular Gauge</string>
+  <string name="titleMaps">Maps</string>
+  <string name="titleTreeMap">TreeMap</string>
+  <string name="titleKnobGauge">Knob Gauge</string>
+  <string name="titleClock">Clock</string>
+  <string name="titleOrganizational">Organizational</string>
+  <string name="titleNumericGauge">Numeric Gauge</string>
+  <string name="titleLinearGauge">Linear Gauge</string>
+  <string name="titleCalendar">Calendar</string>
+  <string name="titleTagCloud">TagCloud</string>
+  <string name="titleStdFunctions">Standard Functions</string>
+
+  <!-- Description for RecyclerViewer main windows (cardview) -->
+
+  <string name="descriptStdCharts">Show different simple chart types how lineals, bubbles or areas.</string>
+  <string name="descriptProCharts">Some charts like the Pyramid or Kagi. These have more customization and are more complex.</string>
+  <string name="descriptCircularGauge">CircularGauge provides a fully configurable and quick drawing circular gauge style.</string>
+  <string name="descriptMaps">Show a Map series which is a collection of polygon shapes and differents world maps.</string>
+  <string name="descriptTreeMap">Treemaps display hierarchical (tree-structured) data as a set of nested rectangles.</string>
+  <string name="descriptKnobGauge">Knob Guage uses a needle pointer but it also has a cap of larger radius that imitates a gear.</string>
+  <string name="descriptClock">The Clock series displays live watches. Multiple configuration parameters are available.</string>
+  <string name="descriptOrganizational">Organizational Charts display elements in hierarchical structures, such as Company and  Employers.</string>
+  <string name="descriptNumericGauge">Show a numeric data using a gauge.</string>
+  <string name="descriptLinearGauge">Dispay numeric data using a linear element.</string>
+  <string name="descriptCalendar">Month-View calendar for selecting dates in order to display different activities.</string>
+  <string name="descriptTagCloud">Display different texts in a cloud with a font whose colour and size is relative to that frequency.</string>
+  <string name="descriptStdFunctions">Some functions to charts which are considered basics.</string>
+  <string name="descriptProFunctions">More complicated functions for statistical sectors for example financial field.</string>
+
+  <!-- MasterView Items Text -->
+
+  <string name="masterItemHome">Home</string>
+  <string name="masterItemWeb">Web</string>
+  <string name="masterItemGithub">GitHub</string>
+  <string name="masterItemDocumentation">Documentation</string>
+  <string name="masterItemSettings">Settings</string>
+  <string name="masterItemAboutus">About us</string>
+
+  <!-- Charts Name -->
+
+  <string name="lineChartName">Line</string>
+  <string name="columnbarChartName">Column Bar</string>
+  <string name="areaChartName">Area</string>
+  <string name="pieChartName">Pie</string>
+  <string name="fstlineChartName">Fast Line</string>
+  <string name="hAreaChartName">Horizontal Area</string>
+  <string name="hBarChartName">Horizontal Bar</string>
+  <string name="hLineChartName">Horizontal Line</string>
+  <string name="donutChartName">Donut</string>
+  <string name="bubbleChartName">Bubble</string>
+  <string name="ganttChartName">Gantt</string>
+  <string name="shapeChartName">Shape</string>
+  <string name="pointscatterChartName">Point/Scatter</string>
+  <string name="interpolatingLineChartName">Interpolating Line</string>
+  <string name="barStylesChartName">Bar Styles</string>
+  <string name="barGradientChartName">Bar Gradient</string>
+  <string name="stackAreaChartName">Stack Area</string>
+  <string name="multiPiesChartName">Multiple Pies</string>
+  <string name="semiPieChartName">Semi Pie</string>
+  <string name="realTimeChartName">Real Time</string>
+  <string name="semiDonutChartName">Semi Donut</string>
+  <string name="transBubbleChartName">Bubble Transparent</string>
+  <string name="arrowChartName">Arrow</string>
+  <string name="polarChartName">Polar</string>
+  <string name="polarBarChartName">Polar Bar</string>
+  <string name="radarChartName">Radar</string>
+  <string name="pyramidChartName">Pyramid</string>
+  <string name="invertedPyramidChartName">Inverted Pyramid</string>
+  <string name="candleChartName">Candle</string>
+  <string name="histogramChartName">Histogram</string>
+  <string name="horizHistogramChartName">Horiz Histogram</string>
+  <string name="errorChartName">Error</string>
+  <string name="errorBarChartName">Error Bar</string>
+  <string name="funnelChartName">Funnel</string>
+  <string name="smithChartName">Smith</string>
+  <string name="bezierChartName">Bezier</string>
+  <string name="highLowChartName">HighLow</string>
+  <string name="speedTimeChartName">Speed Time</string>
+  <string name="waterfallChartName">Waterfall</string>
+  <string name="volumeChartName">Volume</string>
+  <string name="colorGridChartName">Color Grid</string>
+  <string name="circularGaugeChartName">Circular Gauge</string>
+  <string name="carFuelChartName">Car Fuel</string>
+  <string name="customHandChartName">Custom Hand</string>
+  <string name="accelerationChartName">Acceleration</string>
+  <string name="mapGISChartName">Map GIS</string>
+  <string name="worldMapChartName">World Map</string>
+  <string name="treeMapChartName">TreeMap</string>
+  <string name="knobGaugeChartName">Knob Gauge</string>
+  <string name="temperaturaKnobChartName">Temperature Knob</string>
+  <string name="compassChartName">Compass</string>
+  <string name="basicClockChartName">Basic Clock</string>
+  <string name="customClockChartName">Custom Clock</string>
+  <string name="organizationalChartName">Organizational</string>
+  <string name="numericGaugeChartName">Numeric Gauge</string>
+  <string name="linearGaugeChartName">Linear Gauge</string>
+  <string name="scalesChartName">Scales</string>
+  <string name="sublinesChartName">SubLines</string>
+  <string name="mobileBatteryChartName">Mobile Battery</string>
+  <string name="calendarChartName">Calendar</string>
+  <string name="specialDatesChartName">Special Dates</string>
+  <string name="tagCloudChartName">TagCloud</string>
+  <string name="addFuncChartName">Add</string>
+  <string name="substractFuncChartName">Substract</string>
+  <string name="multiplyFuncChartName">Multiply</string>
+  <string name="divideFuncChartName">Divide</string>
+  <string name="countFuncChartName">Count</string>
+  <string name="averageFuncChartName">Average</string>
+  <string name="highFuncChartName">High</string>
+  <string name="lowFuncChartName">Low</string>
+  <string name="medianFuncChartName">Median Function</string>
+  <string name="percentChangeFuncChartName">Percent Change</string>
+
+  <string name="hintSearchView">Search a chart</string>
+  
+  <!-- About us -->
+  
+  <string name="aboutUsMainText">Steema Software SL company (formerly teeMach) was formed to help meet the growing demand for the then shareware version TeeChart 1.0 VCL for Delphi 1.0 developed by current CEO David Berneda in 1995. TeeChart has become the undisputed Chart leader for Delphi, renowned by the industry and winning the Informant Group\'s Delphi Best Charting and Mapping Tool for seven consecutive years. It is still the only native VCL charting tool to have been chosen by Embarcadero (formerly Borland) to be bundled in the Delphi, C++ and HTML5 Builder RAD Studio IDEs. Other successful products have followed, supporting a wide set of development environments. TeeChart may be used in Microsoft\'s Visual Studio, Office and .NET and in Java and PHP development platforms or as native Javascript-HTML5. Steema\'s dedication to customer service remains firmly at the forefront, Steema continues to offer customers one of the most comprehensive, cost-value support environments in the industry.</string>
+  <string name="steemaDescription">Steema Software has been providing developers with tools for charting since 1995. The TeeChart for Android Library forms part of ongoing development to make available for Android application development all of the carthing features thjat form part of the charting features that form part of the TeeChart Libraries. This preview application shows a few of possibilities available to developers. The Pie style shows values displayed as slices of a cheese or pie. Options include 2D and 3D, mobing the slices, marks, patterns, ellipse shape, border, shadow, grouping of small values, partial pies, multiple pies, etc.</string>  
+
+</resources>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+  <group android:checkableBehavior="single">
+      <item
+          android:id="@+id/nav_home"
+          android:icon="@drawable/ic_menu_home"
+          android:title="@string/masterItemHome" />
+  </group>
+
+  <item android:title="Information">
+      <menu>
+          <item
+              android:id="@+id/nav_web"
+              android:icon="@drawable/ic_menu_external"
+              android:title="@string/masterItemWeb" />
+          <item
+              android:id="@+id/nav_github"
+              android:icon="@drawable/iconGithub"
+              android:title="@string/masterItemGithub" />
+        <item
+              android:id="@+id/nav_documentation"
+              android:icon="@drawable/ic_menu_help"
+              android:title="@string/masterItemDocumentation" />
+      </menu>
+  </item>
+
+  
+
+    <item android:title="More">
+      <group android:checkableBehavior="single">
+        <menu>
+          <item
+              android:id="@+id/nav_aboutus"
+              android:icon="@drawable/ic_menu_info"
+              android:title="@string/masterItemAboutus" />
+        </menu>
+      </group>
+    </item>
+
+</menu>

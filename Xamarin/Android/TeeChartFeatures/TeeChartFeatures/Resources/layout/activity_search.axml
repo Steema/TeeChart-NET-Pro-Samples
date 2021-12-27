@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:background="@android:color/transparent">
+
+	
+
+	<include layout="@layout/content_search"/>
+	
+	<!--
+
+	<com.arlib.floatingsearchview.FloatingSearchView
+		android:id="@+id/floating_search_view"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		app:floatingSearch_searchBarMarginLeft="2dp"
+		app:floatingSearch_searchBarMarginTop="2dp"
+		app:floatingSearch_searchBarMarginRight="2dp"
+		app:floatingSearch_searchHint="Search..."
+		app:floatingSearch_suggestionsListAnimDuration="250"
+		app:floatingSearch_showSearchKey="false"
+		app:floatingSearch_leftActionMode="showHamburger"
+		app:floatingSearch_close_search_on_keyboard_dismiss="true"/>
+
+	-->
+
+	<include layout="@layout/custom_searchview"/> -->
+
+	<android.support.design.widget.AppBarLayout
+		android:id="@+id/topbarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/searchbar_height"
+		android:background="@android:color/transparent"
+		app:elevation="0dp">		
+
+    </android.support.design.widget.AppBarLayout>
+
+	-->
+
+</FrameLayout>

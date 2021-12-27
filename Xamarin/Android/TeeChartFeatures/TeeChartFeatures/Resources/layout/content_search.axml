@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+	android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:background="@android:color/transparent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/app_bar_main">
+
+	<ScrollView android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:scrollbars="vertical"
+		android:scrollIndicators="bottom|top">
+
+		<android.support.v7.widget.RecyclerView
+			android:id="@+id/recyclerViewSearch"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:paddingTop="@dimen/searchbar_height"
+			android:scrollbars="none"/>
+
+	</ScrollView>
+
+</LinearLayout>

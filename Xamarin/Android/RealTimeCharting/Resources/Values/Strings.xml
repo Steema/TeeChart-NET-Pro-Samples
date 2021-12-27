@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Start">Start Animation</string>
+    <string name="Stop">Stop Animation</string>
+    <string name="ApplicationName">RealTimeCharting</string>
+</resources>

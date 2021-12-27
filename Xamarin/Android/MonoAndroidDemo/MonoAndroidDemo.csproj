@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BD366DAA-ED66-411B-B18B-8FB048AA28BF}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MonoAndroidDemo</RootNamespace>
+    <AssemblyName>MonoAndroidDemo</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <AndroidApplication>true</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <DeployExternal>False</DeployExternal>
+    <AndroidSupportedAbis>armeabi%3barmeabi-v7a</AndroidSupportedAbis>
+    <AndroidStoreUncompressedFileExtensions />
+    <MandroidI18n />
+    <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
+    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>Full</AndroidLinkMode>
+    <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
+    <AndroidLinkSkip />
+    <EmbedAssembliesIntoApk>False</EmbedAssembliesIntoApk>
+    <BundleAssemblies>False</BundleAssemblies>
+    <AndroidCreatePackagePerAbi>False</AndroidCreatePackagePerAbi>
+    <AndroidSupportedAbis>armeabi,armeabi-v7a,x86,x86_64</AndroidSupportedAbis>
+    <AndroidStoreUncompressedFileExtensions />
+    <MandroidI18n />
+    <JavaMaximumHeapSize />
+    <JavaOptions />
+    <MonoDroidExtraArgs />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+    <AndroidLinkMode>Full</AndroidLinkMode>
+    <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+    <BundleAssemblies>False</BundleAssemblies>
+    <AndroidCreatePackagePerAbi>False</AndroidCreatePackagePerAbi>
+    <Debugger>Xamarin</Debugger>
+    <AotAssemblies>False</AotAssemblies>
+    <EnableLLVM>False</EnableLLVM>
+    <AndroidEnableMultiDex>False</AndroidEnableMultiDex>
+    <EnableProguard>False</EnableProguard>
+    <DebugSymbols>False</DebugSymbols>
+    <AndroidSupportedAbis>armeabi,armeabi-v7a,x86,x86_64,arm64-v8a</AndroidSupportedAbis>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Android" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Xamarin.Android.Support.Animated.Vector.Drawable, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Xamarin.Android.Support.Animated.Vector.Drawable.23.4.0\lib\MonoAndroid403\Xamarin.Android.Support.Animated.Vector.Drawable.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Design, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Xamarin.Android.Support.Design.23.4.0\lib\MonoAndroid43\Xamarin.Android.Support.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v4, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Xamarin.Android.Support.v4.23.4.0\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.AppCompat, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Xamarin.Android.Support.v7.AppCompat.23.4.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.RecyclerView, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Xamarin.Android.Support.v7.RecyclerView.23.4.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.RecyclerView.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Vector.Drawable, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Xamarin.Android.Support.Vector.Drawable.23.4.0\lib\MonoAndroid403\Xamarin.Android.Support.Vector.Drawable.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.cs" />
+    <Compile Include="Activity1.cs" />
+    <Compile Include="BaseActivity.cs" />
+    <Compile Include="ChartEditor.cs" />
+    <Compile Include="ChartView.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SeriesAdapter.cs" />
+    <Compile Include="ListItem.cs" />
+    <Compile Include="TChartApplication.cs" />
+    <Compile Include="ThemesEditor.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Assets\AboutAssets.txt" />
+    <None Include="Properties\AndroidManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
+    <AndroidResource Include="Resources\Layout\Editor.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Values\Arrays.xml" />
+    <AndroidResource Include="Resources\Layout\toolbar.axml" />
+    <AndroidResource Include="Resources\Layout\Chart.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\Main.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\ListItem.axml" />
+    <AndroidResource Include="Resources\Drawable\area.png" />
+    <AndroidResource Include="Resources\Drawable\arrow.png" />
+    <AndroidResource Include="Resources\Drawable\bar.png" />
+    <AndroidResource Include="Resources\Drawable\bar3D.png" />
+    <AndroidResource Include="Resources\Drawable\barjoin.png" />
+    <AndroidResource Include="Resources\Drawable\bezier.png" />
+    <AndroidResource Include="Resources\Drawable\box.png" />
+    <AndroidResource Include="Resources\Drawable\calendar.png" />
+    <AndroidResource Include="Resources\Drawable\candle.png" />
+    <AndroidResource Include="Resources\Drawable\circulargauge.png" />
+    <AndroidResource Include="Resources\Drawable\clock.png" />
+    <AndroidResource Include="Resources\Drawable\colorgrid.png" />
+    <AndroidResource Include="Resources\Drawable\contour.png" />
+    <AndroidResource Include="Resources\Drawable\darvas.png" />
+    <AndroidResource Include="Resources\Drawable\donut.png" />
+    <AndroidResource Include="Resources\Drawable\error.png" />
+    <AndroidResource Include="Resources\Drawable\errorbar.png" />
+    <AndroidResource Include="Resources\Drawable\errorpoint.png" />
+    <AndroidResource Include="Resources\Drawable\fastline.png" />
+    <AndroidResource Include="Resources\Drawable\funnel.png" />
+    <AndroidResource Include="Resources\Drawable\gantt.png" />
+    <AndroidResource Include="Resources\Drawable\highlow.png" />
+    <AndroidResource Include="Resources\Drawable\histogram.png" />
+    <AndroidResource Include="Resources\Drawable\horizarea.png" />
+    <AndroidResource Include="Resources\Drawable\horizbar.png" />
+    <AndroidResource Include="Resources\Drawable\horizbox.png" />
+    <AndroidResource Include="Resources\Drawable\horizhistogram.png" />
+    <AndroidResource Include="Resources\Drawable\horizline.png" />
+    <AndroidResource Include="Resources\Drawable\isosurface.png" />
+    <AndroidResource Include="Resources\Drawable\kagi.png" />
+    <AndroidResource Include="Resources\Drawable\knobgauge.png" />
+    <AndroidResource Include="Resources\Drawable\line.png" />
+    <AndroidResource Include="Resources\Drawable\lineargauge.png" />
+    <AndroidResource Include="Resources\Drawable\linepoint.png" />
+    <AndroidResource Include="Resources\Drawable\map.png" />
+    <AndroidResource Include="Resources\Drawable\numericgauge.png" />
+    <AndroidResource Include="Resources\Drawable\pie.png" />
+    <AndroidResource Include="Resources\Drawable\points.png" />
+    <AndroidResource Include="Resources\Drawable\polar.png" />
+    <AndroidResource Include="Resources\Drawable\polarbar.png" />
+    <AndroidResource Include="Resources\Drawable\PolarGrid.png" />
+    <AndroidResource Include="Resources\Drawable\pyramid.png" />
+    <AndroidResource Include="Resources\Drawable\radar.png" />
+    <AndroidResource Include="Resources\Drawable\renko.png" />
+    <AndroidResource Include="Resources\Drawable\shape.png" />
+    <AndroidResource Include="Resources\Drawable\smith.png" />
+    <AndroidResource Include="Resources\Drawable\surface.png" />
+    <AndroidResource Include="Resources\Drawable\tagcloud.png" />
+    <AndroidResource Include="Resources\Drawable\ternary.png" />
+    <AndroidResource Include="Resources\Drawable\tower.png" />
+    <AndroidResource Include="Resources\Drawable\vector3D.png" />
+    <AndroidResource Include="Resources\Drawable\volume.png" />
+    <AndroidResource Include="Resources\Drawable\volumepipe.png" />
+    <AndroidResource Include="Resources\Drawable\waterfall.png" />
+    <AndroidResource Include="Resources\Drawable\windrose.png" />
+    <AndroidResource Include="Resources\Drawable\logo57x57.png" />
+    <AndroidResource Include="Resources\Values\Strings.xml" />
+    <AndroidResource Include="Resources\Drawable\Icon.png" />
+    <AndroidResource Include="Resources\Drawable\bubble.png" />
+    <AndroidResource Include="Resources\Drawable\points3D.png" />
+    <AndroidResource Include="Resources\Drawable\pointfigure.png" />
+    <AndroidResource Include="Resources\Drawable\orgseries.png" />
+    <AndroidResource Include="Resources\Drawable\verticallineargauge.png" />
+    <AndroidResource Include="Resources\Values\Styles.xml" />
+    <AndroidResource Include="Resources\Values-v21\Styles.xml" />
+    <AndroidResource Include="Resources\Layout\nav_header.axml" />
+    <AndroidResource Include="Resources\menu\nav_menu.xml" />
+    <AndroidResource Include="Resources\Drawable\ic_fiber_new_black_24dp.png" />
+    <AndroidResource Include="Resources\Drawable\ic_open_in_browser_black_24dp.png" />
+    <AndroidResource Include="Resources\Drawable\ic_web_black_24dp.png" />
+    <AndroidResource Include="Resources\Drawable\ic_info_black_24dp.png" />
+    <AndroidResource Include="Resources\Drawable\ic_email_black_24dp.png" />
+    <AndroidResource Include="Resources\Drawable\ic_call_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_menu.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_menu.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_menu.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_menu.png" />
+    <AndroidResource Include="Resources\Layout\about.axml" />
+    <AndroidResource Include="Resources\Drawable\logo_teechart_white2.png" />
+    <AndroidResource Include="Resources\Drawable\logo_steema.png" />
+    <AndroidResource Include="Resources\Drawable\logo_google_plus.png" />
+    <AndroidResource Include="Resources\Drawable\logo_facebook.png" />
+    <AndroidResource Include="Resources\Drawable\logo_twitter.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+     Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Sources\TeeChart.Android\TeeChart.Android.csproj">
+      <Project>{33144B02-758B-4D56-BA12-E9DDC4D47E03}</Project>
+      <Name>TeeChart.Android</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>
