@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">TeeChart for NET5</h1>
+    <p>Example using TeeChart Net5 components</p>
+</div>
+
+<div class="container">
+	<p><br /><br /></p>
+	<h3>TeeChart for .NET5</h3>
+	<p>
+		TeeChart for .NET 5 is the natural evolutionary step from TeeChart for .NET Frameworks 2 to 4. The most significant difference is that there is no
+		dependency on Microsoft's System.Drawing and GDI+ image rendering library. The two rendering examples included here are:<br />
+		<br /><strong><a href="#image">i)</strong> a PNG export</a> format of TeeChart using the <a href="https://github.com/SixLabors/ImageSharp.Drawing" target="_blank">SixLabors ImageSharp</a>
+		Image rendering engine.
+		<br /><br />and<br />
+		<br /><a href="#html5"><strong>ii)</strong> a native Javascript HTML5</a> live chart that uses Steema's own <a href="https://www.steema.com/product/html5" target="_blank">TeeChart for Javascript Charting Library</a>. This rendering option uses no image rendering methods and
+	has no dependency therefore, on any Image library.
+</p>
+</div>
+
+
+<div class="container">
+<p><br /><br /></p>
+<h3><a name="image"></a>i) Image</h3>
+    <ul class="navbar-nav flex-grow-1">
+        <li class="nav-item">
+            <!--<a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="GetChart">GetChart</a>-->
+        </li>
+        <iframe id="fr4" src="/Home/GetChart?width=1000&height=600" style="border:none;  width:1050px; height:650px;"></iframe>
+    </ul>
+</div>
+<br><br>
+<div class="container">
+<p><br /><br /></p>
+<h3><a name="html5">ii) Javascript/HTML5</h3>
+    <ul class="navbar-nav flex-grow-1">
+        <li class="nav-item">
+            <!--<a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="GetHTML5Chart">GetChart</a>-->
+        </li>
+        <iframe id="fr4" src="/Home/GetHTML5Chart?width=1000&height=600&type=1" style="border:none;  width:1050px; height:650px;"></iframe>
+    </ul>
+</div>
