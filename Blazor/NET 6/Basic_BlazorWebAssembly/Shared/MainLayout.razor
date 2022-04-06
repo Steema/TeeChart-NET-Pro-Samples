@@ -1,0 +1,64 @@
+﻿@inherits LayoutComponentBase
+@using BlazorWebAssemblyProg.Data;
+@inject UtilService aUtils;
+
+<Meta http-equiv=@contentSecKey content=@contentCntKey />
+
+<Title Value="@aTitle"></Title>
+
+<Meta name="a10" /> <!--CSP hasloaded verification-->
+
+  <div class="page">
+    <div class="sidebar">
+      <NavMenu />
+    </div>
+
+    <div class="main">
+      <div class="top-row px-4">
+        <a href="http://blazor.net" target="_blank" class="ml-md-auto">About</a>
+      </div>
+
+      <div class="content px-4">
+        @Body
+      </div>
+    </div>
+  </div>
+
+@code
+{
+  string aTitle;
+  string contentSecKey;
+  string contentCntKey;
+
+  private static Action callNonStaticFunction;
+
+  //protected override void OnInitialized()
+  protected override async Task OnInitializedAsync()
+  {
+    Guid g = Guid.NewGuid();
+    string GuidString = Convert.ToBase64String(g.ToByteArray());
+    GuidString = GuidString.Replace("=", "");
+    GuidString = GuidString.Replace("+", "");
+
+    aTitle = "a page title";
+
+    aUtils.SetKeyValue(GuidString);
+
+    string kCode = aUtils.KeyCode;
+
+    contentSecKey = "Content-Security-Policy";
+
+    contentCntKey = "base-uri 'self';";
+    contentCntKey += "block-all-mixed-content;";
+    contentCntKey += "object-src 'none';";
+    contentCntKey += "script-src 'self'";
+    contentCntKey += "         'nonce-" + kCode + "'";
+    contentCntKey += "         'sha256-v8v3RKRPmN4odZ1CWM5gw80QKPCCWMcpNeOmimNL2AA='";
+    contentCntKey += "         'unsafe-eval';";
+    contentCntKey += "style-src 'self'";
+    contentCntKey += "         'unsafe-inline';";
+    contentCntKey += "upgrade-insecure-requests;";
+
+    StateHasChanged();
+  }
+}
