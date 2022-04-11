@@ -20,7 +20,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.0" PrivateAssets="all" />
     <PackageReference Include="SixLabors.ImageSharp" Version="2.1.0" />
     <PackageReference Include="SixLabors.ImageSharp.Drawing" Version="1.0.0-beta14" />
-    <PackageReference Include="Steema.TeeChart.NET.Blazor" Version="6.2022.4.5" />
+    <PackageReference Include="Steema.TeeChart.NET.Blazor" Version="6.2022.4.8" />
   </ItemGroup>
 
 </Project>
