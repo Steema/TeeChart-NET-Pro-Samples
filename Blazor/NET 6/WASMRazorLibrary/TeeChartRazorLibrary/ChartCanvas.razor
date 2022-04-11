@@ -1,0 +1,75 @@
+﻿﻿<canvas id="teeCanvas" width="1400" height="300" style="border: 1px solid #808080;">
+  This browser does not seem to support HTML5 Canvas.
+</canvas>
+
+
+@code {
+  // use the above fixed tag with <ThisLibraryName.ChartCanvas /> on the html page
+  //
+  // use following code calls for multiple charts on page or alternative to fixed canvas tag.
+  // call with @((MarkupString)(canvasTag)) page-tag where code behind:
+  //
+  //  private ChartJsInterop jsChart;
+  //  private ChartCanvas cCanvas;
+  //  private string canvasTag;
+  //
+  //  //call in OnInitialized():
+  //  jsChart = new(JS);
+  //  cCanvas = new ChartCanvas();
+  //  canvasTag = cCanvas.canvasTag;
+  //
+  //  await jsChart.SetChart(cCanvas.canvasName);
+  //  //...add further chart code
+  //
+
+  public string canvasName;
+  public string canvasTag;
+
+  public ChartCanvas()
+  {
+     setCanvasName();
+  }
+
+  protected void setTag(string aName)
+  {
+    canvasName = aName;
+    canvasTag = "<canvas id=\"" + canvasName + "\" width=\"1400\" height=\"300\" style=\"border: 1px solid #808080;\">This browser does not seem to support HTML5 Canvas.</canvas>";
+  }
+
+  public void setCanvasName(string aName)
+  {
+    setTag(aName);
+  }
+
+  public void setCanvasName() //auto name
+  {
+    setTag(System.Guid.NewGuid().ToString());
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

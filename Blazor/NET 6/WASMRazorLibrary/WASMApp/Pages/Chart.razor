@@ -1,0 +1,98 @@
+﻿@page "/chart"
+@using TeeChartRazorLibrary
+@inject IJSRuntime JS
+@implements IDisposable
+
+<h2>TeeChart Razor Library - Chart array</h2>
+
+<!--add canvases-->
+<p>runtime canvases</p>
+@((MarkupString)(canvasTags))
+
+@code {
+  private ChartJsInterop jsChart;
+  private string otherCanvasName;
+  private ChartCanvas cCanvas;
+  private ChartCanvas[] canvases;
+  private string canvasTags;
+
+
+  T[] InitializeArray<T>(int length) where T : new()
+  {
+    T[] array = new T[length];
+    for (int i = 0; i < length; ++i)
+    {
+      array[i] = new T();
+    }
+
+    return array;
+  }
+
+  protected string getCanvasTags()
+  {
+    System.Text.StringBuilder sb = new System.Text.StringBuilder();
+
+    foreach (ChartCanvas cv in canvases)
+      sb.Append(cv.canvasTag);
+
+    string result = sb.ToString();
+
+    return result;
+
+  }
+
+  protected override void OnInitialized()
+  {
+    otherCanvasName = "chartCanvas2";
+
+    jsChart = new(JS);
+
+    cCanvas = new ChartCanvas();
+
+    canvases = InitializeArray<ChartCanvas>(3);
+
+    foreach (ChartCanvas cv in canvases)
+      cv.setCanvasName();
+
+    canvasTags = getCanvasTags();
+
+    ShowChart();
+  }
+
+  private async Task ShowChart()
+  {
+    List<Tuple<double, double>> data = new List<Tuple<double, double>>();
+
+    async Task FillCharts()
+    {
+
+      for (int i = 0; i < canvases.Length; i++)
+      {
+        await jsChart.SetChart(canvases[i].canvasName);
+
+        await jsChart.SetChartTitle("ChartType example " + (i+1));
+
+        if (i==0)
+          await jsChart.AddSeries("Bar");
+        else if (i==1)
+          await jsChart.AddSeries("Area");
+        else
+          await jsChart.AddSeries("Line");
+
+        await jsChart.AddData(0, data);
+        await jsChart.DrawChart();
+      }
+    }
+
+    Random rnd = new Random();
+
+    data.Add(new Tuple<double, double>(0, rnd.Next(20)));
+    data.Add(new Tuple<double, double>(1, rnd.Next(20)));
+    data.Add(new Tuple<double, double>(2, rnd.Next(20)));
+
+    await FillCharts();
+
+  }
+
+  public void Dispose() => jsChart?.DisposeAsync();
+}

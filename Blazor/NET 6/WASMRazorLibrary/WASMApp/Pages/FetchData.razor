@@ -1,0 +1,96 @@
+﻿@page "/fetchdata"
+@using TeeChartRazorLibrary
+@using WASMApp.Shared
+@inject HttpClient Http
+@inject IJSRuntime JS
+
+<h2>Weather forecast - TeeChart linked data</h2>
+
+<p>This component demonstrates fetching data from the server.</p>
+
+@if (forecasts == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Temp. (C)</th>
+                <th>Temp. (F)</th>
+                <th>Summary</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var forecast in forecasts)
+            {
+                <tr>
+                    <td>@forecast.Date.ToShortDateString()</td>
+                    <td>@forecast.TemperatureC</td>
+                    <td>@forecast.TemperatureF</td>
+                    <td>@forecast.Summary</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    @((MarkupString)(canvasTag))
+}
+
+@code {
+    private WeatherForecast[] forecasts;
+
+    private ChartJsInterop jsChart;
+    private Random rnd = new Random();
+    private int count = -1;
+    private ChartCanvas cCanvas;
+    private string canvasTag;
+
+    protected override async Task OnInitializedAsync()
+    {
+        jsChart = new(JS);
+        cCanvas = new ChartCanvas();
+        canvasTag = cCanvas.canvasTag; //important, create html tags early in load cycle.
+
+        forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("sample-data/weather.json");
+
+        ShowChart();
+    }
+
+    private async Task ShowChart()
+    {
+
+        Utils utils = new Utils();
+
+        await jsChart.SetChart(cCanvas.canvasName);
+        await jsChart.SetChartTitle("Linked data example");
+        await jsChart.AddSeries("Bar");
+
+        List<Tuple<double, double>> data = new List<Tuple<double, double>>();
+
+        foreach (WeatherForecast forecast in forecasts)
+        {
+            int aDate = (int)Math.Truncate(forecast.Date.ToOADate()); //day stamp
+
+            double theDate = utils.getDate(aDate);
+
+            data.Add(new Tuple<double, double>(theDate, forecast.TemperatureC));
+		}
+
+        await jsChart.AddDateData(0, data);
+        await jsChart.DrawChart();
+    }
+
+    public class WeatherForecast
+    {
+        public DateTime Date { get; set; }
+
+        public int TemperatureC { get; set; }
+
+        public string Summary { get; set; }
+
+        public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
+    }
+}

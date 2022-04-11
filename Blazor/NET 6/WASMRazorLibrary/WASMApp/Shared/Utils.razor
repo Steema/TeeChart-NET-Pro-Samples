@@ -1,0 +1,24 @@
+﻿@using System;
+
+<h3>Utils</h3>
+
+@code {
+
+    public double MilliTimeStamp(DateTime d2)
+    {
+        DateTime d1 = new DateTime(1970, 1, 1);
+
+        TimeSpan ts = new TimeSpan(d2.Ticks - d1.Ticks);
+
+        return ts.TotalMilliseconds;
+    }
+
+    /// <summary>
+    /// Converting to Javascript timestamp
+    /// </summary>
+    public double getDate(double dateDouble)
+    {
+        return MilliTimeStamp(System.DateTime.FromOADate(dateDouble));
+    }
+
+}

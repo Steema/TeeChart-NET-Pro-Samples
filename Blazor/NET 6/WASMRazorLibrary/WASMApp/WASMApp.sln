@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31919.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WASMApp", "WASMApp.csproj", "{5293A1CB-CFA9-4327-ACE0-E8C0B4CB6072}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TeeChartRazorLibrary", "..\TeeChartRazorLibrary\TeeChartRazorLibrary.csproj", "{5269D437-6B09-4D79-A7A7-F80BEE287129}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5293A1CB-CFA9-4327-ACE0-E8C0B4CB6072}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5293A1CB-CFA9-4327-ACE0-E8C0B4CB6072}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5293A1CB-CFA9-4327-ACE0-E8C0B4CB6072}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5293A1CB-CFA9-4327-ACE0-E8C0B4CB6072}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5269D437-6B09-4D79-A7A7-F80BEE287129}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5269D437-6B09-4D79-A7A7-F80BEE287129}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5269D437-6B09-4D79-A7A7-F80BEE287129}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5269D437-6B09-4D79-A7A7-F80BEE287129}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6C7916ED-E00D-47C7-9044-2C21448B1829}
+	EndGlobalSection
+EndGlobal

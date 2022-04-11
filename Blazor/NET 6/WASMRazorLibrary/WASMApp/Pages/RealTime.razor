@@ -1,0 +1,50 @@
+﻿@page "/realtime"
+@using TeeChartRazorLibrary
+@inject IJSRuntime JS
+@implements IDisposable
+
+
+  <h2>TeeChart Razor Library - Dynamic data</h2>
+  @((MarkupString)(canvasTag))
+
+@code {
+
+  private System.Timers.Timer timer;
+  private ChartJsInterop jsChart;
+  private Random rnd = new Random();
+  private int count = -1;
+  private ChartCanvas cCanvas;
+  private string canvasTag;
+
+  protected override async Task OnInitializedAsync()
+  {
+    jsChart = new(JS);
+    cCanvas = new ChartCanvas();
+    canvasTag = cCanvas.canvasTag; //important, create html tags early in load cycle.
+    
+    await jsChart.SetChart(cCanvas.canvasName);
+
+    await jsChart.SetChartTitle("Realtime data example");
+
+    await jsChart.AddSeries("Line");
+    await jsChart.SetAxisMinMax("Left", 0, 1000);
+    await jsChart.DrawChart();
+    timer = new System.Timers.Timer();
+    timer.Elapsed += Elapsed;
+    timer.Interval = 100;
+    timer.Start();
+  }
+
+  private void Elapsed(Object source, System.Timers.ElapsedEventArgs e)
+  {
+    count++;
+    Task.WaitAll(jsChart.AppendData(0, new Tuple<double, double>(count, rnd.Next(0, 1000))).AsTask(), jsChart.SetAxisMinMax("Bottom", count - 10, count).AsTask(), jsChart.DrawChart().AsTask());
+  }
+
+  public void Dispose()
+  {
+    jsChart?.DisposeAsync();
+    timer.Stop();
+  }
+
+}
