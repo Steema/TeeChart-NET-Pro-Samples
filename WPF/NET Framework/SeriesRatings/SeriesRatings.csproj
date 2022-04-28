@@ -83,7 +83,13 @@
       <HintPath>..\packages\MahApps.Metro.2.4.9\lib\net46\MahApps.Metro.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Xaml.Behaviors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Xaml.Behaviors.Wpf.1.1.37\lib\net45\Microsoft.Xaml.Behaviors.dll</HintPath>
+      <HintPath>..\packages\Microsoft.Xaml.Behaviors.Wpf.1.1.39\lib\net45\Microsoft.Xaml.Behaviors.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.1.50.5147\lib\net20\PdfSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp.Charting, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.1.50.5147\lib\net20\PdfSharp.Charting.dll</HintPath>
     </Reference>
     <Reference Include="RestSharp, Version=106.13.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
       <HintPath>..\packages\RestSharp.106.13.0\lib\net452\RestSharp.dll</HintPath>
@@ -92,6 +98,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml" />
@@ -103,14 +110,14 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
-    <Reference Include="TeeChart, Version=4.2021.11.2, Culture=neutral, PublicKeyToken=9c8126276c77bdb7, processorArchitecture=MSIL">
-      <HintPath>..\packages\Steema.TeeChart.NET.4.2021.11.2\lib\net40\TeeChart.dll</HintPath>
+    <Reference Include="TeeChart, Version=4.2022.4.26, Culture=neutral, PublicKeyToken=9c8126276c77bdb7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Steema.TeeChart.NET.4.2022.4.26\lib\net40\TeeChart.dll</HintPath>
     </Reference>
-    <Reference Include="TeeChart.WPF, Version=4.2021.11.2, Culture=neutral, PublicKeyToken=98e8c3f289a4e286, processorArchitecture=MSIL">
-      <HintPath>..\packages\Steema.TeeChart.NET.4.2021.11.2\lib\net40\TeeChart.WPF.dll</HintPath>
+    <Reference Include="TeeChart.WPF, Version=4.2022.4.26, Culture=neutral, PublicKeyToken=98e8c3f289a4e286, processorArchitecture=MSIL">
+      <HintPath>..\packages\Steema.TeeChart.NET.4.2022.4.26\lib\net40\TeeChart.WPF.dll</HintPath>
     </Reference>
-    <Reference Include="TeeChart.Xaml.WPF, Version=4.2021.11.2, Culture=neutral, PublicKeyToken=9406d226170aa089, processorArchitecture=MSIL">
-      <HintPath>..\packages\Steema.TeeChart.NET.4.2021.11.2\lib\net40\TeeChart.Xaml.WPF.dll</HintPath>
+    <Reference Include="TeeChart.Xaml.WPF, Version=4.2022.4.26, Culture=neutral, PublicKeyToken=9406d226170aa089, processorArchitecture=MSIL">
+      <HintPath>..\packages\Steema.TeeChart.NET.4.2022.4.26\lib\net40\TeeChart.Xaml.WPF.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />

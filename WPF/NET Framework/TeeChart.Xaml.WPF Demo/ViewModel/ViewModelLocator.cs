@@ -9,18 +9,16 @@ namespace XamlWPFDemo.ViewModel
 {
   public class ViewModelLocator
   {
-    public MainViewModel Main => ServiceLocator.Current.GetInstance<MainViewModel>();
+    public MainViewModel Main => SimpleIoc.Default.GetInstance<MainViewModel>();
 
     public BindingObservableCollectionViewModel BindingObservableCollectionViewModel
-      => ServiceLocator.Current.GetInstance<BindingObservableCollectionViewModel>();
+      => SimpleIoc.Default.GetInstance<BindingObservableCollectionViewModel>();
 
     public BindingDataPropertiesViewModel BindingDataPropertiesViewModel
-      => ServiceLocator.Current.GetInstance<BindingDataPropertiesViewModel>();
+      => SimpleIoc.Default.GetInstance<BindingDataPropertiesViewModel>();
 
     public ViewModelLocator()
     {
-      ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
-
       RegisterViewModels();
     }
 
