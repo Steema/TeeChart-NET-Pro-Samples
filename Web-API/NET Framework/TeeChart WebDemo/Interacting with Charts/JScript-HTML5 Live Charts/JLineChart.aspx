@@ -9,6 +9,26 @@
 		<meta content="C#" name="CODE_LANGUAGE">
 		<meta content="JavaScript" name="vs_defaultClientScript">
 		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
+
+		<script language="javascript">
+
+        var firstPaint = false;
+
+        //chart resize code
+        function modifyWindowSize() {
+            firstPaint = true;
+            var chartCanvas = document.getElementById("WebChart1img");
+            chartCanvas.style.width = window.innerWidth * 0.8; //0.8 is arbitrary/optional
+            chartCanvas.style.height = window.innerHeight * 0.8;
+            WebChart1_chart.bounds.width = chartCanvas.style.width;
+            WebChart1_chart.bounds.height = chartCanvas.style.height;
+            drawWebChart1();
+        }
+
+        window.onresize = modifyWindowSize;
+
+        </script>
+
 	</HEAD>
 	<body>
 		<form id="Form1" method="post" runat="server">

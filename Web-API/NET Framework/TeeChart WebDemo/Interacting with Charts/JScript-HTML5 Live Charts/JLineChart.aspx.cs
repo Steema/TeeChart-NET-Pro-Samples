@@ -71,7 +71,11 @@ namespace WebDemo
             "  " + WebChart1.ClientID + "_chart.series.items[1].smooth = 1/3;",
             "  ",
             "  //sets appearance",
-            "  "+ WebChart1.ClientID + "_chart.applyPalette('seaWash');",            "  "+ WebChart1.ClientID + "_chart.applyTheme('minimal');",                          "  ",
+            "  "+ WebChart1.ClientID + "_chart.applyPalette('seaWash');",
+            "  "+ WebChart1.ClientID + "_chart.applyTheme('minimal');",
+
+
+                          "  ",
               "//tooltip",
               "tip=new Tee.ToolTip("+ WebChart1.ClientID + "_chart);",
               "tip.render=\"dom\";",
@@ -87,7 +91,14 @@ namespace WebDemo
               "      s =	s +'<br/><font face=\"verdana\" color=\"red\" size=\"1\">Value: '+series.data.values[index].toFixed(2)+'</font>';  ",
               "   return s;",
               "}",
-              "  "
+
+              "if( firstPaint==false) { ",    //resize code. call once from here on first load
+              "  firstPaint==true;",
+              "	 modifyWindowSize();",
+              "}",
+
+              "  "
+
       //example code - could add Points
       /*"  " + WebChart1.ClientID + "_chart.series.items[0].pointer.width = 20;",
       "  " + WebChart1.ClientID + "_chart.series.items[0].pointer.height = 20;",
