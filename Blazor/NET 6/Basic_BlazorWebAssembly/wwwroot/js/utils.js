@@ -1,6 +1,9 @@
 ﻿var chartNode;
 var firstLoad = false;
 
+var startX, startY, endX, endY; //abs coords
+var chartStartX, chartStartY, chartEndX, chartEndY; //chart coords
+
 function loadChart(chartJS, key) {
 
     //check allows load only if security tag exists on page
@@ -30,8 +33,10 @@ function loadChart(chartJS, key) {
 
 function loadExtras(aChart) {
 
+    aChart.scroll.enabled = false;
+
     if (firstLoad == false) {
-        aChart.axes.left.setMinMax(0, 50);
+        aChart.axes.left.setMinMax(0, 500);
 
         animation = new Tee.SeriesAnimation();
         animation.duration = 900;
@@ -52,6 +57,7 @@ function loadExtras(aChart) {
     //tooltip
     tip = new Tee.ToolTip(aChart);
     tip.findPoint = false;
+    tip.delay = 1000;
     tip.render = "dom";
     tip.domStyle = "padding-left:8px; padding-right:8px; padding-top:0px; padding-bottom:4px; margin-left:5px; margin-top:0px; ";
     tip.domStyle = tip.domStyle + "background-color:#FCFCFC; border-radius:4px 4px; color:#FFF; ";
@@ -82,7 +88,110 @@ function loadExtras(aChart) {
         }
         return s;
     }
+
+    aChart.zoom.enabled = false;
+    var canvas = {};
+    canvas.node = aChart.canvas; //document.getElementById('canvas');
+
+    aChart.mousemove = function (e) {
+        if (!canvas.isDrawing) {
+            return;
+        }
+
+        endX = e.x;
+        endY = e.y;
+
+        chartEndX = e.x;
+        chartEndY = e.y;
+
+        aChart.draw();
+    };
+    aChart.mousedown = function (e) {
+        canvas.isDrawing = true;
+
+        var pMove = Point(0, 0);
+        getOffset(e, pMove, aChart);
+
+        chartStartX = pMove.x;
+        chartStartY = pMove.y;
+
+        startX = pMove.x;
+        startY = pMove.y;
+    };
+    aChart.mouseup = function (e) {
+
+        var pMove = Point(0, 0);
+        getOffset(e, pMove, aChart);
+
+        chartEndX = pMove.x;
+        chartEndY = pMove.y;
+
+        canvas.isDrawing = false;
+    };
+    aChart.ondraw = function () {
+        var MSECSDAY = 86400000,
+            a = aChart.axes.bottom,
+            b = aChart.axes.left,
+            days = Math.round((a.maximum - a.minimum) / MSECSDAY);
+
+        var axRight = aChart.axes.bottom.calc(aChart.axes.bottom.maximum);
+        var topLineY = 50;
+
+        if (chartStartX) {
+            aChart.ctx.fillStyle = "rgba(0, 0, 0, 1)";  //"rgba(2, 34, 55, 1)";
+            aChart.ctx.font = "12px Tahoma";
+            aChart.ctx.textAlign = "start";
+            aChart.ctx.fillText("Line stats:", axRight - 100, topLineY - 15);
+            aChart.ctx.fillText("startX: " + a.fromPos(chartStartX).toFixed(2) + "", axRight - 100, topLineY);
+            aChart.ctx.fillText("endX: " + a.fromPos(chartEndX).toFixed(2) + "", axRight - 100, topLineY + 15);
+            aChart.ctx.fillText("startY: " + b.fromPos(chartStartY).toFixed(2) + "", axRight - 100, topLineY + 30);
+            aChart.ctx.fillText("endY: " + b.fromPos(chartEndY).toFixed(2) + "", axRight - 100, topLineY + 45);
+            aChart.ctx.beginPath();
+            aChart.ctx.strokeStyle = "#100000";
+            aChart.ctx.moveTo(startX, startY);
+            aChart.ctx.arc(startX, startY, 5, 0, 2 * Math.PI);
+            aChart.ctx.stroke();
+            aChart.ctx.beginPath();
+            aChart.ctx.strokeStyle = "#10DD00";
+            aChart.ctx.moveTo(startX, startY);
+            aChart.ctx.lineTo(endX, endY);
+            aChart.ctx.stroke();
+            aChart.ctx.beginPath();
+            aChart.ctx.strokeStyle = "#100000";
+            aChart.ctx.arc(endX, endY, 5, 0, 2 * Math.PI);
+            aChart.ctx.stroke();
+        }
+    }
 }
+
+function Point(x, y) {
+    this.x = x;
+    this.y = y;
+
+    return this;
+}
+
+function getOffset(e, p, aChart) {
+    p.x = e.clientX;
+    p.y = e.clientY;
+
+    var element = aChart.canvas; // this.canvas,
+    var r;
+
+    // IE, Moz3+, Chr, Op9.5+, Saf4+
+    if (element.getBoundingClientRect) {
+        r = element.getBoundingClientRect();
+        p.x -= r.left;
+        p.y -= r.top;
+    } //earlier Moz.
+    else if (element.offsetParent)
+        do {
+            p.x -= element.offsetLeft;
+            p.y -= element.offsetTop;
+            element = element.offsetParent;
+        } while (element);
+}
+
 
 function resize(chart) {
 

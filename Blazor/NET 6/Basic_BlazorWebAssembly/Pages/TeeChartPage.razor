@@ -1,22 +1,50 @@
 ﻿@page "/teechartpage"
 
-<h3>TeeChart tagged</h3>
+<h3>TeeChart Functions</h3>
 
-<button @onclick="clickButton">Update chart titles</button>
+<button @onclick="clickButton">Apply function change</button>
+<br />
+
+<br />
+<table><tr><td>
+<EditForm Model="_teechart3">
+    <InputRadioGroup Name="FunctionSelect" @bind-Value="funcType">
+     <InputRadio Name="FunctionSelect" Value=0 />Trend (all points)<br>
+     <InputRadio Name="FunctionSelect" Value=1 />Trend (Exponential - all points)<br>
+     <InputRadio Name="FunctionSelect" Value=2 />Trend (Logarithmic - all points)<br>
+     <InputRadio Name="FunctionSelect" Value=3 />Average (all points)<br>
+     <InputRadio Name="FunctionSelect" Value=4 />Mov Avg (period 3)<br>
+     <InputRadio Name="FunctionSelect" Value=5 />PolyFitting  (period 3)<br>
+    </InputRadioGroup>
+</EditForm>
+
+<!--•	Linear
+•	Exponential
+•	Logarithmic
+•	Polynomial
+•	Power
+•	Moving Average
+•	Forecasting-->
+
+</td></tr></table>
+
 
 <!--The following TeeChart tag is an example of use. Values may alternatively be sent as an ampersand variable or be 
 	simply loaded codeside in their native format -->
 
-<TeeChart id="tstChrt" @ref="_teechart1" Type="svg" ChartTitle="SVG Chart Header" XValues="0,1,2,3,7,11,12,14,16,21,23" YValues="21,34,33,41,17,31,22,45,12,33,35"/>
+<TeeChart id="tstChrt" @ref="_teechart1" Type="svg" ChartTitle="SVG Chart Header" XValues="0,1,2,3,7,11,12,14,16,21,23" YValues="121,34,33,41,17,31,22,450,12,33,35"/>
 
-<TeeChart id="tstChrt2" @ref="_teechart2" Type="js" ChartTitle="Javascript Chart Header" XValues="0,1,2,3,7,11,12,14,16,21,23" YValues="21,34,33,41,17,31,22,45,12,33,35" />
-
+<TeeChart id="tstChrt2" @ref="_teechart2" Type="js" ChartTitle="Javascript Chart Header" XValues="0,1,2,3,7,11,12,14,16,21,23" YValues="121,34,33,41,17,31,22,450,12,33,35" />
+<p>Draw lines: left mousebutton or touch drag draw lines on bottom chart.</p>
 @code{
-  TeeChart _teechart1;
-  TeeChart _teechart2;
+    TeeChart _teechart1;
+    TeeChart _teechart2;
+    TeeChart _teechart3 = new TeeChart();
+    int funcType = 0;
 
-  void clickButton() {
-      _teechart1.UpdateTitle("New SVG Chart Header");
-      _teechart2.UpdateTitle("New Javascript Chart Header");
+    void clickButton() {
+      _teechart1.UpdateTitle("New SVG Chart Header",funcType);
+      _teechart2.UpdateTitle("New Javascript Chart Header",funcType);
   }
+
 }

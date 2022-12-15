@@ -11,118 +11,179 @@
 
 @code {
 
-  [Parameter]
-  public string ChartTitle { get; set; }
+    [Parameter]
+    public string ChartTitle { get; set; }
 
-  [Parameter]
-  public string Type { get; set; }
+    [Parameter]
+    public string Type { get; set; }
 
-  [Parameter]
-  public string XValues { get; set; }
+    [Parameter]
+    public string XValues { get; set; }
 
-  [Parameter]
-  public string YValues { get; set; }
+    [Parameter]
+    public string YValues { get; set; }
 
-  [Parameter]
-  public string id { get; set; }
+    [Parameter]
+    public string id { get; set; }
 
-  public double KeyCode;
+    public double KeyCode;
 
-  String chartImage;
-  String canvasJS;
-  String chartJS;
-  string canvasName = "canvas1";
-  Steema.TeeChart.TChart tChart;
+    public int funcType = 0;
 
-  string remaining;
-  string contentSecKey;
-  string contentCntKey;
+    String chartImage;
+    String canvasJS;
+    String chartJS;
+    string canvasName = "canvas1";
+    Steema.TeeChart.TChart tChart;
 
-  protected override void OnInitialized()
-  {
-    canvasName = System.Guid.NewGuid().ToString();
+    string remaining;
+    string contentSecKey;
+    string contentCntKey;
 
-    int aWidth = 900;
-    int aHeight = 300;
-
-    CreateChart(aWidth, aHeight);
-
-    if (Type == "js")
+    protected override void OnInitialized()
     {
-      string canvasStr = "<div><canvas id='" + canvasName + "' width='" + aWidth + "' height='" + aHeight + "' style='border: 1px solid #808080;'>";
-      canvasStr += "This browser does not seem to support HTML5 Canvas.";
-      canvasStr += "</canvas></div>";
+        canvasName = System.Guid.NewGuid().ToString();
 
-      canvasJS = canvasStr;
-    }
-  }
+        int aWidth = 900;
+        int aHeight = 300;
 
-  protected override void OnAfterRender(bool firstRender)
-  {
-    if (Type == "js")
-      UpdateJS(900, 300);
-  }
+        CreateChart(aWidth, aHeight);
 
-  public void UpdateTitle(string ATitle)
-  {
-    tChart.Header.Text = ATitle;
+        if (Type == "js")
+        {
+            string canvasStr = "<div><canvas id='" + canvasName + "' width='" + aWidth + "' height='" + aHeight + "' style='border: 1px solid #808080;'>";
+            canvasStr += "This browser does not seem to support HTML5 Canvas.";
+            canvasStr += "</canvas></div>";
 
-    if (Type == "svg")
-    {
-      UpdateSVG();
+            canvasJS = canvasStr;
+        }
     }
 
-    StateHasChanged();
-  }
-
-  public void PrepareData(ref double[] xValues, ref double[] yValues)
-  {
-
-    string[] xStr = XValues.Split(',');
-    string[] yStr = YValues.Split(',');
-
-    xValues = new double[xStr.Length];
-    yValues = new double[yStr.Length];
-
-    for (int i = 0; i < xStr.Length; i++)
+    protected override void OnAfterRender(bool firstRender)
     {
-      xValues[i] = Convert.ToDouble(xStr[i]);
-      yValues[i] = Convert.ToDouble(yStr[i]);
+        if (Type == "js")
+            UpdateJS(900, 300);
     }
-  }
 
-  public void CreateChart(int width, int height)
-  {
-    tChart = new TChart();
-    Steema.TeeChart.Styles.Bar mBar = new Steema.TeeChart.Styles.Bar();
-    tChart.Header.Text = ChartTitle;
+    public void UpdateTitle(string ATitle, int func)
+    {
+        //tChart.Header.Text = ATitle;
 
-    tChart.Width = width;
-    tChart.Height = height;
+        this.funcType = func;
 
-    tChart.Legend.Visible = false;
+        int aWidth = 900;
+        int aHeight = 300;
 
-    if (tChart.Series.Count == 0)
-      tChart.Series.Add(mBar);
+        CreateChart(aWidth, aHeight);
 
-    mBar.Clear();
-    mBar.Marks.Transparent = true;
+        /*if (Type == "svg")
+            {
+            UpdateSVG();
+        }*/
 
-    mBar.BarWidthPercent = 20;
+        StateHasChanged();
+    }
 
-    double[] xValues = new double[0];
-    double[] yValues = new double[0];
+    public void PrepareData(ref double[] xValues, ref double[] yValues)
+    {
 
-    PrepareData(ref xValues, ref yValues);
+        string[] xStr = XValues.Split(',');
+        string[] yStr = YValues.Split(',');
 
-    mBar.Add(xValues, yValues);
+        xValues = new double[xStr.Length];
+        yValues = new double[yStr.Length];
 
-    tChart.Axes.Left.Title.Text = "ºC";
-    tChart.Axes.Left.Increment = 10;
+        for (int i = 0; i < xStr.Length; i++)
+        {
+            xValues[i] = Convert.ToDouble(xStr[i]);
+            yValues[i] = Convert.ToDouble(yStr[i]);
+        }
+    }
 
-    if (Type == "svg")
-      UpdateSVG();
-  }
+    public void CreateChart(int width, int height)
+    {
+        tChart = new TChart();
+        Steema.TeeChart.Styles.Bar mBar = new Steema.TeeChart.Styles.Bar();
+        tChart.Header.Text = ChartTitle;
+
+        var trFunc = new Steema.TeeChart.Functions.Function();
+        Steema.TeeChart.Styles.Line trLine = new Steema.TeeChart.Styles.Line();
+
+        switch (funcType)
+        {
+            case 0:
+            case 1:
+            case 2: { 
+                    trFunc = new Steema.TeeChart.Functions.TrendFunction();
+                    if (funcType == 1)
+                        ((Steema.TeeChart.Functions.TrendFunction)trFunc).TrendStyle = Steema.TeeChart.Functions.TrendStyles.Exponential;
+                    else if (funcType == 2)
+                    {
+                        ((Steema.TeeChart.Functions.TrendFunction)trFunc).TrendStyle = Steema.TeeChart.Functions.TrendStyles.Logarithmic;
+                        trLine.VertAxis = Steema.TeeChart.Styles.VerticalAxis.Right;
+                        tChart.Axes.Right.Title.Text = "log";
+                        tChart.Axes.Right.Title.Visible = true;
+                        tChart.Axes.Right.SetMinMax(-1, 1);
+                    }
+                    else
+                      ((Steema.TeeChart.Functions.TrendFunction)trFunc).TrendStyle = Steema.TeeChart.Functions.TrendStyles.Normal;
+                    break; 
+                }
+            case 3: { 
+                    trFunc = new Steema.TeeChart.Functions.Average();
+                    break; 
+                }
+            case 4: { 
+                    trFunc = new Steema.TeeChart.Functions.MovingAverage();
+                    trFunc.Period = 3;
+                    break; 
+                }
+            case 5: { 
+                    trFunc = new Steema.TeeChart.Functions.PolyFitting();
+                    trFunc.Period = 3;
+                    break; 
+                }
+        }
+
+
+        tChart.Header.Text = trFunc.GetType().ToString() + ", period: " + trFunc.Period;
+
+        trFunc.Series = trLine;
+        trLine.DataSource = mBar;
+
+        tChart.Width = width;
+        tChart.Height = height;
+
+        tChart.Legend.Visible = false;
+        //tChart.Zoom.Direction = ZoomDirections.None;
+        //tChart.Chart.Panning.Allow = ScrollModes.None;
+
+        if (tChart.Series.Count == 0)
+            tChart.Series.Add(mBar);
+
+        mBar.Clear();
+        mBar.Marks.Transparent = true;
+
+        mBar.BarWidthPercent = 20;
+
+        double[] xValues = new double[0];
+        double[] yValues = new double[0];
+
+        PrepareData(ref xValues, ref yValues);
+
+        mBar.Add(xValues, yValues);
+
+        tChart.Series.Add(trLine);
+        trLine.CheckDataSource();
+
+        tChart.Axes.Left.Title.Text = "ºC";
+        tChart.Axes.Left.SetMinMax(0, 500);
+        tChart.Axes.Left.Increment = 50;
+        tChart.Axes.Bottom.Increment = 2;
+
+        if (Type == "svg")
+            UpdateSVG();
+    }
 
   public void UpdateSVG()
   {
@@ -154,6 +215,9 @@
     tChart.Export.Image.JScript.Width = width;
     tChart.Export.Image.JScript.Height = height;
     tChart.Export.Image.JScript.CanvasName = canvasName;
+
+    tChart.Export.Image.JScript.SourceScriptPath = "https://www.steema.com//files/public/teechart/html5/v2021.04.26.2.7/";
+
     tChart.Export.Image.JScript.DoFullPage = false; //inline, no page <html> header tags
     tChart.Export.Image.JScript.CustomCode = new string[] { "loadExtras(" + chartName + ")", "resize(" + chartName + ");" };
     tChart.Export.Image.JScript.Save(ms);
