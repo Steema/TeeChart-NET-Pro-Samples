@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <StartupObject>TeeChartOnBlazor.Program</StartupObject>
+    <RootNamespace>TeeChartOnBlazor</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\genericStr.txt" />
+    <EmbeddedResource Include="Resources\shipJStr.txt" />
+    <EmbeddedResource Include="Resources\shipStr.txt" />
+    <EmbeddedResource Include="Resources\apptJStr.txt" />
+    <EmbeddedResource Include="Resources\apptStr.txt" />
+    <EmbeddedResource Include="Resources\apptChStr.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Pages\ChartPanel.razor" />
+    <None Include="Pages\ChartTable.razor" />
+    <None Include="Pages\GetGeneralChart.razor" />
+    <None Include="Pages\Shipments.razor" />
+    <None Include="wwwroot\img\teechart.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\js\appointment.js" />
+    <None Include="wwwroot\js\gauge.js" />
+    <None Include="wwwroot\js\pieplus.js" />
+    <None Include="wwwroot\js\shipments.js" />
+    <None Include="wwwroot\js\stdsetup.js" />
+    <None Include="wwwroot\js\utils.js" />
+    <None Include="wwwroot\img\steema170x70.png" />
+    <None Include="wwwroot\img\teechart.png" />
+ 	
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ColorCode.HTML" Version="2.0.14" />
+    <PackageReference Include="Steema.TeeChart.NET" Version="4.2022.12.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Components\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="wwwroot\img\steema170x70.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+</Project>

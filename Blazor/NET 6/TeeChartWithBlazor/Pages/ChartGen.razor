@@ -9,7 +9,7 @@
 
 	public Task<String> GetChart(WeatherForecast[] forecasts, int width, int height)
 	{
-		Steema.TeeChart.Chart mChart = new Chart();
+		Steema.TeeChart.TChart mChart = new TChart();
 		Steema.TeeChart.Styles.Bar mBar = new Steema.TeeChart.Styles.Bar();
 
 		mChart.Header.Text = "TeeChart in Blazor example";
@@ -43,7 +43,7 @@
 
 	public Task<string> GetJSChart(WeatherForecast[] forecasts, int width, int height)
 	{
-		Steema.TeeChart.Chart mChart = new Chart();
+		Steema.TeeChart.TChart mChart = new TChart();
 		Steema.TeeChart.Styles.Bar mBar = new Steema.TeeChart.Styles.Bar();
 
 		mChart.Header.Text = "TeeChart in Blazor example";

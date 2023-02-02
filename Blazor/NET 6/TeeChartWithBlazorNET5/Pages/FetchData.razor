@@ -1,0 +1,70 @@
+﻿@page "/fetchdata"
+
+@using TeeChartOnBlazor.Data
+
+@inject WeatherForecastService ForecastService
+
+<h3>Weather forecast</h3>
+
+<p>This component demonstrates fetching data from a service.</p>
+
+@if (forecasts == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table table-sm">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Temp. (C)</th>
+                <th>Temp. (F)</th>
+                <th>Summary</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var forecast in forecasts)
+            {
+                <tr>
+                    <td>@forecast.Date.ToShortDateString()</td>
+                    <td>@forecast.TemperatureC</td>
+                    <td>@forecast.TemperatureF</td>
+                    <td>@forecast.Summary</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <!--<h3>TeeChart Static Chart Image</h3>
+    <p><img src="@chartImage" width="100%" /></p>
+    <br />
+    <br />-->
+    <canvas id="canvas1" width="1400" height="300" style="border: 1px solid #808080;">
+        This browser does not seem to support HTML5 Canvas.
+    </canvas>
+
+    <!--<h3>TeeChart Static Chart Image</h3>
+    <p><img src="@chartImage" width="100%" /></p>-->
+
+    @((MarkupString)chartJS)
+
+    @((MarkupString)(chartResize));
+}
+
+@code {
+    WeatherForecast[] forecasts;
+    String chartImage;
+    String chartJS;
+    String chartResize;
+
+    protected override async Task OnInitializedAsync()
+    {
+        forecasts = await ForecastService.GetForecastAsync(DateTime.Now);
+
+        WethChartGen cGen = new WethChartGen();
+        //chartImage = await cGen.GetChart(forecasts, 1400, 300);
+        chartJS = await cGen.GetJSChart(forecasts, 1400, 300);
+        chartResize = "<script> function resizeChart() { resizeC(" + cGen.chartName + "); } </script>";
+    }
+}
