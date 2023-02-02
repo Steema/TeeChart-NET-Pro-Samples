@@ -303,6 +303,8 @@ namespace TeeMaps
     private void InitializeComponent()
     {
 			this.components = new System.ComponentModel.Container();
+			Steema.TeeChart.Margins margins1 = new Steema.TeeChart.Margins();
+			Steema.TeeChart.Margins margins2 = new Steema.TeeChart.Margins();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TeeSHPForm));
 			this.commander1 = new Steema.TeeChart.Commander();
 			this.splitter1 = new System.Windows.Forms.SplitContainer();
@@ -345,12 +347,15 @@ namespace TeeMaps
 			this.annotation2 = new Steema.TeeChart.Tools.Annotation();
 			this.tChart2 = new Steema.TeeChart.TChart();
 			this.textSource1 = new Steema.TeeChart.Data.TextSource();
+			((System.ComponentModel.ISupportInitialize)(this.splitter1)).BeginInit();
 			this.splitter1.Panel1.SuspendLayout();
 			this.splitter1.Panel2.SuspendLayout();
 			this.splitter1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.splitter3)).BeginInit();
 			this.splitter3.Panel1.SuspendLayout();
 			this.splitter3.Panel2.SuspendLayout();
 			this.splitter3.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.splitter2)).BeginInit();
 			this.splitter2.Panel1.SuspendLayout();
 			this.splitter2.Panel2.SuspendLayout();
 			this.splitter2.SuspendLayout();
@@ -831,6 +836,7 @@ namespace TeeMaps
 			this.tChart1.Axes.Bottom.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
 			this.tChart1.Axes.Bottom.Title.Shadow.Brush.Solid = true;
 			this.tChart1.Axes.Bottom.Title.Shadow.Brush.Visible = true;
+			this.tChart1.Axes.Bottom.UseMaxPixelPos = true;
 			// 
 			// 
 			// 
@@ -939,6 +945,7 @@ namespace TeeMaps
 			this.tChart1.Axes.Depth.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
 			this.tChart1.Axes.Depth.Title.Shadow.Brush.Solid = true;
 			this.tChart1.Axes.Depth.Title.Shadow.Brush.Visible = true;
+			this.tChart1.Axes.Depth.UseMaxPixelPos = true;
 			// 
 			// 
 			// 
@@ -1047,6 +1054,7 @@ namespace TeeMaps
 			this.tChart1.Axes.DepthTop.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
 			this.tChart1.Axes.DepthTop.Title.Shadow.Brush.Solid = true;
 			this.tChart1.Axes.DepthTop.Title.Shadow.Brush.Visible = true;
+			this.tChart1.Axes.DepthTop.UseMaxPixelPos = true;
 			// 
 			// 
 			// 
@@ -1156,6 +1164,7 @@ namespace TeeMaps
 			this.tChart1.Axes.Left.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
 			this.tChart1.Axes.Left.Title.Shadow.Brush.Solid = true;
 			this.tChart1.Axes.Left.Title.Shadow.Brush.Visible = true;
+			this.tChart1.Axes.Left.UseMaxPixelPos = true;
 			// 
 			// 
 			// 
@@ -1264,6 +1273,7 @@ namespace TeeMaps
 			this.tChart1.Axes.Right.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
 			this.tChart1.Axes.Right.Title.Shadow.Brush.Solid = true;
 			this.tChart1.Axes.Right.Title.Shadow.Brush.Visible = true;
+			this.tChart1.Axes.Right.UseMaxPixelPos = true;
 			// 
 			// 
 			// 
@@ -1372,6 +1382,7 @@ namespace TeeMaps
 			this.tChart1.Axes.Top.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
 			this.tChart1.Axes.Top.Title.Shadow.Brush.Solid = true;
 			this.tChart1.Axes.Top.Title.Shadow.Brush.Visible = true;
+			this.tChart1.Axes.Top.UseMaxPixelPos = true;
 			this.tChart1.Dock = System.Windows.Forms.DockStyle.Fill;
 			// 
 			// 
@@ -1629,6 +1640,14 @@ namespace TeeMaps
 			this.tChart1.Panel.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
 			this.tChart1.Panel.Shadow.Brush.Solid = true;
 			this.tChart1.Panel.Shadow.Brush.Visible = true;
+			// 
+			// 
+			// 
+			margins1.Bottom = 100;
+			margins1.Left = 100;
+			margins1.Right = 100;
+			margins1.Top = 100;
+			this.tChart1.Printer.Margins = margins1;
 			this.tChart1.Size = new System.Drawing.Size(722, 575);
 			// 
 			// 
@@ -2030,12 +2049,14 @@ namespace TeeMaps
 			// 
 			// 
 			this.annotation2.Shape.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
+			this.annotation2.Shape.Bottom = 17;
 			// 
 			// 
 			// 
 			this.annotation2.Shape.Brush.Color = System.Drawing.Color.White;
 			this.annotation2.Shape.Brush.Solid = true;
 			this.annotation2.Shape.Brush.Visible = true;
+			this.annotation2.Shape.CustomPosition = true;
 			// 
 			// 
 			// 
@@ -2066,6 +2087,8 @@ namespace TeeMaps
 			this.annotation2.Shape.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
 			this.annotation2.Shape.ImageBevel.Brush.Solid = true;
 			this.annotation2.Shape.ImageBevel.Brush.Visible = true;
+			this.annotation2.Shape.Left = 0;
+			this.annotation2.Shape.Right = 9;
 			// 
 			// 
 			// 
@@ -2075,6 +2098,8 @@ namespace TeeMaps
 			this.annotation2.Shape.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
 			this.annotation2.Shape.Shadow.Brush.Solid = true;
 			this.annotation2.Shape.Shadow.Brush.Visible = true;
+			this.annotation2.Shape.Top = 0;
+			this.annotation2.Top = 0;
 			this.annotation2.Width = 9;
 			// 
 			// tChart2
@@ -2190,6 +2215,7 @@ namespace TeeMaps
 			this.tChart2.Axes.Bottom.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
 			this.tChart2.Axes.Bottom.Title.Shadow.Brush.Solid = true;
 			this.tChart2.Axes.Bottom.Title.Shadow.Brush.Visible = true;
+			this.tChart2.Axes.Bottom.UseMaxPixelPos = true;
 			// 
 			// 
 			// 
@@ -2298,6 +2324,7 @@ namespace TeeMaps
 			this.tChart2.Axes.Depth.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
 			this.tChart2.Axes.Depth.Title.Shadow.Brush.Solid = true;
 			this.tChart2.Axes.Depth.Title.Shadow.Brush.Visible = true;
+			this.tChart2.Axes.Depth.UseMaxPixelPos = true;
 			// 
 			// 
 			// 
@@ -2406,6 +2433,7 @@ namespace TeeMaps
 			this.tChart2.Axes.DepthTop.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
 			this.tChart2.Axes.DepthTop.Title.Shadow.Brush.Solid = true;
 			this.tChart2.Axes.DepthTop.Title.Shadow.Brush.Visible = true;
+			this.tChart2.Axes.DepthTop.UseMaxPixelPos = true;
 			// 
 			// 
 			// 
@@ -2514,6 +2542,7 @@ namespace TeeMaps
 			this.tChart2.Axes.Left.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
 			this.tChart2.Axes.Left.Title.Shadow.Brush.Solid = true;
 			this.tChart2.Axes.Left.Title.Shadow.Brush.Visible = true;
+			this.tChart2.Axes.Left.UseMaxPixelPos = true;
 			// 
 			// 
 			// 
@@ -2622,6 +2651,7 @@ namespace TeeMaps
 			this.tChart2.Axes.Right.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
 			this.tChart2.Axes.Right.Title.Shadow.Brush.Solid = true;
 			this.tChart2.Axes.Right.Title.Shadow.Brush.Visible = true;
+			this.tChart2.Axes.Right.UseMaxPixelPos = true;
 			// 
 			// 
 			// 
@@ -2730,6 +2760,7 @@ namespace TeeMaps
 			this.tChart2.Axes.Top.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
 			this.tChart2.Axes.Top.Title.Shadow.Brush.Solid = true;
 			this.tChart2.Axes.Top.Title.Shadow.Brush.Visible = true;
+			this.tChart2.Axes.Top.UseMaxPixelPos = true;
 			this.tChart2.Dock = System.Windows.Forms.DockStyle.Fill;
 			// 
 			// 
@@ -2984,6 +3015,14 @@ namespace TeeMaps
 			this.tChart2.Panel.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
 			this.tChart2.Panel.Shadow.Brush.Solid = true;
 			this.tChart2.Panel.Shadow.Brush.Visible = true;
+			// 
+			// 
+			// 
+			margins2.Bottom = 100;
+			margins2.Left = 100;
+			margins2.Right = 100;
+			margins2.Top = 100;
+			this.tChart2.Printer.Margins = margins2;
 			this.tChart2.Size = new System.Drawing.Size(600, 400);
 			// 
 			// 
@@ -3241,18 +3280,21 @@ namespace TeeMaps
 			this.Controls.Add(this.commander1);
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "TeeSHPForm";
-			this.Text = "TeeChart for .NET v2018 TeeMaps Example";
+			this.Text = "TeeChart for .NET v2023 TeeMaps Example";
 			this.Load += new System.EventHandler(this.TeeSHPForm_Load);
 			this.splitter1.Panel1.ResumeLayout(false);
 			this.splitter1.Panel2.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.splitter1)).EndInit();
 			this.splitter1.ResumeLayout(false);
 			this.splitter3.Panel1.ResumeLayout(false);
 			this.splitter3.Panel1.PerformLayout();
 			this.splitter3.Panel2.ResumeLayout(false);
 			this.splitter3.Panel2.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.splitter3)).EndInit();
 			this.splitter3.ResumeLayout(false);
 			this.splitter2.Panel1.ResumeLayout(false);
 			this.splitter2.Panel2.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.splitter2)).EndInit();
 			this.splitter2.ResumeLayout(false);
 			this.tabControl1.ResumeLayout(false);
 			this.tabPage1.ResumeLayout(false);
