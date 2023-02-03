@@ -1,0 +1,195 @@
+﻿//javascript code unit to plot legend-table under chart
+//and setup tooltip display format
+
+var a2, tip;
+var hasAnimated = false;
+
+function drawAppointments(aChart, labelLines) {
+
+    aChart.zoom.enabled = false;
+    aChart.scroll.enabled = false;
+
+    aChart.title.visible = false;
+    //aChart.applyTheme("minimal");
+    aChart.applyPalette("windowsxp");
+
+    aChart.axes.left.title.text = "Number";
+    aChart.axes.left.title.format.font.style = "17px Tahoma";
+    aChart.axes.left.title.format.font.fill = "rgb(0,0,0)";
+    aChart.axes.left.format.stroke.fill = "rgba(0,255,0,0)";
+    aChart.axes.left.ticks.visible = false;
+    //aChart.axes.left.increment = 1000;
+    aChart.axes.left.labels.fixedDecimals = true;
+    aChart.axes.left.labels.decimals = 0;
+    aChart.axes.left.labels.labelStyle = "value";
+    aChart.axes.left.labels.valueFormat = true;
+
+    aChart.axes.bottom.increment = 1;
+    aChart.axes.bottom.labels.separation = 1;
+    aChart.axes.bottom.labels.format.font.fill = "rgb(30,30,30)";
+    aChart.axes.left.labels.format.font.fill = aChart.axes.bottom.labels.format.font.fill;
+    aChart.legend.format.font.fill = aChart.axes.bottom.labels.format.font.fill;
+
+    aChart.axes.bottom.grid.centered = true;
+    aChart.axes.bottom.ticks.visible = false;
+
+    aChart.axes.bottom.setMinMax(-0.5, aChart.series.items[0].data.values.length - 0.5);
+
+    aChart.title.format.font.style = "18px Tahoma";
+    aChart.title.format.font.fill = "rgb(0,0,0)";
+    aChart.title.format.font.textAlign = "left";
+    aChart.title.format.font.gradient.visible = false;
+
+    aChart.walls.left.size = 10;
+    aChart.walls.bottom.size = 10;
+
+    aChart.legend.visible = false;
+    aChart.legend.format.stroke.fill = "white";
+    aChart.legend.transparent = false;
+
+    aChart.panel.margins.bottom = 30;
+    aChart.panel.margins.left = 15;
+
+    //tooltip
+    tip = new Tee.ToolTip(aChart);
+    tip.render = "dom";
+    tip.delay = 3000;
+    tip.autoHide = true;
+    //tip.findPoint = true;
+    tip.domStyle = "padding-left:8px; padding-right:8px; padding-top:0px; padding-bottom:4px; margin-left:5px; margin-top:0px; ";
+    tip.domStyle = tip.domStyle + "background-color:#FCFCFC; border-radius:4px 4px; color:#FFF; ";
+    tip.domStyle = tip.domStyle + "border-style:solid;border-color:#A3A3AF;border-width:1px; z-index:1000;";
+
+    aChart.tools.add(tip);
+    tip.onhide = function () { scaling = 0; poindex = -1; }
+    tip.ongettext = function (tool, text, series, index) {
+        var t, s = "", ser;
+
+        s += '<font face="verdana" color="darkblue" size="1"><strong>' + aChart.series.items[0].data.labels[index] + '</strong></font>';
+
+        for (t = 0; t < aChart.series.count(); t++) {
+            ser = aChart.series.items[t];
+            if (!Number.isNaN(ser.data.values[index])) {
+                s += "<br/>";
+                s += '<font face="verdana" color="#004000" size="1"><b>' + ser.title + ':</b></font> <font face="verdana" color="red" size="1">' 
+                     + aChart.axes.left.labels.formatValueString(ser.data.values[index]) + '</font>';
+            }
+        }
+        return s;
+    }
+
+    //aChart.axes.bottom.grid.visible=true;
+    //animation
+    animation = new Tee.SeriesAnimation();
+    animation.duration = 900;
+    animation.kind = "each";
+    fadeAnimation = new Tee.FadeAnimation();
+    fadeAnimation.duration = 500;
+    fadeAnimation.fade.series = true;
+    fadeAnimation.fade.marks = true;
+    animation.mode = "linear";
+    fadeAnimation.mode = "linear";
+    animation.items.push(fadeAnimation);
+
+    animation.animate(aChart);
+
+    animation.onstop = function (a) {
+        hasAnimated = true;
+    }
+
+    //draw event. Add any custom draw content here.
+    aChart.ondraw = function () {
+
+        var inc = 20;  //line height
+
+        var x1 = aChart.axes.bottom.calc(aChart.axes.bottom.minimum),
+            y1 = aChart.axes.left.calc(0),
+            width = aChart.axes.bottom.calc(aChart.axes.bottom.maximum);
+        height = 0;
+
+        yStart = y1;
+
+        // X,Y, Width, Height
+        var myFormat = new Tee.Format(aChart);
+
+        myFormat.stroke.size = 0.5;
+
+        aChart.axes.bottom.calcAxisScale();
+        var xInc = (aChart.axes.bottom.maximum - aChart.axes.bottom.minimum) / aChart.series.items[0].data.values.length;   //aChart.axes.bottom.increm;
+        if (xInc < 0.5) xInc = 0.5;
+        var xPos = aChart.axes.bottom.minimum;
+
+        for (i = 0; i < aChart.series.items.length; i++) {
+            y1 = y1 + inc;
+            if (i == 0) y1 = y1 + (labelLines * inc);
+            myFormat.rectangle(0, y1, width, height);
+            myFormat.font.style = aChart.axes.bottom.labels.format.font.style;
+            myFormat.font.fill = aChart.axes.bottom.labels.format.font.fill;
+            aChart.ctx.font = myFormat.font.style;
+
+            if (i < aChart.series.items.length) {
+                rr = new Tee.Rectangle(60, y1 + 4, 60, 20);
+                myFormat.fill = aChart.series.items[aChart.series.items.length - 1 - i].format.fill; //  "rgb(255,0,0)";
+                myFormat.rectangle(5, y1 + 3, 14, 14);
+                myFormat.font.textAlign = "center";
+                myFormat.drawText(rr, aChart.series.items[aChart.series.items.length - 1 - i].title);
+
+                x1 = aChart.axes.bottom.calc(aChart.axes.bottom.minimum);
+                xPos = aChart.axes.bottom.minimum;
+
+                var incSize = aChart.axes.bottom.calc(aChart.axes.bottom.minimum + xInc) - x1;
+
+                //myFormat.font.textAlign = "left";
+
+                if (hasAnimated) {
+                    for (j = 0; j < aChart.series.items[i].data.values.length; j++) {
+                        rr = new Tee.Rectangle(x1, y1 + 4, incSize, 20);
+                        if (!Number.isNaN(aChart.series.items[aChart.series.items.length - 1 - i].data.values[j]))
+                            myFormat.drawText(rr, "" + aChart.series.items[aChart.series.items.length - 1 - i].data.values[j]);
+
+                        xPos = xPos + xInc;
+                        x1 = aChart.axes.bottom.calc(xPos);
+                    }
+                }
+
+            }
+        }
+
+        y1 = y1 + inc;
+        myFormat.rectangle(0, y1, width, height);
+
+        x1 = aChart.axes.bottom.calc(aChart.axes.bottom.minimum);
+        xPos = aChart.axes.bottom.minimum;
+
+        //left start line
+        myFormat.rectangle(0, aChart.axes.left.calc(0) + inc + (labelLines * inc), 0, y1 - yStart - inc - (labelLines * inc));
+
+        while (x1 < aChart.axes.bottom.calc(aChart.axes.bottom.maximum)) {
+
+            myFormat.rectangle(x1, aChart.axes.left.calc(0), 0, y1 - yStart);
+
+            xPos = xPos + xInc;
+            x1 = aChart.axes.bottom.calc(xPos);
+        }
+
+        //final close line
+        myFormat.rectangle(aChart.axes.bottom.calc(aChart.axes.bottom.maximum), aChart.axes.left.calc(0), 0, y1 - yStart);
+
+    }
+
+    //aChart.draw();
+}
+
+function setSize(value) {
+    aChart.series.items[0].barSize = value;
+    aChart.draw();
+}
+
+function setRightPanelMargin() {
+    if ((aChart.legend.visible) && (aChart.legend.position == "right"))
+        aChart.panel.margins.right = 0;
+    else
+        aChart.panel.margins.right = 10;
+
+    aChart.draw();
+}
