@@ -1,0 +1,22 @@
+﻿@page "/teechartpage"
+
+<h3>TeeChart tagged</h3>
+
+<button @onclick="clickButton">Update chart titles</button>
+
+<!--The following TeeChart tag is an example of use. Values may alternatively be sent as an ampersand variable or be 
+	simply loaded codeside in their native format -->
+
+<TeeChart id="tstChrt" @ref="_teechart1" Type="svg" ChartTitle="SVG Chart Header" XValues="0,1,2,3,7,11,12,14,16,21,23" YValues="21,34,33,41,17,31,22,45,12,33,35"/>
+
+<TeeChart id="tstChrt2" @ref="_teechart2" Type="js" ChartTitle="Javascript Chart Header" XValues="0,1,2,3,7,11,12,14,16,21,23" YValues="21,34,33,41,17,31,22,45,12,33,35" />
+
+@code{
+  TeeChart _teechart1;
+  TeeChart _teechart2;
+
+  void clickButton() {
+      _teechart1.UpdateTitle("New SVG Chart Header");
+      _teechart2.UpdateTitle("New Javascript Chart Header");
+  }
+}

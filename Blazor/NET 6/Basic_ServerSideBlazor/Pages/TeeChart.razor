@@ -1,0 +1,173 @@
+﻿@using System.IO;
+@using Steema.TeeChart;
+@using Microsoft.JSInterop
+@inject IJSRuntime JS
+
+@inject BlazorAppSRvNET6.Data.UtilService aUtils;
+
+@((MarkupString)(chartImage))
+@((MarkupString)(canvasJS))
+
+
+@code {
+
+  [Parameter]
+  public string ChartTitle { get; set; }
+
+  [Parameter]
+  public string Type { get; set; }
+
+  [Parameter]
+  public string XValues { get; set; }
+
+  [Parameter]
+  public string YValues { get; set; }
+
+  [Parameter]
+  public string id { get; set; }
+
+  public double KeyCode;
+
+  String chartImage;
+  String canvasJS;
+  String chartJS;
+  string canvasName = "canvas1";
+  Steema.TeeChart.TChart tChart;
+
+  string remaining;
+  string contentSecKey;
+  string contentCntKey;
+
+  protected override void OnInitialized()
+  {
+    canvasName = System.Guid.NewGuid().ToString();
+
+    int aWidth = 900;
+    int aHeight = 300;
+
+    CreateChart(aWidth, aHeight);
+
+    if (Type == "js")
+    {
+      string canvasStr = "<div><canvas id='" + canvasName + "' width='" + aWidth + "' height='" + aHeight + "' style='border: 1px solid #808080;'>";
+      canvasStr += "This browser does not seem to support HTML5 Canvas.";
+      canvasStr += "</canvas></div>";
+
+      canvasJS = canvasStr;
+    }
+  }
+
+  protected override void OnAfterRender(bool firstRender)
+  {
+    if (Type == "js")
+      UpdateJS(900, 300);
+  }
+
+  public void UpdateTitle(string ATitle)
+  {
+    tChart.Header.Text = ATitle;
+
+    if (Type == "svg")
+    {
+      UpdateSVG();
+    }
+
+    StateHasChanged();
+  }
+
+  public void PrepareData(ref double[] xValues, ref double[] yValues)
+  {
+
+    string[] xStr = XValues.Split(',');
+    string[] yStr = YValues.Split(',');
+
+    xValues = new double[xStr.Length];
+    yValues = new double[yStr.Length];
+
+    for (int i = 0; i < xStr.Length; i++)
+    {
+      xValues[i] = Convert.ToDouble(xStr[i]);
+      yValues[i] = Convert.ToDouble(yStr[i]);
+    }
+  }
+
+  public void CreateChart(int width, int height)
+  {
+    tChart = new TChart();
+    Steema.TeeChart.Styles.Bar mBar = new Steema.TeeChart.Styles.Bar();
+    tChart.Header.Text = ChartTitle;
+
+    tChart.Width = width;
+    tChart.Height = height;
+
+    tChart.Legend.Visible = false;
+
+    if (tChart.Series.Count == 0)
+      tChart.Series.Add(mBar);
+
+    mBar.Clear();
+    mBar.Marks.Transparent = true;
+
+    mBar.BarWidthPercent = 20;
+
+    double[] xValues = new double[0];
+    double[] yValues = new double[0];
+
+    PrepareData(ref xValues, ref yValues);
+
+    mBar.Add(xValues, yValues);
+
+    tChart.Axes.Left.Title.Text = "ºC";
+    tChart.Axes.Left.Increment = 10;
+
+    if (Type == "svg")
+      UpdateSVG();
+  }
+
+  public void UpdateSVG()
+  {
+    //create svg chart
+    MemoryStream ms = new MemoryStream();
+    tChart.Export.Image.SVG.Width = tChart.Width;
+    tChart.Export.Image.SVG.Height = tChart.Height;
+    tChart.Export.Image.SVG.Save(ms);
+
+    ms.Position = 0;
+
+    StreamReader reader = new StreamReader(ms);
+
+    string result = "<svg width=\"" + tChart.Width + "\"px height=\"" + tChart.Height + "px\">" + reader.ReadToEnd() + "</svg>";
+
+    result = result.Replace("\r\n", "");
+
+    chartImage = "<div><p>" + result + "</p></div>";
+  }
+
+  public async void UpdateJS(int width, int height)
+  {
+    //create javascript chart
+    string chartName = "aChart";
+
+    tChart.Export.Image.JScript.ChartName = chartName;
+
+    MemoryStream ms = new MemoryStream();
+    tChart.Export.Image.JScript.Width = width;
+    tChart.Export.Image.JScript.Height = height;
+    tChart.Export.Image.JScript.CanvasName = canvasName;
+    tChart.Export.Image.JScript.DoFullPage = false; //inline, no page <html> header tags
+    tChart.Export.Image.JScript.CustomCode = new string[] { "loadExtras(" + chartName + ")", "resize(" + chartName + ");" };
+    tChart.Export.Image.JScript.Save(ms);
+
+    ms.Position = 0;
+
+    StreamReader reader = new StreamReader(ms);
+
+    string result = "var " + chartName + "; " + reader.ReadToEnd();
+
+    chartJS = result;
+
+    string aKey = aUtils.KeyCode; //Pass unique, current load nonce CSP key to js load.
+
+    await JS.InvokeVoidAsync("loadChart", chartJS, aKey);
+  }
+}
