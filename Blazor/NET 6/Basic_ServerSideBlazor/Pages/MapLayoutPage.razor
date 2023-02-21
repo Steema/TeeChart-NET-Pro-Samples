@@ -1,0 +1,20 @@
+﻿@page "/maplayoutpage"
+
+<h3>Map Layout showing SVG and Javascript renders</h3>
+
+<button @onclick="clickButton">Update chart titles</button>
+<br />
+<MapLayout id="tstChrt" @ref="_teechart2" Type="svg" ChartTitle="SVG Map - Europe 27" />
+<br />
+<MapLayout id="tstChrt2" @ref="_teechart1" Type="js" ChartTitle="Javascript Map - Europe 27" />
+
+
+@code{
+  MapLayout _teechart1;
+  MapLayout _teechart2;
+
+  void clickButton() {
+      _teechart2.UpdateTitle("SVG Map - European Economic Cummunity");
+      _teechart1.UpdateTitle("Javascript Map - European Economic Cummunity");
+  }
+}

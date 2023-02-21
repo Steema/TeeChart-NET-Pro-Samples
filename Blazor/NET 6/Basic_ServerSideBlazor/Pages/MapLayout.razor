@@ -1,0 +1,172 @@
+﻿<h3>MapLayout</h3>
+
+@using System.IO;
+@using Steema.TeeChart;
+@using Microsoft.JSInterop
+@inject IJSRuntime JS
+
+@inject BlazorAppSRvNET6.Data.UtilService aUtils;
+
+@((MarkupString)(chartImage))
+@((MarkupString)(layoutJS))
+
+
+@code {
+
+    [Parameter]
+    public string ChartTitle { get; set; }
+
+    [Parameter]
+    public string Type { get; set; }
+
+    [Parameter]
+    public string XValues { get; set; }
+
+    [Parameter]
+    public string YValues { get; set; }
+
+    [Parameter]
+    public string id { get; set; }
+
+    public double KeyCode;
+
+    String chartImage;
+    String layoutJS;
+    String chartJS;
+    string canvasName = "canvas1";
+    Steema.TeeChart.TChart tChart;
+
+    string remaining;
+    string contentSecKey;
+    string contentCntKey;
+
+    protected override void OnInitialized()
+    {
+        canvasName = System.Guid.NewGuid().ToString();
+
+        int aWidth = 900;
+        int aHeight = 900;
+
+        CreateChart(aWidth, aHeight);
+
+        if (Type == "js")
+        {
+            string canvasStr = "<div><canvas id='" + canvasName + "' width='" + aWidth + "' height='" + aHeight + "' style='border: 1px solid #808080;'>";
+            canvasStr += "This browser does not seem to support HTML5 Canvas.";
+            canvasStr += "</canvas></div>";
+
+            layoutJS = canvasStr;
+        }
+    }
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        if (Type == "js")
+            UpdateJS(900, 300);
+    }
+
+    public void UpdateTitle(string ATitle)
+    {
+        tChart.Header.Text = ATitle;
+
+        if (Type == "svg")
+        {
+            UpdateSVG();
+        }
+
+        StateHasChanged();
+    }
+
+    public void CreateChart(int width, int height)
+    {
+        tChart = new TChart();
+        Steema.TeeChart.Styles.World mMap = new Steema.TeeChart.Styles.World();
+        tChart.Header.Text = ChartTitle;
+
+        tChart.Width = width;
+        tChart.Height = height;
+
+        // tChart.Legend.Visible = false;
+
+        tChart.Axes.Left.Grid.Visible =  false;
+        tChart.Axes.Bottom.Grid.Visible =  false;
+
+        tChart.Series.Clear();
+
+        if (tChart.Series.Count == 0)
+            tChart.Series.Add(mMap);
+
+        mMap.Map = Steema.TeeChart.Styles.WorldMapType.Europe27;
+
+        for (int i = 0; i < mMap.Shapes.Count; i++)
+        {
+            if (mMap.Shapes[i].Code == "DE") //countries accessible by two letter code. See https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
+              mMap.Shapes[i].Z = 1022;
+            else
+              mMap.Shapes[i].Z = i * 30;
+        }
+
+        Steema.TeeChart.Tools.MarksTip mTip = new Steema.TeeChart.Tools.MarksTip();
+        tChart.Tools.Add(mTip);               
+
+        tChart.Series[0].Marks.Visible = true;
+
+        tChart.Axes.Left.Visible = false;
+        tChart.Axes.Bottom.Visible = false;
+
+        if (Type == "svg")
+            UpdateSVG();
+    }
+
+    public void UpdateSVG()
+    {
+        //create svg chart
+        MemoryStream ms = new MemoryStream();
+        tChart.Export.Image.SVG.Width = tChart.Width;
+        tChart.Export.Image.SVG.Height = tChart.Height;
+        tChart.Export.Image.SVG.Save(ms);
+
+        ms.Position = 0;
+
+        StreamReader reader = new StreamReader(ms);
+
+        string result = "<svg width=\"" + tChart.Width + "px\" height=\"" + tChart.Height + "px\">" + reader.ReadToEnd() + "</svg>";
+
+        result = result.Replace("\r\n", "");
+        result = result.Replace("\n", "");
+
+        chartImage = "<div><p>" + result + "</p></div>";
+    }
+
+    public async void UpdateJS(int width, int height)
+    {
+        //create javascript chart
+        string chartName = "aChart";
+
+        tChart.Export.Image.JScript.ChartName = chartName;
+
+        MemoryStream ms = new MemoryStream();
+        tChart.Export.Image.JScript.Width = 400; // width;
+        tChart.Export.Image.JScript.Height = 300; // height;
+        tChart.Export.Image.JScript.CanvasName = canvasName;
+
+    //tChart.Export.Image.JScript.SourceScriptPath = @"https://www.steema.com/files/public/teechart/html5/v2021.04.26.2.7/src";
+
+    tChart.Export.Image.JScript.DoFullPage = false; //inline, no page <html> header tags
+    tChart.Export.Image.JScript.CustomCode = new string[] { "enhanceToolTip(toolTip1," + chartName + ");" };
+    //tChart.Export.Image.JScript.CustomCode = new string[] { "loadExtras(" + chartName + ")", "resize(" + chartName + ");" };
+    tChart.Export.Image.JScript.Save(ms);
+
+    ms.Position = 0;
+
+    StreamReader reader = new StreamReader(ms);
+
+    string result = "var " + chartName + "; " + reader.ReadToEnd();
+
+    chartJS = result;
+
+    string aKey = aUtils.KeyCode; //Pass unique, current load nonce CSP key to js load.
+
+    await JS.InvokeVoidAsync("loadChart", chartJS, aKey);
+  }
+}

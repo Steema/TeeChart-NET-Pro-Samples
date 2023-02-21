@@ -1,6 +1,21 @@
 ﻿var chartNode;
 var firstLoad = false;
 
+function enhanceToolTip(toolTip1, aChart) {
+    toolTip1.ongettext = function (tool, text, series, index) {
+
+        var t, s = "", ser;
+
+        for (t = 0; t < aChart.series.count(); t++) {
+            if (t > 0) s += "<br/>";
+            ser = aChart.series.items[t];
+            var poly = ser.items[index].item.id;
+            s += '<font face="verdana" color="#004000" size="2"><b>' + text + ':</b></font> <font face="verdana" color="red" size="1">' + ser.svg.values[poly] + '</font>';
+        }
+        return s;
+    }
+}
+
 function loadChart(chartJS, key) {
 
     //check allows load only if security tag exists on page
