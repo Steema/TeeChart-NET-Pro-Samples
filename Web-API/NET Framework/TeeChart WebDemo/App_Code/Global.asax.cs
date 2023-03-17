@@ -19,6 +19,11 @@ namespace WebDemo
 		public Global()
 		{
 			InitializeComponent();
+			
+			ServicePointManager.SecurityProtocol =
+							SecurityProtocolType.Tls12 |
+							SecurityProtocolType.Tls11 |
+							SecurityProtocolType.Tls;			
 		}	
 		
 		protected void Application_Start(Object sender, EventArgs e)
