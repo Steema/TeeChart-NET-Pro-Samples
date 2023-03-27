@@ -1,14 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27703.2000
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33502.453
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CursorShowValues", "CursorShowValues.csproj", "{AAB70714-83CC-4E09-BD09-E1DBC8AECF68}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuGet", "NuGet", "{C30390A8-324A-4CAE-85F6-80735A010FD8}"
-	ProjectSection(SolutionItems) = preProject
-		nuget.config = nuget.config
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
