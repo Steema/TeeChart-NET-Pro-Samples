@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31205.134
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeriesRatings", "SeriesRatings\SeriesRatings.csproj", "{178B5DE8-447D-4E65-B928-C705A617788F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamlWPFDemo", "TeeChart.Xaml.WPF Demo\XamlWPFDemo.csproj", "{37A0A4ED-EDB6-4BC7-BFEB-2592FECDC7A4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeeChartWPFManipulation", "TeeChartWPFManipulation\TeeChartWPFManipulation.csproj", "{B5774646-C71F-4EA1-AA80-555EE1255B7C}"
 EndProject
@@ -35,18 +33,6 @@ Global
 		{178B5DE8-447D-4E65-B928-C705A617788F}.Release|x64.Build.0 = Release|x64
 		{178B5DE8-447D-4E65-B928-C705A617788F}.Release|x86.ActiveCfg = Release|x86
 		{178B5DE8-447D-4E65-B928-C705A617788F}.Release|x86.Build.0 = Release|x86
-		{37A0A4ED-EDB6-4BC7-BFEB-2592FECDC7A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{37A0A4ED-EDB6-4BC7-BFEB-2592FECDC7A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{37A0A4ED-EDB6-4BC7-BFEB-2592FECDC7A4}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{37A0A4ED-EDB6-4BC7-BFEB-2592FECDC7A4}.Debug|x64.Build.0 = Debug|Any CPU
-		{37A0A4ED-EDB6-4BC7-BFEB-2592FECDC7A4}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{37A0A4ED-EDB6-4BC7-BFEB-2592FECDC7A4}.Debug|x86.Build.0 = Debug|Any CPU
-		{37A0A4ED-EDB6-4BC7-BFEB-2592FECDC7A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{37A0A4ED-EDB6-4BC7-BFEB-2592FECDC7A4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{37A0A4ED-EDB6-4BC7-BFEB-2592FECDC7A4}.Release|x64.ActiveCfg = Release|Any CPU
-		{37A0A4ED-EDB6-4BC7-BFEB-2592FECDC7A4}.Release|x64.Build.0 = Release|Any CPU
-		{37A0A4ED-EDB6-4BC7-BFEB-2592FECDC7A4}.Release|x86.ActiveCfg = Release|Any CPU
-		{37A0A4ED-EDB6-4BC7-BFEB-2592FECDC7A4}.Release|x86.Build.0 = Release|Any CPU
 		{B5774646-C71F-4EA1-AA80-555EE1255B7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B5774646-C71F-4EA1-AA80-555EE1255B7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B5774646-C71F-4EA1-AA80-555EE1255B7C}.Debug|x64.ActiveCfg = Debug|Any CPU

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.ComponentModel;
+using System.Net;
 using System.Web;
 using System.Web.SessionState;
 
@@ -21,8 +22,6 @@ namespace WebDemo
 			InitializeComponent();
 			
 			ServicePointManager.SecurityProtocol =
-							SecurityProtocolType.Tls12 |
-							SecurityProtocolType.Tls11 |
 							SecurityProtocolType.Tls;			
 		}	
 		
