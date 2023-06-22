@@ -1,9 +1,13 @@
 ﻿using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Running;
-using Speed_Test;
+using Speed_Test_48;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Benchmark
+namespace Benchmark_48
 {
     public class Program
     {
