@@ -67,6 +67,6 @@
 
         <controls:TChart x:Name="tChart1" Drawable="{Binding Source={RelativeSource Self}}"
                           HeightRequest="400"
-                          WidthRequest="600" />
+                          HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
     </StackLayout>
 </ContentPage>

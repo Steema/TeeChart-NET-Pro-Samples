@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:controls="clr-namespace:Steema.TeeChart.Maui;assembly=TeeChart.Maui"
              x:Class="TeeChartMockUpDemos.AllCharts"
-             Title="TemplateBinding CardView">
+             Title="TeeChart MAUI Demos">
     <ContentPage.Resources>
         <ControlTemplate x:Key="CardViewControlTemplate">
             <!--
