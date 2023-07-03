@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:Steema.TeeChart.Maui;assembly=TeeChart.Maui"
+             x:Class="TeeChartMockUpDemos.AllCharts"
+             Title="TemplateBinding CardView">
+    <ContentPage.Resources>
+        <ControlTemplate x:Key="CardViewControlTemplate">
+            <!--
+            In this example, the TemplateBinding markup extension resolves binding expressions against the properties of each CardView object.
+            -->
+            <Frame BackgroundColor="{TemplateBinding CardColor}"
+                   BorderColor="{TemplateBinding BorderColor}"
+                   CornerRadius="5"
+                   HasShadow="True"
+                   Padding="8"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="75" />
+                        <RowDefinition Height="4" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <!--<ColumnDefinition Width="75" />-->
+                        <ColumnDefinition Width="200" />
+                    </Grid.ColumnDefinitions>
+                    <Frame IsClippedToBounds="True"
+                           BorderColor="{TemplateBinding BorderColor}"
+                           BackgroundColor="{TemplateBinding IconBackgroundColor}"
+                           CornerRadius="38"
+                           HeightRequest="60"
+                           WidthRequest="60"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center">
+                        <Image Source="{TemplateBinding IconImageSource}"
+                               Margin="-20"
+                               WidthRequest="100"
+                               HeightRequest="100"
+                               Aspect="AspectFill" />
+                    </Frame>
+                    <Label Grid.Column="1"
+                           Text="{TemplateBinding CardTitle}"
+                           FontAttributes="Bold"
+                           FontSize="20"
+                           VerticalTextAlignment="Center"
+                           HorizontalTextAlignment="Start" />
+                    <BoxView Grid.Row="1"
+                             Grid.ColumnSpan="2"
+                             BackgroundColor="{TemplateBinding BorderColor}"
+                             HeightRequest="2"
+                             HorizontalOptions="Fill" />
+                    <Label Grid.Row="2"
+                           Grid.ColumnSpan="2"
+                           Text="{TemplateBinding CardDescription}"
+                           VerticalTextAlignment="Start"
+                           VerticalOptions="Fill"
+                           HorizontalOptions="Fill" />
+                </Grid>
+            </Frame>
+        </ControlTemplate>
+    </ContentPage.Resources>
+    <ScrollView>
+        <StackLayout Margin="30">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <!--<ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />-->
+                </Grid.ColumnDefinitions>
+
+                <!-- Contenido de la rejilla -->
+
+                <!-- Elemento en la primera fila, primera columna -->
+                <controls:TChart x:Name="tChart1" Drawable="{Binding Source={RelativeSource Self}}"
+                     HeightRequest="400" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="0" Grid.Column="0" />
+
+                <!-- Elemento en la primera fila, segunda columna -->
+                <controls:TChart x:Name="tChart2" Drawable="{Binding Source={RelativeSource Self}}"
+                     HeightRequest="400" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="1" Grid.Column="0" />
+
+                <!-- Elemento en la primera fila, tercera columna -->
+                <controls:TChart x:Name="tChart3" Drawable="{Binding Source={RelativeSource Self}}"
+                     HeightRequest="400" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="2" Grid.Column="0" />
+
+                <!-- Elemento en la segunda fila, primera columna -->
+                <controls:TChart x:Name="tChart4" Drawable="{Binding Source={RelativeSource Self}}"
+                     HeightRequest="400" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="3" Grid.Column="0" />
+
+                <!-- Elemento en la segunda fila, segunda columna -->
+                <controls:TChart x:Name="tChart5" Drawable="{Binding Source={RelativeSource Self}}"
+                     HeightRequest="400" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="4" Grid.Column="0" />
+
+                <!-- Elemento en la segunda fila, tercera columna -->
+                <controls:TChart x:Name="tChart6" Drawable="{Binding Source={RelativeSource Self}}"
+                     HeightRequest="400" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="5" Grid.Column="0" />
+
+                <!-- Elemento en la tercera fila, primera columna -->
+                <controls:TChart x:Name="tChart7" Drawable="{Binding Source={RelativeSource Self}}"
+                     HeightRequest="400" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="6" Grid.Column="0" />
+
+                <!-- Elemento en la tercera fila, segunda columna -->
+                <controls:TChart x:Name="tChart8" Drawable="{Binding Source={RelativeSource Self}}"
+                     HeightRequest="400" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="7" Grid.Column="0" />
+
+                <!-- Elemento en la tercera fila, tercera columna -->
+                <controls:TChart x:Name="tChart9" Drawable="{Binding Source={RelativeSource Self}}"
+                     HeightRequest="400" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="8" Grid.Column="0" />
+
+                <!-- Elemento en la cuarta fila, primera columna -->
+                <controls:TChart x:Name="tChart10" Drawable="{Binding Source={RelativeSource Self}}"
+                     HeightRequest="400" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="9" Grid.Column="0" />
+
+                <!-- Elemento en la cuarta fila, segunda columna -->
+                <controls:TChart x:Name="tChart11" Drawable="{Binding Source={RelativeSource Self}}"
+                     HeightRequest="400" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="10" Grid.Column="0" />
+
+                <!-- Elemento en la cuarta fila, tercera columna -->
+                <controls:TChart x:Name="tChart12" Drawable="{Binding Source={RelativeSource Self}}"
+                     HeightRequest="400" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="11" Grid.Column="0" />
+
+                <!-- Elemento en la quinta fila, primera columna -->
+                <controls:TChart x:Name="tChart13" Drawable="{Binding Source={RelativeSource Self}}"
+                     HeightRequest="400" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="12" Grid.Column="0" />
+
+                <!-- Elemento en la quinta fila, segunda columna -->
+                <controls:TChart x:Name="tChart14" Drawable="{Binding Source={RelativeSource Self}}"
+                     HeightRequest="400" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="13" Grid.Column="0" />
+
+                <!-- Elemento en la quinta fila, tercera columna -->
+                <controls:TChart x:Name="tChart15" Drawable="{Binding Source={RelativeSource Self}}"
+                     HeightRequest="400" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="14" Grid.Column="0" />
+
+                <!-- Elemento en la sexta fila, primera columna -->
+                <controls:TChart x:Name="tChart16" Drawable="{Binding Source={RelativeSource Self}}"
+                     HeightRequest="400" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="15" Grid.Column="0" />
+
+                <!-- Elemento en la sexta fila, segunda columna -->
+                <controls:TChart x:Name="tChart17" Drawable="{Binding Source={RelativeSource Self}}"
+                     HeightRequest="400" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="16" Grid.Column="0" />
+
+                <!-- Elemento en la sexta fila, tercera columna -->
+                <controls:TChart x:Name="tChart18" Drawable="{Binding Source={RelativeSource Self}}"
+                     HeightRequest="400" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="17" Grid.Column="0" />
+
+                <!-- Elemento en la séptima fila, primera columna -->
+                <controls:TChart x:Name="tChart19" Drawable="{Binding Source={RelativeSource Self}}"
+                     HeightRequest="400" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="18" Grid.Column="0" />
+
+                <!-- Elemento en la séptima fila, segunda columna -->
+                <controls:TChart x:Name="tChart20" Drawable="{Binding Source={RelativeSource Self}}"
+                     HeightRequest="400" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="19" Grid.Column="0" />
+
+                <!-- Elemento en la séptima fila, tercera columna -->
+                <controls:TChart x:Name="tChart21" Drawable="{Binding Source={RelativeSource Self}}"
+                     HeightRequest="400" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="20" Grid.Column="0" />
+
+                <!-- Elemento en la octava fila, primera columna -->
+                <controls:TChart x:Name="tChart22" Drawable="{Binding Source={RelativeSource Self}}"
+                     HeightRequest="400" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="21" Grid.Column="0" />
+
+                <!-- Elemento en la octava fila, segunda columna -->
+                <controls:TChart x:Name="tChart23" Drawable="{Binding Source={RelativeSource Self}}"
+                     HeightRequest="400" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="22" Grid.Column="1" />
+
+                <!-- Elemento en la octava fila, tercera columna -->
+                <controls:TChart x:Name="tChart24" Drawable="{Binding Source={RelativeSource Self}}"
+                     HeightRequest="400" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="23" Grid.Column="0" />
+
+                <!-- Elemento en la novena fila, primera columna -->
+                <controls:TChart x:Name="tChart25" Drawable="{Binding Source={RelativeSource Self}}"
+                     HeightRequest="400" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="24" Grid.Column="0" />
+
+                <!-- Elemento en la novena fila, segunda columna -->
+                <controls:TChart x:Name="tChart26" Drawable="{Binding Source={RelativeSource Self}}"
+                     HeightRequest="400" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="25" Grid.Column="0" />
+
+                <!-- Elemento en la novena fila, tercera columna -->
+                <controls:TChart x:Name="tChart27" Drawable="{Binding Source={RelativeSource Self}}"
+                     HeightRequest="400" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="26" Grid.Column="0" />
+
+                <!-- Elemento en la décima fila, primera columna -->
+                <controls:TChart x:Name="tChart28" Drawable="{Binding Source={RelativeSource Self}}"
+                     HeightRequest="400" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="27" Grid.Column="0" />
+
+                <!-- Elemento en la décima fila, segunda columna -->
+                <controls:TChart x:Name="tChart29" Drawable="{Binding Source={RelativeSource Self}}"
+                     HeightRequest="400" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="28" Grid.Column="0" />
+
+                <!-- Elemento en la décima fila, tercera columna -->
+                <controls:TChart x:Name="tChart30" Drawable="{Binding Source={RelativeSource Self}}"
+                     HeightRequest="400" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="29" Grid.Column="0" />
+
+                <!-- Nuevos elementos con sus respectivas filas y columnas -->
+            </Grid>
+
+            <StackLayout Margin="30">
+                <CheckBox x:Name="view3D"/>
+                <Label Text="View 3D" />
+            </StackLayout>
+        </StackLayout>
+            
+    </ScrollView>
+        
+</ContentPage>

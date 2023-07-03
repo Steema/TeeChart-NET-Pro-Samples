@@ -1,0 +1,41 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TeeChartMockUpDemos"
+             x:Class="TeeChartMockUpDemos.MainPage"
+             Padding="10"
+             Title="TeeChart MAUI demos">
+    <TableView Intent="Menu">
+        <TableRoot>
+      <TableSection Title="Select the Demo">
+                <TextCell Text="All Charts"
+                          Detail="All Charts"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:AllCharts}" />
+                <TextCell Text="Line Chart"
+                          Detail="Using Line Chart"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:LineChart}" />
+                <TextCell Text="Bar Chart"
+                          Detail="Using Bar Chart"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:BarChart}" />          
+                <TextCell Text="Area Chart"
+                          Detail="Using Area Chart"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:AreaChart}" />
+                <TextCell Text="Bubble Chart"
+                          Detail="Using Bubble Chart"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:BubbleChart}" />
+                <TextCell Text="Candle Chart"
+                          Detail="Using Candle Chart"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:CandleChart}" />
+                <TextCell Text="Donut Chart"
+                          Detail="Using Donut Chart"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:DonutChart}" />          
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>

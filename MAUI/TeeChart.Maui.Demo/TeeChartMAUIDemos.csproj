@@ -1,0 +1,129 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net7.0-maccatalyst;net7.0-ios;net7.0-android</TargetFrameworks>
+		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net7.0-windows10.0.19041.0</TargetFrameworks>
+		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
+		<!-- <TargetFrameworks>$(TargetFrameworks);net6.0-tizen</TargetFrameworks> -->
+		<OutputType>Exe</OutputType>
+		<RootNamespace>TeeChartMockUpDemos</RootNamespace>
+		<UseMaui>true</UseMaui>
+		<SingleProject>true</SingleProject>
+		<ImplicitUsings>enable</ImplicitUsings>
+
+		<!-- Display name -->
+		<ApplicationTitle>TeeChartMockUpDemos</ApplicationTitle>
+
+		<!-- App Identifier -->
+		<ApplicationId>com.companyname.controltemplatedemos</ApplicationId>
+		<ApplicationIdGuid>FA1585E0-F7D2-48D7-AE3B-DF5EB411617D</ApplicationIdGuid>
+
+		<!-- Versions -->
+		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+		<ApplicationVersion>1</ApplicationVersion>
+
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
+		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-ios|AnyCPU'">
+	  <MtouchLink>SdkOnly</MtouchLink>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<!-- App Icon -->
+		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
+
+		<!-- Splash Screen -->
+		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
+
+		<!-- Images -->
+		<MauiImage Include="Resources\Images\*" />
+		<MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
+
+		<!-- Custom Fonts -->
+		<MauiFont Include="Resources\Fonts\*" />
+
+		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
+		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Remove="Views\AccessTemplateElementPage.xaml.cs" />
+	  <Compile Remove="Views\AllCharst.xaml.cs" />
+	  <Compile Remove="Views\BindToViewModelPage.xaml.cs" />
+	  <Compile Remove="Views\ContentPresenterPage.xaml.cs" />
+	  <Compile Remove="Views\ControlTemplateStylePage.xaml.cs" />
+	  <Compile Remove="Views\FastLineChart.xaml.cs" />
+	  <Compile Remove="Views\GanttChart.xaml.cs" />
+	  <Compile Remove="Views\HorizBarChart.xaml.cs" />
+	  <Compile Remove="Views\NewPage1.xaml.cs" />
+	  <Compile Remove="Views\PieChart.xaml.cs" />
+	  <Compile Remove="Views\PointsChart.xaml.cs" />
+	  <Compile Remove="Views\RelativeSourceBindingCardViewPage.xaml.cs" />
+	  <Compile Remove="Views\ReplaceTemplateCardViewPage.xaml.cs" />
+	  <Compile Remove="Views\SurfaceChart.xaml.cs" />
+	  <Compile Remove="Views\TemplateBindingCardViewPage.xaml.cs" />
+	  <Compile Remove="Views\VolumeChart.xaml.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Remove="Views\AccessTemplateElementPage.xaml" />
+	  <MauiXaml Remove="Views\BindToViewModelPage.xaml" />
+	  <MauiXaml Remove="Views\ContentPresenterPage.xaml" />
+	  <MauiXaml Remove="Views\ControlTemplateStylePage.xaml" />
+	  <MauiXaml Remove="Views\FastLineChart.xaml" />
+	  <MauiXaml Remove="Views\GanttChart.xaml" />
+	  <MauiXaml Remove="Views\HorizBarChart.xaml" />
+	  <MauiXaml Remove="Views\NewPage1.xaml" />
+	  <MauiXaml Remove="Views\PieChart.xaml" />
+	  <MauiXaml Remove="Views\PointsChart.xaml" />
+	  <MauiXaml Remove="Views\RelativeSourceBindingCardViewPage.xaml" />
+	  <MauiXaml Remove="Views\ReplaceTemplateCardViewPage.xaml" />
+	  <MauiXaml Remove="Views\SurfaceChart.xaml" />
+	  <MauiXaml Remove="Views\TemplateBindingCardViewPage.xaml" />
+	  <MauiXaml Remove="Views\VolumeChart.xaml" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="Resources\Images\user.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="Steema.TeeChart.NET.MAUI" Version="6.2023.7.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Views\LineChart.xaml.cs">
+	    <DependentUpon>LineChart.xaml</DependentUpon>
+	  </Compile>
+  </ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Views\AllCharts.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\AreaChart.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\BarChart.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\BuubleChart.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\CandleChart.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\DonutChart.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\LineChart.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\MainPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+  </ItemGroup>
+
+</Project>
