@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:controls="clr-namespace:Steema.TeeChart.Maui;assembly=TeeChart.Maui"
              x:Class="TeeChartMockUpDemos.BubbleChart"
-             Title="TemplateBinding CardView">
+             Title="Bubble Chart Sample">
     <ContentPage.Resources>
         <ControlTemplate x:Key="CardViewControlTemplate">
             <!--
@@ -62,9 +62,6 @@
         </ControlTemplate>
     </ContentPage.Resources>
     <StackLayout Margin="30">
-        <CheckBox x:Name="view3D"/>
-        <Label Text="View 3D" />
-
         <controls:TChart x:Name="tChart1" Drawable="{Binding Source={RelativeSource Self}}"
                           HeightRequest="400"
                           HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />

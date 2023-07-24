@@ -12,7 +12,11 @@ namespace TeeChartMockUpDemos
             view3D.CheckedChanged += View3D_CheckedChanged;
             var line = new Line(tChart1.Chart);
             line.FillSampleValues();
-            
+            var line2 = new Line(tChart1.Chart);
+            line2.FillSampleValues();
+            var line3 = new Line(tChart1.Chart);
+            line3.FillSampleValues();
+
             tChart1.Panning.Active = false;
             tChart1.Zoom.Active = true;
         }

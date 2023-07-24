@@ -11,7 +11,12 @@ namespace TeeChartMockUpDemos
             InitializeComponent();
             view3D.CheckedChanged += View3D_CheckedChanged;
             var bar = new Bar(tChart1.Chart);
-            bar.Add(10000000);
+            //bar.Add(10000000);
+            bar.FillSampleValues(10);
+
+            var bar2 = new Bar(tChart1.Chart);
+            //bar.Add(10000000);
+            bar2.FillSampleValues(10);
             tChart1.Chart.Panning.Active = false;
             tChart1.Chart.Zoom.Active = true;
         }
