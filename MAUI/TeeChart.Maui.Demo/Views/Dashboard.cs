@@ -1,26 +1,24 @@
-﻿using Microsoft.Maui.Controls;
-using Steema.TeeChart.Maui;
-using Steema.TeeChart;
+﻿using Steema.TeeChart.Maui;
 
 namespace TeeChartMockUpDemos;
 
 public class Dashboard : ContentPage
 {
-    TChart _chart1 = new TChart();
-    TChart _chart2 = new TChart();
-    TChart _chart3 = new TChart();
-    TChart _chart4 = new TChart();
-    TChart _chart5 = new TChart();
-    TChart _chart6 = new TChart();
-    TChart _chart7 = new TChart();
-    TChart _chart8 = new TChart();
-    TChart _chart9 = new TChart();
-    TChart _chart10 = new TChart();
+    private readonly TChart _chart1 = new();
+    private readonly TChart _chart2 = new();
+    private readonly TChart _chart3 = new();
+    private readonly TChart _chart4 = new();
+    private readonly TChart _chart5 = new();
+    private readonly TChart _chart6 = new();
+    private readonly TChart _chart7 = new();
+    private readonly TChart _chart8 = new();
+    private readonly TChart _chart9 = new();
+    private readonly TChart _chart10 = new();
 
-
+    [Obsolete]
     public Dashboard()
-	{
-        Grid grid = new Grid
+    {
+        Grid grid = new()
         {
             RowDefinitions =
             {
@@ -37,10 +35,11 @@ public class Dashboard : ContentPage
             }
         };
 
+        /*
         // Row 0
         // The BoxView and Label are in row 0 and column 0, and so only need to be added to the
         // Grid to obtain the default row and column settings.
-        var _numericGauge = new Steema.TeeChart.Styles.Line();
+        Steema.TeeChart.Styles.Line _numericGauge = new();
         _numericGauge.FillSampleValues();
         _chart1.Chart.Series.Add(_numericGauge);
         _chart1.HeightRequest = 400;
@@ -48,18 +47,34 @@ public class Dashboard : ContentPage
         _chart1.Chart.Width = 400;
         _chart1.Chart.Height = 400;
         _chart1.HorizontalOptions = LayoutOptions.FillAndExpand;
+        _chart1.VerticalOptions = LayoutOptions.FillAndExpand;  */
+
+
+
+        void _chart1_AfterDraw(object sender, Steema.TeeChart.Drawing.IGraphics3D g)
+        {
+            g.Font.Size = 16;
+            g.Font.Color = System.Drawing.Color.Red;
+            var str = "Hello Chart";
+            var size = g.MeasureString(g.Font, str);
+            g.TextOut(g.ChartXCenter - Steema.TeeChart.Utils.Round(size.Width / 2.0), g.ChartYCenter - Steema.TeeChart.Utils.Round(size.Height / 2.0), str);
+        }
+
+        _chart1.Drawable = _chart1;
+        _chart1.AfterDraw += _chart1_AfterDraw;
+        //_chart1.HeightRequest = 400;
+        _chart1.HorizontalOptions = LayoutOptions.FillAndExpand;
         _chart1.VerticalOptions = LayoutOptions.FillAndExpand;
+        grid.Add(_chart1, 0, 0);
 
-        grid.Add((_chart1 as IView),1,0);
 
-
-        /*
-        grid.Add(new Label
+        
+        /* grid.Add(new Label
         {
             Text = "Row 0, Column 0",
             HorizontalOptions = LayoutOptions.Center,
             VerticalOptions = LayoutOptions.Center
-        });*/
+        });  */
 
         grid.Add(new Label
         {
@@ -98,7 +113,7 @@ public class Dashboard : ContentPage
 
         // This BoxView and Label are in row 1 and column 1, which are specified as arguments
         // to the Add method.
-        BoxView boxView2 = new BoxView
+        BoxView boxView2 = new()
         {
             Color = Colors.Blue
         };
@@ -115,7 +130,7 @@ public class Dashboard : ContentPage
         // Row 2
         // This BoxView and Label are in row 1 and column 0, which are specified as arguments
         // to the Add method overload.
-        BoxView boxView3 = new BoxView
+        BoxView boxView3 = new()
         {
             Color = Colors.Teal
         };
@@ -145,10 +160,10 @@ public class Dashboard : ContentPage
         // Row 3
         // Alternatively, the BoxView and Label can be positioned in cells with the Grid.SetRow
         // and Grid.SetColumn methods.
-        BoxView boxView = new BoxView { Color = Colors.Red };
+        BoxView boxView = new() { Color = Colors.Red };
         Grid.SetRow(boxView, 3);
         Grid.SetColumnSpan(boxView, 3);
-        Label label = new Label
+        Label label = new()
         {
             Text = "Row 3, Column 0 and 1",
             HorizontalOptions = LayoutOptions.Center,
@@ -162,5 +177,6 @@ public class Dashboard : ContentPage
 
         Title = "Dashboard";
         Content = grid;
-	}
+    }
+
 }

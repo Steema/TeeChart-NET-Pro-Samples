@@ -91,7 +91,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="Steema.TeeChart.NET.MAUI" Version="6.2023.24.7" />
+	  <ProjectReference Include="..\..\..\..\..\..\..\TCROOT\TeeChartForNET\Version 4\Sources\TeeChart.PCL.NET6\Headless\TeeChart\TeeChart.csproj" />
+	  <ProjectReference Include="..\..\..\..\..\..\..\TCROOT\TeeChartForNET\Version 4\Sources\TeeChart.PCL.NET7\TeeChart.Maui.NET7\TeeChart.Maui.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
