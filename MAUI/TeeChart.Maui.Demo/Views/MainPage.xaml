@@ -34,7 +34,19 @@
                 <TextCell Text="Donut Chart"
                           Detail="Using Donut Chart"
                           Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:DonutChart}" />          
+                          CommandParameter="{x:Type local:DonutChart}" />
+                <TextCell Text="CircularGauge Chart"
+                          Detail="Using Gauge Chart"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:CircularGaugeChart}" />
+                <TextCell Text="Map Chart"
+                          Detail="Map Chart"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:MapChart}" />
+                <TextCell Text="Dashboard"
+                          Detail="Dashboard"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Dashboard}" />
             </TableSection>
         </TableRoot>
     </TableView>

@@ -8,17 +8,9 @@ namespace TeeChartMockUpDemos
     {
         public BubbleChart()
         {
-            InitializeComponent();
-            view3D.CheckedChanged += View3D_CheckedChanged;
+            InitializeComponent();            
             var bubble = new Bubble(tChart1.Chart);
             bubble.FillSampleValues();
         }
-
-        private void View3D_CheckedChanged(object sender, CheckedChangedEventArgs e)
-        {
-            tChart1.Chart.Aspect.View3D = e.Value;
-            InvalidateMeasure();
-        }
-
     }
 }

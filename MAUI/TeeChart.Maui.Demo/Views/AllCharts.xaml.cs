@@ -17,6 +17,8 @@ namespace TeeChartMockUpDemos
             var area = new Area(tChart3.Chart);
             var pie = new Pie(tChart4.Chart);
             pie.Circled = true;
+            pie.Marks.Visible = false;
+            tChart4.Chart.Header.Visible = false;
 
             var bubble = new Bubble(tChart5.Chart);
             var donut = new Donut(tChart6.Chart);

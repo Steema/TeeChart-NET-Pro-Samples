@@ -1,4 +1,5 @@
 ﻿using Microsoft.Maui;
+using Microsoft.Maui.Controls.Shapes;
 using Steema.TeeChart.Maui;
 using Steema.TeeChart.Styles;
 
@@ -19,6 +20,9 @@ namespace TeeChartMockUpDemos
             bar2.FillSampleValues(10);
             tChart1.Chart.Panning.Active = false;
             tChart1.Chart.Zoom.Active = true;
+
+            bar2.Gradient.Visible = true;
+            bar2.BarStyle = BarStyles.RectGradient;
         }
 
         private void View3D_CheckedChanged(object sender, CheckedChangedEventArgs e)

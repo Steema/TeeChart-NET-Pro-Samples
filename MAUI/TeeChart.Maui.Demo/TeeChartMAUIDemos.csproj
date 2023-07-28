@@ -24,6 +24,7 @@
 
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
 		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">14.1</SupportedOSPlatformVersion>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-ios|AnyCPU'">
@@ -90,7 +91,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="Steema.TeeChart.NET.MAUI" Version="6.2023.7.1" />
+	  <ProjectReference Include="..\..\..\..\Sources\TeeChart.PCL.NET6\Headless\TeeChart\TeeChart.csproj" />
+	  <ProjectReference Include="..\..\..\..\Sources\TeeChart.PCL.NET7\TeeChart.Maui.NET7\TeeChart.Maui.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -100,10 +102,13 @@
   </ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Views\AllCharts.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Views\AreaChart.xaml">
+    <MauiXaml Update="Views\Dashboard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Views\AllCharts.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Views\AreaChart.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\BarChart.xaml">
