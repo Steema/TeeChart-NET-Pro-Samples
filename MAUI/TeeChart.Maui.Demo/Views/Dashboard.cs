@@ -1,26 +1,23 @@
-﻿using Microsoft.Maui.Controls;
-using Steema.TeeChart.Maui;
-using Steema.TeeChart;
+﻿using Steema.TeeChart.Maui;
+using Steema.TeeChart.Styles;
 
 namespace TeeChartMockUpDemos;
 
 public class Dashboard : ContentPage
 {
-    TChart _chart1 = new TChart();
-    TChart _chart2 = new TChart();
-    TChart _chart3 = new TChart();
-    TChart _chart4 = new TChart();
-    TChart _chart5 = new TChart();
-    TChart _chart6 = new TChart();
-    TChart _chart7 = new TChart();
-    TChart _chart8 = new TChart();
-    TChart _chart9 = new TChart();
-    TChart _chart10 = new TChart();
+    private readonly TChart _chart1 = new();
+    private readonly TChart _chart1_2 = new();
+    private readonly TChart _chart1_3 = new();
+    private readonly TChart _chart2 = new();
+    private readonly TChart _chart3 = new();
+    private readonly TChart _chart4 = new();
+    private readonly TChart _chart5 = new();
+    private readonly TChart _chart6 = new();
 
-
+    [Obsolete]
     public Dashboard()
-	{
-        Grid grid = new Grid
+    {
+        Grid grid = new()
         {
             RowDefinitions =
             {
@@ -37,130 +34,109 @@ public class Dashboard : ContentPage
             }
         };
 
-        // Row 0
-        // The BoxView and Label are in row 0 and column 0, and so only need to be added to the
-        // Grid to obtain the default row and column settings.
-        var _numericGauge = new Steema.TeeChart.Styles.Line();
-        _numericGauge.FillSampleValues();
-        _chart1.Chart.Series.Add(_numericGauge);
-        _chart1.HeightRequest = 400;
-        _chart1.WidthRequest = 400;
-        _chart1.Chart.Width = 400;
-        _chart1.Chart.Height = 400;
+        void _chart1_AfterDraw(object sender, Steema.TeeChart.Drawing.IGraphics3D g)
+        {
+            g.Font.Size = 14;
+            g.Font.Color = System.Drawing.Color.Red;
+            var str = "This is a custom text on Canvas";
+            var size = g.MeasureString(g.Font, str);
+            g.TextOut(g.ChartXCenter - Steema.TeeChart.Utils.Round(size.Width / 2.0), g.ChartYCenter - Steema.TeeChart.Utils.Round(size.Height / 2.0), str);
+        }
+
+        _chart1.Drawable = _chart1;
+        _chart1.Chart.Header.Visible = false;
+        _chart1.Chart.Series.Add(new NumericGauge());
+        _chart1.Chart.Series[0].FillSampleValues();        
         _chart1.HorizontalOptions = LayoutOptions.FillAndExpand;
         _chart1.VerticalOptions = LayoutOptions.FillAndExpand;
+        grid.Add(_chart1, 0, 0);
 
-        grid.Add((_chart1 as IView),1,0);
+        _chart1_2.Drawable = _chart1_2;
+        _chart1_2.Chart.Header.Visible = false;
+        _chart1_2.Chart.Series.Add(new NumericGauge());
+        _chart1_2.Chart.Series[0].FillSampleValues();
+        _chart1_2.HorizontalOptions = LayoutOptions.FillAndExpand;
+        _chart1_2.VerticalOptions = LayoutOptions.FillAndExpand;
+        grid.Add(_chart1_2, 1, 0);
 
+        _chart1_3.Drawable = _chart1_3;
+        _chart1_3.Chart.Header.Visible = false;
+        _chart1_3.Chart.Series.Add(new NumericGauge());
+        _chart1_3.Chart.Series[0].FillSampleValues();
+        _chart1_3.HorizontalOptions = LayoutOptions.FillAndExpand;
+        _chart1_3.VerticalOptions = LayoutOptions.FillAndExpand;
+        grid.Add(_chart1_3, 2, 0);
 
-        /*
-        grid.Add(new Label
-        {
-            Text = "Row 0, Column 0",
-            HorizontalOptions = LayoutOptions.Center,
-            VerticalOptions = LayoutOptions.Center
-        });*/
+        _chart2.Drawable = _chart2;
+        _chart2.Chart.Header.Visible = false;
+        _chart2.Chart.Series.Add(new Donut());
+        _chart2.Chart.Legend.Alignment = Steema.TeeChart.LegendAlignments.Bottom;
+        (_chart2.Chart.Series[0] as Donut).Marks.Visible = false;
+        (_chart2.Chart.Series[0] as Donut).Circled = true;
+        (_chart2.Chart.Series[0] as Donut).Pen.Visible = false;
+        _chart2.Chart.Series[0].FillSampleValues();
+        _chart2.HorizontalOptions = LayoutOptions.FillAndExpand;
+        _chart2.VerticalOptions = LayoutOptions.FillAndExpand;
+        grid.Add(_chart2, 0, 1);
 
-        grid.Add(new Label
-        {
-            Text = "Row 0, Column 1",
-            HorizontalOptions = LayoutOptions.Center,
-            VerticalOptions = LayoutOptions.Center
-        }, 1, 0);
+        _chart3.Drawable = _chart3;
+        _chart3.Chart.Series.Add(new Area());
+        _chart3.Chart.Header.Visible = false;
+        _chart3.Chart.Series[0].FillSampleValues();
+        _chart3.Chart.Legend.Visible = false;
+        _chart3.Chart.Axes.Left.Visible = false;
+        _chart3.Chart.Axes.Bottom.Increment = 10;
+        (_chart3.Chart.Series[0] as Area).Smoothed = true;
+        (_chart3.Chart.Series[0] as Area).AreaLines.Visible = false;
+        _chart3.HorizontalOptions = LayoutOptions.FillAndExpand;
+        _chart3.VerticalOptions = LayoutOptions.FillAndExpand;
+        grid.Add(_chart3, 1, 1);
 
-        // This BoxView and Label are in row 0 and column 2, which are specified as arguments
-        // to the Add method.
-        grid.Add(new BoxView
-        {
-            Color = Colors.Blue
-        }, 2, 0);
-        grid.Add(new Label
-        {
-            Text = "Row 0, Column 2",
-            HorizontalOptions = LayoutOptions.Center,
-            VerticalOptions = LayoutOptions.Center
-        }, 2, 0);
-
-
-        // Row 1
-        // The BoxView and Label are in row 0 and column 0, and so only need to be added to the
-        // Grid to obtain the default row and column settings.
-        grid.Add(new BoxView
-        {
-            Color = Colors.Green
-        }, 0, 1);
-        grid.Add(new Label
-        {
-            Text = "Row 1, Column 0",
-            HorizontalOptions = LayoutOptions.Center,
-            VerticalOptions = LayoutOptions.Center
-        }, 0, 1);
-
-        // This BoxView and Label are in row 1 and column 1, which are specified as arguments
-        // to the Add method.
-        BoxView boxView2 = new BoxView
-        {
-            Color = Colors.Blue
-        };
-
-        grid.Add(boxView2, 1, 1);
-        grid.Add(new Label
-        {
-            Text = "Row 1, Column 1",
-            HorizontalOptions = LayoutOptions.Center,
-            VerticalOptions = LayoutOptions.Center
-        }, 1, 1);
-        grid.SetColumnSpan(boxView2, 2);
+        grid.SetColumnSpan(_chart3, 2);
 
         // Row 2
-        // This BoxView and Label are in row 1 and column 0, which are specified as arguments
-        // to the Add method overload.
-        BoxView boxView3 = new BoxView
-        {
-            Color = Colors.Teal
-        };
+        _chart4.Drawable = _chart4;
+        _chart4.Chart.Header.Visible = false;
+        _chart4.Chart.Series.Add(new World());
+        _chart4.Chart.Axes.Bottom.Visible = false;
+        (_chart4.Chart.Series[0] as World).Map = WorldMapType.World;
+        (_chart4.Chart.Series[0] as World).Pen.Visible = false;
+        _chart4.Chart.Series[0].FillSampleValues();
+        _chart4.HorizontalOptions = LayoutOptions.FillAndExpand;
+        _chart4.VerticalOptions = LayoutOptions.FillAndExpand;
+        grid.Add(_chart4, 0, 2);
 
-        grid.Add(boxView3, 0, 2);
-        grid.Add(new Label
-        {
-            Text = "Row 2, Column 0",
-            HorizontalOptions = LayoutOptions.Center,
-            VerticalOptions = LayoutOptions.Center
-        }, 0, 2);
-        grid.SetColumnSpan(boxView3, 2);
+        grid.SetColumnSpan(_chart4, 2);
 
-        // This BoxView and Label are in row 2 and column 1, which are specified as arguments
-        // to the Add method overload.
-        grid.Add(new BoxView
-        {
-            Color = Colors.Purple
-        }, 2, 2);
-        grid.Add(new Label
-        {
-            Text = "Row2, Column 1",
-            HorizontalOptions = LayoutOptions.Center,
-            VerticalOptions = LayoutOptions.Center
-        }, 2, 2);
+        _chart5.Drawable = _chart5;
+        _chart5.Chart.Header.Visible = false;
+        _chart5.Chart.Series.Add(new Bar());
+        _chart5.Chart.Series[0].FillSampleValues();
+        _chart5.Chart.Series[0].Marks.Visible = false;
+        _chart5.Chart.Axes.Left.Visible = false;
+        _chart5.Chart.Legend.Visible = false;        
+        _chart5.HorizontalOptions = LayoutOptions.FillAndExpand;
+        _chart5.VerticalOptions = LayoutOptions.FillAndExpand;
+        grid.Add(_chart5, 2, 2);
 
         // Row 3
-        // Alternatively, the BoxView and Label can be positioned in cells with the Grid.SetRow
-        // and Grid.SetColumn methods.
-        BoxView boxView = new BoxView { Color = Colors.Red };
-        Grid.SetRow(boxView, 3);
-        Grid.SetColumnSpan(boxView, 3);
-        Label label = new Label
-        {
-            Text = "Row 3, Column 0 and 1",
-            HorizontalOptions = LayoutOptions.Center,
-            VerticalOptions = LayoutOptions.Center
-        };
-        Grid.SetRow(label, 3);
-        Grid.SetColumnSpan(label, 3);
+        _chart6.Drawable = _chart6;
+        _chart6.Chart.Header.Visible = false;
+        _chart6.Chart.Series.Add(new Line());
+        _chart6.Chart.Series[0].FillSampleValues();
+        _chart6.Chart.Legend.Visible = false;
+        _chart6.Chart.Axes.Left.Visible = false;
+        _chart6.Chart.Axes.Bottom.Visible = false;
+        _chart6.Chart.Panel.MarginBottom = 50;
+        _chart6.HorizontalOptions = LayoutOptions.FillAndExpand;
+        _chart6.VerticalOptions = LayoutOptions.FillAndExpand;
+        _chart6.AfterDraw += _chart1_AfterDraw;
+        grid.Add(_chart6, 0, 3);
 
-        grid.Add(boxView);
-        grid.Add(label);
+        Grid.SetColumnSpan(_chart6, 3);
 
-        Title = "Dashboard";
+        Title = "Steema TeeChart sample Dashboard";
         Content = grid;
-	}
+    }
+
 }
