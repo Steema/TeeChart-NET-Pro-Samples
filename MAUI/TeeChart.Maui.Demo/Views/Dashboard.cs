@@ -123,6 +123,7 @@ public class Dashboard : ContentPage
         _chart6.Drawable = _chart6;
         _chart6.Chart.Header.Visible = false;
         _chart6.Chart.Series.Add(new Line());
+        (_chart6.Chart.Series[0] as Line).LinePen.Width = 5;
         _chart6.Chart.Series[0].FillSampleValues();
         _chart6.Chart.Legend.Visible = false;
         _chart6.Chart.Axes.Left.Visible = false;
