@@ -97,7 +97,7 @@ namespace Steema.TeeChart.Samples
     {
       string path = Environment.GetFolderPath(System.Environment.SpecialFolder.ApplicationData) + @"\charthtml5.html";
       tChart1.Export.Image.HTML5.Save(path);
-      System.Diagnostics.Process.Start(path);
+      //temp out System.Diagnostics.Process.Start(path);
     }
 	}
 }
