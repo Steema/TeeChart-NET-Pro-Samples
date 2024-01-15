@@ -42,18 +42,22 @@ namespace SeriesRatings
             Chart.Visibility = Visibility.Visible;
 
             Chart.Aspect.View3D = false;
-            Chart.CurrentTheme = ThemeType.BlackIsBack;
 
             Chart.Header.Font.Size = 16;
 
             Chart.Legend.Alignment = LegendAlignments.Bottom;
             Chart.Legend.Brush.Gradient.Visible = false;
+
             Chart.Legend.Brush.Visible = false;
 
+
             Chart.Panel.Gradient.Visible = false;
-            // If we set the panel visibility to false, all the mouse events go through the chart, so we set it to fully transparent instead.
-            Chart.Panel.Brush.Transparency = 100;
-            Chart.Panel.Bevel.Inner = BevelStyles.None;
+            Chart.CurrentTheme = ThemeType.BlackIsBack;
+
+      // If we set the panel visibility to false, all the mouse events go through the chart, so we set it to fully transparent instead.
+      //Chart.Panel.Brush.Transparency = 100;
+
+      Chart.Panel.Bevel.Inner = BevelStyles.None;
             Chart.Panel.Bevel.Outer = BevelStyles.None;
 
             var dashStyle = new DashStyle(new double[] {1, 5}, 0);
@@ -202,13 +206,20 @@ namespace SeriesRatings
             var ratedEpisodes = 0;
             foreach (var episode in season.Episodes)
             {
-                if (double.IsNaN(episode.Rating)) break;
-
+              if (double.IsNaN(episode.Rating))
+              {
+                //In case the API doesn't return a correct value, we don't do anything
+              }
+              else
+              {
                 _episodeSeries.Add(episodes, episode.Rating, GetEpisodeLabel(episode, seasonNumber));
                 ratingAverage += episode.Rating;
 
                 episodes++;
                 ratedEpisodes++;
+              }
+
+                
             }
             ratingAverage /= ratedEpisodes;
 
