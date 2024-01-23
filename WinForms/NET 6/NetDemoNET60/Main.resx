@@ -1007,7 +1007,6 @@
   Big Dotted lines,Canvas_DotPen,\\Canvas\\Canvas_DotPen
   Canvas Events,Chart_OnBeforeDraw,\\Canvas\\Chart_OnBeforeDraw
   Custom Gradients,Canvas_CustomGradients,\\Canvas\\Canvas_CustomGradients
-  Font Quality,Canvas_FontQuality,\\Canvas\Canvas_FontQuality
   Gradient middle color,Gradient_MidColor,\\Canvas\\Gradient_MidColor
   Html Text,Canvas_HtmlText,\\Canvas\Canvas_HtmlText
   ICloneable Implentation,Canvas_ICloneable,\\Canvas\\Canvas_ICloneable
@@ -1279,7 +1278,6 @@ Upgrading and Ordering,Order_Info,Order_Info</value>
   SubAxes,Axis_SubAxes,\\Axis\\Axis_SubAxes
  New in Canvas
   Flash "CompactCharts",CompactCharts,\\Canvas\CompactCharts
-  Font Quality,Canvas_FontQuality,\\Canvas\Canvas_FontQuality
   Pen Fill,Canvas_PenFill,\\Canvas\Canvas_PenFill
   Html Text,Canvas_HtmlText,\\Canvas\Canvas_HtmlText
  New in Components
