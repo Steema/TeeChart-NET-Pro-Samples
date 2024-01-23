@@ -20,6 +20,7 @@ namespace Steema.TeeChart.Samples
 		{
 			// This call is required by the Windows Form Designer.
 			InitializeComponent();
+     
 		}
 
 		/// <summary>
@@ -230,9 +231,12 @@ namespace Steema.TeeChart.Samples
 
 		private void ZPosition_Load(object sender, System.EventArgs e)
 		{
-			this.comboBox1.SelectedIndex = 0;
-            tChart1.Axes.Right.Visible = true;
-		}
+			  this.comboBox1.SelectedIndex = 0;
+        tChart1.Axes.Right.Visible = true;
+        tChart1.Series[0].FillSampleValues(20);
+        tChart1.Aspect.View3D = true;
+        tChart1.Walls.Left.Transparency = 100;
+    }
 
 		private void hScrollBar1_Scroll(object sender, System.Windows.Forms.ScrollEventArgs e)
 		{
