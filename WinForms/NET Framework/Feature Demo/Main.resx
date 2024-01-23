@@ -1330,7 +1330,7 @@ Upgrading and Ordering,Order_Info,Order_Info</value>
   ErrorPoint3D Series,Series_ErrorPoint3D,\\Series\\Series_ErrorPoint3D
   TreeMap Series,TreeMap_Series,\\Series\\TreeMap_Series
   ClockGauge Series,ClockGauge_Series,\\Series\\ClockGauge_Series
- New Funtions
+ New Functions
   Money Flow,Function_MoneyFlow,\\Functions\\Function_MoneyFlow
   Percent Change,Function_PercentChange,\\Functions\\Function_PercentChange
   Slope,Function_Slope,\\Functions\\Function_Slope
