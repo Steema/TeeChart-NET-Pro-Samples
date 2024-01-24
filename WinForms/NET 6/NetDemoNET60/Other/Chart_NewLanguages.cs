@@ -73,7 +73,8 @@ namespace Steema.TeeChart.Samples
             "Farsi",
             "Malaysian",
             "Romanian",
-            "Urdu"});
+            "Urdu",
+            "English"});
       this.comboBox1.Location = new System.Drawing.Point(12, 12);
       this.comboBox1.Name = "comboBox1";
       this.comboBox1.Size = new System.Drawing.Size(207, 21);
@@ -150,9 +151,20 @@ namespace Steema.TeeChart.Samples
           Steema.TeeChart.Languages.Urdu.Activate();
           Urdu.Activate<Translator>();
           break;
+        case "English":
+          Texts.Translator = new Steema.TeeChart.Languages.Translator();
+          try
+          {
+            Texts.Translator.InitLanguage(UtilsWF.Language());
+          }
+          catch
+          {
+            Languages.English.SetTexts();
+          }
+          break;
       }
-
       Texts.Translator.Translate(tChart1);
+
       tChart1.ShowEditor();
     }
   }
