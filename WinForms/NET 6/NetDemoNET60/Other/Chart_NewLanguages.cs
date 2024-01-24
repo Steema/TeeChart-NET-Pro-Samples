@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Steema.TeeChart.Languages;
+using System;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -127,23 +128,30 @@ namespace Steema.TeeChart.Samples
       {
         case "Croatian":
           Steema.TeeChart.Languages.Croatian.Activate();
+          Croatian.Activate<Translator>();
           break;
         case "Czech":
           Steema.TeeChart.Languages.Czech.Activate();
+          Czech.Activate<Translator>();
           break;
         case "Farsi":
           Steema.TeeChart.Languages.Farsi.Activate();
+          Farsi.Activate<Translator>();
           break;
         case "Malaysian":
           Steema.TeeChart.Languages.Malaysian.Activate();
+          Malaysian.Activate<Translator>();
           break;
         case "Romanian":
           Steema.TeeChart.Languages.Romanian.Activate();
+          Romanian.Activate<Translator>();
           break;
         case "Urdu":
           Steema.TeeChart.Languages.Urdu.Activate();
+          Urdu.Activate<Translator>();
           break;
       }
+
       Texts.Translator.Translate(tChart1);
       tChart1.ShowEditor();
     }
