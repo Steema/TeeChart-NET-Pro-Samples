@@ -167,15 +167,9 @@ namespace Steema.TeeChart.Samples
       // Change language:
 			if (comboBox1.SelectedIndex == 0)
 			{
-          Texts.Translator = new Steema.TeeChart.Languages.Translator();
-          try
-          {
-            Texts.Translator.InitLanguage(UtilsWF.Language());
-          }
-          catch
-          {
-            Languages.English.SetTexts();
-          }
+				Texts.Translator = new Steema.TeeChart.Languages.Translator();
+				Texts.Translator.InitLanguage(0);
+
       }
 			else
 			{

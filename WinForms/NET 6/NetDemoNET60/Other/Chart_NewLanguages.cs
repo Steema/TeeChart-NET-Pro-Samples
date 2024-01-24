@@ -153,15 +153,9 @@ namespace Steema.TeeChart.Samples
           break;
         case "English":
           Texts.Translator = new Steema.TeeChart.Languages.Translator();
-          try
-          {
-            Texts.Translator.InitLanguage(UtilsWF.Language());
-          }
-          catch
-          {
-            Languages.English.SetTexts();
-          }
+          Texts.Translator.InitLanguage(0);
           break;
+
       }
       Texts.Translator.Translate(tChart1);
 
