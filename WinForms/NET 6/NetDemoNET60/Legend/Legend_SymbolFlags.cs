@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Steema.TeeChart.Drawing;
+using System;
 using System.Collections;
 using System.ComponentModel;
 using System.Drawing;
@@ -570,9 +571,10 @@ namespace Steema.TeeChart.Samples
 				Rectangle tmpR = e.Rect;
 				tmpR.Inflate(-1,-1);
 
-				//System.Drawing.Bitmap bmp = new Bitmap(imageList1.Images[e.ValueIndex]);
-				//tChart1.Chart.Graphics3D.Draw(tmpR, bmp, Steema.TeeChart.Drawing.ImageMode.Stretch, false);
-			}
+        System.Drawing.Bitmap bmp = new Bitmap(imageList1.Images[e.ValueIndex]);
+        tChart1.Chart.Graphics3D.Draw(tmpR, new TImage(bmp), Steema.TeeChart.Drawing.ImageMode.Stretch, false);
+
+      }
 		}
 
 		private void checkBox1_Click(object sender, System.EventArgs e)
