@@ -100,9 +100,8 @@ namespace Steema.TeeChart.Samples
 		public Canvas_SmoothShadow()
 		{
 			InitializeComponent();
-#if VS2005
 			InitializeChart();
-#endif
+
 		}
 
 		private Button button1;
@@ -110,23 +109,21 @@ namespace Steema.TeeChart.Samples
 		private Bar bar1;
 		private void InitializeChart()
 		{
-#if VS2005
 			tChart1.Series.Add(bar1 = new Steema.TeeChart.Styles.Bar());
 			bar1.FillSampleValues();
 
 			tChart1.Legend.Shadow.Width = 16;
 			tChart1.Legend.Shadow.Height = 16;
 			tChart1.Legend.Shadow.Smooth = true;
-#endif
+
 		}
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-#if VS2005
 			Steema.TeeChart.Editors.ShadowEditor shadow = new Steema.TeeChart.Editors.ShadowEditor(tChart1.Legend.Shadow);
       Steema.TeeChart.Editors.EditorUtils.Translate(shadow);
       Steema.TeeChart.Editors.EditorUtils.ShowFormModal(shadow);
-#endif
+
 
 		}
 	}

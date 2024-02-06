@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -103,7 +104,19 @@ namespace Steema.TeeChart.Samples
     {
       string path = Environment.GetFolderPath(System.Environment.SpecialFolder.ApplicationData) + @"\chartjscript.html";
       tChart1.Export.Image.JScript.Save(path);
-      System.Diagnostics.Process.Start(path);
+      //temp out System.Diagnostics.Process.Start(path);
+      try
+      {
+        Process.Start(new ProcessStartInfo
+        {
+          FileName = path,
+          UseShellExecute = true
+        });
+      }
+      catch (Exception ex)
+      {
+        // Ideally nothing goes wrong
+      }
     }
 	}
 }

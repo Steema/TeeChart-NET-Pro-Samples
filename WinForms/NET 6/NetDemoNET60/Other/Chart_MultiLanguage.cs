@@ -165,8 +165,17 @@ namespace Steema.TeeChart.Samples
     private void comboBox1_SelectedIndexChanged(object sender, System.EventArgs e)
     {
       // Change language:
+			if (comboBox1.SelectedIndex == 0)
+			{
+				Texts.Translator = new Steema.TeeChart.Languages.Translator();
+				Texts.Translator.InitLanguage(0);
 
-      TeeChart.Editors.AskLanguage.ChangeLanguage(comboBox1.SelectedIndex);
+      }
+			else
+			{
+        TeeChart.Editors.AskLanguage.ChangeLanguage(comboBox1.SelectedIndex);
+      }
+
 
       // Example, replace texts:
       label1.Text="&Language:";
