@@ -208,11 +208,15 @@ namespace Steema.TeeChart.Samples
 		private void checkBox1_Click(object sender, System.EventArgs e) {
 			tChart1.Legend.Symbol.DefaultPen=checkBox1.Checked;
       buttonPen1.Enabled=!checkBox1.Checked;
+      tChart1.Invalidate();
 		}
 
-		private void checkBox2_Click(object sender, System.EventArgs e) {
-			tChart1.Legend.Symbol.Squared=checkBox2.Checked;
-		}
-	}
+		private void checkBox2_Click(object sender, System.EventArgs e)
+		{
+			tChart1.Legend.Symbol.Squared = checkBox2.Checked;
+      tChart1.Invalidate();
+
+    }
+  }
 }
 
