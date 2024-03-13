@@ -1234,7 +1234,7 @@
    Drawing more text,Legend_AddText,\\Legend\\Legend_AddText
    Scrolling legend,Legend_Scroll,\\Legend\\Legend_Scroll
    Custom position,Legend_CustomPos,\\Legend\\Legend_CustomPos
-   Check boxes,Legend_CheckBox,\\Legend\\Legend_CheckBox
+   Active Style,Legend_ActiveStyles,\\Legend\\Legend_ActiveStyles
    Vertical spacing,Legend_VertSpa,\\Legend\\Legend_VertSpa
    Legend Items,Legend_Items,\\Legend\\Legend_Items
    Legend Symbol Shadows,Legend_SymbolShadow,\\Legend\\Legend_SymbolShadow

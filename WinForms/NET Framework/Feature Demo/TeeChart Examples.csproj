@@ -173,15 +173,6 @@
     <Reference Include="System.Xml">
       <Name>System.XML</Name>
     </Reference>
-    <Reference Include="TeeChart, Version=4.2022.4.7, Culture=neutral, PublicKeyToken=9c8126276c77bdb7, processorArchitecture=MSIL">
-      <HintPath>..\packages\Steema.TeeChart.NET.4.2022.4.8\lib\net40\TeeChart.dll</HintPath>
-    </Reference>
-    <Reference Include="TeeChart.WPF, Version=4.2022.4.7, Culture=neutral, PublicKeyToken=98e8c3f289a4e286, processorArchitecture=MSIL">
-      <HintPath>..\packages\Steema.TeeChart.NET.4.2022.4.8\lib\net40\TeeChart.WPF.dll</HintPath>
-    </Reference>
-    <Reference Include="TeeChart.Xaml.WPF, Version=4.2022.4.7, Culture=neutral, PublicKeyToken=9406d226170aa089, processorArchitecture=MSIL">
-      <HintPath>..\packages\Steema.TeeChart.NET.4.2022.4.8\lib\net40\TeeChart.Xaml.WPF.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Animations\Animations_ChartPart.cs">
@@ -610,7 +601,7 @@
     <Compile Include="Legend\Legend_AddText.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Legend\Legend_CheckBox.cs">
+    <Compile Include="Legend\Legend_ActiveStyles.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Legend\Legend_CustomPos.cs">
@@ -2004,8 +1995,8 @@
       <DependentUpon>Legend_AddText.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Legend\Legend_CheckBox.resx">
-      <DependentUpon>Legend_CheckBox.cs</DependentUpon>
+    <EmbeddedResource Include="Legend\Legend_ActiveStyles.resx">
+      <DependentUpon>Legend_ActiveStyles.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Legend\Legend_CustomPos.resx">
@@ -2167,6 +2158,7 @@
       <DependentUpon>Chart_PrintPreview.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Series\Area_Gradient.resx">
       <DependentUpon>Area_Gradient.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -3167,7 +3159,12 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\TeeChart.NET_Sources\TeeChart\TeeChart48.csproj">
+      <Project>{b3b54431-9317-4b31-ac03-a61585e6efdf}</Project>
+      <Name>TeeChart48</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>
