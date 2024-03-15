@@ -121,6 +121,7 @@
     <value>Through Legend.ActiveStyles you can choose different Active Styles. 
 While the ActiveStyle is not None, Series in the Legend can be clicked to be hidden or shown on the chart.
 Choose from the different options in the combobox below to test them out and see which one suits your chart better.
+Where ActiveStyle is None, when a Series is not Active, it is not included in the Legend.
 Example: tChart1.Legend.ActiveStyles = ActiveStyles.LineThrough;
 
 	</value>
