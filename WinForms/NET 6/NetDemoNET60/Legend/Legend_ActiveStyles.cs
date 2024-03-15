@@ -148,7 +148,6 @@ namespace Steema.TeeChart.Samples
             // 
             // 
             // 
-            tChart1.Legend.CheckBoxes = true;
             // 
             // 
             // 
