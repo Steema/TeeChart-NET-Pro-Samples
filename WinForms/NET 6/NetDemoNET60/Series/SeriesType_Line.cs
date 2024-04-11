@@ -8,315 +8,286 @@ using System.Windows.Forms;
 
 namespace Steema.TeeChart.Samples
 {
-	public class SeriesType_Line : Samples.BaseForm
-	{
-		private Steema.TeeChart.Styles.Line lineSeries1;
-		private Steema.TeeChart.Styles.Line lineSeries2;
-		private System.Windows.Forms.CheckBox checkBox1;
-		private System.Windows.Forms.CheckBox checkBox2;
-		private System.Windows.Forms.CheckBox checkBox3;
-		private System.Windows.Forms.CheckBox checkBox4;
-		private System.Windows.Forms.CheckBox checkBox5;
-		private System.Windows.Forms.Button button1;
-		private Steema.TeeChart.Tools.GridBand gridBand1;
-		private System.ComponentModel.IContainer components = null;
+    public class SeriesType_Line : Samples.BaseForm
+    {
+        private Steema.TeeChart.Styles.Line lineSeries1;
+        private Steema.TeeChart.Styles.Line lineSeries2;
+        private CheckBox checkBox1;
+        private CheckBox checkBox2;
+        private CheckBox checkBox3;
+        private CheckBox checkBox4;
+        private CheckBox checkBox5;
+        private Button button1;
+        private Steema.TeeChart.Tools.GridBand gridBand1;
+        private IContainer components = null;
 
-		public SeriesType_Line()
-		{
-			// This call is required by the Windows Form Designer.
-			InitializeComponent();
-			lineSeries1.FillSampleValues(20);
-			lineSeries2.FillSampleValues(20);
-		}
+        public SeriesType_Line()
+        {
+            // This call is required by the Windows Form Designer.
+            InitializeComponent();
+            lineSeries1.FillSampleValues(20);
+            lineSeries2.FillSampleValues(20);
+            tChart1.Aspect.View3D = true;
+        }
 
-		/// <summary>
-		/// Clean up any resources being used.
-		/// </summary>
-		protected override void Dispose( bool disposing )
-		{
-			if( disposing )
-			{
-				if (components != null) 
-				{
-					components.Dispose();
-				}
-			}
-			base.Dispose( disposing );
-		}
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                if (components != null)
+                {
+                    components.Dispose();
+                }
+            }
+            base.Dispose(disposing);
+        }
 
-		#region Designer generated code
-		/// <summary>
-		/// Required method for Designer support - do not modify
-		/// the contents of this method with the code editor.
-		/// </summary>
-		private void InitializeComponent()
-		{
-			this.lineSeries1 = new Steema.TeeChart.Styles.Line();
-			this.lineSeries2 = new Steema.TeeChart.Styles.Line();
-			this.checkBox1 = new System.Windows.Forms.CheckBox();
-			this.checkBox2 = new System.Windows.Forms.CheckBox();
-			this.checkBox3 = new System.Windows.Forms.CheckBox();
-			this.checkBox4 = new System.Windows.Forms.CheckBox();
-			this.checkBox5 = new System.Windows.Forms.CheckBox();
-			this.button1 = new System.Windows.Forms.Button();
-			this.gridBand1 = new Steema.TeeChart.Tools.GridBand();
-			this.panel1.SuspendLayout();
-			this.SuspendLayout();
-			// 
-			// textBox1
-			// 
-			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(466, 63);
-			this.textBox1.Text = "Line series displays points drawing one line from each point to the next.\r\nOption" +
-				"s include 2D and 3D, \"stairs\" mode, null points, pointers, border, filling patte" +
-				"rn, height 3D, stacking, overlaping, clicking, dark 3D and marks.";
-			// 
-			// panel1
-			// 
-			this.panel1.Controls.Add(this.button1);
-			this.panel1.Controls.Add(this.checkBox5);
-			this.panel1.Controls.Add(this.checkBox4);
-			this.panel1.Controls.Add(this.checkBox3);
-			this.panel1.Controls.Add(this.checkBox2);
-			this.panel1.Controls.Add(this.checkBox1);
-			this.panel1.Location = new System.Drawing.Point(0, 63);
-			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(466, 41);
-			// 
-			// tChart1
-			// 
-			// 
-			// tChart1.Aspect
-			// 
-			
-			
-			// 
-			// tChart1.Header
-			// 
-			this.tChart1.Header.Lines = new string[] {
-																								 "Line Series example"};
-			this.tChart1.Location = new System.Drawing.Point(0, 104);
-			this.tChart1.Name = "tChart1";
-			// 
-			// tChart1.Panel
-			// 
-			// 
-			// tChart1.Panel.Brush
-			// 
-			this.tChart1.Panel.Brush.Color = System.Drawing.Color.FromArgb(((System.Byte)(254)), ((System.Byte)(255)), ((System.Byte)(255)), ((System.Byte)(255)));
-			this.tChart1.Series.Add(this.lineSeries1);
-			this.tChart1.Series.Add(this.lineSeries2);
-			this.tChart1.Size = new System.Drawing.Size(466, 182);
-			this.tChart1.Tools.Add(this.gridBand1);
-			// 
-			// tChart1.Walls
-			// 
-			// 
-			// tChart1.Walls.Bottom
-			// 
-			// 
-			// tChart1.Walls.Bottom.Pen
-			// 
-			this.tChart1.Walls.Bottom.Pen.Visible = false;
-			this.tChart1.Walls.Bottom.Size = 5;
-			// 
-			// tChart1.Walls.Left
-			// 
-			// 
-			// tChart1.Walls.Left.Pen
-			// 
-			this.tChart1.Walls.Left.Pen.Visible = false;
-			this.tChart1.Walls.Left.Size = 5;
-			// 
-			// lineSeries1
-			// 
-			// 
-			// lineSeries1.Brush
-			// 
-			this.lineSeries1.Brush.Color = System.Drawing.Color.Red;
-			// 
-			// lineSeries1.Marks
-			// 
-			// 
-			// lineSeries1.Marks.Symbol
-			// 
-			// 
-			// lineSeries1.Marks.Symbol.Shadow
-			// 
-			this.lineSeries1.Marks.Symbol.Shadow.Height = 1;
-			this.lineSeries1.Marks.Symbol.Shadow.Visible = true;
-			this.lineSeries1.Marks.Symbol.Shadow.Width = 1;
-			// 
-			// lineSeries1.Pointer
-			// 
-			// 
-			// lineSeries1.Pointer.Brush
-			// 
-			this.lineSeries1.Pointer.Style = Steema.TeeChart.Styles.PointerStyles.Rectangle;
-			this.lineSeries1.Title = "line2";
-			// 
-			// lineSeries1.XValues
-			// 
-			this.lineSeries1.XValues.DataMember = "X";
-			this.lineSeries1.XValues.Order = Steema.TeeChart.Styles.ValueListOrder.Ascending;
-			// 
-			// lineSeries1.YValues
-			// 
-			this.lineSeries1.YValues.DataMember = "Y";
-			// 
-			// lineSeries2
-			// 
-			// 
-			// lineSeries2.Brush
-			// 
-			this.lineSeries2.Brush.Color = System.Drawing.Color.Green;
-			// 
-			// lineSeries2.Marks
-			// 
-			// 
-			// lineSeries2.Marks.Symbol
-			// 
-			// 
-			// lineSeries2.Marks.Symbol.Shadow
-			// 
-			this.lineSeries2.Marks.Symbol.Shadow.Height = 1;
-			this.lineSeries2.Marks.Symbol.Shadow.Visible = true;
-			this.lineSeries2.Marks.Symbol.Shadow.Width = 1;
-			// 
-			// lineSeries2.Pointer
-			// 
-			// 
-			// lineSeries2.Pointer.Brush
-			// 
-			this.lineSeries2.Pointer.Style = Steema.TeeChart.Styles.PointerStyles.Rectangle;
-			this.lineSeries2.Title = "line2";
-			// 
-			// lineSeries2.XValues
-			// 
-			this.lineSeries2.XValues.DataMember = "X";
-			this.lineSeries2.XValues.Order = Steema.TeeChart.Styles.ValueListOrder.Ascending;
-			// 
-			// lineSeries2.YValues
-			// 
-			this.lineSeries2.YValues.DataMember = "Y";
-			// 
-			// checkBox1
-			// 
-			this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.checkBox1.Location = new System.Drawing.Point(20, 9);
-			this.checkBox1.Name = "checkBox1";
-			this.checkBox1.Size = new System.Drawing.Size(60, 21);
-			this.checkBox1.TabIndex = 0;
-			this.checkBox1.Text = "&Stairs";
-			this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-			// 
-			// checkBox2
-			// 
-			this.checkBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.checkBox2.Location = new System.Drawing.Point(80, 9);
-			this.checkBox2.Name = "checkBox2";
-			this.checkBox2.Size = new System.Drawing.Size(67, 21);
-			this.checkBox2.TabIndex = 1;
-			this.checkBox2.Text = "&Pointers";
-			this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
-			// 
-			// checkBox3
-			// 
-			this.checkBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.checkBox3.Location = new System.Drawing.Point(153, 9);
-			this.checkBox3.Name = "checkBox3";
-			this.checkBox3.Size = new System.Drawing.Size(54, 21);
-			this.checkBox3.TabIndex = 2;
-			this.checkBox3.Text = "&Marks";
-			this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
-			// 
-			// checkBox4
-			// 
-			this.checkBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.checkBox4.Location = new System.Drawing.Point(213, 9);
-			this.checkBox4.Name = "checkBox4";
-			this.checkBox4.Size = new System.Drawing.Size(67, 21);
-			this.checkBox4.TabIndex = 3;
-			this.checkBox4.Text = "S&tacked";
-			this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
-			// 
-			// checkBox5
-			// 
-			this.checkBox5.Checked = true;
-			this.checkBox5.CheckState = System.Windows.Forms.CheckState.Checked;
-			this.checkBox5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.checkBox5.Location = new System.Drawing.Point(280, 9);
-			this.checkBox5.Name = "checkBox5";
-			this.checkBox5.Size = new System.Drawing.Size(40, 21);
-			this.checkBox5.TabIndex = 4;
-			this.checkBox5.Text = "&3D";
-			this.checkBox5.CheckedChanged += new System.EventHandler(this.checkBox5_CheckedChanged);
-			// 
-			// button1
-			// 
-			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button1.Location = new System.Drawing.Point(367, 9);
-			this.button1.Name = "button1";
-			this.button1.TabIndex = 5;
-			this.button1.Text = "&Edit...";
-			this.button1.Click += new System.EventHandler(this.button1_Click);
-			// 
-			// gridBand1
-			// 
-			this.gridBand1.Axis = this.tChart1.Axes.Left;
-			// 
-			// gridBand1.Band1
-			// 
-			this.gridBand1.Band1.Color = System.Drawing.Color.FromArgb(((System.Byte)(127)), ((System.Byte)(192)), ((System.Byte)(192)), ((System.Byte)(192)));
-			// 
-			// gridBand1.Band2
-			// 
-			this.gridBand1.Band2.Color = System.Drawing.Color.FromArgb(((System.Byte)(127)), ((System.Byte)(224)), ((System.Byte)(224)), ((System.Byte)(224)));
-			// 
-			// SeriesType_Line
-			// 
-			this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-			this.ClientSize = new System.Drawing.Size(466, 286);
-			this.Name = "SeriesType_Line";
-			this.panel1.ResumeLayout(false);
-			this.ResumeLayout(false);
+        #region Designer generated code
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            ComponentResourceManager resources = new ComponentResourceManager(typeof(SeriesType_Line));
+            Drawing.Cursor cursor2 = new Drawing.Cursor();
+            lineSeries1 = new Styles.Line();
+            lineSeries2 = new Styles.Line();
+            checkBox1 = new CheckBox();
+            checkBox2 = new CheckBox();
+            checkBox3 = new CheckBox();
+            checkBox4 = new CheckBox();
+            checkBox5 = new CheckBox();
+            button1 = new Button();
+            gridBand1 = new Tools.GridBand();
+            panel1.SuspendLayout();
+            chartContainer.SuspendLayout();
+            SuspendLayout();
+            // 
+            // textBox1
+            // 
+            textBox1.Size = new Size(466, 78);
+            textBox1.Text = resources.GetString("textBox1.Text");
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(button1);
+            panel1.Controls.Add(checkBox5);
+            panel1.Controls.Add(checkBox4);
+            panel1.Controls.Add(checkBox3);
+            panel1.Controls.Add(checkBox2);
+            panel1.Controls.Add(checkBox1);
+            panel1.Location = new Point(0, 78);
+            panel1.Size = new Size(466, 50);
+            // 
+            // tChart1
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            tChart1.Header.Font.Size = 14;
+            tChart1.Header.Font.SizeFloat = 14F;
+            tChart1.Header.Lines = new string[] { "Line Series example" };
+            // 
+            // 
+            // 
+            tChart1.Legend.CheckBoxes = false;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            tChart1.Panel.Brush.Color = Color.FromArgb(254, 255, 255, 255);
+            tChart1.Series.Add(lineSeries1);
+            tChart1.Series.Add(lineSeries2);
+            tChart1.Size = new Size(466, 158);
+            tChart1.Tools.Add(gridBand1);
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            tChart1.Walls.Bottom.Pen.Visible = false;
+            tChart1.Walls.Bottom.Size = 5;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            tChart1.Walls.Left.Pen.Visible = false;
+            tChart1.Walls.Left.Size = 5;
+            // 
+            // chartContainer
+            // 
+            chartContainer.Location = new Point(0, 128);
+            chartContainer.Size = new Size(466, 158);
+            // 
+            // lineSeries1
+            // 
+            lineSeries1.Color = Color.FromArgb(119, 153, 214);
+            lineSeries1.Cursor = cursor2;
+            lineSeries1.Title = "line2";
+            // 
+            // 
+            // 
+            lineSeries1.XValues.DataMember = "X";
+            lineSeries1.XValues.Order = Styles.ValueListOrder.Ascending;
+            lineSeries1.XValues.Value = new double[] { 0D, 1D, 2D, 3D, 4D, 5D, 6D, 7D, 8D, 9D, 10D, 11D, 12D, 13D, 14D, 15D, 16D, 17D, 18D, 19D, 20D, 21D, 22D, 23D, 24D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D };
+            // 
+            // 
+            // 
+            lineSeries1.YValues.DataMember = "Y";
+            lineSeries1.YValues.Value = new double[] { 549D, 609D, 496D, 501D, 536D, 422D, 315D, 268D, 344D, 460D, 444D, 430D, 424D, 430D, 307D, 283D, 284D, 336D, 406D, 301D, 416D, 297D, 358D, 307D, 352D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D };
+            // 
+            // lineSeries2
+            // 
+            lineSeries2.Color = Color.FromArgb(255, 207, 104);
+            lineSeries2.Cursor = cursor2;
+            lineSeries2.Title = "line2";
+            // 
+            // 
+            // 
+            lineSeries2.XValues.DataMember = "X";
+            lineSeries2.XValues.Order = Styles.ValueListOrder.Ascending;
+            lineSeries2.XValues.Value = new double[] { 0D, 1D, 2D, 3D, 4D, 5D, 6D, 7D, 8D, 9D, 10D, 11D, 12D, 13D, 14D, 15D, 16D, 17D, 18D, 19D, 20D, 21D, 22D, 23D, 24D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D };
+            // 
+            // 
+            // 
+            lineSeries2.YValues.DataMember = "Y";
+            lineSeries2.YValues.Value = new double[] { 615D, 649D, 644D, 607D, 606D, 647D, 628D, 622D, 586D, 544D, 525D, 546D, 506D, 547D, 528D, 499D, 505D, 503D, 521D, 544D, 541D, 509D, 493D, 470D, 507D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D };
+            // 
+            // checkBox1
+            // 
+            checkBox1.FlatStyle = FlatStyle.Flat;
+            checkBox1.Location = new Point(24, 11);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(72, 26);
+            checkBox1.TabIndex = 0;
+            checkBox1.Text = "&Stairs";
+            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
+            // 
+            // checkBox2
+            // 
+            checkBox2.FlatStyle = FlatStyle.Flat;
+            checkBox2.Location = new Point(96, 11);
+            checkBox2.Name = "checkBox2";
+            checkBox2.Size = new Size(80, 26);
+            checkBox2.TabIndex = 1;
+            checkBox2.Text = "&Pointers";
+            checkBox2.CheckedChanged += checkBox2_CheckedChanged;
+            // 
+            // checkBox3
+            // 
+            checkBox3.FlatStyle = FlatStyle.Flat;
+            checkBox3.Location = new Point(184, 11);
+            checkBox3.Name = "checkBox3";
+            checkBox3.Size = new Size(64, 26);
+            checkBox3.TabIndex = 2;
+            checkBox3.Text = "&Marks";
+            checkBox3.CheckedChanged += checkBox3_CheckedChanged;
+            // 
+            // checkBox4
+            // 
+            checkBox4.FlatStyle = FlatStyle.Flat;
+            checkBox4.Location = new Point(256, 11);
+            checkBox4.Name = "checkBox4";
+            checkBox4.Size = new Size(80, 26);
+            checkBox4.TabIndex = 3;
+            checkBox4.Text = "S&tacked";
+            checkBox4.CheckedChanged += checkBox4_CheckedChanged;
+            // 
+            // checkBox5
+            // 
+            checkBox5.Checked = true;
+            checkBox5.CheckState = CheckState.Checked;
+            checkBox5.FlatStyle = FlatStyle.Flat;
+            checkBox5.Location = new Point(336, 11);
+            checkBox5.Name = "checkBox5";
+            checkBox5.Size = new Size(48, 26);
+            checkBox5.TabIndex = 4;
+            checkBox5.Text = "&3D";
+            checkBox5.CheckedChanged += checkBox5_CheckedChanged;
+            // 
+            // button1
+            // 
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Location = new Point(440, 11);
+            button1.Name = "button1";
+            button1.Size = new Size(90, 28);
+            button1.TabIndex = 5;
+            button1.Text = "&Edit...";
+            button1.Click += button1_Click;
+            // 
+            // gridBand1
+            // 
+            gridBand1.Axis = tChart1.Axes.Left;
+            gridBand1.AxisIndex = -1;
+            // 
+            // 
+            // 
+            gridBand1.Band1.Color = Color.FromArgb(127, 192, 192, 192);
+            // 
+            // 
+            // 
+            gridBand1.Band2.Color = Color.FromArgb(127, 224, 224, 224);
+            // 
+            // SeriesType_Line
+            // 
+            AutoScaleBaseSize = new Size(6, 16);
+            ClientSize = new Size(466, 286);
+            Name = "SeriesType_Line";
+            panel1.ResumeLayout(false);
+            chartContainer.ResumeLayout(false);
+            ResumeLayout(false);
+            PerformLayout();
+        }
+        #endregion
 
-		}
-		#endregion
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            lineSeries1.Stairs = checkBox1.Checked;
+            lineSeries2.Stairs = checkBox1.Checked;
+        }
 
-		private void checkBox1_CheckedChanged(object sender, System.EventArgs e)
-		{
-			lineSeries1.Stairs = checkBox1.Checked;
-			lineSeries2.Stairs = checkBox1.Checked;
-		}
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            lineSeries1.Pointer.Visible = checkBox2.Checked;
+            lineSeries2.Pointer.Visible = checkBox2.Checked;
+        }
 
-		private void checkBox2_CheckedChanged(object sender, System.EventArgs e)
-		{
-			lineSeries1.Pointer.Visible = checkBox2.Checked;
-			lineSeries2.Pointer.Visible = checkBox2.Checked;
-		}
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+            lineSeries1.Marks.Visible = checkBox3.Checked;
+            lineSeries2.Marks.Visible = checkBox3.Checked;
+        }
 
-		private void checkBox3_CheckedChanged(object sender, System.EventArgs e)
-		{
-			lineSeries1.Marks.Visible = checkBox3.Checked;
-			lineSeries2.Marks.Visible = checkBox3.Checked;
-		}
+        private void checkBox4_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox4.Checked) lineSeries1.Stacked = Steema.TeeChart.Styles.CustomStack.Stack;
+            else lineSeries1.Stacked = Steema.TeeChart.Styles.CustomStack.None;
+        }
 
-		private void checkBox4_CheckedChanged(object sender, System.EventArgs e)
-		{
-			if (checkBox4.Checked) lineSeries1.Stacked =Steema.TeeChart.Styles.CustomStack.Stack;
-			else lineSeries1.Stacked =Steema.TeeChart.Styles.CustomStack.None;
-		}
+        private void checkBox5_CheckedChanged(object sender, EventArgs e)
+        {
+            tChart1.Aspect.View3D = checkBox5.Checked;
+        }
 
-		private void checkBox5_CheckedChanged(object sender, System.EventArgs e)
-		{
-			tChart1.Aspect.View3D = checkBox5.Checked;
-		}
-
-		private void button1_Click(object sender, System.EventArgs e)
-		{
-			tChart1.ShowEditor();
-		}
-	}
+        private void button1_Click(object sender, EventArgs e)
+        {
+            tChart1.ShowEditor();
+        }
+    }
 }
 

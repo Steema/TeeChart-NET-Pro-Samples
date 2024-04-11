@@ -30,8 +30,9 @@ namespace Steema.TeeChart.Samples
 			this.bar3DSeries1.Add( 3,  30,  50, "D", Color.Blue );
 			this.bar3DSeries1.Add( 4,  70, 150, "E", Color.White );
 			this.bar3DSeries1.Add( 5, 120, 150, "F", Color.Silver );
+            tChart1.Aspect.View3D = true;
 
-		}
+        }
 
 		/// <summary>
 		/// Clean up any resources being used.

@@ -22,7 +22,8 @@ namespace Steema.TeeChart.Samples
 			InitializeComponent();
 
 			ganttSeries1.FillSampleValues(10);
-		}
+            tChart1.Aspect.View3D = true;
+        }
 
 		/// <summary>
 		/// Clean up any resources being used.

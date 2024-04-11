@@ -19,6 +19,7 @@ namespace Steema.TeeChart.Samples
       InitializeComponent();
 
       point3DSeries1.FillSampleValues(20);
+      tChart1.Aspect.View3D = true;
     }
 
     /// <summary>

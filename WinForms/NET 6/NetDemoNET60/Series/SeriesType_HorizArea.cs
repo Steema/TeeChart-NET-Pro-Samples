@@ -29,7 +29,8 @@ namespace Steema.TeeChart.Samples
 			horizArea3.FillSampleValues();
 
 			CBLayout.SelectedIndex = 0;
-		}
+            tChart1.Aspect.View3D = true;
+        }
 
 		/// <summary>
 		/// Clean up any resources being used.

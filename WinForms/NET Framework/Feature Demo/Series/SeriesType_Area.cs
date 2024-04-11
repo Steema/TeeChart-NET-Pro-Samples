@@ -36,7 +36,8 @@ namespace Steema.TeeChart.Samples
 			for (int s=0; s<tChart1.Series.Count;s++)
 				for (int i=0;i<5;i++)
 					tChart1[s].Add(r.Next(100-(s*20)));
-		}
+            tChart1.Aspect.View3D = true;
+        }
 
 		/// <summary>
 		/// Clean up any resources being used.
