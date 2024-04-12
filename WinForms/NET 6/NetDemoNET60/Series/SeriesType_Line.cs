@@ -70,7 +70,9 @@ namespace Steema.TeeChart.Samples
             // textBox1
             // 
             textBox1.Size = new Size(466, 78);
-            textBox1.Text = resources.GetString("textBox1.Text");
+            textBox1.Text = "Line series displays points drawing one line from each point to the next.\r\nOption" +
+                "s include 2D and 3D, \"stairs\" mode, null points, pointers, border, filling patte" +
+                "rn, height 3D, stacking, overlaping, clicking, dark 3D and marks.";
             // 
             // panel1
             // 
