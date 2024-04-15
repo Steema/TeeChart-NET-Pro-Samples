@@ -1043,7 +1043,6 @@
   Single Record,DBChart_SingleRecord,\\Datasource\\DBChart_SingleRecord
   CrossTab Charts,DBChart_CrossTabSource,\\Datasource\\DBChart_CrossTabSource
   Master Detail,Master_Detail,\\Series\\Master_Detail
-  DesignTime Drill-Down,DBDrillDown,\\Datasource\\DBDrillDown  
  Printing
   Print Export dialog,Chart_PrintPreview,\\Print\\Chart_PrintPreview
  Exporting
@@ -1315,7 +1314,6 @@ Upgrading and Ordering,Order_Info,Order_Info</value>
   Gantt MultipleNextTasks,Gantt_MultipleNextTasks,\\Series\\Gantt_MultipleNextTasks
   Tower Stacked,Tower_Stacked,\\Series\\Tower_Stacked 
   Master Detail,Master_Detail,\\Series\\Master_Detail
-  DesignTime Drill-Down,DBDrillDown,\\Datasource\\DBDrillDown
  New in Zoom and Scroll
   Zoom History,Zoom_Pen,\\Zoom_Scroll\\Zoom_Pen
  New Chart Tools
