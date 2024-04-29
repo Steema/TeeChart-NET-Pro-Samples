@@ -16,12 +16,15 @@ namespace Steema.TeeChart.Samples
 
 		public PieSliceHeights()
 		{
-			// This call is required by the Windows Form Designer.
-			InitializeComponent();
+            // This call is required by the Windows Form Designer.
+            InitializeComponent();
 
-			donut1.FillSampleValues();
-		  checkBox1.Checked=true;
-		}
+            donut1.FillSampleValues();
+            checkBox1.Checked = true;
+			tChart1.Aspect.View3D = true;
+
+
+        }
 
 		/// <summary>
 		/// Clean up any resources being used.
@@ -537,20 +540,23 @@ namespace Steema.TeeChart.Samples
 			this.ResumeLayout(false);
 
 		}
-		#endregion
+        #endregion
 
-		private void checkBox1_CheckedChanged(object sender, System.EventArgs e) {
-			for(int t=0; t < donut1.Count; ++t) {
-				if(checkBox1.Checked) 
-					donut1.SliceHeight[t]= Convert.ToInt32( (t + 1)*100 / donut1.Count );// vary height
-				else
-					donut1.SliceHeight[t]=100;  // total height for all slices
-			}
-		}
+        private void checkBox1_CheckedChanged(object sender, System.EventArgs e)
+        {
+            for (int t = 0; t < donut1.Count; ++t)
+            {
+                if (checkBox1.Checked)
+                    donut1.SliceHeight[t] = Convert.ToInt32((t + 1) * 100 / donut1.Count);// vary height
+                else
+                    donut1.SliceHeight[t] = 100;  // total height for all slices
+            }
+        }
 
-		private void hScrollBar1_Scroll(object sender, System.Windows.Forms.ScrollEventArgs e) {
-			donut1.RotationAngle=hScrollBar1.Value;
-		}
-	}
+        private void hScrollBar1_Scroll(object sender, System.Windows.Forms.ScrollEventArgs e)
+        {
+            donut1.RotationAngle = hScrollBar1.Value;
+        }
+    }
 }
 
