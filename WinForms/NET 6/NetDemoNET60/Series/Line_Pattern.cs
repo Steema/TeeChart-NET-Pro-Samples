@@ -2,6 +2,7 @@
 using System.Collections;
 using System.ComponentModel;
 using System.Drawing;
+using Steema.TeeChart.Drawing;
 
 using System.Windows.Forms;
 
@@ -29,9 +30,14 @@ namespace Steema.TeeChart.Samples
 			lineSeries1.Brush.ImageMode = Steema.TeeChart.Drawing.ImageMode.Tile;
 			lineSeries2.Brush.ImageMode = Steema.TeeChart.Drawing.ImageMode.Tile;
 			lineSeries3.Brush.ImageMode = Steema.TeeChart.Drawing.ImageMode.Tile;
-			//this.lineSeries1.Brush.Image = this.pictureBox1.Image;
-			//this.lineSeries2.Brush.Image = this.pictureBox2.Image;
-			//this.lineSeries3.Brush.Image = this.pictureBox3.Image;
+
+
+			this.lineSeries1.Brush.Image = new TImage(pictureBox1.Image);
+			this.lineSeries2.Brush.Image = new TImage(pictureBox2.Image);
+			this.lineSeries3.Brush.Image = new TImage(pictureBox3.Image);
+
+			tChart1.Aspect.View3D = true;
+
 		}
 
 		/// <summary>
@@ -235,8 +241,8 @@ namespace Steema.TeeChart.Samples
 			// 
 			// pictureBox1
 			// 
-			this.pictureBox1.Cursor = Cursors.Hand;
-			this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+			this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
 			this.pictureBox1.Location = new System.Drawing.Point(13, 9);
 			this.pictureBox1.Name = "pictureBox1";
 			this.pictureBox1.Size = new System.Drawing.Size(34, 35);
@@ -247,8 +253,8 @@ namespace Steema.TeeChart.Samples
 			// 
 			// pictureBox2
 			// 
-			this.pictureBox2.Cursor = Cursors.Hand;
-			this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+			this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
 			this.pictureBox2.Location = new System.Drawing.Point(60, 9);
 			this.pictureBox2.Name = "pictureBox2";
 			this.pictureBox2.Size = new System.Drawing.Size(33, 35);
@@ -259,8 +265,8 @@ namespace Steema.TeeChart.Samples
 			// 
 			// pictureBox3
 			// 
-			this.pictureBox3.Cursor = Cursors.Hand;
-			this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+			this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
 			this.pictureBox3.Location = new System.Drawing.Point(107, 9);
 			this.pictureBox3.Name = "pictureBox3";
 			this.pictureBox3.Size = new System.Drawing.Size(33, 35);
@@ -291,25 +297,25 @@ namespace Steema.TeeChart.Samples
 			this.ResumeLayout(false);
 
 		}
-		#endregion
+        #endregion
 
-		private void pictureBox1_Click(object sender, System.EventArgs e)
-		{
-      string fileName=Steema.TeeChart.Editors.PictureDialog.FileName(this);
-
-      if (fileName!="")
-      {
-        System.Windows.Forms.PictureBox pbox = sender as System.Windows.Forms.PictureBox;
-        int SeriesIndex;
-        if (sender == this.pictureBox1) SeriesIndex = 0;
-        else if (sender == this.pictureBox2) SeriesIndex = 1;
-        else SeriesIndex = 2;
-
-        Steema.TeeChart.Styles.Line lineseries = (Steema.TeeChart.Styles.Line)this.tChart1.Series[SeriesIndex];
-				//lineseries.Brush.Image = Image.FromFile(fileName);
-				//pbox.Image = lineseries.Brush.Image;
-			}
-		}
-	}
+        private void pictureBox1_Click(object sender, System.EventArgs e)
+        {
+            string fileName = Steema.TeeChart.Editors.PictureDialog.FileName(this);
+            if (fileName != "")
+            {
+                System.Windows.Forms.PictureBox pbox = sender as System.Windows.Forms.PictureBox;
+                int SeriesIndex;
+                if (sender == this.pictureBox1) SeriesIndex = 0;
+                else if (sender == this.pictureBox2) SeriesIndex = 1;
+                else SeriesIndex = 2;
+                Steema.TeeChart.Styles.Line lineseries = (Steema.TeeChart.Styles.Line)this.tChart1.Series[SeriesIndex];
+                Image image = Image.FromFile(fileName);
+                Steema.TeeChart.Drawing.TImage timage = new(image);
+                lineseries.Brush.Image = timage;
+                pbox.Image = image;
+            }
+        }
+    }
 }
 
