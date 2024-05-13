@@ -67,7 +67,7 @@ namespace Steema.TeeChart.Samples
 			this.textBox1.Name = "textBox1";
 			this.textBox1.Size = new System.Drawing.Size(466, 63);
 			this.textBox1.Text = "Bubbles are represented with a center position and Radius. Each bubble can show a" +
-				" different style using the OnGetPointerStyle event.\r\n\r\nOptions include style, pa" +
+				" different style using the GetPointerStyle event.\r\n\r\nOptions include style, pa" +
 				"ttern, border, marks, radius, etc.";
 			// 
 			// panel1
@@ -238,7 +238,7 @@ namespace Steema.TeeChart.Samples
 			// bubbleSeries1.YValues
 			// 
 			this.bubbleSeries1.YValues.DataMember = "Y";
-      //this.bubbleSeries1.GetPointerStyle += new Steema.TeeChart.Styles.CustomPoint.GetPointerStyleEventHandler(this.bubbleSeries1_GetPointerStyle);
+			this.bubbleSeries1.GetPointerStyle += new Steema.TeeChart.Styles.CustomPoint.GetPointerStyleEventHandler(this.bubbleSeries1_GetPointerStyle);
 			// 
 			// SeriesType_Bubble
 			// 
@@ -284,23 +284,23 @@ namespace Steema.TeeChart.Samples
     }
 
 
-    //private void bubbleSeries1_GetPointerStyle(Steema.TeeChart.Styles.CustomPoint series, Steema.TeeChart.Styles.CustomPoint.GetPointerStyleEventArgs e)
-    //{
-    //  if (checkBox2.Checked)
-    //  {
-    //    switch (random.Next(8))
-    //    {
-    //      case 1: e.Style=Styles.PointerStyles.Circle; break;
-    //      case 2: e.Style=Styles.PointerStyles.Diamond; break;
-    //      case 3: e.Style=Styles.PointerStyles.Triangle; break;
-    //      case 4: e.Style=Styles.PointerStyles.Cross; break;
-    //      case 5: e.Style=Styles.PointerStyles.DiagCross; break;
-    //      case 6: e.Style=Styles.PointerStyles.DownTriangle; break;
-    //      case 7: e.Style=Styles.PointerStyles.Star; break;
-    //      default: e.Style=Styles.PointerStyles.Rectangle; break;
-    //    }
-    //  }
-    //}
-  }
+		private void bubbleSeries1_GetPointerStyle(Steema.TeeChart.Styles.CustomPoint series, Steema.TeeChart.Styles.GetPointerStyleEventArgs e)
+		{
+			if (checkBox2.Checked)
+			{
+				switch (random.Next(8))
+				{
+					case 1: e.Style = Styles.PointerStyles.Circle; break;
+					case 2: e.Style = Styles.PointerStyles.Diamond; break;
+					case 3: e.Style = Styles.PointerStyles.Triangle; break;
+					case 4: e.Style = Styles.PointerStyles.Cross; break;
+					case 5: e.Style = Styles.PointerStyles.DiagCross; break;
+					case 6: e.Style = Styles.PointerStyles.DownTriangle; break;
+					case 7: e.Style = Styles.PointerStyles.Star; break;
+					default: e.Style = Styles.PointerStyles.Rectangle; break;
+				}
+			}
+		}
+	}
 }
 
