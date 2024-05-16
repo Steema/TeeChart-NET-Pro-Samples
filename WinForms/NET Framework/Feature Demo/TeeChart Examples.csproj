@@ -173,15 +173,6 @@
     <Reference Include="System.Xml">
       <Name>System.XML</Name>
     </Reference>
-    <Reference Include="TeeChart, Version=4.2024.3.15, Culture=neutral, PublicKeyToken=9c8126276c77bdb7, processorArchitecture=MSIL">
-      <HintPath>..\packages\Steema.TeeChart.NET.4.2024.3.15\lib\net48\TeeChart.dll</HintPath>
-    </Reference>
-    <Reference Include="TeeChart.WPF, Version=4.2024.3.15, Culture=neutral, PublicKeyToken=98e8c3f289a4e286, processorArchitecture=MSIL">
-      <HintPath>..\packages\Steema.TeeChart.NET.4.2024.3.15\lib\net48\TeeChart.WPF.dll</HintPath>
-    </Reference>
-    <Reference Include="TeeChart.Xaml.WPF, Version=4.2024.3.15, Culture=neutral, PublicKeyToken=9406d226170aa089, processorArchitecture=MSIL">
-      <HintPath>..\packages\Steema.TeeChart.NET.4.2024.3.15\lib\net48\TeeChart.Xaml.WPF.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Animations\Animations_ChartPart.cs">
@@ -1192,6 +1183,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Series\Smith_Series.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Series\Squarified_Series.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Series\Surface_HideCells.cs">
@@ -2767,6 +2761,9 @@
       <DependentUpon>Smith_Series.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Series\Squarified_Series.resx">
+      <DependentUpon>Squarified_Series.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Series\Surface_HideCells.resx">
       <DependentUpon>Surface_HideCells.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -3169,9 +3166,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\TeeChart.NET_Sources\TeeChart\TeeChart48.csproj">
+    <ProjectReference Include="..\..\..\..\..\Sources\TeeChart\TeeChartNuGet.csproj">
       <Project>{b3b54431-9317-4b31-ac03-a61585e6efdf}</Project>
-      <Name>TeeChart48</Name>
+      <Name>TeeChartNuGet</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

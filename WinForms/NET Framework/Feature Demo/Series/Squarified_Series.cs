@@ -1343,6 +1343,7 @@ namespace Steema.TeeChart.Samples
 
           series1.FillSampleValues(10);
           tChart1.Legend.Title.Visible = true;
+          textBox1.Text = "SquarifiedMap Series type";
         }
 	        	    
 	
@@ -1439,9 +1440,9 @@ namespace Steema.TeeChart.Samples
 
         private void bEdit_Click(object sender, EventArgs e)
         {
-          //SquarifiedMap editor = new SquarifiedMap(Series1);
-          //Steema.TeeChart.Editors.EditorUtils.Translate(editor);
-          //EditorUtils.ShowFormModal(editor);
+          SquarifiedMapSeries editor = new SquarifiedMapSeries(series1);
+          Steema.TeeChart.Editors.EditorUtils.Translate(editor);
+          EditorUtils.ShowFormModal(editor);
         }
 
         private void cbMarks_CheckedChanged_1(object sender, EventArgs e)

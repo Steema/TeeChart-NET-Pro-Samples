@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.ComponentModel;
 using System.Drawing;
@@ -499,14 +499,14 @@ namespace Steema.TeeChart.Samples
 
         private void ActiveStylesSetup()
         {
-            comboBox1.DataSource = Enum.GetValues(typeof(LegendActiveStyles));
+            comboBox1.DataSource = Enum.GetValues(typeof(LegendStyles));
             comboBox1.SelectedValueChanged += ComboBox1_SelectedValueChanged;
 
         }
 
         private void ComboBox1_SelectedValueChanged(object sender, EventArgs e)
         {
-            tChart1.Legend.ActiveStyle = (LegendActiveStyles)comboBox1.SelectedItem;
+            tChart1.Legend.LegendStyle = (LegendStyles)comboBox1.SelectedItem;
         }
     }
 }

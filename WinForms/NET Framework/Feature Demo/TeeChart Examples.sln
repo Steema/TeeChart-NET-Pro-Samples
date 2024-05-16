@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2016
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34321.82
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeeChart Examples", "TeeChart Examples.csproj", "{B24A17B4-3B1F-42C1-BAD3-C8DA0AF51BFB}"
 EndProject
@@ -9,6 +9,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuGet", "NuGet", "{B60F932B
 	ProjectSection(SolutionItems) = preProject
 		nuget.config = nuget.config
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeeChartNuGet", "..\..\..\..\..\Sources\TeeChart\TeeChartNuGet.csproj", "{B3B54431-9317-4B31-AC03-A61585E6EFDF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,6 +34,18 @@ Global
 		{B24A17B4-3B1F-42C1-BAD3-C8DA0AF51BFB}.Release|x64.Build.0 = Release|x64
 		{B24A17B4-3B1F-42C1-BAD3-C8DA0AF51BFB}.Release|x86.ActiveCfg = Release|x86
 		{B24A17B4-3B1F-42C1-BAD3-C8DA0AF51BFB}.Release|x86.Build.0 = Release|x86
+		{B3B54431-9317-4B31-AC03-A61585E6EFDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3B54431-9317-4B31-AC03-A61585E6EFDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3B54431-9317-4B31-AC03-A61585E6EFDF}.Debug|x64.ActiveCfg = Debug|x64
+		{B3B54431-9317-4B31-AC03-A61585E6EFDF}.Debug|x64.Build.0 = Debug|x64
+		{B3B54431-9317-4B31-AC03-A61585E6EFDF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B3B54431-9317-4B31-AC03-A61585E6EFDF}.Debug|x86.Build.0 = Debug|Any CPU
+		{B3B54431-9317-4B31-AC03-A61585E6EFDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3B54431-9317-4B31-AC03-A61585E6EFDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3B54431-9317-4B31-AC03-A61585E6EFDF}.Release|x64.ActiveCfg = Release|x64
+		{B3B54431-9317-4B31-AC03-A61585E6EFDF}.Release|x64.Build.0 = Release|x64
+		{B3B54431-9317-4B31-AC03-A61585E6EFDF}.Release|x86.ActiveCfg = Release|Any CPU
+		{B3B54431-9317-4B31-AC03-A61585E6EFDF}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
