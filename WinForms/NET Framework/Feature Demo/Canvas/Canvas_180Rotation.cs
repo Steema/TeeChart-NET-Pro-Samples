@@ -8,44 +8,46 @@ using System.Windows.Forms;
 
 namespace Steema.TeeChart.Samples
 {
-	public class Canvas_180Rotation : Samples.BaseForm
-	{
-		private System.Windows.Forms.HScrollBar hScrollBar2;
-		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.Label label2;
-		private Steema.TeeChart.Styles.Bar bar1;
-		private System.ComponentModel.IContainer components = null;
+    public class Canvas_180Rotation : Samples.BaseForm
+    {
+        private System.Windows.Forms.HScrollBar hScrollBar2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private Steema.TeeChart.Styles.Bar bar1;
+        private System.ComponentModel.IContainer components = null;
 
-		public Canvas_180Rotation()
-		{
-			// This call is required by the Windows Form Designer.
-			InitializeComponent();
+        public Canvas_180Rotation()
+        {
+            // This call is required by the Windows Form Designer.
+            InitializeComponent();
+            tChart1.Aspect.View3D = true;
+            tChart1.Aspect.Orthogonal = false;
 
-      bar1.FillSampleValues(4);
-		}
+            bar1.FillSampleValues(4);
+        }
 
-		/// <summary>
-		/// Clean up any resources being used.
-		/// </summary>
-		protected override void Dispose( bool disposing )
-		{
-			if( disposing )
-			{
-				if (components != null) 
-				{
-					components.Dispose();
-				}
-			}
-			base.Dispose( disposing );
-		}
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                if (components != null)
+                {
+                    components.Dispose();
+                }
+            }
+            base.Dispose(disposing);
+        }
 
-		#region Designer generated code
-		/// <summary>
-		/// Required method for Designer support - do not modify
-		/// the contents of this method with the code editor.
-		/// </summary>
-		private void InitializeComponent()
-		{
+        #region Designer generated code
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Canvas_180Rotation));
             this.hScrollBar2 = new System.Windows.Forms.HScrollBar();
             this.label1 = new System.Windows.Forms.Label();
@@ -354,8 +356,8 @@ namespace Steema.TeeChart.Samples
             this.ResumeLayout(false);
             this.PerformLayout();
 
-		}
-		#endregion
+        }
+        #endregion
 
         private void hScrollBar2_Scroll(object sender, System.Windows.Forms.ScrollEventArgs e)
         {
