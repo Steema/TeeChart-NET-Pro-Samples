@@ -22,7 +22,9 @@ namespace Steema.TeeChart.Samples
 			InitializeComponent();
 
 			this.barSeries1.FillSampleValues(6);
-		}
+            //Has to be 3D
+            tChart1.Aspect.View3D = true;
+        }
 
 		/// <summary>
 		/// Clean up any resources being used.
@@ -58,7 +60,7 @@ namespace Steema.TeeChart.Samples
 			// 
 			this.textBox1.Name = "textBox1";
 			this.textBox1.Size = new System.Drawing.Size(466, 63);
-			this.textBox1.Text = "Aspect roperty OrthoAngle defines the slope used to draw the Chart in Orthogonal " +
+			this.textBox1.Text = "Aspect property OrthoAngle defines the slope used to draw the Chart in Orthogonal " +
 				"mode. \r\nValid range is from 0 to 90 degree.  By default it is 45 degree.\r\n\r\nExam" +
 				"ple: tChart1.Aspect.OrthoAngle = 60;";
 			// 
