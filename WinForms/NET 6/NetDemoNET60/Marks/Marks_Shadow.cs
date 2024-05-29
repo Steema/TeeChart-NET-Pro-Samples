@@ -24,12 +24,20 @@ namespace Steema.TeeChart.Samples
 			InitializeComponent();
 
 			this.barSeries1.FillSampleValues(5);
+            ChartSetup();
 		}
 
-		/// <summary>
-		/// Clean up any resources being used.
-		/// </summary>
-		protected override void Dispose( bool disposing )
+        private void ChartSetup()
+        {
+            barSeries1.Marks.TailStyle = Styles.MarksTail.None;
+			checkBox1.Checked = false;
+
+        }
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        protected override void Dispose( bool disposing )
 		{
 			if( disposing )
 			{
