@@ -277,7 +277,7 @@ Move the mouse over a Bar series point to show the Mark tip.";
 
 		private void numericUpDown1_ValueChanged(object sender, System.EventArgs e)
 		{
-			//this.marksTip1.MouseDelay = (int)this.numericUpDown1.Value;
+			this.marksTip1.MouseDelay = (int)this.numericUpDown1.Value;
 		}
 	}
 }
