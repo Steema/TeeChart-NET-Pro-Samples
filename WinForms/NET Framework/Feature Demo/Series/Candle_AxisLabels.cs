@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.ComponentModel;
 using System.Drawing;
-
+using System.Globalization;
 using System.Windows.Forms;
 
 
@@ -12,56 +12,44 @@ namespace Steema.TeeChart.Samples
 	{
 		private Steema.TeeChart.Styles.Candle candleSeries1;
 		private System.ComponentModel.IContainer components = null;
-		
-		public Candle_AxisLabels()
-		{
-			// This call is required by the Windows Form Designer.
-			InitializeComponent();
 
-			Random  r = new Random();
-			candleSeries1.Clear();
-      tChart1.Header.Text = "Axis Labels no Weekends";
-      tChart1.Header.Visible = true;
+        public Candle_AxisLabels()
+        {
+            // This call is required by the Windows Form Designer.
+            InitializeComponent();
 
-			TeeChart.Styles.StringList labels = new TeeChart.Styles.StringList(10);
-			labels.Add("23/03/2009");
-      labels.Add("24/03/2009");
-      labels.Add("25/03/2009");
-      labels.Add("26/03/2009");
-      labels.Add("27/03/2009");
-      labels.Add("28/03/2009");
-      labels.Add("29/03/2009");
-      labels.Add("30/03/2009");
-      labels.Add("31/03/2009");
+            //Setup
+            tChart1.Header.Text = "Axis Labels no Weekends";
+            tChart1.Header.Visible = true;
+            candleSeries1.XValues.DateTime = false;
+            candleSeries1.GetHorizAxis.Labels.Angle = 90;
 
-			candleSeries1.XValues.DateTime = false;
-			candleSeries1.GetHorizAxis.Labels.Angle = 90;
+            TeeChart.Styles.StringList labels = new TeeChart.Styles.StringList(20);
+            Random r = new Random();
 
-			double tmpOpen;
-			double tmpClose;
-			int count = 0;
-      DateTime dt = new DateTime(2009, 03, 23); //DateTime.Parse("23/03/2009");
-			TimeSpan ts = TimeSpan.FromDays(1);
-			for (int t=0;t<13;t++) 
-			{
-				tmpOpen = r.Next(100);
-				tmpClose = tmpOpen - r.Next(100);
-				if(dt.DayOfWeek != DayOfWeek.Saturday & dt.DayOfWeek !=
-					DayOfWeek.Sunday) 
-				{
-					++count;
-					candleSeries1.Add(count,tmpOpen,tmpOpen + r.Next(50),
-						tmpClose -r.Next(50),tmpClose);
-				}
-				dt += ts;
-			}
-			candleSeries1.Labels = labels;
-		}
+            double tmpOpen, tmpClose;
+            int count = 0;
+            DateTime dt = DateTime.Now.Subtract(TimeSpan.FromDays(14));
+            TimeSpan oneDay = TimeSpan.FromDays(1);
+            for (int t = 0; t < 13; t++)
+            {
+                tmpOpen = r.Next(100);
+                tmpClose = tmpOpen - r.Next(100);
+                if (dt.DayOfWeek != DayOfWeek.Saturday & dt.DayOfWeek != DayOfWeek.Sunday) // If day isn't weekend
+                {
+                    ++count;
+                    candleSeries1.Add(count, tmpOpen, tmpOpen + r.Next(50), tmpClose - r.Next(50), tmpClose);
+                    labels.Add(dt.Date.ToString(CultureInfo.CurrentUICulture.DateTimeFormat.ShortDatePattern)); // Label format up to 
+                }
+                dt += oneDay;
+            }
+            candleSeries1.Labels = labels;
+        }
 
-		/// <summary>
-		/// Clean up any resources being used.
-		/// </summary>
-		protected override void Dispose( bool disposing )
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        protected override void Dispose( bool disposing )
 		{
 			if( disposing )
 			{

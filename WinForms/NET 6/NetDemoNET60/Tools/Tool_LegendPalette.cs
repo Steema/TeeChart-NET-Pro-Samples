@@ -20,6 +20,7 @@ namespace Steema.TeeChart.Samples
             surface1.UsePalette = false;
             legendPalette1.Pen.Visible = false;
             legendPalette1.Transparent = true;
+
         }
 
         private void AddSurfacePoints()
@@ -294,6 +295,7 @@ namespace Steema.TeeChart.Samples
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
             legendPalette1.Transparent = checkBox2.Checked;
+            legendPalette1.Invalidate();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -309,7 +311,7 @@ namespace Steema.TeeChart.Samples
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
         {
             legendPalette1.Pen.Visible = checkBox3.Checked;
-        }
+        }   
 
         private void tChart1_Resize(object sender, EventArgs e)
         {

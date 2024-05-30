@@ -20,9 +20,10 @@ namespace Steema.TeeChart.Samples
 
 			points3D1.FillSampleValues();
 			this.buttonPen1.Pen = points3D1.BaseLine;
+            tChart1.Aspect.View3D = true;
 
 
-		}
+        }
 
 		/// <summary>
 		/// Clean up any resources being used.

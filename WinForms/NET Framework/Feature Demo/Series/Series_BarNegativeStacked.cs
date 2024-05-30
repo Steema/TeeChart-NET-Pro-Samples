@@ -25,8 +25,9 @@ namespace Steema.TeeChart.Samples
 			this.barSeries1.Add(new int[5] {23, -56, 42, 9, -8});
 			this.barSeries2.Add(new int[5] {32, -16, 9, 39, -28});
 			this.barSeries3.Add(new int[5] {12, -21, 14, 22, -13});
+            tChart1.Aspect.View3D = true;
 
-		}
+        }
 
 		/// <summary>
 		/// Clean up any resources being used.

@@ -23,7 +23,9 @@ namespace Steema.TeeChart.Samples
 
 			bubble1.Pointer.Gradient.StartColor = Color.DarkBlue;
 			bubble1.FillSampleValues();
-		}
+            comboBox1.SelectedIndex = 0;
+
+        }
 
 		/// <summary>
 		/// Clean up any resources being used.
@@ -256,31 +258,33 @@ namespace Steema.TeeChart.Samples
 			checkBox1.Checked=bubble1.Pointer.Gradient.Visible;
 		}
 
-		private void comboBox1_SelectedIndexChanged(object sender, System.EventArgs e)
-		{
-			switch (comboBox1.SelectedIndex)
-			{
-				case 0: bubble1.Pointer.Style=Styles.PointerStyles.Circle; break;
-				case 1: bubble1.Pointer.Style=Styles.PointerStyles.Sphere; 
-					      setGradient(false);
-					      break;
-				case 2: bubble1.Pointer.Style=Styles.PointerStyles.PolishedSphere; 
-					      setGradient(false);
-								break;
-			}
+        private void comboBox1_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
+            switch (comboBox1.SelectedIndex)
+            {
+                case 0: bubble1.Pointer.Style = Styles.PointerStyles.Circle; break;
+                case 1:
+                    bubble1.Pointer.Style = Styles.PointerStyles.Sphere;
+                    setGradient(false);
+                    break;
+                case 2:
+                    bubble1.Pointer.Style = Styles.PointerStyles.PolishedSphere;
+                    setGradient(false);
+                    break;
+            }
 
-			if (comboBox1.SelectedIndex==0)
-			{
-				checkBox1.Enabled=true;
-				checkBox1.Checked=bubble1.Pointer.Gradient.Visible;
-        button1.Enabled=true;
-			}
-			else
-			{
-				checkBox1.Enabled=false;
-				button1.Enabled=false;
-			}
-		}
-	}
+            if (comboBox1.SelectedIndex == 0)
+            {
+                checkBox1.Enabled = true;
+                checkBox1.Checked = bubble1.Pointer.Gradient.Visible;
+                button1.Enabled = true;
+            }
+            else
+            {
+                checkBox1.Enabled = false;
+                button1.Enabled = false;
+            }
+        }
+    }
 }
 

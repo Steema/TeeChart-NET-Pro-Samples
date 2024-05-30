@@ -30,8 +30,8 @@ namespace Steema.TeeChart.Samples
 
 			hScrollBar1.Value=bar1.DepthPercent;
 			hScrollBar2.Value=bar1.BarWidthPercent;
-
-		}
+            tChart1.Aspect.View3D = true;
+        }
 
 		/// <summary>
 		/// Clean up any resources being used.

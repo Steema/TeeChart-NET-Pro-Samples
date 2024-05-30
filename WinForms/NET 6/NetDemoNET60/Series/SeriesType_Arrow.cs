@@ -61,7 +61,8 @@ namespace Steema.TeeChart.Samples
 			arrowSeries1.ArrowHeight = 24;
 			arrowSeries1.ColorEach = true;
 			AddRandomArrows();
-		}
+            tChart1.Aspect.View3D = true;
+        }
 
 		/// <summary>
 		/// Clean up any resources being used.

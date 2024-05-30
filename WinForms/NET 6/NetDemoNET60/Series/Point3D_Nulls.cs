@@ -180,7 +180,8 @@ namespace Steema.TeeChart.Samples
 		{
 			InitializeComponent();
 			InitializeChart();
-		}
+            tChart1.Aspect.View3D = true;
+        }
 
 		private GroupBox groupBox1;
 		private CheckBox cbView3D;

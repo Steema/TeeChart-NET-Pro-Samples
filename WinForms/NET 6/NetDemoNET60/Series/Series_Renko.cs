@@ -13,8 +13,12 @@ namespace Steema.TeeChart.Samples
         {
             InitializeComponent();
             candle1.FillSampleValues(20);
-            
-            // populate renko with closing values
+
+            //add initial colors if wanted
+            renko1.UpSwingColor = Color.Green;
+            renko1.DownSwingColor = Color.Red;
+
+            //// populate renko with closing values
             renko1.Clear();
             for (int i = 0; i < candle1.Count; i++)
                 renko1.Add(candle1.CloseValues[i]);
@@ -37,7 +41,7 @@ namespace Steema.TeeChart.Samples
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        private IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -60,581 +64,242 @@ namespace Steema.TeeChart.Samples
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Series_Renko));
-            this.candle1 = new Steema.TeeChart.Styles.Candle();
-            this.renko1 = new Steema.TeeChart.Styles.Renko();
-            this.buttonColor1 = new Steema.TeeChart.ButtonColor();
-            this.buttonColor2 = new Steema.TeeChart.ButtonColor();
-            this.label1 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            this.SuspendLayout();
+            ComponentResourceManager resources = new ComponentResourceManager(typeof(Series_Renko));
+            Drawing.Cursor cursor1 = new Drawing.Cursor();
+            candle1 = new Styles.Candle();
+            renko1 = new Styles.Renko();
+            buttonColor1 = new ButtonColor();
+            buttonColor2 = new ButtonColor();
+            label1 = new Label();
+            numericUpDown1 = new NumericUpDown();
+            panel1.SuspendLayout();
+            chartContainer.SuspendLayout();
+            ((ISupportInitialize)numericUpDown1).BeginInit();
+            SuspendLayout();
             // 
             // textBox1
             // 
-            this.textBox1.Text = resources.GetString("textBox1.Text");
+            textBox1.Text = resources.GetString("textBox1.Text");
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.numericUpDown1);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.buttonColor2);
-            this.panel1.Controls.Add(this.buttonColor1);
-            this.panel1.Size = new System.Drawing.Size(440, 69);
+            panel1.Controls.Add(numericUpDown1);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(buttonColor2);
+            panel1.Controls.Add(buttonColor1);
+            panel1.Size = new Size(440, 69);
             // 
             // tChart1
             // 
             // 
             // 
             // 
-            this.tChart1.Aspect.ElevationFloat = 345;
-            this.tChart1.Aspect.RotationFloat = 345;
-            this.tChart1.Aspect.View3D = false;
             // 
             // 
             // 
             // 
             // 
             // 
-            this.tChart1.Axes.Bottom.Automatic = true;
+            tChart1.Axes.Bottom.Grid.Style = Drawing.DashStyle.Dash;
             // 
             // 
             // 
-            this.tChart1.Axes.Bottom.Grid.Style = Drawing.DashStyle.Dash;
-            this.tChart1.Axes.Bottom.Grid.ZPosition = 0;
+            tChart1.Axes.Bottom.Labels.DateTimeFormat = "d.M.yyyy";
+            tChart1.Axes.Bottom.RelativePosition = 50D;
             // 
             // 
             // 
-            this.tChart1.Axes.Bottom.Labels.DateTimeFormat = "d.M.yyyy";
             // 
             // 
             // 
+            tChart1.Axes.Depth.Grid.Style = Drawing.DashStyle.Dash;
             // 
             // 
             // 
-            this.tChart1.Axes.Bottom.Labels.Font.Shadow.Visible = false;
             // 
             // 
             // 
-            this.tChart1.Axes.Bottom.Labels.Shadow.Visible = false;
-            this.tChart1.Axes.Bottom.RelativePosition = 50;
+            tChart1.Axes.DepthTop.Grid.Style = Drawing.DashStyle.Dash;
             // 
             // 
             // 
+            tChart1.Axes.Left.EndPosition = 50D;
             // 
             // 
             // 
+            tChart1.Axes.Left.Grid.Style = Drawing.DashStyle.Dash;
             // 
             // 
             // 
-            this.tChart1.Axes.Bottom.Title.Font.Shadow.Visible = false;
-            
             // 
             // 
             // 
-            this.tChart1.Axes.Bottom.Title.Shadow.Visible = false;
+            tChart1.Axes.Right.Grid.Centered = true;
+            tChart1.Axes.Right.Grid.Style = Drawing.DashStyle.Dash;
+            tChart1.Axes.Right.Increment = 1D;
+            tChart1.Axes.Right.MaximumOffset = 20;
+            tChart1.Axes.Right.MinimumOffset = 20;
+            tChart1.Axes.Right.StartPosition = 50D;
             // 
             // 
             // 
-            this.tChart1.Axes.Depth.Automatic = true;
             // 
             // 
             // 
-            this.tChart1.Axes.Depth.Grid.Style = Drawing.DashStyle.Dash;
-            this.tChart1.Axes.Depth.Grid.ZPosition = 0;
+            tChart1.Axes.Top.Grid.Centered = true;
+            tChart1.Axes.Top.Grid.Style = Drawing.DashStyle.Dash;
             // 
             // 
             // 
             // 
             // 
             // 
+            tChart1.Axes.Top.Labels.Font.Size = 7;
+            tChart1.Axes.Top.Labels.Font.SizeFloat = 7F;
+            tChart1.Axes.Top.Labels.Style = AxisLabelStyle.Value;
+            tChart1.Axes.Top.Labels.Visible = false;
+            tChart1.Axes.Top.MaximumOffset = 20;
+            tChart1.Axes.Top.MinimumOffset = 20;
+            tChart1.Axes.Top.RelativePosition = 100D;
             // 
             // 
             // 
-            this.tChart1.Axes.Depth.Labels.Font.Shadow.Visible = false;
-            
             // 
             // 
             // 
-            this.tChart1.Axes.Depth.Labels.Shadow.Visible = false;
+            tChart1.Header.Font.Size = 14;
+            tChart1.Header.Font.SizeFloat = 14F;
+            tChart1.Header.Visible = false;
             // 
             // 
             // 
+            tChart1.Legend.Alignment = LegendAlignments.Bottom;
+            tChart1.Legend.CheckBoxes = false;
+            tChart1.Series.Add(candle1);
+            tChart1.Series.Add(renko1);
+            tChart1.Size = new Size(440, 175);
             // 
+            // chartContainer
             // 
-            // 
-            // 
-            // 
-            // 
-            this.tChart1.Axes.Depth.Title.Font.Shadow.Visible = false;
-            
-            // 
-            // 
-            // 
-            this.tChart1.Axes.Depth.Title.Shadow.Visible = false;
-            // 
-            // 
-            // 
-            this.tChart1.Axes.DepthTop.Automatic = true;
-            // 
-            // 
-            // 
-            this.tChart1.Axes.DepthTop.Grid.Style = Drawing.DashStyle.Dash;
-            this.tChart1.Axes.DepthTop.Grid.ZPosition = 0;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.tChart1.Axes.DepthTop.Labels.Font.Shadow.Visible = false;
-            // 
-            // 
-            // 
-            this.tChart1.Axes.DepthTop.Labels.Shadow.Visible = false;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.tChart1.Axes.DepthTop.Title.Font.Shadow.Visible = false;
-            // 
-            // 
-            // 
-            this.tChart1.Axes.DepthTop.Title.Shadow.Visible = false;
-            // 
-            // 
-            // 
-            this.tChart1.Axes.Left.Automatic = true;
-            this.tChart1.Axes.Left.EndPosition = 50;
-            // 
-            // 
-            // 
-            this.tChart1.Axes.Left.Grid.Style = Drawing.DashStyle.Dash;
-            this.tChart1.Axes.Left.Grid.ZPosition = 0;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.tChart1.Axes.Left.Labels.Font.Shadow.Visible = false;
-            // 
-            // 
-            // 
-            this.tChart1.Axes.Left.Labels.Shadow.Visible = false;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.tChart1.Axes.Left.Title.Font.Shadow.Visible = false;
-            // 
-            // 
-            // 
-            this.tChart1.Axes.Left.Title.Shadow.Visible = false;
-            // 
-            // 
-            // 
-            this.tChart1.Axes.Right.Automatic = true;
-            // 
-            // 
-            // 
-            this.tChart1.Axes.Right.Grid.Style = Drawing.DashStyle.Dash;
-            this.tChart1.Axes.Right.Grid.ZPosition = 0;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.tChart1.Axes.Right.Labels.Font.Shadow.Visible = false;
-            // 
-            // 
-            // 
-            this.tChart1.Axes.Right.Labels.Shadow.Visible = false;
-            this.tChart1.Axes.Right.StartPosition = 50;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.tChart1.Axes.Right.Title.Font.Shadow.Visible = false;
-            // 
-            // 
-            // 
-            this.tChart1.Axes.Right.Title.Shadow.Visible = false;
-            // 
-            // 
-            // 
-            this.tChart1.Axes.Top.Automatic = true;
-            // 
-            // 
-            // 
-            this.tChart1.Axes.Top.Grid.Style = Drawing.DashStyle.Dash;
-            this.tChart1.Axes.Top.Grid.ZPosition = 0;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.tChart1.Axes.Top.Labels.Font.Shadow.Visible = false;
-            // 
-            // 
-            // 
-            this.tChart1.Axes.Top.Labels.Shadow.Visible = false;
-            this.tChart1.Axes.Top.Labels.Visible = false;
-            this.tChart1.Axes.Top.RelativePosition = 100;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.tChart1.Axes.Top.Title.Font.Shadow.Visible = false;
-            // 
-            // 
-            // 
-            this.tChart1.Axes.Top.Title.Shadow.Visible = false;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.tChart1.Footer.Font.Shadow.Visible = false;
-            
-            // 
-            // 
-            // 
-            this.tChart1.Footer.Shadow.Visible = false;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.tChart1.Header.Font.Shadow.Visible = false;
-            this.tChart1.Header.Lines = new string[] {
-        "TeeChart"};
-            // 
-            // 
-            // 
-            this.tChart1.Header.Shadow.Visible = false;
-            this.tChart1.Header.Visible = false;
-            // 
-            // 
-            // 
-            this.tChart1.Legend.Alignment = Steema.TeeChart.LegendAlignments.Bottom;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.tChart1.Legend.Font.Shadow.Visible = false;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.tChart1.Legend.Title.Font.Bold = true;
-            // 
-            // 
-            // 
-            this.tChart1.Legend.Title.Font.Shadow.Visible = false;
-            
-            // 
-            // 
-            // 
-            this.tChart1.Legend.Title.Pen.Visible = false;
-            // 
-            // 
-            // 
-            this.tChart1.Legend.Title.Shadow.Visible = false;
-            this.tChart1.Location = new System.Drawing.Point(0, 142);
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.tChart1.Panel.Shadow.Visible = false;
-            this.tChart1.Series.Add(this.candle1);
-            this.tChart1.Series.Add(this.renko1);
-            this.tChart1.Size = new System.Drawing.Size(440, 175);
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.tChart1.SubFooter.Font.Shadow.Visible = false;
-            
-            // 
-            // 
-            // 
-            this.tChart1.SubFooter.Shadow.Visible = false;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.tChart1.SubHeader.Font.Shadow.Visible = false;
-            // 
-            // 
-            // 
-            this.tChart1.SubHeader.Shadow.Visible = false;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.tChart1.Walls.Back.AutoHide = false;
-            // 
-            // 
-            // 
-            this.tChart1.Walls.Back.Brush.Visible = false;
-            // 
-            // 
-            // 
-            this.tChart1.Walls.Back.Shadow.Visible = false;
-            // 
-            // 
-            // 
-            this.tChart1.Walls.Bottom.AutoHide = false;
-            // 
-            // 
-            // 
-            this.tChart1.Walls.Bottom.Shadow.Visible = false;
-            // 
-            // 
-            // 
-            this.tChart1.Walls.Left.AutoHide = false;
-            // 
-            // 
-            // 
-            this.tChart1.Walls.Left.Shadow.Visible = false;
-            // 
-            // 
-            // 
-            this.tChart1.Walls.Right.AutoHide = false;
-            // 
-            // 
-            // 
-            this.tChart1.Walls.Right.Shadow.Visible = false;
+            chartContainer.Location = new Point(0, 142);
+            chartContainer.Size = new Size(440, 175);
             // 
             // candle1
             // 
+            candle1.Color = Color.FromArgb(119, 153, 214);
+            candle1.Cursor = cursor1;
             // 
             // 
             // 
-            this.candle1.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(165)))), ((int)(((byte)(161)))));
-            this.candle1.CloseValues = this.candle1.YValues;
-            this.candle1.DateValues = this.candle1.XValues;
+            candle1.Pointer.Draw3D = false;
+            candle1.Title = "Trading data";
             // 
             // 
             // 
-            this.candle1.HighLowPen.Color = System.Drawing.Color.Black;
+            candle1.XValues.DataMember = "Date";
+            candle1.XValues.DateTime = true;
+            candle1.XValues.Order = Styles.ValueListOrder.Ascending;
+            candle1.XValues.Value = new double[] { 45425.670504155096D, 45426.670504155096D, 45427.670504155096D, 45428.670504155096D, 45429.670504155096D, 45430.670504155096D, 45431.670504155096D, 45432.670504155096D, 45433.670504155096D, 45434.670504155096D, 45435.670504155096D, 45436.670504155096D, 45437.670504155096D, 45438.670504155096D, 45439.670504155096D, 45440.670504155096D, 45441.670504155096D, 45442.670504155096D, 45443.670504155096D, 45444.670504155096D, 45445.670504155096D, 45446.670504155096D, 45447.670504155096D, 45448.670504155096D, 45449.670504155096D, 45450.670504155096D, 45451.670504155096D, 45452.670504155096D, 45453.670504155096D, 45454.670504155096D, 45455.670504155096D, 45456.670504155096D, 45457.670504155096D, 45458.670504155096D, 45459.670504155096D, 45460.670504155096D, 45461.670504155096D, 45462.670504155096D, 45463.670504155096D, 45464.670504155096D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D };
             // 
             // 
             // 
-            this.candle1.LinePen.Color = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(165)))), ((int)(((byte)(161)))));
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.candle1.Marks.Callout.ArrowHead = Steema.TeeChart.Styles.ArrowHeadStyles.None;
-            this.candle1.Marks.Callout.ArrowHeadSize = 8;
-            this.candle1.Marks.Callout.Distance = 0;
-            this.candle1.Marks.Callout.Draw3D = false;
-            this.candle1.Marks.Callout.Length = 10;
-            this.candle1.Marks.Callout.Style = Steema.TeeChart.Styles.PointerStyles.Rectangle;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.candle1.Marks.Font.Shadow.Visible = false;
-            // 
-            // 
-            // 
-            this.candle1.Pointer.Draw3D = false;
-            this.candle1.Pointer.Style = Steema.TeeChart.Styles.PointerStyles.Rectangle;
-            this.candle1.Pointer.Visible = true;
-            this.candle1.Title = "Trading data";
-            // 
-            // 
-            // 
-            this.candle1.XValues.DataMember = "Date";
-            this.candle1.XValues.DateTime = true;
-            this.candle1.XValues.Order = Steema.TeeChart.Styles.ValueListOrder.Ascending;
-            // 
-            // 
-            // 
-            this.candle1.YValues.DataMember = "Close";
+            candle1.YValues.DataMember = "Close";
+            candle1.YValues.Value = new double[] { 46.702045923425842D, 60.24862922134281D, 77.796137877645037D, 81.370989698158112D, 61.06089896199336D, 68.973248501295814D, 54.632739334661863D, 42.065338925023262D, 47.7810316299D, 48.462173224176354D, 45.168407693118041D, 55.6996136636937D, 43.28258356791109D, 46.296035276398072D, 33.277796602471632D, 23.471728577498212D, 11.726566280110994D, 26.004597904628412D, 25.245765157624035D, 35.265823645641014D, 38.3246839327387D, 39.337184390210169D, 52.55556934725287D, 43.097227420703149D, 31.861660854826525D, 26.698042249166427D, 41.7415805038724D, 47.134612795959512D, 34.316715140043158D, 29.911316934466043D, 31.053903444229576D, 14.406513544454477D, 26.321412193738581D, 27.550682851369814D, 19.998064386657468D, 15.79913407694508D, 15.708247273093207D, 18.037894403113938D, 35.694078275791412D, 23.541592364451667D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D };
             // 
             // renko1
             // 
+            renko1.BrickStats = Styles.BrickStatOptions.all;
+            renko1.Color = Color.FromArgb(0, 0, 0);
+            renko1.Cursor = cursor1;
+            renko1.HorizAxis = Styles.HorizontalAxis.Top;
+            renko1.Title = "Renko (close values)";
             // 
             // 
             // 
-            this.renko1.Brush.Color = System.Drawing.Color.White;
-            this.renko1.HorizAxis = Steema.TeeChart.Styles.HorizontalAxis.Top;
+            renko1.VData.Color = Color.FromArgb(255, 207, 104);
             // 
             // 
             // 
-            this.renko1.LinePen.Color = System.Drawing.Color.White;
+            renko1.VData.Legend.Visible = false;
             // 
             // 
             // 
+            renko1.VData.Marks.Visible = false;
+            renko1.VData.SeriesData = null;
+            renko1.VData.Title = "bar1";
+            renko1.VData.Visible = false;
             // 
             // 
             // 
-            this.renko1.Marks.Callout.ArrowHead = Steema.TeeChart.Styles.ArrowHeadStyles.None;
-            this.renko1.Marks.Callout.ArrowHeadSize = 8;
-            this.renko1.Marks.Callout.Distance = 0;
-            this.renko1.Marks.Callout.Draw3D = false;
-            this.renko1.Marks.Callout.Length = 10;
-            this.renko1.Marks.Callout.Style = Steema.TeeChart.Styles.PointerStyles.Rectangle;
+            renko1.VData.XValues.Value = new double[] { 0D };
             // 
             // 
             // 
+            renko1.VData.YValues.Value = new double[] { 0D };
+            renko1.VertAxis = Styles.VerticalAxis.Right;
             // 
             // 
             // 
-            this.renko1.Marks.Font.Shadow.Visible = false;
+            renko1.XValues.DataMember = "X";
+            renko1.XValues.DateTime = true;
+            renko1.XValues.Order = Styles.ValueListOrder.Ascending;
+            renko1.XValues.Value = new double[] { 45417.670504166665D, 45418.670504166665D, 45419.670504166665D, 45420.670504166665D, 45421.670504166665D, 45422.670504166665D, 45423.670504166665D, 45424.670504166665D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D };
             // 
             // 
             // 
-            this.renko1.Pointer.Style = Steema.TeeChart.Styles.PointerStyles.Rectangle;
-            this.renko1.Title = "Renko (close values)";
-            this.renko1.VertAxis = Steema.TeeChart.Styles.VerticalAxis.Right;
-            // 
-            // 
-            // 
-            this.renko1.XValues.DataMember = "X";
-            this.renko1.XValues.Order = Steema.TeeChart.Styles.ValueListOrder.Ascending;
-            // 
-            // 
-            // 
-            this.renko1.YValues.DataMember = "Y";
+            renko1.YValues.DataMember = "Y";
+            renko1.YValues.Value = new double[] { -1.8577913932048D, 0.94063693238788249D, 3.2342269891686377D, 2.9935203918681044D, 4.2797024185806123D, 3.3544184463320583D, 2.1566977542315762D, 5.0116815850722478D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D, 0D };
             // 
             // buttonColor1
             // 
-            this.buttonColor1.Color = System.Drawing.Color.Empty;
-            this.buttonColor1.Location = new System.Drawing.Point(12, 6);
-            this.buttonColor1.Name = "buttonColor1";
-            this.buttonColor1.Size = new System.Drawing.Size(105, 23);
-            this.buttonColor1.TabIndex = 0;
-            this.buttonColor1.Text = "Up swing";
-#if VS2005
-            this.buttonColor1.UseVisualStyleBackColor = true;
-#endif
-            this.buttonColor1.Click += new System.EventHandler(this.buttonColor1_Click);
+            buttonColor1.Color = Color.Empty;
+            buttonColor1.Location = new Point(12, 6);
+            buttonColor1.Name = "buttonColor1";
+            buttonColor1.Size = new Size(105, 23);
+            buttonColor1.TabIndex = 0;
+            buttonColor1.Text = "Up swing";
+            buttonColor1.Click += buttonColor1_Click;
             // 
             // buttonColor2
             // 
-            this.buttonColor2.Color = System.Drawing.Color.Empty;
-            this.buttonColor2.Location = new System.Drawing.Point(12, 35);
-            this.buttonColor2.Name = "buttonColor2";
-            this.buttonColor2.Size = new System.Drawing.Size(105, 23);
-            this.buttonColor2.TabIndex = 1;
-            this.buttonColor2.Text = "Down swing";
-#if VS2005
-            this.buttonColor2.UseVisualStyleBackColor = true;
-#endif
-            this.buttonColor2.Click += new System.EventHandler(this.buttonColor2_Click);
+            buttonColor2.Color = Color.Empty;
+            buttonColor2.Location = new Point(12, 35);
+            buttonColor2.Name = "buttonColor2";
+            buttonColor2.Size = new Size(105, 23);
+            buttonColor2.TabIndex = 1;
+            buttonColor2.Text = "Down swing";
+            buttonColor2.Click += buttonColor2_Click;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(143, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Box size";
+            label1.AutoSize = true;
+            label1.Location = new Point(143, 11);
+            label1.Name = "label1";
+            label1.Size = new Size(49, 15);
+            label1.TabIndex = 2;
+            label1.Text = "Box size";
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(195, 9);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(64, 20);
-            this.numericUpDown1.TabIndex = 3;
-            this.numericUpDown1.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            numericUpDown1.Location = new Point(195, 9);
+            numericUpDown1.Maximum = new decimal(new int[] { 50, 0, 0, 0 });
+            numericUpDown1.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            numericUpDown1.Name = "numericUpDown1";
+            numericUpDown1.Size = new Size(64, 23);
+            numericUpDown1.TabIndex = 3;
+            numericUpDown1.Value = new decimal(new int[] { 5, 0, 0, 0 });
+            numericUpDown1.ValueChanged += numericUpDown1_ValueChanged;
             // 
             // Series_Renko
             // 
-            this.ClientSize = new System.Drawing.Size(440, 317);
-            this.Name = "Series_Renko";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            ClientSize = new Size(440, 317);
+            Name = "Series_Renko";
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            chartContainer.ResumeLayout(false);
+            ((ISupportInitialize)numericUpDown1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

@@ -1043,7 +1043,6 @@
   Single Record,DBChart_SingleRecord,\\Datasource\\DBChart_SingleRecord
   CrossTab Charts,DBChart_CrossTabSource,\\Datasource\\DBChart_CrossTabSource
   Master Detail,Master_Detail,\\Series\\Master_Detail
-  DesignTime Drill-Down,DBDrillDown,\\Datasource\\DBDrillDown  
  Printing
   Print Export dialog,Chart_PrintPreview,\\Print\\Chart_PrintPreview
  Exporting
@@ -1120,7 +1119,7 @@
    Exponential Trend,Exponential_Trend,\\Functions\\Exponential_Trend
    Fitting linearizable models,CurveFitting_Models,\\Functions\\CurveFitting_Models 
    Performance,Function_Performance,\\Functions\Function_Performance
-   Perimeter,Function_Perimeter,\\Functions\Perimeter
+   Perimeter,Function_Perimeter,\\Functions\Function_Perimeter
    Polynomial fitting,Function_CurveFitting,\\Functions\\Function_CurveFitting
     Finding coefficients,CurveFitting_Coef,\\Functions\\CurveFitting_Coef
    Reducing number of points,Function_DownSampling,\\Functions\\Function_DownSampling
@@ -1200,7 +1199,7 @@
    Custom logarithmic axis,Log_CustomIncrement,\\Axis\\Log_CustomIncrement
    Exponent superscript,Axis_Exponent,\\Axis\\Axis_Exponent
    Finding local minimum and maximum,Axis_LocalMinMax,\\Axis\LocalMinMax
-   Grid DrawEvery,Axis_GridDrawEvery,\\Axis\\Grid_DrawEvery
+   Grid DrawEvery,Axis_GridDrawEvery,\\Axis\\Axis_GridDrawEvery
    Labels Format,Axes_LabelsFormat,\\Axis\\Axes_LabelsFormat
    Showing milliseconds,Axis_Millisec,\\Axis\\Axis_Millisec
    Using GetAxisLabel,Axis_GetAxisLabel,\\Axis\\Axis_GetAxisLabel
@@ -1315,7 +1314,6 @@ Upgrading and Ordering,Order_Info,Order_Info</value>
   Gantt MultipleNextTasks,Gantt_MultipleNextTasks,\\Series\\Gantt_MultipleNextTasks
   Tower Stacked,Tower_Stacked,\\Series\\Tower_Stacked 
   Master Detail,Master_Detail,\\Series\\Master_Detail
-  DesignTime Drill-Down,DBDrillDown,\\Datasource\\DBDrillDown
  New in Zoom and Scroll
   Zoom History,Zoom_Pen,\\Zoom_Scroll\\Zoom_Pen
  New Chart Tools

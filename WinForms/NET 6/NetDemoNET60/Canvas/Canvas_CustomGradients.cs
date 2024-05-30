@@ -236,7 +236,6 @@ namespace Steema.TeeChart.Samples
 			// 
 			// 
 			// 
-			this.tChart1.Resize += new System.EventHandler(this.tChart1_Resize);
 			// 
 			// groupBox1
 			// 
@@ -377,11 +376,18 @@ namespace Steema.TeeChart.Samples
 		private void InitializeChart()
 		{
 			tChart1.Tools.Add(rectangle = new Steema.TeeChart.Tools.RectangleTool());
+            tChart1.AfterDraw += TChart1_AfterDraw;
 		
 
 		}
 
-		private void CustomizeGradient(Steema.TeeChart.Drawing.IGradient gradient)
+        private void TChart1_AfterDraw(object sender, Drawing.IGraphics3D g)
+        {
+            if (rectangle != null)
+                CustomizeGradient(rectangle.Shape.Gradient);
+        }
+
+        private void CustomizeGradient(Steema.TeeChart.Drawing.IGradient gradient)
 		{
 			gradient.Visible = true;
 			Color[] CustomGradientPalette = new Color[] { 
@@ -395,14 +401,10 @@ namespace Steema.TeeChart.Samples
 			gradient.Style.Visible = true;
 			gradient.Style.CenterXOffset = 50;
 			gradient.Style.CenterYOffset = 50;
-			gradient.Style.Direction = Steema.TeeChart.Drawing.PathGradientMode.FromCenter;
-		}
+            if (rbRadial.Checked) gradient.Style.Direction = rectangle.Shape.Gradient.Style.Direction = Steema.TeeChart.Drawing.PathGradientMode.Radial;
+            else gradient.Style.Direction = rectangle.Shape.Gradient.Style.Direction = Steema.TeeChart.Drawing.PathGradientMode.FromCenter;
+        }
 
-		private void tChart1_Resize(object sender, EventArgs e)
-		{
-            if (rectangle !=null)
-			  CustomizeGradient(rectangle.Shape.Gradient);
-		}
 
 		private void rbRadial_CheckedChanged(object sender, EventArgs e)
 		{

@@ -30,7 +30,8 @@ namespace Steema.TeeChart.Samples
 				s.FillSampleValues(20);
 
 			r = new Random();
-		}
+            tChart1.Aspect.View3D = true;
+        }
 
 		/// <summary>
 		/// Clean up any resources being used.

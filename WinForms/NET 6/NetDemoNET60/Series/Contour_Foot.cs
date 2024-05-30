@@ -507,7 +507,7 @@ namespace Steema.TeeChart.Samples
 		#endregion
 
 		private void LoadData(string FileName) {
-			string path = Application.StartupPath + @"\..\..\";
+			string path = Application.StartupPath + @"\..\..\..\";
 			path = path + FileName;
 
 			if(File.Exists(path))	{ 
