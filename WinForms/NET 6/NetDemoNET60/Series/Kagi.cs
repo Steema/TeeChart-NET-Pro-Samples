@@ -23,7 +23,8 @@ namespace Steema.TeeChart.Samples
 		{
 			// This call is required by the Windows Form Designer.
 			InitializeComponent();
-		}
+            tChart1.Aspect.View3D = true;
+        }
 
 		/// <summary>
 		/// Clean up any resources being used.
@@ -892,37 +893,13 @@ namespace Steema.TeeChart.Samples
             this.PerformLayout();
 
 		}
-		#endregion
+        #endregion
 
-		private void Candle_HighLowPen_Load(object sender, System.EventArgs e)
-		{
-            // 1st week
-            kagi1.Add(20, "2006-08-21");
-            kagi1.Add(14, "2006-08-22");
-            kagi1.Add(15, "2006-08-23");
-            kagi1.Add(10, "2006-08-24");
-            kagi1.Add(12, "2006-08-25");
-            
-            // 2nd week 
-            kagi1.Add(12, "2006-08-28");
-            kagi1.Add(12, "2006-08-29");
-            kagi1.Add(13, "2006-08-30");
-            kagi1.Add(9, "2006-08-31");
-            kagi1.Add(8, "2006-9-01");
-            
-            // customize axis labels, because Kagi is not aware of time scale
-            Steema.TeeChart.AxisLabels labels = kagi1.GetHorizAxis.Labels;
-            labels.Items.Clear();
-            // these are dates when direction changes
-            labels.Items.Add(0, "2006-08-21");
-            labels.Items.Add(1, "2006-08-23");
-            labels.Items.Add(2, "2006-08-24");
-            labels.Items.Add(3, "2006-08-30");
-            labels.Items.Add(4, "2006-09-01");
-
+        private void Candle_HighLowPen_Load(object sender, System.EventArgs e)
+        {
+            kagi1.FillSampleValues(100);
             textBox2.Text = kagi1.ReversalAmount.ToString();
-
-		}
+        }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {

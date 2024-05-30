@@ -44,7 +44,8 @@ namespace Steema.TeeChart.Samples
 					y = Math.Sin(z*Math.PI/10.0)*Math.Cos(x*Math.PI/5.0);  // example Y value
 					surfaceSeries1.Add(xval[x],y,zval[z]);
 				}
-		}
+            tChart1.Aspect.View3D = true;
+        }
 
 		/// <summary>
 		/// Clean up any resources being used.

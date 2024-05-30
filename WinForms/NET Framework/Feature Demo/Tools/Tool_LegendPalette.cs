@@ -294,6 +294,9 @@ namespace Steema.TeeChart.Samples
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
             legendPalette1.Transparent = checkBox2.Checked;
+            legendPalette1.Invalidate();
+
+
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

@@ -42,9 +42,15 @@ namespace Steema.TeeChart.Samples
       {
         checkedListBox1.Items.Add(l.Charts[t].Header.Text, true);
       }
+            checkedListBox1.ItemCheck += CheckedListBox1_ItemCheck;
+    }
+    private void CheckedListBox1_ItemCheck(object sender, ItemCheckEventArgs e)
+    {
+        l.Charts[e.Index].Visible = e.NewValue == CheckState.Checked;
+        l.Relayout();
     }
 
-    private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
     {
       l.View3D = checkBox1.Checked;
     }
@@ -133,7 +139,7 @@ namespace Steema.TeeChart.Samples
       this.button1.Name = "button1";
       this.button1.Size = new System.Drawing.Size(75, 23);
       this.button1.TabIndex = 3;
-      this.button1.Text = "Bimap";
+      this.button1.Text = "Bitmap";
       this.button1.UseVisualStyleBackColor = true;
       this.button1.Click += new System.EventHandler(this.button1_Click);
       // 

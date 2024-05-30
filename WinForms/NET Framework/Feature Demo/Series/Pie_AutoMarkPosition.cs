@@ -52,8 +52,7 @@ namespace Steema.TeeChart.Samples
 			// 
 			this.textBox1.Name = "textBox1";
 			this.textBox1.Text = "Pie series can display Marks using an anti-overlap algorithm. \r\nThe algorithm mov" +
-				"es marks outside the space of previous point marks. \r\n\r\npie1.AutoMarkPosition = " +
-				"true;   // default is True";
+                "es marks outside the space of previous point marks. \r\n\r\npie1.Marks.AutoPosition = checkBox1.Checked;   // default is True";
 			// 
 			// panel1
 			// 
@@ -170,7 +169,8 @@ namespace Steema.TeeChart.Samples
 		#endregion
 
 		private void checkBox1_Click(object sender, System.EventArgs e) {
-			pie1.AutoMarkPosition = checkBox1.Checked;
+			pie1.Marks.AutoPosition = checkBox1.Checked;
+			tChart1.Invalidate();
 		}
 	}
 }

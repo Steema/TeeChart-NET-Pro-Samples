@@ -23,6 +23,7 @@ namespace Steema.TeeChart.Samples
 			for(int x=-10; x<=10; ++x)
 				for(int z=-10; z<=10; ++z)
 					surface1.Add(x,Calc(x,z),z);
+			tChart1.Aspect.View3D = true;
 		}
 
 		private double Calc(double x,double y){
@@ -254,6 +255,7 @@ namespace Steema.TeeChart.Samples
 			tChart1.Walls.Back.Transparency=hScrollBar1.Value;
 
 			label2.Text=hScrollBar1.Value.ToString();
+			tChart1.Invalidate();
 		}
 
 		private void button1_Click(object sender, System.EventArgs e) {

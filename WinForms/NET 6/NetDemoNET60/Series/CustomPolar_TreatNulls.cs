@@ -303,12 +303,23 @@ namespace Steema.TeeChart.Samples
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Steema.TeeChart.Styles.Series s = tChart1[0];
+            Series s = tChart1[0];
+            //This little if/else's only purpose is to activate Circle Labels for the WindRose series. 
+            if (comboBox1.SelectedIndex == 3)
+            {
+                CustomPolar cp = s as CustomPolar;
+                cp.CircleLabels = true;
+            }
+            else
+            {
+                CustomPolar cp = s as CustomPolar;
+                cp.CircleLabels = false;
+            }
             switch (comboBox1.SelectedIndex)
             {
                 case 1: Steema.TeeChart.Styles.Series.ChangeType(ref s, typeof(PolarBar)); break;
                 case 2: Steema.TeeChart.Styles.Series.ChangeType(ref s, typeof(Radar)); break;
-                case 3: Steema.TeeChart.Styles.Series.ChangeType(ref s, typeof(WindRose)); break;
+                case 3: Steema.TeeChart.Styles.Series.ChangeType(ref s, typeof(WindRose)); break;                   
                 default: Steema.TeeChart.Styles.Series.ChangeType(ref s, typeof(Polar)); break;
             }
         }

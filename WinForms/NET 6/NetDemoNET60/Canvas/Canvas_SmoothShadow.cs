@@ -101,8 +101,9 @@ namespace Steema.TeeChart.Samples
 		{
 			InitializeComponent();
 			InitializeChart();
+            tChart1.Aspect.View3D = true;
 
-		}
+        }
 
 		private Button button1;
 

@@ -22,7 +22,8 @@ namespace Steema.TeeChart.Samples
 			
 			
 			BPPen.Pen = vector3D1.Pen;
-		}
+            tChart1.Aspect.View3D = true;
+        }
 
 		/// <summary>
 		/// Clean up any resources being used.

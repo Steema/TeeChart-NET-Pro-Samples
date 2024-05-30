@@ -17,14 +17,16 @@ namespace Steema.TeeChart.Samples
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.ComboBox comboBox1;
 		private System.ComponentModel.IContainer components = null;
+		
 
 		public Canvas_Cone()
 		{
 			// This call is required by the Windows Form Designer.
 			InitializeComponent();
-
 			this.barSeries1.FillSampleValues(6);
-      //this.barSeries1.ConePercent = (int)this.trackBar1.Value;
+			this.barSeries1.ConePercent = (int)this.trackBar1.Value;
+			tChart1.Aspect.View3D = true;
+
 		}
 
 		/// <summary>
@@ -268,7 +270,7 @@ namespace Steema.TeeChart.Samples
 
 		private void trackBar1_ValueChanged(object sender, System.EventArgs e)
 		{
-      //this.barSeries1.ConePercent = (int)this.trackBar1.Value;
+			this.barSeries1.ConePercent = (int)this.trackBar1.Value;
 			this.label2.Text = this.trackBar1.Value.ToString()+"%";
 			this.tChart1.Refresh();
 		}

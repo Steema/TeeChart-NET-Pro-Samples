@@ -291,13 +291,13 @@ namespace Steema.TeeChart.Samples
 			System.IO.MemoryStream stream = new System.IO.MemoryStream();
 			try
 			{
-				// save only Chart and Series formatting, NOT including data
-				//tChart1.Export.Template.Save(stream);
-				//// 2) Load the template into other Chart...
-				//stream.Position = 0;
-				//tChart2.Import.Template.Load(stream);
-				// restore the chart alignment (in this example)
-				this.tChart2.Dock = DockStyle.Fill;
+                // save only Chart and Series formatting, NOT including data
+                tChart1.Export.Template.Save(stream);
+                // 2) Load the template into other Chart...
+                stream.Position = 0;
+                tChart2.Import.Template.Load(stream);
+                // restore the chart alignment (in this example)
+                this.tChart2.Dock = DockStyle.Fill;
 				// repaint the Chart
 				this.tChart2.Refresh();
 			}

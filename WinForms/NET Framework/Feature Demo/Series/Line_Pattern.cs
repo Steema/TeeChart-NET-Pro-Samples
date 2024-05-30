@@ -32,6 +32,7 @@ namespace Steema.TeeChart.Samples
 			this.lineSeries1.Brush.Image = this.pictureBox1.Image;
 			this.lineSeries2.Brush.Image = this.pictureBox2.Image;
 			this.lineSeries3.Brush.Image = this.pictureBox3.Image;
+			tChart1.Aspect.View3D = true;
 		}
 
 		/// <summary>

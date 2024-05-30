@@ -19,7 +19,8 @@ namespace Steema.TeeChart.Samples
 			InitializeComponent();
 
 			candleSeries1.FillSampleValues(20);
-		}
+            candleSeries1.GetHorizAxis.Labels.Angle = 90;
+        }
 
 		/// <summary>
 		/// Clean up any resources being used.
@@ -146,7 +147,7 @@ namespace Steema.TeeChart.Samples
 			// candleSeries1.YValues
 			// 
 			this.candleSeries1.YValues.DataMember = "Close";
-      //this.candleSeries1.GetPointerStyle += new Steema.TeeChart.Styles.CustomPoint.GetPointerStyleEventHandler(this.candleSeries1_GetPointerStyle);
+			this.candleSeries1.GetPointerStyle += new Steema.TeeChart.Styles.CustomPoint.GetPointerStyleEventHandler(this.candleSeries1_GetPointerStyle);
 			// 
 			// checkBox1
 			// 
@@ -188,27 +189,27 @@ namespace Steema.TeeChart.Samples
 			candleSeries1.Repaint();
 		}
 
-    //private void candleSeries1_GetPointerStyle(Steema.TeeChart.Styles.CustomPoint series, Steema.TeeChart.Styles.CustomPoint.GetPointerStyleEventArgs e)
-    //{
-    //  if (checkBox1.Checked) // custom
-    //  {
-    //    // change some candle colors...
-    //    if (e.ValueIndex % 2 == 0) 
-    //    {
-    //      e.Style = Steema.TeeChart.Styles.PointerStyles.Rectangle;
-    //      candleSeries1.Pointer.Pen.Color = Color.Yellow;
-    //    }
-    //    else
-    //    {
-    //      e.Style = Steema.TeeChart.Styles.PointerStyles.Diamond;
-    //      candleSeries1.Pointer.Pen.Color = Color.Blue;
-    //    }
-    //  }
-    //  else // default 
-    //  {
-    //    e.Style = Steema.TeeChart.Styles.PointerStyles.Rectangle;
-    //    candleSeries1.Pointer.Pen.Color = Color.Black;
-    //  }		
-    //}
+		private void candleSeries1_GetPointerStyle(Steema.TeeChart.Styles.CustomPoint series, Steema.TeeChart.Styles.GetPointerStyleEventArgs e)
+		{
+			if (checkBox1.Checked) // custom
+			{
+				// change some candle colors...
+				if (e.ValueIndex % 2 == 0)
+				{
+					e.Style = Steema.TeeChart.Styles.PointerStyles.Rectangle;
+					candleSeries1.Pointer.Pen.Color = Color.Yellow;
+				}
+				else
+				{
+					e.Style = Steema.TeeChart.Styles.PointerStyles.Diamond;
+					candleSeries1.Pointer.Pen.Color = Color.Blue;
+				}
+			}
+			else // default 
+			{
+				e.Style = Steema.TeeChart.Styles.PointerStyles.Rectangle;
+				candleSeries1.Pointer.Pen.Color = Color.Black;
+			}
+		}
 	}
 }

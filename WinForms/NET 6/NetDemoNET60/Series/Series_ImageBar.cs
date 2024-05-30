@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Steema.TeeChart.Drawing;
+using System;
 using System.Collections;
 using System.ComponentModel;
 using System.Drawing;
@@ -27,9 +28,15 @@ namespace Steema.TeeChart.Samples
 			imageBar1.ImageTiled = true;
 			string s="Steema.TeeChart.Samples.Utilities.images.euro-coin.jpg";
       System.IO.Stream stream = System.Reflection.Assembly.GetExecutingAssembly().GetManifestResourceStream(s);
-   //   if (stream!=null) imageBar1.Image=Image.FromStream(stream);
-			//pictureBox1.Image = imageBar1.Image;
-			pictureBox1.SizeMode=PictureBoxSizeMode.StretchImage;
+			Image img;
+			if (stream != null)
+			{
+				img = Image.FromStream(stream);
+
+				imageBar1.Image = new TImage(img);
+				pictureBox1.Image = img;
+				pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+			}
 		}
 
 		/// <summary>
@@ -548,9 +555,10 @@ namespace Steema.TeeChart.Samples
 			string filename=Steema.TeeChart.Editors.PictureDialog.FileName(this);
 			if (filename.Length!=0) 
 			{
-				//imageBar1.Image = Image.FromFile(filename);
-				//pictureBox1.Image=imageBar1.Image;
-			
+
+				imageBar1.Image = new TImage(Image.FromFile(filename));
+				pictureBox1.Image = Image.FromFile(filename);
+
 			} 
 		}
 

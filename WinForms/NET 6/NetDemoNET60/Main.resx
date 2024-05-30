@@ -1115,7 +1115,7 @@
    Exponential Trend,Exponential_Trend,\\Functions\\Exponential_Trend
    Fitting linearizable models,CurveFitting_Models,\\Functions\\CurveFitting_Models 
    Performance,Function_Performance,\\Functions\Function_Performance
-   Perimeter,Function_Perimeter,\\Functions\Perimeter
+   Perimeter,Function_Perimeter,\\Functions\Function_Perimeter
    Polynomial fitting,Function_CurveFitting,\\Functions\\Function_CurveFitting
     Finding coefficients,CurveFitting_Coef,\\Functions\\CurveFitting_Coef
    Reducing number of points,Function_DownSampling,\\Functions\\Function_DownSampling
@@ -1192,13 +1192,13 @@
    Custom labels,Axis_Items,\\Axis\\Axis_Items
    Custom logarithmic axis,Log_CustomIncrement,\\Axis\\Log_CustomIncrement
    Exponent superscript,Axis_Exponent,\\Axis\\Axis_Exponent
-   Finding local minimum and maximum,Axis_LocalMinMax,\\Axis\LocalMinMax
-   Grid DrawEvery,Axis_GridDrawEvery,\\Axis\\Grid_DrawEvery
+   Finding local minimum and maximum,Axis_LocalMinMax,\\Axis\\LocalMinMax
+   Grid DrawEvery,Axis_GridDrawEvery,\\Axis\\Axis_GridDrawEvery
    Labels Format,Axes_LabelsFormat,\\Axis\\Axes_LabelsFormat
    Showing milliseconds,Axis_Millisec,\\Axis\\Axis_Millisec
    Using GetAxisLabel,Axis_GetAxisLabel,\\Axis\\Axis_GetAxisLabel
   Min and max offset,Axes_Offsets,\\Axis\\Axes_Offsets
-  Max/Min Rounded,Axis_MaxMinRounded,\\Axis\Axis_MaxMinRounded
+  Max/Min Rounded,Axis_MaxMinRounded,\\Axis\\Axis_MaxMinRounded
   Minor grid,Axis_MinorGrid,\\Axis\\Axis_MinorGrid
   Opaque zones,Axis_OpaqueZone,\\Axis\\Axis_OpaqueZone
   Page AutoScale,Page_AutoScale,\\Axis\\Page_AutoScale
@@ -1353,7 +1353,7 @@ Upgrading and Ordering,Order_Info,Order_Info</value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAEZTeXN0ZW0uV2luZG93cy5Gb3JtcywgQ3VsdHVyZT1uZXV0cmFs
         LCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5BQEAAAAmU3lzdGVtLldpbmRvd3MuRm9ybXMu
         SW1hZ2VMaXN0U3RyZWFtZXIBAAAABERhdGEHAgIAAAAJAwAAAA8DAAAA1gkAAAJNU0Z0AUkBTAIBAQQB
-        AAEoAQEBKAEBARABAAEQAQAE/wEJAQAI/wFCAU0BNgEEBgABNgEEAgABKAMAAUADAAEgAwABAQEAAQgG
+        AAFIAQEBSAEBARABAAEQAQAE/wEJAQAI/wFCAU0BNgEEBgABNgEEAgABKAMAAUADAAEgAwABAQEAAQgG
         AAEIGAABgAIAAYADAAKAAQABgAMAAYABAAGAAQACgAIAA8ABAAHAAdwBwAEAAfABygGmAQABMwUAATMB
         AAEzAQABMwEAAjMCAAMWAQADHAEAAyIBAAMpAQADVQEAA00BAANCAQADOQEAAYABfAH/AQACUAH/AQAB
         kwEAAdYBAAH/AewBzAEAAcYB1gHvAQAB1gLnAQABkAGpAa0CAAH/ATMDAAFmAwABmQMAAcwCAAEzAwAC

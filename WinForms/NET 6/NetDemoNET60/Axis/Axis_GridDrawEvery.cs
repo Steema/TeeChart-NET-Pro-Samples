@@ -18,7 +18,12 @@ namespace Steema.TeeChart.Samples
         {
             InitializeComponent();
             bubble1.FillSampleValues(6);
+            axis = bubble1.GetHorizAxis;
+            axis.Grid.Visible = true;
             axis = bubble1.GetVertAxis;
+
+            
+
         }
 
         private Steema.TeeChart.Styles.Bubble bubble1;

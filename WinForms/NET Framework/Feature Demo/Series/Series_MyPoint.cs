@@ -23,8 +23,9 @@ namespace Steema.TeeChart.Samples
 
 			this.linePointSeries1.FillSampleValues(12);
 			this.linePointSeries1.LinePen.Color = Color.Blue;
+            tChart1.Aspect.View3D = true;
 
-		}
+        }
 
 		/// <summary>
 		/// Clean up any resources being used.
