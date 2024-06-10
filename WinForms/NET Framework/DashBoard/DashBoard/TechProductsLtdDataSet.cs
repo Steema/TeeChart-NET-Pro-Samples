@@ -2,7 +2,7 @@
 {
 
 
-	partial class TechProductsLtdDataSet
-	{
-	}
+    partial class TechProductsLtdDataSet
+    {
+    }
 }
