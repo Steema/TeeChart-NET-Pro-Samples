@@ -55,13 +55,13 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="TeeChart, Version=4.2024.5.16, Culture=neutral, PublicKeyToken=9c8126276c77bdb7, processorArchitecture=MSIL">
-      <HintPath>packages\Steema.TeeChart.NET.4.2024.5.16\lib\net48\TeeChart.dll</HintPath>
+      <HintPath>..\..\packages\Steema.TeeChart.NET.4.2024.5.16\lib\net48\TeeChart.dll</HintPath>
     </Reference>
     <Reference Include="TeeChart.WPF, Version=4.2024.5.16, Culture=neutral, PublicKeyToken=98e8c3f289a4e286, processorArchitecture=MSIL">
-      <HintPath>packages\Steema.TeeChart.NET.4.2024.5.16\lib\net48\TeeChart.WPF.dll</HintPath>
+      <HintPath>..\..\packages\Steema.TeeChart.NET.4.2024.5.16\lib\net48\TeeChart.WPF.dll</HintPath>
     </Reference>
     <Reference Include="TeeChart.Xaml.WPF, Version=4.2024.5.16, Culture=neutral, PublicKeyToken=9406d226170aa089, processorArchitecture=MSIL">
-      <HintPath>packages\Steema.TeeChart.NET.4.2024.5.16\lib\net48\TeeChart.Xaml.WPF.dll</HintPath>
+      <HintPath>..\..\packages\Steema.TeeChart.NET.4.2024.5.16\lib\net48\TeeChart.Xaml.WPF.dll</HintPath>
     </Reference>
     <Reference Include="TeeGrid.WinForm, Version=1.2021.5.25, Culture=neutral, PublicKeyToken=cc97f2073aa08b08, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Steema.TeeGrid.NET.1.2021.5.25\lib\net\TeeGrid.WinForm.dll</HintPath>

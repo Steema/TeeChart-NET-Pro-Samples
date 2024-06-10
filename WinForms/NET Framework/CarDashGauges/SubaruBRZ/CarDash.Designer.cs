@@ -299,7 +299,6 @@
       this.circularGauge1.Center.SizeDouble = 0D;
       this.circularGauge1.Center.SizeUnits = Steema.TeeChart.Styles.PointerSizeUnits.Pixels;
       this.circularGauge1.Center.Spiralled = false;
-      this.circularGauge1.Center.Style = ((Steema.TeeChart.Styles.GaugePointerStyles)(resources.GetObject("resource.Style")));
       this.circularGauge1.Center.VertSize = 45;
       this.circularGauge1.Center.Visible = true;
       this.circularGauge1.Circled = true;
