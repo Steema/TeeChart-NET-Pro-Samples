@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Steema.TeeChart.NET" Version="4.2024.2.9" />
+    <PackageReference Include="Steema.TeeChart.NET" Version="4.2024.5.16" />
   </ItemGroup>
 
 </Project>

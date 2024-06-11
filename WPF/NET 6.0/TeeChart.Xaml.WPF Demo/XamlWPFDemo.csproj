@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net5.0-windows</TargetFramework>
+    <TargetFramework>net6.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
@@ -10,8 +10,7 @@
     <PackageReference Include="AvalonEdit" Version="6.1.2.30" />
     <PackageReference Include="CommonServiceLocator" Version="2.0.6" />
     <PackageReference Include="MvvmLight" Version="5.4.1.1" />
-    <PackageReference Include="MvvmLightLibsStd10" Version="5.4.1.1" />
-    <PackageReference Include="Steema.TeeChart.NET" Version="4.2021.11.2" />
+    <PackageReference Include="Steema.TeeChart.NET" Version="4.2024.5.16" />
   </ItemGroup>
 
 </Project>
