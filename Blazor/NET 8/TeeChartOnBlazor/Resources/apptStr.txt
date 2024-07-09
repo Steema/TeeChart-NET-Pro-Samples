@@ -1,0 +1,29 @@
+
+        if (chartType == 101) //appointments chart
+        {
+
+            //title
+            string aTitle = "Appointments";
+            //Year labels
+            string[] xLabels = new string[] { "2019", "2020", "2021", "2022", "2023" };
+            //Series names
+            string[] sNames = new string[] { "Ancillaries", "Core staff" };
+            //Chart data
+            double?[,] apptData = new double?[,] {
+                                { /*Ancillaries*/ 10,12,31,34,16 },
+                                { /*Core*/ 5,7,12,12,3 }};
+
+            MultiBars stack = MultiBars.Stacked;
+            int incr = 5; //left axis increment
+
+
+            ChartTable cGen = new ChartTable();
+            chartJS = await cGen.loadAppointmentsChart(aTitle, sNames, apptData,
+                                       stack, xLabels, newLineLabel(xLabels),
+                                       incr);
+
+            title = aTitle;
+
+            supportUnit = "<script src=\"js/appointment.js\" type=\"text/javascript\"></script>";
+
+        }

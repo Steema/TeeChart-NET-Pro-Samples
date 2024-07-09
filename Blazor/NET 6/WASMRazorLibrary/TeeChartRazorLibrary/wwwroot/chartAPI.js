@@ -46,16 +46,28 @@ export function setAxisMinMax(axis, min, max) {
 
 export function appendData(seriesIndex, xData, yData) {
     chart.getSeries(seriesIndex).data.values.push(yData);
+
+    if (chart.getSeries(seriesIndex).data.x == null)
+        chart.getSeries(seriesIndex).data.x = [];
+
     chart.getSeries(seriesIndex).data.x.push(xData);
 }
 
 export function addData(seriesIndex, xData, yData) {
     chart.getSeries(seriesIndex).data.values = yData;
+
+    if (chart.getSeries(seriesIndex).data.x == null)
+        chart.getSeries(seriesIndex).data.x = [];
+
     chart.getSeries(seriesIndex).data.x = xData;
 }
 
 export function addDateData(seriesIndex, xDateData, yData) {
-  chart.getSeries(seriesIndex).data.values = yData;
+    chart.getSeries(seriesIndex).data.values = yData;
+
+    if (chart.getSeries(seriesIndex).data.x == null)
+        chart.getSeries(seriesIndex).data.x = [];
+
   chart.getSeries(seriesIndex).data.x = [];
 
   for (var t = 0; t < chart.getSeries(seriesIndex).data.values.length; t++) {

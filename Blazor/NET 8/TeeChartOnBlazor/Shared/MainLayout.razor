@@ -1,0 +1,25 @@
+﻿@inherits LayoutComponentBase
+
+<div class="sidebar">
+    <NavMenu />
+</div>
+
+<div class="main">
+    <div class="top-row px-4">
+
+        <table width=100%><tr><td style="text-align:left"><a href="https://www.steema.com/product/net" target="_blank"><img src="/img/teechart.png" alt="TeeChart for .NET" /></a></td><td style="text-align:right"><a href="https://www.steema.com" target="_blank"><img src="/img/steema170x70.png" alt="Steema Software SL" /></a></td></tr></table>
+
+        <!--temporary line for publishing as "~" for root not functioning correctly in tested version-->
+        <!--<table width=100%><tr><td style="text-align:left"><a href="https://www.steema.com/product/net" target="_blank"><img src="/TeeChartBlazor/img/teechart.png" alt="TeeChart for .NET"/></a></td><td style="text-align:right"><a href="https://www.steema.com" target="_blank"><img src="/TeeChartBlazor/img/steema170x70.png" alt="Steema Software SL"/></a></td></tr></table>-->
+
+    </div>
+
+    <div class="content px-4">
+        @Body
+    </div>
+    <!--<div align="right" style="position: absolute; bottom: 1; width:100%;"><hr style="width:auto;" />-->
+    <div class="row px-4" style="position: absolute; bottom: 0;">
+        <hr />
+        <div>  <a href="https://www.steema.com/" target="_blank">Steema Software 2024.</a></div>
+    </div>
+</div>
