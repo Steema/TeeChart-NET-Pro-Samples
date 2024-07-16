@@ -8,6 +8,11 @@
 The TeeChart NET Pro Edition is a Nuget based Charting control designed to offer instant chart, map and gauge capabilities to your NET application. With dozens of chart types, statistical functions and developer tools, TeeChart is simply one of the most comprehensive charting libraries available for developers today. Easy to use with designtime editor and an intuitive programming structure we hope you enjoy working with it. For Winform, NET5.0, NET6.0, NET7.0, NET8.0, WASM, WPF. Web applications use TeeChart's Javascript engine at the browser.
 
 [See demos](https://www.steema.com/demos/net)
+
+
+### Nuget Package:
+[Nuget: https://www.nuget.org/packages/Steema.TeeChart.NET/](https://www.nuget.org/packages/Steema.TeeChart.NET/)
+
  
 ### Useful pages
  
@@ -19,6 +24,8 @@ The TeeChart NET Pro Edition is a Nuget based Charting control designed to offer
   [Examples WPF](https://github.com/Steema/TeeChart-NET-Pro-Samples/tree/main/WPF)
 
 - [License](https://www.steema.com/licensing/net)
+
+<br>
 
 Other companion products that can use common source code to extend your projects:
 
@@ -33,6 +40,11 @@ Other companion products that can use common source code to extend your projects
 #### TeeChart .NET for Blazor:
 - [Nuget: https://www.nuget.org/packages/Steema.TeeChart.NET.Blazor/](https://www.nuget.org/packages/Steema.TeeChart.NET.Blazor)
 - [Examples on github](https://github.com/Steema/TeeChart-NET-Pro-Samples/tree/main/Blazor)
+
+#### TeeChart .NET for Avalonia:
+- [Nuget: https://www.nuget.org/packages/Steema.TeeChart.NET.Avalonia](https://www.nuget.org/packages/Steema.TeeChart.NET.Avalonia)
+- [Examples on github](https://github.com/Steema/TeeChart-Avalonia-Samples)
+
 
 <br>
 
