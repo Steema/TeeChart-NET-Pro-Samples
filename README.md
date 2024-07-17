@@ -6,7 +6,7 @@ For more information visit [https://www.steema.com/product/net](https://www.stee
 
 ![screenshot](https://www.steema.com/uploads/products/TeeChart_Chart_For_Blazor.png ".NET Blazor Charts")
 
-### Nuget Package:
+### Nuget package
 [Nuget: https://www.nuget.org/packages/Steema.TeeChart.NET/](https://www.nuget.org/packages/Steema.TeeChart.NET/)
  
 ### Useful pages
