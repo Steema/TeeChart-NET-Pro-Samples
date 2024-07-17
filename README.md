@@ -42,7 +42,7 @@ Other companion products that can use common source code to extend your projects
 - [Nuget: https://www.nuget.org/packages/Steema.TeeChart.NET.Avalonia](https://www.nuget.org/packages/Steema.TeeChart.NET.Avalonia)
 - [Examples on github](https://github.com/Steema/TeeChart-Avalonia-Samples)
 
-<br>
+
 ### Support and Feedback
 
 If you want to ask questions, report a bug or submit a feature request, visit Steema Support page: [https://www.steema.com/support_options](https://www.steema.com/support_options)
