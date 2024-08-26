@@ -97,6 +97,11 @@ namespace TeeChartMockUpDemos
             //errorbar = new ErrorBar(tChart32.Chart);
 
             view3D.CheckedChanged += View3D_CheckedChanged;
+            tChart24.Chart.Zoom.Active = false;
+            tChart24.Chart.Panning.Active = false;
+            var _rotateTool = new Steema.TeeChart.Tools.Rotate();
+            _rotateTool.Style = Steema.TeeChart.Tools.RotateStyles.Rotation;
+            tChart24.Chart.Tools.Add(_rotateTool);
 
         }
         
@@ -118,6 +123,7 @@ namespace TeeChartMockUpDemos
             tChart14.Chart.Aspect.View3D = e.Value;
             tChart15.Chart.Aspect.View3D = e.Value;
             tChart16.Chart.Aspect.View3D = e.Value;
+            tChart24.Chart.Aspect.View3D = e.Value;
 
             InvalidateMeasure();
         }
