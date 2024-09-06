@@ -155,7 +155,28 @@
     tChart.Export.Image.JScript.Height = height;
     tChart.Export.Image.JScript.CanvasName = canvasName;
     tChart.Export.Image.JScript.DoFullPage = false; //inline, no page <html> header tags
-    tChart.Export.Image.JScript.CustomCode = new string[] { "loadExtras(" + chartName + ")", "resize(" + chartName + ");" };
+
+    var customCode = new List<string>();
+
+    customCode.Add("loadExtras(" + chartName + ");");
+    customCode.Add("resize(" + chartName + ");");
+
+    customCode.Add("var annot = new Tee.Annotation(" + chartName + ");");
+    customCode.Add("annot.position.x = 15;");
+    customCode.Add("annot.position.y = 20;");
+    customCode.Add("" + chartName + ".tools.add(annot);");
+
+    customCode.Add(chartName + ".series.items[0].onclick = function(series, index, x, y) {");
+    customCode.Add("  var xValue = series.data.x ? series.data.x[index].toFixed(0) : index.toFixed(0);");
+    customCode.Add(" annot.text = 'Clicked point: ' + index + '\\nX: ' + xValue + '\\nValue: ' + series.data.values[index].toFixed(series.decimals);");
+    customCode.Add("  var p = new Tee.Point();");
+    customCode.Add("" + chartName + ".series.items[0].calc(index, p); ");
+    customCode.Add("  annot.moveTo(p.x - annot.bounds.width / 2, p.y - annot.bounds.height);");
+    customCode.Add("  " + chartName + ".draw();");
+    customCode.Add("}");
+
+    tChart.Export.Image.JScript.CustomCode = customCode.ToArray();
+
     tChart.Export.Image.JScript.Save(ms);
 
     ms.Position = 0;
