@@ -1,0 +1,14 @@
+﻿<h3>WeatherForecast</h3>
+
+<PageTitle>WeatherForecast</PageTitle>
+
+@code {
+  public DateTime Date { get; set; }
+  public int TemperatureC { get; set; }
+  public string? Summary { get; set; }
+  public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
+
+  //support Chart theme change
+  public static bool isDark = true;
+
+}

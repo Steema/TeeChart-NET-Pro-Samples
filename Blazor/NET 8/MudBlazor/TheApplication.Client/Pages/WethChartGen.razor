@@ -1,0 +1,156 @@
+﻿@page "/wethgenchart"
+
+<PageTitle>WethChartGen</PageTitle>
+
+@using Steema.TeeChart;
+@using System.IO;
+@using System.Drawing;
+
+
+@code {
+
+  public string chartName;
+
+  protected override async Task OnInitializedAsync()
+  {
+    WeatherForecast weatherForecast = new WeatherForecast();
+  }
+
+  //get chart as image
+  public Task<String> GetChart(WeatherForecast[] forecasts, int width, int height)
+  {
+    Steema.TeeChart.TChart mChart = new TChart();
+    Steema.TeeChart.Styles.Line mLine = new Steema.TeeChart.Styles.Line();
+
+    mChart.Header.Text = "TeeChart in MudBlazor example";
+
+    mChart.Series.Add(mLine);
+
+    //mBar.FillSampleValues();
+    foreach (WeatherForecast forecast in forecasts)
+    {
+      int aDate = (int)Math.Truncate(forecast.Date.ToOADate()); //day stamp
+      mLine.Add(aDate, forecast.TemperatureC);
+    }
+
+    mChart.Axes.Left.SetMinMax(mLine.YValues.Minimum, mLine.YValues.Maximum);
+
+    mLine.XValues.DateTime = true;
+    //mChart.Axes.Bottom.Labels.Angle = 90;
+    mChart.Axes.Bottom.Increment = Steema.TeeChart.Utils.GetDateTimeStep(DateTimeSteps.OneDay);
+    mChart.Axes.Left.Title.Text = "ºC";
+
+    Steema.TeeChart.Themes.BlackIsBackTheme aTheme = new Steema.TeeChart.Themes.BlackIsBackTheme(mChart.Chart);
+    // aTheme.Apply();
+    aTheme.Apply(mChart.Chart);
+
+    mChart.Panel.Gradient.StartColor = System.Drawing.Color.FromArgb(0, 30, 30, 45);
+    mChart.Axes.Left.Title.Font.Color = System.Drawing.Color.WhiteSmoke;
+    mChart.Axes.Left.Title.Font.Size = 14;
+
+    MemoryStream ms = new MemoryStream();
+    mChart.Export.Image.PNG.Width = width;
+    mChart.Export.Image.PNG.Height = height;
+    mChart.Export.Image.PNG.Save(ms);
+
+    String str = Convert.ToBase64String(ms.ToArray());
+
+    return Task.FromResult("<img src=\"data: image / bmp; base64," + str + "\" /> ");
+  }
+
+  //get live chart
+  public Task<string> GetJSChart(WeatherForecast[] forecasts, int width, int height)
+  {
+    Steema.TeeChart.TChart mChart = new TChart();
+    Steema.TeeChart.Styles.Bar mBar = new Steema.TeeChart.Styles.Bar();
+
+    mChart.Header.Text = "TeeChart in MudBlazor example";
+
+    mChart.Series.Add(mBar);
+
+    //test data: mBar.FillSampleValues();
+
+    //weather data
+    foreach (WeatherForecast forecast in forecasts)
+    {
+      int aDate = (int)Math.Truncate(forecast.Date.ToOADate()); //day stamp
+      mBar.Add(aDate, forecast.TemperatureC);
+    }
+
+    mBar.XValues.DateTime = true;
+    mBar.Marks.Font.Color = System.Drawing.Color.AntiqueWhite;
+
+    //mChart.Axes.Bottom.Labels.Angle = 90;
+    mChart.Axes.Bottom.Increment = Steema.TeeChart.Utils.GetDateTimeStep(DateTimeSteps.OneDay);
+    mChart.Axes.Bottom.Labels.Font.Color = System.Drawing.Color.AntiqueWhite;
+    mChart.Axes.Left.Title.Text = "ºC";
+
+    mChart.Axes.Left.SetMinMax(mBar.YValues.Minimum-10, mBar.YValues.Maximum+10);
+
+    chartName = "dynoTeeChart";
+    mChart.Export.Image.JScript.ChartName = chartName;
+
+    MemoryStream ms = new MemoryStream();
+    mChart.Export.Image.JScript.Width = width;
+    mChart.Export.Image.JScript.Height = height;
+    mChart.Export.Image.JScript.DoFullPage = false; //inline, no page <html> header tags
+    mChart.Export.Image.JScript.CustomCode = getCustomCode(mChart);
+    mChart.Export.Image.JScript.Save(ms);
+
+    ms.Position = 0;
+
+    StreamReader reader = new StreamReader(ms);
+    //setup our chart name, here 'dynoChartName'.
+    string result = "<script> var "+chartName+"; " + reader.ReadToEnd() + "</script>";
+
+    return Task.FromResult(result);
+  }
+
+  string[] getCustomCode(TChart aChart)
+  {
+    var customCode = new List<string>();
+
+    //var ff = Drawer;
+
+    customCode.Add(aChart.Export.Image.JScript.ChartName + ".applyTheme(\"dark\");");
+
+    //customCode.Add(aChart.Export.Image.JScript.ChartName + ".panel.format.fill=\"#1E1E2D00\";"); //solid fill, transparent
+    customCode.Add(aChart.Export.Image.JScript.ChartName + ".panel.format.gradient.visible = true;");
+    if (TheApplication.Client.Pages.WeatherForecast.isDark == true)
+      customCode.Add(aChart.Export.Image.JScript.ChartName + ".panel.format.gradient.colors = ['rgba(69, 69, 69, 1.0)','rgba(30, 30, 45, 1.0)'];");
+    else
+      customCode.Add(aChart.Export.Image.JScript.ChartName + ".panel.format.gradient.colors = ['rgba(255, 255, 255, 1.0)','rgba(69, 69, 69, 1.0)'];");
+
+    customCode.Add(aChart.Export.Image.JScript.ChartName + ".panel.format.gradient.direction = 'topbottom';");
+    //customCode.Add(aChart.Export.Image.JScript.ChartName + ".panel.format.fill = 'rgba(255, 0, 0, 1.0)';");
+    customCode.Add(aChart.Export.Image.JScript.ChartName + ".panel.format.stroke.size = 0;");
+    customCode.Add(aChart.Export.Image.JScript.ChartName + ".panel.format.stroke.visible = false;");
+
+    customCode.Add("   //animation");
+    customCode.Add("   animation = new Tee.SeriesAnimation();");
+    customCode.Add("   animation.duration = 900;");
+    customCode.Add("   animation.kind = \"each\";");
+    customCode.Add("   fadeAnimation = new Tee.FadeAnimation();");
+    customCode.Add("   fadeAnimation.duration = 500;");
+    customCode.Add("   fadeAnimation.fade.series = true;");
+    customCode.Add("   fadeAnimation.fade.marks = true;");
+    customCode.Add("   animation.mode = \"linear\"; ");
+    customCode.Add("   fadeAnimation.mode = \"linear\";");
+    customCode.Add("   animation.items.push(fadeAnimation);");
+    customCode.Add("   ");
+    customCode.Add("   animation.animate(" + aChart.Export.Image.JScript.ChartName + ");");
+
+
+    //customCode.Add("  setTimeout(manualLoop, 6000); ");
+
+    customCode.Add(aChart.Export.Image.JScript.ChartName + ".axes.bottom.labels.format.font.setSize(\"10px\");");
+    customCode.Add(aChart.Export.Image.JScript.ChartName + ".series.items[0].marks.transparent = true;");
+
+
+    customCode.Add("resizeC(" + chartName + ");");
+
+    return customCode.ToArray();
+
+
+    }
+}
