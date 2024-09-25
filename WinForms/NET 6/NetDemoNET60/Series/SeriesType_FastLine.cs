@@ -22,23 +22,28 @@ namespace Steema.TeeChart.Samples
 			InitializeComponent();
 
 			// Make the chart flicker by default, only for this demo
-            tChart1.Graphics3D.BufferStyle = Drawing.BufferStyle.None;
+            tChart1.Graphics3D.BufferStyle = Drawing.BufferStyle.OptimizedBuffer;
 
             // hide things for better speed
             tChart1.Aspect.View3D = false;
 			tChart1.Legend.Visible = false;
 			tChart1.Header.Visible = false;
 			tChart1.Footer.Visible = false;
-			
-			// 1000 random points each series
+
+      // 10000 random points each series
 			Random r = new Random();
 			int tmprandom;
-			for (int t=1;t<1000;t++)
+
+			tChart1.AutoRepaint = false;
+
+      for (int t=1;t<10000;t++)
 			{
-				tmprandom = r.Next(Math.Abs(500-t))-(Math.Abs(500-t) / 2);
-				fastLineSeries1.Add(1000-t+tmprandom);
+				tmprandom = r.Next(Math.Abs(5000-t))-(Math.Abs(5000-t) / 2);
+				fastLineSeries1.Add(10000-t+tmprandom);
 				fastLineSeries2.Add(t+tmprandom);
 			}
+
+			tChart1.AutoRepaint = true;
 		}
 
 		/// <summary>
@@ -184,10 +189,11 @@ Some optimizations (like not drawing repeated values) are performed. It can be u
 			// fastLineSeries1.YValues
 			// 
 			this.fastLineSeries1.YValues.DataMember = "Y";
-			// 
-			// checkBox1
-			// 
-			this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+      // 
+      // checkBox1
+      // 
+      this.checkBox1.Checked = true;
+      this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.checkBox1.Location = new System.Drawing.Point(14, 8);
 			this.checkBox1.Name = "checkBox1";
 			this.checkBox1.Size = new System.Drawing.Size(73, 22);
@@ -309,7 +315,7 @@ Some optimizations (like not drawing repeated values) are performed. It can be u
 			{
 				Cursor.Current = Cursors.Default;
 			}
-			MessageBox.Show("Time to plot 2000 points \n 61 times : \n "+
+			MessageBox.Show("Time to plot 20000 points \n 61 times : \n "+
 				MarkTime.ToString()+" milliseconds.");
 			}
 	}
