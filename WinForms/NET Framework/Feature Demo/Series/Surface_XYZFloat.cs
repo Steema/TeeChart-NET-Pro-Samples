@@ -18,8 +18,10 @@ namespace Steema.TeeChart.Samples
 		{
 			// This call is required by the Windows Form Designer.
 			InitializeComponent();
+            tChart1.Aspect.View3D = true;
+			
 
-			this.surfaceSeries1.IrregularGrid = true; // <-- IMPORTANT ! means X and Z are float
+            this.surfaceSeries1.IrregularGrid = true; // <-- IMPORTANT ! means X and Z are float
 			for (int x=1; x<=10;x++)
 				for (int z=1; z<=10; z++)
 					this.surfaceSeries1.Add(x/10.0,Math.Sqrt(x*z),z/5.0);

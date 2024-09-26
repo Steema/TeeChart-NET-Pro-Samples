@@ -51,6 +51,7 @@ namespace Steema.TeeChart.Samples
 
       Fill();
       Grid3DUtils.CreateGrid(points3D1,surface1,15);
+			tChart1.Aspect.View3D = true;
     }
 
     /// <summary>

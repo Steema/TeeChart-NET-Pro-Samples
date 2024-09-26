@@ -23,7 +23,8 @@ namespace Steema.TeeChart.Samples
 
 			surface1.FillSampleValues(5);
 			surface1.Pen.Visible = false;
-		}
+            tChart1.Aspect.View3D = true;
+        }
 
 		/// <summary>
 		/// Clean up any resources being used.

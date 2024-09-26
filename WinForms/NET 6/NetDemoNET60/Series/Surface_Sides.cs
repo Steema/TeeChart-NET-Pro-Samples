@@ -18,8 +18,9 @@ namespace Steema.TeeChart.Samples
 		{
 			// This call is required by the Windows Form Designer.
 			InitializeComponent();
+            tChart1.Aspect.View3D = true;
 
-		  surface1.FillSampleValues(12);
+            surface1.FillSampleValues(12);
       surface1.SideBrush.Style = Drawing.HatchStyle.DiagonalCross;
 			surface1.SideBrush.Color = Color.FromArgb(217, 217, 255);
 			surface1.SideBrush.ForegroundColor = Color.FromArgb(149, 149, 255);

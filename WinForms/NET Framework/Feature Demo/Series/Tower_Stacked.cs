@@ -351,6 +351,7 @@ namespace Steema.TeeChart.Samples
 		private void InitializeChart()
 		{
 			tChart1.Header.Text = "Tower Stacked";
+			tChart1.Aspect.View3D = true;
 
 			tower1 = new Tower(tChart1.Chart);
 			tower2 = new Tower(tChart1.Chart);

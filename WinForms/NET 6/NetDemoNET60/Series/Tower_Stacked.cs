@@ -342,6 +342,7 @@ namespace Steema.TeeChart.Samples
 		public Tower_Stacked()
 		{
 			InitializeComponent();
+			tChart1.Aspect.View3D = true;
 			InitializeChart();
 		}
 

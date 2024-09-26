@@ -20,6 +20,7 @@ namespace Steema.TeeChart.Samples
 		{
 			// This call is required by the Windows Form Designer.
 			InitializeComponent();
+			tChart1.Aspect.View3D = true;
 			surfaceSeries1.FillSampleValues(30);
 		}
 

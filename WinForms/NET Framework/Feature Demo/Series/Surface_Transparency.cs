@@ -20,6 +20,7 @@ namespace Steema.TeeChart.Samples
 			InitializeComponent();
 
 			surface1.FillSampleValues();
+			tChart1.Aspect.View3D = true;
 			tChart1.Walls.Back.Color = Color.Orange;
 			surface1.Brush.Transparency = 50;
 			surface1.Pen.Transparency = 50;

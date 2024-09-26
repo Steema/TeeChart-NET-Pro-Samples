@@ -48,8 +48,8 @@ namespace Steema.TeeChart.Samples
     {
       // This call is required by the Windows Form Designer.
       InitializeComponent();
-
-      Fill();
+            tChart1.Aspect.View3D = true;
+            Fill();
       Grid3DUtils.CreateGrid(points3D1,surface1,15);
     }
 
