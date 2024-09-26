@@ -42,7 +42,7 @@
   {
     canvasName = System.Guid.NewGuid().ToString();
 
-    int aWidth = 900;
+    int aWidth = 350;
     int aHeight = 300;
 
     CreateChart(aWidth, aHeight);
@@ -141,6 +141,7 @@
     result = result.Replace("\r\n", "");
 
     chartImage = "<div><p>" + result + "</p></div>";
+    StateHasChanged();
   }
 
   public async void UpdateJS(int width, int height)
@@ -169,5 +170,6 @@
     string aKey = aUtils.KeyCode; //Pass unique, current load nonce CSP key to js load.
 
     await JS.InvokeVoidAsync("loadChart", chartJS, aKey);
+    StateHasChanged();
   }
 }
