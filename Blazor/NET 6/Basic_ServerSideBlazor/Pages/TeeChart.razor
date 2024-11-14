@@ -8,6 +8,7 @@
 @((MarkupString)(chartImage))
 @((MarkupString)(canvasJS))
 
+<!--<p>Click on the series points in the bottom, javascript chart, to see how callback events converse with the server.</p>-->
 
 @code {
 
@@ -38,6 +39,8 @@
   string contentSecKey;
   string contentCntKey;
 
+  private DotNetObjectReference<TeeChart>? _objRef;
+
   protected override void OnInitialized()
   {
     canvasName = System.Guid.NewGuid().ToString();
@@ -57,11 +60,60 @@
     }
   }
 
-  protected override void OnAfterRender(bool firstRender)
+  protected override async Task OnAfterRenderAsync(bool firstRender)
   {
+    //set the clientside reference for this live instance
+    await BundleAndSendDotNetHelper();
+
     if (Type == "js")
       UpdateJS(900, 300);
   }
+
+  private async Task BundleAndSendDotNetHelper()
+  {
+    _objRef = DotNetObjectReference.Create(this);
+    if (JS != null)
+    {
+      await JS.InvokeAsync<string>("SetDotNetHelper", _objRef);
+    }
+  }
+
+  public void Dispose()
+  {
+    _objRef?.Dispose();
+  }
+
+  // **** static response (optional methods) *******
+  public static string setThingsStatic(string aVal, string yVal)
+  {
+    return (Convert.ToInt16(aVal) * 2).ToString();
+  }
+
+  [JSInvokable]
+  public static async Task<string> ReturnArrayAsyncStatic(string aVal, string yVal){
+    return await Task.FromResult(setThingsStatic(aVal, yVal));
+  }
+  // **** end static response *******
+
+  // **** instance response *******
+  public string setThings(string aVal, string yVal)
+  {
+    //could use index to create a drilldown chart.
+    int idx = Array.BinarySearch(tChart[0].XValues.Value, Convert.ToDouble(aVal));
+
+    tChart.Header.Text = "Retrieved serverside Label for the clicked Point: '" + getLabel(idx) + "'. The serverside instance Y Value increased by 5.";
+
+    tChart[0].YValues.Value[idx] = tChart[0].YValues.Value[idx] + 5;
+    StateHasChanged();
+    return (Convert.ToInt16(aVal) * 2).ToString();
+  }
+
+  [JSInvokable]
+  public string ReturnArrayAsync(string aVal, string yVal)
+  {
+    return setThings(aVal, yVal);
+  }
+  // **** end instance response *******
 
   public void UpdateTitle(string ATitle)
   {
@@ -73,6 +125,13 @@
     }
 
     StateHasChanged();
+  }
+
+  string[] labels = new string[] { "first", "second", "third", "fourth", "fifth", "sixth", "seventh", "eighth", "ninth", "tenth", "eleventh" };
+
+  public string getLabel(int idx)
+  {
+    return labels[idx];
   }
 
   public void PrepareData(ref double[] xValues, ref double[] yValues)
@@ -150,6 +209,14 @@
 
     tChart.Export.Image.JScript.ChartName = chartName;
 
+    tChart.Zoom.Direction = ZoomDirections.Horizontal;
+    tChart.Chart.Panning.Allow = ScrollModes.Horizontal;
+
+    tChart.Footer.Text = "Click on the series points to see how callback events converse with the server.";
+    tChart.Footer.Visible = true;
+    tChart.Footer.Font.Size = 10;
+    tChart.Footer.Font.Name = "Arial";
+
     MemoryStream ms = new MemoryStream();
     tChart.Export.Image.JScript.Width = width;
     tChart.Export.Image.JScript.Height = height;
@@ -158,22 +225,38 @@
 
     var customCode = new List<string>();
 
-    customCode.Add("loadExtras(" + chartName + ");");
-    customCode.Add("resize(" + chartName + ");");
+    customCode.Add("  loadExtras(" + chartName + ",'" + canvasName + "');");
+    //customCode.Add("  loadExtras(" + chartName + ");");
+    customCode.Add("  resize(" + chartName + ");");
 
-    customCode.Add("var annot = new Tee.Annotation(" + chartName + ");");
-    customCode.Add("annot.position.x = 15;");
-    customCode.Add("annot.position.y = 20;");
-    customCode.Add("" + chartName + ".tools.add(annot);");
+    // **** code to provoke callback to server to retrieve point label and increase its value ***********
+    customCode.Add(  chartName + ".series.items[0].onclick = function(series, index, x, y) {");
+    customCode.Add("    var xValue = series.data.x ? series.data.x[index].toFixed(0) : index.toFixed(0);");
+    customCode.Add("    var yValue = series.data.values[index].toFixed(0)");
+    customCode.Add("    isValSet = 0;");
+    customCode.Add("    returnArrayAsync(xValue,yValue);");
+    customCode.Add("  }");
+    // **** end callback code call ********
 
-    customCode.Add(chartName + ".series.items[0].onclick = function(series, index, x, y) {");
-    customCode.Add("  var xValue = series.data.x ? series.data.x[index].toFixed(0) : index.toFixed(0);");
-    customCode.Add(" annot.text = 'Clicked point: ' + index + '\\nX: ' + xValue + '\\nValue: ' + series.data.values[index].toFixed(series.decimals);");
-    customCode.Add("  var p = new Tee.Point();");
-    customCode.Add("" + chartName + ".series.items[0].calc(index, p); ");
-    customCode.Add("  annot.moveTo(p.x - annot.bounds.width / 2, p.y - annot.bounds.height);");
-    customCode.Add("  " + chartName + ".draw();");
-    customCode.Add("}");
+    /*
+    //alternative click code to setup a detailed message label over clicked point.
+    customCode.Add("  var annot = new Tee.Annotation(" + chartName + ");");
+    customCode.Add("  annot.position.x = 15;");
+    customCode.Add("  annot.position.y = 20;");
+    customCode.Add("  " + chartName + ".tools.add(annot);");
+
+    customCode.Add(  chartName + ".series.items[0].onclick = function(series, index, x, y) {");
+    customCode.Add("    var xValue = series.data.x ? series.data.x[index].toFixed(0) : index.toFixed(0);");
+    customCode.Add("    isValSet = 0;");
+    customCode.Add("    let vals = returnArrayAsync(xValue,'4');");
+    //customCode.Add("    pausecomp(vals);");
+    customCode.Add("   annot.text = 'Clicked point: ' + index + '\\nX: ' + xValue + '\\nValue: ' + series.data.values[index].toFixed(series.decimals));
+    customCode.Add("    var p = new Tee.Point();");
+    customCode.Add("  " + chartName + ".series.items[0].calc(index, p); ");
+    customCode.Add("    annot.moveTo(p.x - annot.bounds.width / 2, p.y - annot.bounds.height);");
+    customCode.Add("    " + chartName + ".draw();");
+    customCode.Add("  }");
+    */
 
     tChart.Export.Image.JScript.CustomCode = customCode.ToArray();
 

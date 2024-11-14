@@ -43,9 +43,10 @@ function loadChart(chartJS, key) {
     }
 }
 
-function loadExtras(aChart) {
+function loadExtras(aChart,aCanvas) {
 
-    if (firstLoad == false) {
+  if (firstLoad == false) {
+        //addHandlers(aCanvas);
         aChart.axes.left.setMinMax(0, 50);
 
         animation = new Tee.SeriesAnimation();
@@ -150,4 +151,46 @@ function resize(chart) {
             chart.draw();
         }
     }
+}
+
+function pauseFunction() {
+  // your code to run after the timeout
+}
+
+function pausecomp(val) {
+   alert(vals);
+}
+
+var chartData = 0;
+var isValSet = 0;
+
+async function returnArrayAsync(xValue, yValue) {
+
+  //can use for static method calls
+  /*DotNet.invokeMethodAsync('BlazorAppSRvNET6', 'ReturnArrayAsync', xValue, yValue)
+    .then(data => {
+      chartData = data;
+      isValSet = 1;
+      console.log(data);
+      return data;
+    });
+    */
+
+  //used for instance calls
+  window.dotNetHelper.invokeMethodAsync('ReturnArrayAsync', xValue, yValue)
+    .then(data => {
+      chartData = data;
+      isValSet = 1;
+      console.log(data);
+      return data;
+    });
+}
+
+function SetDotNetHelper(dotNetHelper) {
+  window.dotNetHelper = dotNetHelper;
+}
+
+function addHandlers(acanvas) {
+  const canvas = document.getElementById(acanvas);
+  canvas.addEventListener("click", returnArrayAsync);
 }
