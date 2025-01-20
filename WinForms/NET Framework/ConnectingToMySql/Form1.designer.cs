@@ -1404,7 +1404,7 @@
             // 
             // mySqlConnection1
             // 
-            this.mySqlConnection1.ConnectionString = "server=qs4591.pair.com;uid=nook4_10_r;password=8wqALzLA;database=nook4_examples";
+            this.mySqlConnection1.ConnectionString = "server=qs4899.pair.com;uid=nook4_10_r;password=8wqALzLA;database=nook4_examples";
             // 
             // mySqlCommand1
             // 
