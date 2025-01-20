@@ -200,6 +200,7 @@ namespace LinkingCharts
       tChart3[0].YValues.DataMember = "SumOfInvoice_Value";
       tChart3[0].LabelMember = "Country_name";
 
+      tChart3[0].Clear();
       tChart3[0].CheckDataSource();
 
       tChart3.Header.Text = region +  ", Sales 2000-2015";

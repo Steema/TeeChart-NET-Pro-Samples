@@ -226,134 +226,74 @@
       // 
       // 
       // 
-      this.tChart6.Aspect.ColorPaletteIndex = 20;
-      this.tChart6.Aspect.View3D = false;
       // 
       // 
       // 
-      this.tChart6.Axes.Automatic = true;
       // 
       // 
       // 
+      this.tChart6.Axes.Bottom.Title.Distance = 0;
       // 
       // 
       // 
-      this.tChart6.Axes.Bottom.Grid.DrawEvery = 2;
       // 
       // 
       // 
+      this.tChart6.Axes.Depth.Title.Distance = 0;
       // 
       // 
       // 
       // 
       // 
       // 
-      this.tChart6.Axes.Bottom.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-      this.tChart6.Axes.Bottom.Labels.Font.Size = 9;
-      this.tChart6.Axes.Bottom.Labels.Font.SizeFloat = 9F;
+      this.tChart6.Axes.DepthTop.Title.Distance = 0;
       // 
       // 
       // 
       // 
       // 
       // 
+      this.tChart6.Axes.Left.Title.Distance = 0;
       // 
       // 
       // 
-      this.tChart6.Axes.Bottom.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-      this.tChart6.Axes.Bottom.Title.Font.Size = 11;
-      this.tChart6.Axes.Bottom.Title.Font.SizeFloat = 11F;
       // 
       // 
       // 
+      this.tChart6.Axes.Right.Title.Distance = 0;
       // 
       // 
       // 
-      this.tChart6.Axes.Left.Grid.DrawEvery = 2;
       // 
       // 
       // 
+      this.tChart6.Axes.Top.Title.Distance = 0;
       // 
       // 
       // 
       // 
       // 
       // 
-      this.tChart6.Axes.Left.Labels.Font.Brush.Color = System.Drawing.Color.Gray;
-      this.tChart6.Axes.Left.Labels.Font.Size = 9;
-      this.tChart6.Axes.Left.Labels.Font.SizeFloat = 9F;
       // 
       // 
       // 
+      this.tChart6.Header.Brush.Gradient.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+      this.tChart6.Header.Brush.Gradient.MiddleColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+      this.tChart6.Header.Brush.Gradient.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(0)))));
+      this.tChart6.Header.Brush.Gradient.UseMiddle = true;
       // 
       // 
       // 
       // 
       // 
       // 
-      this.tChart6.Axes.Left.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-      this.tChart6.Axes.Left.Title.Font.Size = 11;
-      this.tChart6.Axes.Left.Title.Font.SizeFloat = 11F;
       // 
       // 
       // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      this.tChart6.Axes.Right.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-      this.tChart6.Axes.Right.Labels.Font.Size = 9;
-      this.tChart6.Axes.Right.Labels.Font.SizeFloat = 9F;
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      this.tChart6.Axes.Top.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-      this.tChart6.Axes.Top.Labels.Font.Size = 9;
-      this.tChart6.Axes.Top.Labels.Font.SizeFloat = 9F;
-      this.tChart6.CurrentTheme = Steema.TeeChart.ThemeType.Report;
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      this.tChart6.Header.Font.Brush.Color = System.Drawing.Color.Gray;
-      this.tChart6.Header.Font.Size = 12;
-      this.tChart6.Header.Font.SizeFloat = 12F;
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      this.tChart6.Legend.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-      this.tChart6.Legend.Font.Size = 9;
-      this.tChart6.Legend.Font.SizeFloat = 9F;
-      // 
-      // 
-      // 
-      this.tChart6.Legend.Shadow.Visible = false;
-      this.tChart6.Legend.Transparent = true;
+      this.tChart6.Legend.Brush.Gradient.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+      this.tChart6.Legend.Brush.Gradient.MiddleColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+      this.tChart6.Legend.Brush.Gradient.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(0)))));
+      this.tChart6.Legend.Brush.Gradient.UseMiddle = true;
       this.tChart6.Location = new System.Drawing.Point(0, 0);
       this.tChart6.Name = "tChart6";
       // 
@@ -362,11 +302,7 @@
       // 
       // 
       // 
-      this.tChart6.Panel.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-      // 
-      // 
-      // 
-      this.tChart6.Panel.Brush.Gradient.Visible = false;
+      this.tChart6.Panel.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.Raised;
       this.tChart6.Size = new System.Drawing.Size(600, 400);
       this.tChart6.TabIndex = 0;
       // 
@@ -378,143 +314,132 @@
       // 
       // 
       // 
-      this.tChart6.Walls.Back.Brush.Visible = false;
-      this.tChart6.Walls.Back.Transparent = true;
-      this.tChart6.Walls.Back.Visible = false;
+      // 
+      // 
+      // 
+      this.tChart6.Walls.Back.Brush.Gradient.MiddleColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      this.tChart6.Walls.Bottom.Brush.Gradient.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+      this.tChart6.Walls.Bottom.Brush.Gradient.MiddleColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+      this.tChart6.Walls.Bottom.Brush.Gradient.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(0)))));
+      this.tChart6.Walls.Bottom.Brush.Gradient.UseMiddle = true;
+      this.tChart6.Walls.Bottom.Visible = false;
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      this.tChart6.Walls.Left.Brush.Gradient.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+      this.tChart6.Walls.Left.Brush.Gradient.MiddleColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+      this.tChart6.Walls.Left.Brush.Gradient.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(0)))));
+      this.tChart6.Walls.Left.Brush.Gradient.UseMiddle = true;
+      this.tChart6.Walls.Left.Visible = false;
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      this.tChart6.Walls.Right.Brush.Gradient.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+      this.tChart6.Walls.Right.Brush.Gradient.MiddleColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+      this.tChart6.Walls.Right.Brush.Gradient.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(0)))));
+      this.tChart6.Walls.Right.Brush.Gradient.UseMiddle = true;
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      this.tChart6.Zoom.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
       // 
       // tChart4
       // 
       // 
       // 
       // 
-      this.tChart4.Aspect.ColorPaletteIndex = 20;
-      this.tChart4.Aspect.View3D = false;
       // 
       // 
       // 
-      this.tChart4.Axes.Automatic = true;
       // 
       // 
       // 
+      this.tChart4.Axes.Bottom.Title.Distance = 0;
       // 
       // 
       // 
-      this.tChart4.Axes.Bottom.Grid.DrawEvery = 2;
       // 
       // 
       // 
+      this.tChart4.Axes.Depth.Title.Distance = 0;
       // 
       // 
       // 
       // 
       // 
       // 
-      this.tChart4.Axes.Bottom.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-      this.tChart4.Axes.Bottom.Labels.Font.Size = 9;
-      this.tChart4.Axes.Bottom.Labels.Font.SizeFloat = 9F;
+      this.tChart4.Axes.DepthTop.Title.Distance = 0;
       // 
       // 
       // 
       // 
       // 
       // 
+      this.tChart4.Axes.Left.Title.Distance = 0;
       // 
       // 
       // 
-      this.tChart4.Axes.Bottom.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-      this.tChart4.Axes.Bottom.Title.Font.Size = 11;
-      this.tChart4.Axes.Bottom.Title.Font.SizeFloat = 11F;
       // 
       // 
       // 
+      this.tChart4.Axes.Right.Title.Distance = 0;
       // 
       // 
       // 
-      this.tChart4.Axes.Left.Grid.DrawEvery = 2;
       // 
       // 
       // 
+      this.tChart4.Axes.Top.Title.Distance = 0;
       // 
       // 
       // 
       // 
       // 
       // 
-      this.tChart4.Axes.Left.Labels.Font.Brush.Color = System.Drawing.Color.Gray;
-      this.tChart4.Axes.Left.Labels.Font.Size = 9;
-      this.tChart4.Axes.Left.Labels.Font.SizeFloat = 9F;
       // 
       // 
       // 
+      this.tChart4.Header.Brush.Gradient.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+      this.tChart4.Header.Brush.Gradient.MiddleColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+      this.tChart4.Header.Brush.Gradient.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(0)))));
+      this.tChart4.Header.Brush.Gradient.UseMiddle = true;
       // 
       // 
       // 
       // 
       // 
       // 
-      this.tChart4.Axes.Left.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-      this.tChart4.Axes.Left.Title.Font.Size = 11;
-      this.tChart4.Axes.Left.Title.Font.SizeFloat = 11F;
       // 
       // 
       // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      this.tChart4.Axes.Right.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-      this.tChart4.Axes.Right.Labels.Font.Size = 9;
-      this.tChart4.Axes.Right.Labels.Font.SizeFloat = 9F;
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      this.tChart4.Axes.Top.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-      this.tChart4.Axes.Top.Labels.Font.Size = 9;
-      this.tChart4.Axes.Top.Labels.Font.SizeFloat = 9F;
-      this.tChart4.CurrentTheme = Steema.TeeChart.ThemeType.Report;
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      this.tChart4.Header.Font.Brush.Color = System.Drawing.Color.Gray;
-      this.tChart4.Header.Font.Size = 12;
-      this.tChart4.Header.Font.SizeFloat = 12F;
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      this.tChart4.Legend.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-      this.tChart4.Legend.Font.Size = 9;
-      this.tChart4.Legend.Font.SizeFloat = 9F;
-      // 
-      // 
-      // 
-      this.tChart4.Legend.Shadow.Visible = false;
-      this.tChart4.Legend.Transparent = true;
+      this.tChart4.Legend.Brush.Gradient.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+      this.tChart4.Legend.Brush.Gradient.MiddleColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+      this.tChart4.Legend.Brush.Gradient.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(0)))));
+      this.tChart4.Legend.Brush.Gradient.UseMiddle = true;
       this.tChart4.Location = new System.Drawing.Point(0, 0);
       this.tChart4.Name = "tChart4";
       // 
@@ -523,11 +448,7 @@
       // 
       // 
       // 
-      this.tChart4.Panel.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-      // 
-      // 
-      // 
-      this.tChart4.Panel.Brush.Gradient.Visible = false;
+      this.tChart4.Panel.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.Raised;
       this.tChart4.Size = new System.Drawing.Size(600, 400);
       this.tChart4.TabIndex = 0;
       // 
@@ -539,9 +460,58 @@
       // 
       // 
       // 
-      this.tChart4.Walls.Back.Brush.Visible = false;
-      this.tChart4.Walls.Back.Transparent = true;
-      this.tChart4.Walls.Back.Visible = false;
+      // 
+      // 
+      // 
+      this.tChart4.Walls.Back.Brush.Gradient.MiddleColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      this.tChart4.Walls.Bottom.Brush.Gradient.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+      this.tChart4.Walls.Bottom.Brush.Gradient.MiddleColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+      this.tChart4.Walls.Bottom.Brush.Gradient.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(0)))));
+      this.tChart4.Walls.Bottom.Brush.Gradient.UseMiddle = true;
+      this.tChart4.Walls.Bottom.Visible = false;
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      this.tChart4.Walls.Left.Brush.Gradient.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+      this.tChart4.Walls.Left.Brush.Gradient.MiddleColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+      this.tChart4.Walls.Left.Brush.Gradient.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(0)))));
+      this.tChart4.Walls.Left.Brush.Gradient.UseMiddle = true;
+      this.tChart4.Walls.Left.Visible = false;
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      this.tChart4.Walls.Right.Brush.Gradient.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+      this.tChart4.Walls.Right.Brush.Gradient.MiddleColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+      this.tChart4.Walls.Right.Brush.Gradient.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(0)))));
+      this.tChart4.Walls.Right.Brush.Gradient.UseMiddle = true;
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      this.tChart4.Zoom.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
       // 
       // biPanel1
       // 
@@ -562,111 +532,52 @@
       // 
       // 
       // 
-      this.tChart3.Aspect.ColorPaletteIndex = 3;
-      this.tChart3.Aspect.Elevation = 315;
-      this.tChart3.Aspect.ElevationFloat = 315D;
       this.tChart3.Aspect.Orthogonal = false;
-      this.tChart3.Aspect.Perspective = 0;
-      this.tChart3.Aspect.Rotation = 360;
-      this.tChart3.Aspect.RotationFloat = 360D;
-      this.tChart3.Aspect.View3D = false;
       // 
       // 
       // 
-      this.tChart3.Axes.Automatic = true;
       // 
       // 
       // 
       // 
       // 
       // 
-      this.tChart3.Axes.Bottom.Grid.DrawEvery = 2;
+      this.tChart3.Axes.Bottom.Title.Distance = 0;
       // 
       // 
       // 
       // 
       // 
       // 
+      this.tChart3.Axes.Depth.Title.Distance = 0;
       // 
       // 
       // 
-      this.tChart3.Axes.Bottom.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-      this.tChart3.Axes.Bottom.Labels.Font.Size = 9;
-      this.tChart3.Axes.Bottom.Labels.Font.SizeFloat = 9F;
       // 
       // 
       // 
+      this.tChart3.Axes.DepthTop.Title.Distance = 0;
       // 
       // 
       // 
       // 
       // 
       // 
-      this.tChart3.Axes.Bottom.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-      this.tChart3.Axes.Bottom.Title.Font.Size = 11;
-      this.tChart3.Axes.Bottom.Title.Font.SizeFloat = 11F;
+      this.tChart3.Axes.Left.Title.Distance = 0;
       // 
       // 
       // 
       // 
       // 
       // 
-      this.tChart3.Axes.Left.Grid.DrawEvery = 2;
+      this.tChart3.Axes.Right.Title.Distance = 0;
       // 
       // 
       // 
       // 
       // 
       // 
-      // 
-      // 
-      // 
-      this.tChart3.Axes.Left.Labels.Font.Brush.Color = System.Drawing.Color.Gray;
-      this.tChart3.Axes.Left.Labels.Font.Size = 9;
-      this.tChart3.Axes.Left.Labels.Font.SizeFloat = 9F;
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      this.tChart3.Axes.Left.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-      this.tChart3.Axes.Left.Title.Font.Size = 11;
-      this.tChart3.Axes.Left.Title.Font.SizeFloat = 11F;
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      this.tChart3.Axes.Right.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-      this.tChart3.Axes.Right.Labels.Font.Size = 9;
-      this.tChart3.Axes.Right.Labels.Font.SizeFloat = 9F;
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      this.tChart3.Axes.Top.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-      this.tChart3.Axes.Top.Labels.Font.Size = 9;
-      this.tChart3.Axes.Top.Labels.Font.SizeFloat = 9F;
-      this.tChart3.CurrentTheme = Steema.TeeChart.ThemeType.Report;
+      this.tChart3.Axes.Top.Title.Distance = 0;
       this.tChart3.Dock = System.Windows.Forms.DockStyle.Fill;
       // 
       // 
@@ -677,9 +588,10 @@
       // 
       // 
       // 
-      this.tChart3.Header.Font.Brush.Color = System.Drawing.Color.Gray;
-      this.tChart3.Header.Font.Size = 12;
-      this.tChart3.Header.Font.SizeFloat = 12F;
+      this.tChart3.Header.Brush.Gradient.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+      this.tChart3.Header.Brush.Gradient.MiddleColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+      this.tChart3.Header.Brush.Gradient.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(0)))));
+      this.tChart3.Header.Brush.Gradient.UseMiddle = true;
       this.tChart3.Header.Lines = new string[] {
         "Countries, Sales 2015"};
       // 
@@ -691,32 +603,13 @@
       // 
       // 
       // 
-      this.tChart3.Legend.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-      this.tChart3.Legend.Font.Size = 9;
-      this.tChart3.Legend.Font.SizeFloat = 9F;
-      // 
-      // 
-      // 
-      this.tChart3.Legend.Shadow.Visible = false;
-      this.tChart3.Legend.Transparent = true;
+      this.tChart3.Legend.Brush.Gradient.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+      this.tChart3.Legend.Brush.Gradient.MiddleColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+      this.tChart3.Legend.Brush.Gradient.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(0)))));
+      this.tChart3.Legend.Brush.Gradient.UseMiddle = true;
       this.tChart3.Legend.Visible = false;
       this.tChart3.Location = new System.Drawing.Point(429, 0);
       this.tChart3.Name = "tChart3";
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      this.tChart3.Panel.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
-      // 
-      // 
-      // 
-      this.tChart3.Panel.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-      // 
-      // 
-      // 
-      this.tChart3.Panel.Brush.Gradient.Visible = false;
       this.tChart3.Series.Add(this.pie1);
       this.tChart3.Size = new System.Drawing.Size(663, 348);
       this.tChart3.TabIndex = 8;
@@ -729,9 +622,58 @@
       // 
       // 
       // 
-      this.tChart3.Walls.Back.Brush.Visible = false;
-      this.tChart3.Walls.Back.Transparent = true;
-      this.tChart3.Walls.Back.Visible = false;
+      // 
+      // 
+      // 
+      this.tChart3.Walls.Back.Brush.Gradient.MiddleColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      this.tChart3.Walls.Bottom.Brush.Gradient.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+      this.tChart3.Walls.Bottom.Brush.Gradient.MiddleColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+      this.tChart3.Walls.Bottom.Brush.Gradient.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(0)))));
+      this.tChart3.Walls.Bottom.Brush.Gradient.UseMiddle = true;
+      this.tChart3.Walls.Bottom.Visible = false;
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      this.tChart3.Walls.Left.Brush.Gradient.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+      this.tChart3.Walls.Left.Brush.Gradient.MiddleColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+      this.tChart3.Walls.Left.Brush.Gradient.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(0)))));
+      this.tChart3.Walls.Left.Brush.Gradient.UseMiddle = true;
+      this.tChart3.Walls.Left.Visible = false;
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      this.tChart3.Walls.Right.Brush.Gradient.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+      this.tChart3.Walls.Right.Brush.Gradient.MiddleColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+      this.tChart3.Walls.Right.Brush.Gradient.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(0)))));
+      this.tChart3.Walls.Right.Brush.Gradient.UseMiddle = true;
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      this.tChart3.Zoom.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
       this.tChart3.ClickSeries += new Steema.TeeChart.SeriesEventHandler(this.tChart3_ClickSeries);
       // 
       // pie1
@@ -766,18 +708,18 @@
       // 
       // 
       this.pie1.Marks.Arrow.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-      this.pie1.Marks.ArrowLength = 10;
+      this.pie1.Marks.Arrow.Visible = false;
       // 
       // 
       // 
-      this.pie1.Marks.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
       // 
       // 
       // 
-      this.pie1.Marks.Brush.Gradient.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-      this.pie1.Marks.Brush.Gradient.MiddleColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-      this.pie1.Marks.Brush.Gradient.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(0)))));
-      this.pie1.Marks.Brush.Gradient.UseMiddle = true;
+      this.pie1.Marks.Brush.Gradient.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(0)))));
+      this.pie1.Marks.Brush.Gradient.MiddleColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+      this.pie1.Marks.Brush.Gradient.SigmaFocus = 0F;
+      this.pie1.Marks.Brush.Gradient.SigmaScale = 0F;
+      this.pie1.Marks.Brush.Gradient.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
       // 
       // 
       // 
@@ -788,11 +730,7 @@
       // 
       // 
       // 
-      this.pie1.Marks.Pen.Color = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(124)))), ((int)(((byte)(174)))));
-      // 
-      // 
-      // 
-      this.pie1.Marks.Shadow.Visible = false;
+      this.pie1.Marks.Pen.Color = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
       // 
       // 
       // 
@@ -802,7 +740,6 @@
       this.pie1.Marks.TailParams.Margin = 2F;
       this.pie1.Marks.TailParams.PointerHeight = 5D;
       this.pie1.Marks.TailParams.PointerWidth = 8D;
-      this.pie1.Marks.TailStyle = Steema.TeeChart.Styles.MarksTail.WithPointer;
       // 
       // 
       // 
@@ -837,106 +774,53 @@
       // 
       // 
       // 
-      this.tChart2.Aspect.ColorPaletteIndex = 3;
-      this.tChart2.Aspect.View3D = false;
       // 
       // 
       // 
-      this.tChart2.Axes.Automatic = true;
       // 
       // 
       // 
+      this.tChart2.Axes.Bottom.Labels.Angle = 60;
+      this.tChart2.Axes.Bottom.Labels.Separation = 0;
       // 
       // 
       // 
-      this.tChart2.Axes.Bottom.Grid.DrawEvery = 2;
+      this.tChart2.Axes.Bottom.Title.Distance = 0;
       // 
       // 
       // 
-      this.tChart2.Axes.Bottom.Labels.Angle = 90;
       // 
       // 
       // 
+      this.tChart2.Axes.Depth.Title.Distance = 0;
       // 
       // 
       // 
-      this.tChart2.Axes.Bottom.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-      this.tChart2.Axes.Bottom.Labels.Font.Size = 9;
-      this.tChart2.Axes.Bottom.Labels.Font.SizeFloat = 9F;
       // 
       // 
       // 
+      this.tChart2.Axes.DepthTop.Title.Distance = 0;
       // 
       // 
       // 
       // 
       // 
       // 
-      this.tChart2.Axes.Bottom.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-      this.tChart2.Axes.Bottom.Title.Font.Size = 11;
-      this.tChart2.Axes.Bottom.Title.Font.SizeFloat = 11F;
+      this.tChart2.Axes.Left.Title.Distance = 0;
       // 
       // 
       // 
       // 
       // 
       // 
-      this.tChart2.Axes.Left.Grid.DrawEvery = 2;
+      this.tChart2.Axes.Right.Title.Distance = 0;
       // 
       // 
       // 
       // 
       // 
       // 
-      // 
-      // 
-      // 
-      this.tChart2.Axes.Left.Labels.Font.Brush.Color = System.Drawing.Color.Gray;
-      this.tChart2.Axes.Left.Labels.Font.Size = 9;
-      this.tChart2.Axes.Left.Labels.Font.SizeFloat = 9F;
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      this.tChart2.Axes.Left.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-      this.tChart2.Axes.Left.Title.Font.Size = 11;
-      this.tChart2.Axes.Left.Title.Font.SizeFloat = 11F;
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      this.tChart2.Axes.Right.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-      this.tChart2.Axes.Right.Labels.Font.Size = 9;
-      this.tChart2.Axes.Right.Labels.Font.SizeFloat = 9F;
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      this.tChart2.Axes.Top.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-      this.tChart2.Axes.Top.Labels.Font.Size = 9;
-      this.tChart2.Axes.Top.Labels.Font.SizeFloat = 9F;
-      this.tChart2.CurrentTheme = Steema.TeeChart.ThemeType.Report;
+      this.tChart2.Axes.Top.Title.Distance = 0;
       this.tChart2.Dock = System.Windows.Forms.DockStyle.Left;
       // 
       // 
@@ -947,9 +831,10 @@
       // 
       // 
       // 
-      this.tChart2.Header.Font.Brush.Color = System.Drawing.Color.Gray;
-      this.tChart2.Header.Font.Size = 12;
-      this.tChart2.Header.Font.SizeFloat = 12F;
+      this.tChart2.Header.Brush.Gradient.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+      this.tChart2.Header.Brush.Gradient.MiddleColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+      this.tChart2.Header.Brush.Gradient.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(0)))));
+      this.tChart2.Header.Brush.Gradient.UseMiddle = true;
       this.tChart2.Header.Lines = new string[] {
         "Continents, Sales 2000-2015"};
       // 
@@ -961,32 +846,13 @@
       // 
       // 
       // 
-      this.tChart2.Legend.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-      this.tChart2.Legend.Font.Size = 9;
-      this.tChart2.Legend.Font.SizeFloat = 9F;
-      // 
-      // 
-      // 
-      this.tChart2.Legend.Shadow.Visible = false;
-      this.tChart2.Legend.Transparent = true;
+      this.tChart2.Legend.Brush.Gradient.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+      this.tChart2.Legend.Brush.Gradient.MiddleColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+      this.tChart2.Legend.Brush.Gradient.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(0)))));
+      this.tChart2.Legend.Brush.Gradient.UseMiddle = true;
       this.tChart2.Legend.Visible = false;
       this.tChart2.Location = new System.Drawing.Point(0, 0);
       this.tChart2.Name = "tChart2";
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      this.tChart2.Panel.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
-      // 
-      // 
-      // 
-      this.tChart2.Panel.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-      // 
-      // 
-      // 
-      this.tChart2.Panel.Brush.Gradient.Visible = false;
       this.tChart2.Series.Add(this.bar2);
       this.tChart2.Size = new System.Drawing.Size(429, 348);
       this.tChart2.TabIndex = 7;
@@ -999,9 +865,58 @@
       // 
       // 
       // 
-      this.tChart2.Walls.Back.Brush.Visible = false;
-      this.tChart2.Walls.Back.Transparent = true;
-      this.tChart2.Walls.Back.Visible = false;
+      // 
+      // 
+      // 
+      this.tChart2.Walls.Back.Brush.Gradient.MiddleColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      this.tChart2.Walls.Bottom.Brush.Gradient.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+      this.tChart2.Walls.Bottom.Brush.Gradient.MiddleColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+      this.tChart2.Walls.Bottom.Brush.Gradient.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(0)))));
+      this.tChart2.Walls.Bottom.Brush.Gradient.UseMiddle = true;
+      this.tChart2.Walls.Bottom.Visible = false;
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      this.tChart2.Walls.Left.Brush.Gradient.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+      this.tChart2.Walls.Left.Brush.Gradient.MiddleColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+      this.tChart2.Walls.Left.Brush.Gradient.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(0)))));
+      this.tChart2.Walls.Left.Brush.Gradient.UseMiddle = true;
+      this.tChart2.Walls.Left.Visible = false;
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      this.tChart2.Walls.Right.Brush.Gradient.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+      this.tChart2.Walls.Right.Brush.Gradient.MiddleColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+      this.tChart2.Walls.Right.Brush.Gradient.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(0)))));
+      this.tChart2.Walls.Right.Brush.Gradient.UseMiddle = true;
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      this.tChart2.Zoom.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
       this.tChart2.ClickAxis += new System.Windows.Forms.MouseEventHandler(this.tChart2_ClickAxis);
       this.tChart2.ClickSeries += new Steema.TeeChart.SeriesEventHandler(this.tChart2_ClickSeries);
       this.tChart2.Click += new System.EventHandler(this.tChart2_Click);
@@ -1020,18 +935,22 @@
       // 
       // 
       // 
-      this.bar2.Marks.ArrowLength = 10;
       // 
       // 
       // 
-      this.bar2.Marks.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+      this.bar2.Marks.Arrow.Visible = false;
+      this.bar2.Marks.ArrowLength = 8;
       // 
       // 
       // 
-      this.bar2.Marks.Brush.Gradient.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-      this.bar2.Marks.Brush.Gradient.MiddleColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-      this.bar2.Marks.Brush.Gradient.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(0)))));
-      this.bar2.Marks.Brush.Gradient.UseMiddle = true;
+      // 
+      // 
+      // 
+      this.bar2.Marks.Brush.Gradient.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(0)))));
+      this.bar2.Marks.Brush.Gradient.MiddleColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+      this.bar2.Marks.Brush.Gradient.SigmaFocus = 0F;
+      this.bar2.Marks.Brush.Gradient.SigmaScale = 0F;
+      this.bar2.Marks.Brush.Gradient.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
       // 
       // 
       // 
@@ -1046,16 +965,11 @@
       // 
       // 
       // 
-      this.bar2.Marks.Shadow.Visible = false;
-      // 
-      // 
-      // 
       this.bar2.Marks.TailParams.Align = Steema.TeeChart.Styles.TailAlignment.Auto;
       this.bar2.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos1")));
       this.bar2.Marks.TailParams.Margin = 0F;
       this.bar2.Marks.TailParams.PointerHeight = 8D;
       this.bar2.Marks.TailParams.PointerWidth = 8D;
-      this.bar2.Marks.TailStyle = Steema.TeeChart.Styles.MarksTail.WithPointer;
       this.bar2.Marks.Visible = false;
       this.bar2.OriginalCursor = null;
       // 
@@ -1078,110 +992,52 @@
       // 
       // 
       // 
-      this.tChart1.Aspect.ColorPaletteIndex = 21;
-      this.tChart1.Aspect.View3D = false;
-      // 
-      // 
-      // 
-      this.tChart1.Axes.Automatic = true;
       // 
       // 
       // 
       // 
       // 
       // 
-      this.tChart1.Axes.Bottom.Grid.DrawEvery = 2;
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      this.tChart1.Axes.Bottom.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-      this.tChart1.Axes.Bottom.Labels.Font.Size = 9;
-      this.tChart1.Axes.Bottom.Labels.Font.SizeFloat = 9F;
       this.tChart1.Axes.Bottom.Labels.ValueFormat = "###0";
       // 
       // 
       // 
-      this.tChart1.Axes.Bottom.MinorTicks.Visible = false;
+      this.tChart1.Axes.Bottom.Title.Distance = 0;
       // 
       // 
       // 
       // 
       // 
       // 
-      // 
-      // 
-      // 
-      this.tChart1.Axes.Bottom.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-      this.tChart1.Axes.Bottom.Title.Font.Size = 11;
-      this.tChart1.Axes.Bottom.Title.Font.SizeFloat = 11F;
+      this.tChart1.Axes.Depth.Title.Distance = 0;
       // 
       // 
       // 
       // 
       // 
       // 
-      this.tChart1.Axes.Left.Grid.DrawEvery = 2;
+      this.tChart1.Axes.DepthTop.Title.Distance = 0;
       // 
       // 
       // 
       // 
       // 
       // 
-      // 
-      // 
-      // 
-      this.tChart1.Axes.Left.Labels.Font.Brush.Color = System.Drawing.Color.Gray;
-      this.tChart1.Axes.Left.Labels.Font.Size = 9;
-      this.tChart1.Axes.Left.Labels.Font.SizeFloat = 9F;
+      this.tChart1.Axes.Left.Title.Distance = 0;
       // 
       // 
       // 
       // 
       // 
       // 
-      // 
-      // 
-      // 
-      this.tChart1.Axes.Left.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-      this.tChart1.Axes.Left.Title.Font.Size = 11;
-      this.tChart1.Axes.Left.Title.Font.SizeFloat = 11F;
+      this.tChart1.Axes.Right.Title.Distance = 0;
       // 
       // 
       // 
       // 
       // 
       // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      this.tChart1.Axes.Right.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-      this.tChart1.Axes.Right.Labels.Font.Size = 9;
-      this.tChart1.Axes.Right.Labels.Font.SizeFloat = 9F;
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      this.tChart1.Axes.Top.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-      this.tChart1.Axes.Top.Labels.Font.Size = 9;
-      this.tChart1.Axes.Top.Labels.Font.SizeFloat = 9F;
-      this.tChart1.CurrentTheme = Steema.TeeChart.ThemeType.Report;
+      this.tChart1.Axes.Top.Title.Distance = 0;
       this.tChart1.Dock = System.Windows.Forms.DockStyle.Bottom;
       // 
       // 
@@ -1192,9 +1048,10 @@
       // 
       // 
       // 
-      this.tChart1.Header.Font.Brush.Color = System.Drawing.Color.Gray;
-      this.tChart1.Header.Font.Size = 12;
-      this.tChart1.Header.Font.SizeFloat = 12F;
+      this.tChart1.Header.Brush.Gradient.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+      this.tChart1.Header.Brush.Gradient.MiddleColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+      this.tChart1.Header.Brush.Gradient.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(0)))));
+      this.tChart1.Header.Brush.Gradient.UseMiddle = true;
       this.tChart1.Header.Lines = new string[] {
         "Country"};
       // 
@@ -1206,14 +1063,15 @@
       // 
       // 
       // 
-      this.tChart1.Legend.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+      this.tChart1.Legend.Brush.Gradient.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+      this.tChart1.Legend.Brush.Gradient.MiddleColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+      this.tChart1.Legend.Brush.Gradient.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(0)))));
+      this.tChart1.Legend.Brush.Gradient.UseMiddle = true;
+      // 
+      // 
+      // 
       this.tChart1.Legend.Font.Size = 6;
       this.tChart1.Legend.Font.SizeFloat = 6F;
-      // 
-      // 
-      // 
-      this.tChart1.Legend.Shadow.Visible = false;
-      this.tChart1.Legend.Transparent = true;
       this.tChart1.Legend.Visible = false;
       this.tChart1.Location = new System.Drawing.Point(0, 348);
       this.tChart1.Name = "tChart1";
@@ -1223,17 +1081,11 @@
       // 
       // 
       // 
-      this.tChart1.Panel.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
-      // 
-      // 
-      // 
-      this.tChart1.Panel.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
       // 
       // 
       // 
       this.tChart1.Panel.Brush.Gradient.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
       this.tChart1.Panel.Brush.Gradient.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-      this.tChart1.Panel.Brush.Gradient.Visible = false;
       this.tChart1.Series.Add(this.line1);
       this.tChart1.Series.Add(this.line2);
       this.tChart1.Size = new System.Drawing.Size(1092, 227);
@@ -1247,9 +1099,58 @@
       // 
       // 
       // 
-      this.tChart1.Walls.Back.Brush.Visible = false;
-      this.tChart1.Walls.Back.Transparent = true;
-      this.tChart1.Walls.Back.Visible = false;
+      // 
+      // 
+      // 
+      this.tChart1.Walls.Back.Brush.Gradient.MiddleColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      this.tChart1.Walls.Bottom.Brush.Gradient.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+      this.tChart1.Walls.Bottom.Brush.Gradient.MiddleColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+      this.tChart1.Walls.Bottom.Brush.Gradient.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(0)))));
+      this.tChart1.Walls.Bottom.Brush.Gradient.UseMiddle = true;
+      this.tChart1.Walls.Bottom.Visible = false;
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      this.tChart1.Walls.Left.Brush.Gradient.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+      this.tChart1.Walls.Left.Brush.Gradient.MiddleColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+      this.tChart1.Walls.Left.Brush.Gradient.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(0)))));
+      this.tChart1.Walls.Left.Brush.Gradient.UseMiddle = true;
+      this.tChart1.Walls.Left.Visible = false;
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      this.tChart1.Walls.Right.Brush.Gradient.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+      this.tChart1.Walls.Right.Brush.Gradient.MiddleColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+      this.tChart1.Walls.Right.Brush.Gradient.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(0)))));
+      this.tChart1.Walls.Right.Brush.Gradient.UseMiddle = true;
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      this.tChart1.Zoom.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
       // 
       // line1
       // 
@@ -1270,14 +1171,19 @@
       // 
       // 
       // 
-      this.line1.Marks.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+      this.line1.Marks.Arrow.Visible = false;
+      this.line1.Marks.ArrowLength = 8;
       // 
       // 
       // 
-      this.line1.Marks.Brush.Gradient.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-      this.line1.Marks.Brush.Gradient.MiddleColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-      this.line1.Marks.Brush.Gradient.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(0)))));
-      this.line1.Marks.Brush.Gradient.UseMiddle = true;
+      // 
+      // 
+      // 
+      this.line1.Marks.Brush.Gradient.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(0)))));
+      this.line1.Marks.Brush.Gradient.MiddleColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+      this.line1.Marks.Brush.Gradient.SigmaFocus = 0F;
+      this.line1.Marks.Brush.Gradient.SigmaScale = 0F;
+      this.line1.Marks.Brush.Gradient.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
       // 
       // 
       // 
@@ -1292,16 +1198,11 @@
       // 
       // 
       // 
-      this.line1.Marks.Shadow.Visible = false;
-      // 
-      // 
-      // 
       this.line1.Marks.TailParams.Align = Steema.TeeChart.Styles.TailAlignment.Auto;
       this.line1.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos2")));
       this.line1.Marks.TailParams.Margin = 0F;
       this.line1.Marks.TailParams.PointerHeight = 8D;
       this.line1.Marks.TailParams.PointerWidth = 8D;
-      this.line1.Marks.TailStyle = Steema.TeeChart.Styles.MarksTail.WithPointer;
       this.line1.OriginalCursor = null;
       // 
       // 
@@ -1357,14 +1258,19 @@
       // 
       // 
       // 
-      this.line2.Marks.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+      this.line2.Marks.Arrow.Visible = false;
+      this.line2.Marks.ArrowLength = 8;
       // 
       // 
       // 
-      this.line2.Marks.Brush.Gradient.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-      this.line2.Marks.Brush.Gradient.MiddleColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-      this.line2.Marks.Brush.Gradient.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(0)))));
-      this.line2.Marks.Brush.Gradient.UseMiddle = true;
+      // 
+      // 
+      // 
+      this.line2.Marks.Brush.Gradient.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(0)))));
+      this.line2.Marks.Brush.Gradient.MiddleColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+      this.line2.Marks.Brush.Gradient.SigmaFocus = 0F;
+      this.line2.Marks.Brush.Gradient.SigmaScale = 0F;
+      this.line2.Marks.Brush.Gradient.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
       // 
       // 
       // 
@@ -1379,16 +1285,11 @@
       // 
       // 
       // 
-      this.line2.Marks.Shadow.Visible = false;
-      // 
-      // 
-      // 
       this.line2.Marks.TailParams.Align = Steema.TeeChart.Styles.TailAlignment.Auto;
       this.line2.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos3")));
       this.line2.Marks.TailParams.Margin = 0F;
       this.line2.Marks.TailParams.PointerHeight = 5D;
       this.line2.Marks.TailParams.PointerWidth = 8D;
-      this.line2.Marks.TailStyle = Steema.TeeChart.Styles.MarksTail.WithPointer;
       this.line2.OriginalCursor = null;
       // 
       // 
