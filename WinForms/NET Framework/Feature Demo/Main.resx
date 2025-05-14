@@ -1329,6 +1329,7 @@ Upgrading and Ordering,Order_Info,Order_Info</value>
   TreeMap Series,TreeMap_Series,\\Series\\TreeMap_Series
   ClockGauge Series,ClockGauge_Series,\\Series\\ClockGauge_Series
   SquarifiedMap Series,Squarified_Series,\\Series\\Squarified_Series
+  Sankey Series,Sankey_Series,\\Series\\Sankey_Series
  New Functions
   Money Flow,Function_MoneyFlow,\\Functions\\Function_MoneyFlow
   Percent Change,Function_PercentChange,\\Functions\\Function_PercentChange
