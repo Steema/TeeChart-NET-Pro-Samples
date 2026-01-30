@@ -1,7 +1,7 @@
 # TeeChart for .NET Pro
 ## Professional, high-performance chart controls for WPF/WinForms/MAUI
  
-The TeeChart NET Pro Edition is a Nuget based Charting control designed to offer instant chart, map and gauge capabilities to your NET application. With dozens of chart types, statistical functions and developer tools, TeeChart is simply one of the most comprehensive charting libraries available for developers today. Easy to use with designtime editor and an intuitive programming structure we hope you enjoy working with it. Chart controls for WPF, Winform, NET5.0 to NET10.0, WASM, MAUI. Web applications use TeeChart's Javascript engine at the browser.<br>
+The TeeChart NET Pro Edition is a Nuget based Charting control designed to offer instant chart, map and gauge capabilities to your NET application. With dozens of chart types, statistical functions and developer tools, TeeChart is simply one of the most comprehensive charting libraries available for developers today. Easy to use with designtime editor and an intuitive programming structure we hope you enjoy working with it. Chart controls for WPF, WinForms, NET5.0 to NET10.0, WASM, MAUI. Web applications use TeeChart's Javascript engine at the browser.<br>
 For more information visit [https://www.steema.com/product/net](https://www.steema.com/product/net)
 
 ![screenshot](https://www.steema.com/uploads/products/TeeChart_Chart_For_Blazor.png ".NET Blazor Charts")
