@@ -17,7 +17,7 @@ For more information visit [https://www.steema.com/product/net](https://www.stee
  
 - [Documentation & API Reference](http://www.steema.com/docs/TeeChartNET/)
  
-- [Examples WinForm](https://github.com/Steema/TeeChart-NET-Pro-Samples/tree/main/WinForms),
+- [Examples WinForms](https://github.com/Steema/TeeChart-NET-Pro-Samples/tree/main/WinForms),
   [Examples WPF](https://github.com/Steema/TeeChart-NET-Pro-Samples/tree/main/WPF)
 
 - [License](https://www.steema.com/licensing/net)
