@@ -174,14 +174,14 @@
     <Reference Include="System.Xml">
       <Name>System.XML</Name>
     </Reference>
-    <Reference Include="TeeChart, Version=4.2024.5.16, Culture=neutral, PublicKeyToken=9c8126276c77bdb7, processorArchitecture=MSIL">
-      <HintPath>..\packages\Steema.TeeChart.NET.4.2024.5.16\lib\net48\TeeChart.dll</HintPath>
+    <Reference Include="TeeChart, Version=4.2026.2.5, Culture=neutral, PublicKeyToken=9c8126276c77bdb7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Steema.TeeChart.NET.4.2026.2.5\lib\net48\TeeChart.dll</HintPath>
     </Reference>
-    <Reference Include="TeeChart.WPF, Version=4.2024.5.16, Culture=neutral, PublicKeyToken=98e8c3f289a4e286, processorArchitecture=MSIL">
-      <HintPath>..\packages\Steema.TeeChart.NET.4.2024.5.16\lib\net48\TeeChart.WPF.dll</HintPath>
+    <Reference Include="TeeChart.WPF, Version=4.2026.2.5, Culture=neutral, PublicKeyToken=98e8c3f289a4e286, processorArchitecture=MSIL">
+      <HintPath>..\packages\Steema.TeeChart.NET.4.2026.2.5\lib\net48\TeeChart.WPF.dll</HintPath>
     </Reference>
-    <Reference Include="TeeChart.Xaml.WPF, Version=4.2024.5.16, Culture=neutral, PublicKeyToken=9406d226170aa089, processorArchitecture=MSIL">
-      <HintPath>..\packages\Steema.TeeChart.NET.4.2024.5.16\lib\net48\TeeChart.Xaml.WPF.dll</HintPath>
+    <Reference Include="TeeChart.Xaml.WPF, Version=4.2026.2.5, Culture=neutral, PublicKeyToken=9406d226170aa089, processorArchitecture=MSIL">
+      <HintPath>..\packages\Steema.TeeChart.NET.4.2026.2.5\lib\net48\TeeChart.Xaml.WPF.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -1184,6 +1184,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Series\Series_TagCloud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Series\Series_Tornado.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Series\Series_Vector3D.cs">
@@ -2760,6 +2763,9 @@
     <EmbeddedResource Include="Series\Series_TagCloud.resx">
       <SubType>Designer</SubType>
       <DependentUpon>Series_TagCloud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Series\Series_Tornado.resx">
+      <DependentUpon>Series_Tornado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Series\Series_Vector3D.resx">
       <DependentUpon>Series_Vector3D.cs</DependentUpon>

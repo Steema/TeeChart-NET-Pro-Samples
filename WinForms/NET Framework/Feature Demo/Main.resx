@@ -952,6 +952,7 @@
     Point3D base lines,Point3D_BaseLine,\\Series\\Point3D_BaseLine
    Pyramid,Pyramid_Series,\\Series\\Pyramid_Series
    Radar,SeriesType_Radar,\\Series\\SeriesType_Radar
+   Sankey Series,Sankey_Series,\\Series\\Sankey_Series
    Smith,Smith_Series,\\Series\\Smith_Series
    Surface,SeriesType_Surface,\\Series\\SeriesType_Surface
     Irregular grid,Surface_Irregular,\\Series\\Surface_Irregular
@@ -967,6 +968,7 @@
     TriSurface Hiding,TriSurface_Hidding,\\Series\\TriSurface_Hidding
    Tower,SeriesType_Tower,\\Series\\SeriesType_Tower
     Tower Stacked,Tower_Stacked,\\Series\\Tower_Stacked
+   Tornado,Series_Tornado,\\Series\\Series_Tornado
    All 3D Series
     Add Arrays method,Series3D_AddArray,\\Series\\Series3D_AddArray
   Statistical
@@ -1330,6 +1332,7 @@ Upgrading and Ordering,Order_Info,Order_Info</value>
   ClockGauge Series,ClockGauge_Series,\\Series\\ClockGauge_Series
   SquarifiedMap Series,Squarified_Series,\\Series\\Squarified_Series
   Sankey Series,Sankey_Series,\\Series\\Sankey_Series
+  Tornado,Series_Tornado,\\Series\\Series_Tornado
  New Functions
   Money Flow,Function_MoneyFlow,\\Functions\\Function_MoneyFlow
   Percent Change,Function_PercentChange,\\Functions\\Function_PercentChange
