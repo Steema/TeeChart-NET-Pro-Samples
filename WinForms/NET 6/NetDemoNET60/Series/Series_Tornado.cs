@@ -42,6 +42,8 @@ namespace Steema.TeeChart.Samples
       tChart1.Header.Text = "Greenhouse       Open air";
       tChart1.Axes.Bottom.Title.Text = "tonnes";
 
+      comboBox2.Text = "None";
+      comboBox1.Focus();
     }
 
     private ComboBox comboBox1;
@@ -75,26 +77,24 @@ namespace Steema.TeeChart.Samples
     /// </summary>
     private void InitializeComponent()
     {
-      System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Series_Tornado));
-      this.label1 = new System.Windows.Forms.Label();
-      this.comboBox1 = new System.Windows.Forms.ComboBox();
-      this.label2 = new System.Windows.Forms.Label();
-      this.comboBox2 = new System.Windows.Forms.ComboBox();
-      this.panel1.SuspendLayout();
-      this.chartContainer.SuspendLayout();
-      this.SuspendLayout();
+      label1 = new Label();
+      comboBox1 = new ComboBox();
+      label2 = new Label();
+      comboBox2 = new ComboBox();
+      panel1.SuspendLayout();
+      chartContainer.SuspendLayout();
+      SuspendLayout();
       // 
       // textBox1
       // 
-      this.textBox1.Text = "A Tornado chart, based on horizontal bars, is useful to show relativities as a sc" +
-    "aled set between two categories..";
+      textBox1.Text = "A Tornado chart, based on horizontal bars, is useful to show relativities as a scaled set between two categories..";
       // 
       // panel1
       // 
-      this.panel1.Controls.Add(this.comboBox2);
-      this.panel1.Controls.Add(this.label2);
-      this.panel1.Controls.Add(this.comboBox1);
-      this.panel1.Controls.Add(this.label1);
+      panel1.Controls.Add(comboBox2);
+      panel1.Controls.Add(label2);
+      panel1.Controls.Add(comboBox1);
+      panel1.Controls.Add(label1);
       // 
       // tChart1
       // 
@@ -107,42 +107,42 @@ namespace Steema.TeeChart.Samples
       // 
       // 
       // 
-      this.tChart1.Axes.Bottom.Labels.Sign = false;
+      tChart1.Axes.Bottom.Labels.Sign = false;
       // 
       // 
       // 
       // 
       // 
       // 
-      this.tChart1.Axes.Depth.Labels.Sign = false;
+      tChart1.Axes.Depth.Labels.Sign = false;
       // 
       // 
       // 
       // 
       // 
       // 
-      this.tChart1.Axes.DepthTop.Labels.Sign = false;
+      tChart1.Axes.DepthTop.Labels.Sign = false;
       // 
       // 
       // 
       // 
       // 
       // 
-      this.tChart1.Axes.Left.Labels.Sign = false;
+      tChart1.Axes.Left.Labels.Sign = false;
       // 
       // 
       // 
       // 
       // 
       // 
-      this.tChart1.Axes.Right.Labels.Sign = false;
+      tChart1.Axes.Right.Labels.Sign = false;
       // 
       // 
       // 
       // 
       // 
       // 
-      this.tChart1.Axes.Top.Labels.Sign = false;
+      tChart1.Axes.Top.Labels.Sign = false;
       // 
       // 
       // 
@@ -152,15 +152,12 @@ namespace Steema.TeeChart.Samples
       // 
       // 
       // 
-      this.tChart1.Header.Brush.Gradient.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-      this.tChart1.Header.Brush.Gradient.MiddleColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-      this.tChart1.Header.Brush.Gradient.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(0)))));
-      this.tChart1.Header.Brush.Gradient.UseMiddle = true;
+      tChart1.Header.Brush.Gradient.UseMiddle = true;
       // 
       // 
       // 
-      this.tChart1.Header.Font.Size = 14;
-      this.tChart1.Header.Font.SizeFloat = 14F;
+      tChart1.Header.Font.Size = 14;
+      tChart1.Header.Font.SizeFloat = 14F;
       // 
       // 
       // 
@@ -170,157 +167,122 @@ namespace Steema.TeeChart.Samples
       // 
       // 
       // 
-      this.tChart1.Legend.Brush.Gradient.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-      this.tChart1.Legend.Brush.Gradient.MiddleColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-      this.tChart1.Legend.Brush.Gradient.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(0)))));
-      this.tChart1.Legend.Brush.Gradient.UseMiddle = true;
-      this.tChart1.Legend.ClipText = false;
+      tChart1.Legend.Brush.Gradient.UseMiddle = true;
+      tChart1.Legend.CheckBoxes = false;
+      tChart1.Legend.ClipText = false;
       // 
       // 
       // 
       // 
       // 
       // 
-      this.tChart1.Legend.Title.Font.Bold = true;
+      tChart1.Panel.Bevel.Outer = Drawing.BevelStyles.Raised;
       // 
       // 
       // 
       // 
       // 
       // 
-      this.tChart1.Panel.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.Raised;
       // 
       // 
       // 
       // 
       // 
       // 
+      tChart1.Walls.Bottom.Brush.Gradient.UseMiddle = true;
+      tChart1.Walls.Bottom.Visible = false;
       // 
       // 
       // 
       // 
       // 
       // 
-      this.tChart1.Walls.Back.Brush.Gradient.MiddleColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-      this.tChart1.Walls.Back.Brush.Visible = false;
       // 
       // 
       // 
+      tChart1.Walls.Left.Brush.Gradient.UseMiddle = true;
+      tChart1.Walls.Left.Visible = false;
       // 
       // 
       // 
       // 
       // 
       // 
-      this.tChart1.Walls.Bottom.Brush.Gradient.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-      this.tChart1.Walls.Bottom.Brush.Gradient.MiddleColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-      this.tChart1.Walls.Bottom.Brush.Gradient.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(0)))));
-      this.tChart1.Walls.Bottom.Brush.Gradient.UseMiddle = true;
-      this.tChart1.Walls.Bottom.Visible = false;
       // 
       // 
       // 
+      tChart1.Walls.Right.Brush.Gradient.UseMiddle = true;
       // 
       // 
       // 
       // 
       // 
       // 
-      this.tChart1.Walls.Left.Brush.Gradient.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-      this.tChart1.Walls.Left.Brush.Gradient.MiddleColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-      this.tChart1.Walls.Left.Brush.Gradient.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(0)))));
-      this.tChart1.Walls.Left.Brush.Gradient.UseMiddle = true;
-      this.tChart1.Walls.Left.Visible = false;
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      this.tChart1.Walls.Right.Brush.Gradient.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-      this.tChart1.Walls.Right.Brush.Gradient.MiddleColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-      this.tChart1.Walls.Right.Brush.Gradient.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(0)))));
-      this.tChart1.Walls.Right.Brush.Gradient.UseMiddle = true;
-      // 
-      // 
-      // 
-      // 
-      // 
-      // 
-      this.tChart1.Zoom.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
-      this.tChart1.Zoom.Brush.Visible = false;
+      tChart1.Zoom.Brush.Color = Color.FromArgb(127, 0, 0, 255);
+      tChart1.Zoom.Brush.Visible = false;
       // 
       // label1
       // 
-      this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-      this.label1.AutoSize = true;
-      this.label1.Location = new System.Drawing.Point(261, 12);
-      this.label1.Name = "label1";
-      this.label1.Size = new System.Drawing.Size(44, 13);
-      this.label1.TabIndex = 0;
-      this.label1.Text = "sort b&y: ";
+      label1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+      label1.AutoSize = true;
+      label1.Location = new Point(261, 11);
+      label1.Name = "label1";
+      label1.Size = new Size(56, 17);
+      label1.TabIndex = 0;
+      label1.Text = "sort b&y: ";
       // 
       // comboBox1
       // 
-      this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-      this.comboBox1.FormattingEnabled = true;
-      this.comboBox1.Items.AddRange(new object[] {
-            "Sum",
-            "Left",
-            "Right",
-            "None"});
-      this.comboBox1.Location = new System.Drawing.Point(311, 8);
-      this.comboBox1.Name = "comboBox1";
-      this.comboBox1.Size = new System.Drawing.Size(121, 21);
-      this.comboBox1.TabIndex = 1;
-      this.comboBox1.Text = "None";
-      this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+      comboBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+      comboBox1.FlatStyle = FlatStyle.Flat;
+      comboBox1.FormattingEnabled = true;
+      comboBox1.Items.AddRange(new object[] { "Sum", "Left", "Right", "None" });
+      comboBox1.Location = new Point(311, 8);
+      comboBox1.Name = "comboBox1";
+      comboBox1.Size = new Size(121, 25);
+      comboBox1.TabIndex = 1;
+      comboBox1.Text = "None";
+      comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
       // 
       // label2
       // 
-      this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-      this.label2.AutoSize = true;
-      this.label2.Location = new System.Drawing.Point(96, 12);
-      this.label2.Name = "label2";
-      this.label2.Size = new System.Drawing.Size(50, 13);
-      this.label2.TabIndex = 2;
-      this.label2.Text = "&Order by:";
+      label2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+      label2.AutoSize = true;
+      label2.Location = new Point(82, 11);
+      label2.Name = "label2";
+      label2.Size = new Size(64, 17);
+      label2.TabIndex = 2;
+      label2.Text = "&Order by:";
       // 
       // comboBox2
       // 
-      this.comboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-      this.comboBox2.FormattingEnabled = true;
-      this.comboBox2.Items.AddRange(new object[] {
-            "None",
-            "Ascending",
-            "Descending"});
-      this.comboBox2.Location = new System.Drawing.Point(152, 8);
-      this.comboBox2.Name = "comboBox2";
-      this.comboBox2.Size = new System.Drawing.Size(92, 21);
-      this.comboBox2.TabIndex = 3;
-      this.comboBox2.Text = "None";
-      this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+      comboBox2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+      comboBox2.FlatStyle = FlatStyle.Flat;
+      comboBox2.FormattingEnabled = true;
+      comboBox2.Items.AddRange(new object[] { "None", "Ascending", "Descending" });
+      comboBox2.Location = new Point(152, 8);
+      comboBox2.Name = "comboBox2";
+      comboBox2.Size = new Size(92, 25);
+      comboBox2.TabIndex = 3;
+      comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
       // 
       // Series_Tornado
       // 
-      this.ClientSize = new System.Drawing.Size(440, 317);
-      this.Name = "Series_Tornado";
-      this.Load += new System.EventHandler(this.Series_Tornado_Load);
-      this.panel1.ResumeLayout(false);
-      this.panel1.PerformLayout();
-      this.chartContainer.ResumeLayout(false);
-      this.ResumeLayout(false);
-      this.PerformLayout();
+      ClientSize = new Size(440, 317);
+      Name = "Series_Tornado";
+      Load += Series_Tornado_Load;
+      panel1.ResumeLayout(false);
+      panel1.PerformLayout();
+      chartContainer.ResumeLayout(false);
+      ResumeLayout(false);
+      PerformLayout();
 
     }
 
     #endregion
 
-private void resetSort()
-{
+    private void resetSort()
+    {
 
       switch (comboBox1.SelectedIndex)
       {
