@@ -959,6 +959,7 @@
     Transparency,Surface_Transparency,\\Series\\Surface_Transparency
     Surface Palette,Surface_Palette,\\Series\\Surface_Palette
     Surface Smoothing,SurfaceSmoothing,\\Series\\Surface_Smoothing
+   Tornado,Series_Tornado,\\Series\\Series_Tornado
    TreeMap Series,TreeMap_Series,\\Series\\TreeMap_Series
    Tri. Surface,TriSurface_Series,\\Series\\TriSurface_Series
     TriSurface Hiding,TriSurface_Hidding,\\Series\\TriSurface_Hidding
@@ -1323,6 +1324,7 @@ Upgrading and Ordering,Order_Info,Order_Info</value>
   ClockGauge Series,ClockGauge_Series,\\Series\\ClockGauge_Series
   SquarifiedMap Series,Squarified_Series,\\Series\\Squarified_Series
   Sankey Series,Sankey_Series,\\Series\\Sankey_Series
+  Tornado,Series_Tornado,\\Series\\Series_Tornado
  New Functions
   Money Flow,Function_MoneyFlow,\\Functions\\Function_MoneyFlow
   Percent Change,Function_PercentChange,\\Functions\\Function_PercentChange
