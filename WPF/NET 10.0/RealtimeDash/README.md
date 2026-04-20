@@ -5,7 +5,7 @@ The demo runs a time based simulation of real-time data entering a system to tra
 
 This is the dashboard created by the demo project:
 
-![screenshot](https://www.steema.com/docs/gallery/charts/assets/charts/dashboard/DataHeatVisualiser_charts_wpf.png ".NET 10 Dashboard on WPF")
+![screenshot](https://www.steema.com/docs/gallery/charts/assets/charts/dashboard/DataHeatVisualiser_charts__wpf.png ".NET 10 Dashboard on WPF")
 
 
 ## References
