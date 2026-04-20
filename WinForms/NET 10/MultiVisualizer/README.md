@@ -1,5 +1,5 @@
 # TeeChart for .NET Pro
-## Realtime demo dashboard for NET.
+## Realtime demo dashboard for NET Winform.
  
 The demo runs a time based simulation of real-time data entering a system to track several different indicators via different chart and gauge types.<br>
 
