@@ -1,0 +1,15 @@
+# TeeChart for .NET Pro
+## Realtime example dashboard for NET Winform.
+ 
+The demo runs a time based simulation of real-time data entering a system to track several different indicators via different chart and gauge types.<br>
+
+![screenshot](https://www.steema.com/docs/gallery/charts/assets/charts/dashboard/multipanelchartsFr48.png "NET Framework 4.8 Dashboard on Winform")
+
+## References
+For more information visit [https://www.steema.com/product/net](https://www.steema.com/product/net)
+
+### Nuget package
+[Nuget: https://www.nuget.org/packages/Steema.TeeChart.NET/](https://www.nuget.org/packages/Steema.TeeChart.NET/)
+ 
+## Steema Software SL
+[https://www.steema.com/](https://www.steema.com/) - info@steema.com
