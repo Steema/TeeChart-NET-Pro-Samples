@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Steema.TeeChart.NET" Version="4.2025.5.7" />
+    <PackageReference Include="Steema.TeeChart.NET" Version="4.2026.5.29" />
   </ItemGroup>
 
   <ItemGroup>
