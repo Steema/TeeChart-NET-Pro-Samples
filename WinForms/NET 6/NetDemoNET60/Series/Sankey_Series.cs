@@ -25,255 +25,223 @@ namespace Steema.TeeChart.Samples
         private ComboBox comboBox1;        
         private Steema.TeeChart.Tools.MarksTip marksTip1;
 
-        #region Windows Form Designer generated code
+    #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
-        private void InitializeComponent()
-        {
-            this.hScrollBar1 = new System.Windows.Forms.HScrollBar();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.panel1.SuspendLayout();
-            this.chartContainer.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.SuspendLayout();
-            // 
-            // textBox1
-            // 
-            this.textBox1.Size = new System.Drawing.Size(1114, 73);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.checkBox2);
-            this.panel1.Controls.Add(this.checkBox1);
-            this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Controls.Add(this.hScrollBar1);
-            this.panel1.Size = new System.Drawing.Size(1114, 82);
-            // 
-            // tChart1
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.tChart1.Header.Brush.Gradient.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.tChart1.Header.Brush.Gradient.MiddleColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.tChart1.Header.Brush.Gradient.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(0)))));
-            this.tChart1.Header.Brush.Gradient.UseMiddle = true;
-            // 
-            // 
-            // 
-            this.tChart1.Header.Font.Size = 14;
-            this.tChart1.Header.Font.SizeFloat = 14F;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.tChart1.Legend.Brush.Gradient.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.tChart1.Legend.Brush.Gradient.MiddleColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.tChart1.Legend.Brush.Gradient.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(0)))));
-            this.tChart1.Legend.Brush.Gradient.UseMiddle = true;
-            this.tChart1.Legend.ClipText = false;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.tChart1.Legend.Title.Font.Bold = true;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.tChart1.Panel.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.Raised;
-            this.tChart1.Size = new System.Drawing.Size(1114, 378);
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.tChart1.Walls.Back.Brush.Gradient.MiddleColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.tChart1.Walls.Back.Brush.Visible = false;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.tChart1.Walls.Bottom.Brush.Gradient.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.tChart1.Walls.Bottom.Brush.Gradient.MiddleColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.tChart1.Walls.Bottom.Brush.Gradient.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(0)))));
-            this.tChart1.Walls.Bottom.Brush.Gradient.UseMiddle = true;
-            this.tChart1.Walls.Bottom.Visible = false;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.tChart1.Walls.Left.Brush.Gradient.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.tChart1.Walls.Left.Brush.Gradient.MiddleColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.tChart1.Walls.Left.Brush.Gradient.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(0)))));
-            this.tChart1.Walls.Left.Brush.Gradient.UseMiddle = true;
-            this.tChart1.Walls.Left.Visible = false;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.tChart1.Walls.Right.Brush.Gradient.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.tChart1.Walls.Right.Brush.Gradient.MiddleColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.tChart1.Walls.Right.Brush.Gradient.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(0)))));
-            this.tChart1.Walls.Right.Brush.Gradient.UseMiddle = true;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.tChart1.Zoom.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
-            this.tChart1.Zoom.Brush.Visible = false;
-            // 
-            // chartContainer
-            // 
-            this.chartContainer.Location = new System.Drawing.Point(0, 155);
-            this.chartContainer.Size = new System.Drawing.Size(1114, 378);
-            // 
-            // hScrollBar1
-            // 
-            this.hScrollBar1.Location = new System.Drawing.Point(19, 43);
-            this.hScrollBar1.Name = "hScrollBar1";
-            this.hScrollBar1.Size = new System.Drawing.Size(208, 27);
-            this.hScrollBar1.TabIndex = 0;
-            this.hScrollBar1.ValueChanged += new System.EventHandler(this.hScrollBar1_ValueChanged);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Location = new System.Drawing.Point(257, 6);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(193, 64);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
-            this.groupBox1.Visible = false;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(27, 41);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(56, 17);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "mouse";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(27, 19);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(47, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "click";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(542, 25);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(67, 17);
-            this.checkBox1.TabIndex = 2;
-            this.checkBox1.Text = "Highlight";
-            this.checkBox1.UseVisualStyleBackColor = false;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Checked = true;
-            this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox2.Location = new System.Drawing.Point(542, 49);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(84, 17);
-            this.checkBox2.TabIndex = 3;
-            this.checkBox2.Text = "labels in/out";
-            this.checkBox2.UseVisualStyleBackColor = false;
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "data 1",
-            "data 2",
-            "data 3",
-            "data 4"});
-            this.comboBox1.Location = new System.Drawing.Point(19, 19);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 4;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // Sankey_Series
-            // 
-            this.ClientSize = new System.Drawing.Size(1114, 533);
-            this.Name = "Sankey_Series";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.chartContainer.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+    /// <summary>
+    /// Required method for Designer support - do not modify
+    /// the contents of this method with the code editor.
+    /// </summary>
+    private void InitializeComponent()
+    {
+      hScrollBar1 = new HScrollBar();
+      groupBox1 = new System.Windows.Forms.GroupBox();
+      radioButton2 = new System.Windows.Forms.RadioButton();
+      radioButton1 = new System.Windows.Forms.RadioButton();
+      checkBox1 = new System.Windows.Forms.CheckBox();
+      checkBox2 = new System.Windows.Forms.CheckBox();
+      comboBox1 = new ComboBox();
+      panel1.SuspendLayout();
+      chartContainer.SuspendLayout();
+      groupBox1.SuspendLayout();
+      SuspendLayout();
+      // 
+      // textBox1
+      // 
+      textBox1.Size = new Size(1114, 73);
+      textBox1.Text = "Sankey Series";
+      // 
+      // panel1
+      // 
+      panel1.Controls.Add(comboBox1);
+      panel1.Controls.Add(checkBox2);
+      panel1.Controls.Add(checkBox1);
+      panel1.Controls.Add(groupBox1);
+      panel1.Controls.Add(hScrollBar1);
+      panel1.Size = new Size(1114, 82);
+      // 
+      // tChart1
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      tChart1.Header.Brush.Gradient.UseMiddle = true;
+      // 
+      // 
+      // 
+      tChart1.Header.Font.Size = 14;
+      tChart1.Header.Font.SizeFloat = 14F;
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      tChart1.Legend.Brush.Gradient.UseMiddle = true;
+      tChart1.Legend.CheckBoxes = false;
+      tChart1.Legend.ClipText = false;
+      tChart1.Legend.Visible = false;
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      tChart1.Panel.Bevel.Outer = Drawing.BevelStyles.Raised;
+      tChart1.Size = new Size(1114, 378);
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      tChart1.Walls.Bottom.Brush.Gradient.UseMiddle = true;
+      tChart1.Walls.Bottom.Visible = false;
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      tChart1.Walls.Left.Brush.Gradient.UseMiddle = true;
+      tChart1.Walls.Left.Visible = false;
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      tChart1.Walls.Right.Brush.Gradient.UseMiddle = true;
+      // 
+      // 
+      // 
+      // 
+      // 
+      // 
+      tChart1.Zoom.Brush.Color = Color.FromArgb(127, 0, 0, 255);
+      tChart1.Zoom.Brush.Visible = false;
+      // 
+      // chartContainer
+      // 
+      chartContainer.Location = new Point(0, 155);
+      chartContainer.Size = new Size(1114, 378);
+      // 
+      // hScrollBar1
+      // 
+      hScrollBar1.Location = new Point(19, 43);
+      hScrollBar1.Name = "hScrollBar1";
+      hScrollBar1.Size = new Size(208, 27);
+      hScrollBar1.TabIndex = 0;
+      hScrollBar1.ValueChanged += hScrollBar1_ValueChanged;
+      // 
+      // groupBox1
+      // 
+      groupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+      groupBox1.Controls.Add(radioButton2);
+      groupBox1.Controls.Add(radioButton1);
+      groupBox1.Location = new Point(257, 6);
+      groupBox1.Name = "groupBox1";
+      groupBox1.Size = new Size(193, 64);
+      groupBox1.TabIndex = 1;
+      groupBox1.TabStop = false;
+      groupBox1.Text = "groupBox1";
+      // 
+      // radioButton2
+      // 
+      radioButton2.AutoSize = true;
+      radioButton2.Location = new Point(27, 41);
+      radioButton2.Name = "radioButton2";
+      radioButton2.Size = new Size(65, 21);
+      radioButton2.TabIndex = 1;
+      radioButton2.TabStop = true;
+      radioButton2.Text = "mouse";
+      radioButton2.UseVisualStyleBackColor = true;
+      // 
+      // radioButton1
+      // 
+      radioButton1.AutoSize = true;
+      radioButton1.Checked = true;
+      radioButton1.Location = new Point(27, 19);
+      radioButton1.Name = "radioButton1";
+      radioButton1.Size = new Size(50, 21);
+      radioButton1.TabIndex = 0;
+      radioButton1.TabStop = true;
+      radioButton1.Text = "click";
+      radioButton1.UseVisualStyleBackColor = true;
+      radioButton1.CheckedChanged += radioButton1_CheckedChanged;
+      // 
+      // checkBox1
+      // 
+      checkBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+      checkBox1.AutoSize = true;
+      checkBox1.Location = new Point(467, 19);
+      checkBox1.Name = "checkBox1";
+      checkBox1.Size = new Size(79, 21);
+      checkBox1.TabIndex = 2;
+      checkBox1.Text = "Highlight";
+      checkBox1.UseVisualStyleBackColor = false;
+      checkBox1.CheckedChanged += checkBox1_CheckedChanged;
+      // 
+      // checkBox2
+      // 
+      checkBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+      checkBox2.AutoSize = true;
+      checkBox2.Checked = true;
+      checkBox2.CheckState = CheckState.Checked;
+      checkBox2.Location = new Point(467, 43);
+      checkBox2.Name = "checkBox2";
+      checkBox2.Size = new Size(99, 21);
+      checkBox2.TabIndex = 3;
+      checkBox2.Text = "labels in/out";
+      checkBox2.UseVisualStyleBackColor = false;
+      checkBox2.CheckedChanged += checkBox2_CheckedChanged;
+      // 
+      // comboBox1
+      // 
+      comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+      comboBox1.FormattingEnabled = true;
+      comboBox1.Items.AddRange(new object[] { "data 1", "data 2", "data 3", "data 4" });
+      comboBox1.Location = new Point(19, 19);
+      comboBox1.Name = "comboBox1";
+      comboBox1.Size = new Size(121, 25);
+      comboBox1.TabIndex = 4;
+      comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+      // 
+      // Sankey_Series
+      // 
+      ClientSize = new Size(1114, 533);
+      Name = "Sankey_Series";
+      panel1.ResumeLayout(false);
+      panel1.PerformLayout();
+      chartContainer.ResumeLayout(false);
+      groupBox1.ResumeLayout(false);
+      groupBox1.PerformLayout();
+      ResumeLayout(false);
+      PerformLayout();
 
-}
+    }
 
-#endregion
+    #endregion
 
     public Sankey_Series()
     {
@@ -313,7 +281,7 @@ namespace Steema.TeeChart.Samples
             sdiag.FirstAndLastLabelPosition = FirstAndLastLabelPosition.Inward;
 
             //tChart1.Chart.Title.Visible = false;
-            this.textBox1.Visible = false;
+            //this.textBox1.Visible = false;
             this.comboBox1.SelectedIndex = 2;
             hScrollBar1.Value = hScrollBar1.Maximum / 2;
 
@@ -336,6 +304,7 @@ namespace Steema.TeeChart.Samples
         }
 
         private bool sankeyShowLabels;
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Content)]
         public bool SankeyShowLabels
         {
           get
@@ -352,6 +321,7 @@ namespace Steema.TeeChart.Samples
         }
 
         private double sankeyLinkCurvature;
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Content)]
         public double SankeyLinkCurvature
         {
           get
@@ -479,7 +449,6 @@ namespace Steema.TeeChart.Samples
         new SankeyData("A1", "B2", 2),
         new SankeyData("B1", "C1", 8),
         new SankeyData("B2", "C1", 4),
-        new SankeyData("A2", "B2", 7),
         new SankeyData("B2", "C2", 2),
       };
 
@@ -539,20 +508,6 @@ namespace Steema.TeeChart.Samples
       tChart1.Chart.CancelMouse = true;
     }
 
-    int counter = 0;
-
-    private void tChart1_AfterDraw(object sender, Steema.TeeChart.Drawing.Graphics3D g)
-    {
-      counter++;            
-      //g.Font.Color = Color.White;
-      //g.TextOut(10, 10, counter.ToString());
-    }
-
-    private void tChart1_MouseMove(object sender, MouseEventArgs e)
-    {
-      //sdiag.Sankey_Click(sender, e);
-    }
-
     private void setData(List<SankeyData> data)
     {
       sdiag.Clear();
@@ -566,7 +521,6 @@ namespace Steema.TeeChart.Samples
       checkBox2.Checked = true;
 
       sdiag.initialize(tChart1.Chart);
-      //sdiag = new Sankey(tChart1.Chart);
       sdiag.Add(data);
       sdiag.Invalidate();
 
@@ -612,29 +566,6 @@ namespace Steema.TeeChart.Samples
         sdiag.FirstAndLastLabelPosition = FirstAndLastLabelPosition.Outward;
 
       tChart1.Invalidate();
-    }
-
-    private void tChart1_BeforeDrawAxes(object sender, Steema.TeeChart.Drawing.Graphics3D g)
-    {
-      Steema.TeeChart.Styles.Line line1 = new Steema.TeeChart.Styles.Line();
-      Steema.TeeChart.Styles.Line line2 = new Steema.TeeChart.Styles.Line();
-      Steema.TeeChart.Styles.Line line3 = new Steema.TeeChart.Styles.Line();
-
-      tChart1.Series.Add(line1);
-      tChart1.Series.Add(line2);
-      tChart1.Series.Add(line3);
-
-      tChart1.Invalidate();
-    }
-
-    private void tChart1_BeforeDraw(object sender, Steema.TeeChart.Drawing.Graphics3D g)
-    {
-
-    }
-
-    private void tChart1_BeforeDrawSeries(object sender, Steema.TeeChart.Drawing.Graphics3D g)
-    {
-
     }
   }
 }

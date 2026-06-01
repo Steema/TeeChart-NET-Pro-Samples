@@ -1,7 +1,9 @@
-using System;
-using System.Drawing;
 using Steema.TeeChart.Drawing;
 using Steema.TeeChart.Styles;
+using System;
+using System.ComponentModel;
+using System.ComponentModel.Design.Serialization;
+using System.Drawing;
 
 namespace Steema.TeeChart.Samples
 {
@@ -18,6 +20,7 @@ namespace Steema.TeeChart.Samples
     public BarSize(Chart c) : base(c) 
     { 
       sizeValues=new ValueList(this,"xSize");
+      //sizeValues.UpperName = sizeValues.Name.ToUpper();
     }
 
     private void InternalCalcBarSize(int valueIndex)
@@ -43,7 +46,9 @@ namespace Steema.TeeChart.Samples
       // Call default Bar drawing method.
       base.DrawValue(valueIndex);
     }
-    
+
+
+    [DesignerSerializationVisibility(DesignerSerializationVisibility.Content)]
     public ValueList SizeValues 
     {
       get { return sizeValues; }
