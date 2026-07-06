@@ -1,0 +1,24 @@
+body
+{
+	font-family: Arial;
+	font-size: 9pt;
+}
+.ContentItem
+{
+	font-family: Arial;
+	font-size: 9pt;
+}
+.IndexItem
+{
+	font-family: Arial;
+	font-size: 9pt;
+}
+
+.ContentItem:active
+{
+	color: #0000CC;
+}
+.ContentItem:hover
+{
+	color: #FF0000;
+}

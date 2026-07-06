@@ -1,0 +1,1092 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1A2AE95C-46AE-4CC9-B410-02FD78882EBB}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebDemo</RootNamespace>
+    <AssemblyName>WebDemo</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=10.0.0.8, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.10.0.8\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PdfSharp, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>packages\PDFsharp.1.50.5147\lib\net20\PdfSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp.Charting, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>packages\PDFsharp.1.50.5147\lib\net20\PdfSharp.Charting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.6.1\lib\net462\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.IO.Pipelines, Version=10.0.0.8, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.Pipelines.10.0.8\lib\net462\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.6.3\lib\net462\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.6.1\lib\net462\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.6.1.2\lib\net462\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=10.0.0.8, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Encodings.Web.10.0.8\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=10.0.0.8, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Json.10.0.8\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.4.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Tasks.Extensions.4.6.3\lib\net462\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap">
+      <HintPath>packages\AspNet.ScriptManager.bootstrap.3.3.7\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>packages\AspNet.ScriptManager.jQuery.3.3.1\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="TeeChart, Version=4.2026.7.3, Culture=neutral, PublicKeyToken=9c8126276c77bdb7, processorArchitecture=MSIL">
+      <HintPath>packages\Steema.TeeChart.NET.4.2026.7.3\lib\net48\TeeChart.dll</HintPath>
+    </Reference>
+    <Reference Include="TeeChart.WPF, Version=4.2026.7.3, Culture=neutral, PublicKeyToken=98e8c3f289a4e286, processorArchitecture=MSIL">
+      <HintPath>packages\Steema.TeeChart.NET.4.2026.7.3\lib\net48\TeeChart.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="TeeChart.Xaml.WPF, Version=4.2026.7.3, Culture=neutral, PublicKeyToken=9406d226170aa089, processorArchitecture=MSIL">
+      <HintPath>packages\Steema.TeeChart.NET.4.2026.7.3\lib\net48\TeeChart.Xaml.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="App_Data\PublishProfiles\FolderProfile.pubxml.user" />
+    <Content Include="App_Data\PublishProfiles\IISProfile.pubxml.user" />
+    <Content Include="Chart Styles\Extended\contourchart.aspx" />
+    <Content Include="Chart Styles\Extended\donutchart.aspx" />
+    <Content Include="Chart Styles\Extended\point3dchart.aspx" />
+    <Content Include="Chart Styles\Extended\polarchart.aspx" />
+    <Content Include="Chart Styles\Extended\pyramidchart.aspx" />
+    <Content Include="Chart Styles\Extended\radarchart.aspx" />
+    <Content Include="Chart Styles\Extended\smithchart.aspx" />
+    <Content Include="Chart Styles\Extended\surfacechart.aspx" />
+    <Content Include="Chart Styles\Extended\towerchart.aspx" />
+    <Content Include="Chart Styles\Extended\trisurfacechart.aspx" />
+    <Content Include="Chart Styles\Financial\candlechart.aspx" />
+    <Content Include="Chart Styles\Financial\darvaschart.aspx" />
+    <Content Include="Chart Styles\Financial\equivolume.aspx" />
+    <Content Include="Chart Styles\Financial\indicators.aspx" />
+    <Content Include="Chart Styles\Financial\kagichart.aspx" />
+    <Content Include="Chart Styles\Financial\pointfigurechart.aspx" />
+    <Content Include="Chart Styles\Financial\renkochart.aspx" />
+    <Content Include="Chart Styles\Financial\volumechart.aspx" />
+    <Content Include="Chart Styles\Other\bar3dchart.aspx" />
+    <Content Include="Chart Styles\Other\barjoinchart.aspx" />
+    <Content Include="Chart Styles\Other\calendarchart.aspx" />
+    <Content Include="Chart Styles\Other\clockchart.aspx" />
+    <Content Include="Chart Styles\Standard\bubblechart.aspx" />
+    <Content Include="Chart Styles\Standard\fastlinechart.aspx" />
+    <Content Include="Chart Styles\Standard\piechart.aspx" />
+    <Content Include="Chart Styles\Standard\shapechart.aspx" />
+    <Content Include="Chart Styles\Standard\vhareachart.aspx" />
+    <Content Include="Chart Styles\Standard\vhbarchart.aspx" />
+    <Content Include="Chart Styles\Standard\vhlinechart.aspx" />
+    <Content Include="Chart Styles\Statistical\colorgridchart.aspx" />
+    <Content Include="Chart Styles\Statistical\errorbarchart.aspx" />
+    <Content Include="Chart Styles\Statistical\errorchart.aspx" />
+    <Content Include="Chart Styles\Statistical\funnelchart.aspx" />
+    <Content Include="Chart Styles\Statistical\highlowchart.aspx" />
+    <Content Include="Chart Styles\Statistical\vhboxplotchart.aspx" />
+    <Content Include="Chart Styles\Statistical\vhhistogramchart.aspx" />
+    <Content Include="Chart Styles\Statistical\volumepipechart.aspx" />
+    <Content Include="Chart Styles\Statistical\waterfallchart.aspx" />
+    <Content Include="Codes\code.aspx" />
+    <Content Include="Content2.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="ContentIdx.aspx" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="css\animate.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\buttons\buttons.css" />
+    <Content Include="css\buttons\social-icons-codes.css" />
+    <Content Include="css\buttons\social-icons-embedded.css" />
+    <Content Include="css\buttons\social-icons-ie7-codes.css" />
+    <Content Include="css\buttons\social-icons-ie7.css" />
+    <Content Include="css\buttons\social-icons.css" />
+    <Content Include="css\codemirror.css" />
+    <Content Include="css\customizer\elements-pages-customizer.css" />
+    <Content Include="css\customizer\home-pages-customizer.css" />
+    <Content Include="css\customizer\pages-pages-customizer.css" />
+    <Content Include="css\customizer\pages.css" />
+    <Content Include="css\customizer\shop-2-pages-customizer.css" />
+    <Content Include="css\customizer\shop-5-pages-customizer.css" />
+    <Content Include="css\customizer\shop-6-pages-customizer.css" />
+    <Content Include="css\customizer\shop-8-pages-customizer.css" />
+    <Content Include="css\customizer\shop-pages-customizer.css" />
+    <Content Include="css\datepicker.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\ie\ie.css" />
+    <Content Include="css\ie\ie8.css" />
+    <Content Include="css\jplayer\skin\blue.monday\jplayer.blue.monday.css" />
+    <Content Include="css\jplayer\skin\blue.monday\jplayer.blue.monday.jpg" />
+    <Content Include="css\jplayer\skin\blue.monday\jplayer.blue.monday.seeking.gif" />
+    <Content Include="css\jplayer\skin\blue.monday\jplayer.blue.monday.video.play.png" />
+    <Content Include="css\jplayer\skin\circle.skin\bgr.jpg" />
+    <Content Include="css\jplayer\skin\circle.skin\buffer.png" />
+    <Content Include="css\jplayer\skin\circle.skin\circle.player.css" />
+    <Content Include="css\jplayer\skin\circle.skin\controls.jpg" />
+    <Content Include="css\jplayer\skin\circle.skin\progress.png" />
+    <Content Include="css\jplayer\skin\circle.skin\progress_sprite.jpg" />
+    <Content Include="css\jplayer\skin\pink.flag\jplayer.pink.flag.css" />
+    <Content Include="css\jplayer\skin\pink.flag\jplayer.pink.flag.jpg" />
+    <Content Include="css\jplayer\skin\pink.flag\jplayer.pink.flag.seeking.gif" />
+    <Content Include="css\jplayer\skin\pink.flag\jplayer.pink.flag.video.play.png" />
+    <Content Include="css\jquery.fancybox.css" />
+    <Content Include="css\jquery.scrollbar.css" />
+    <Content Include="css\jslider.css" />
+    <Content Include="css\ladda.min.css" />
+    <Content Include="css\layerslider\css\blank.gif" />
+    <Content Include="css\layerslider\layerslider.css" />
+    <Content Include="css\layerslider\skins\borderlessdark3d\loading.gif" />
+    <Content Include="css\layerslider\skins\borderlessdark3d\nothumb.png" />
+    <Content Include="css\layerslider\skins\borderlessdark3d\shadow.png" />
+    <Content Include="css\layerslider\skins\borderlessdark3d\skin.css" />
+    <Content Include="css\layerslider\skins\borderlessdark3d\skin.png" />
+    <Content Include="css\layerslider\skins\borderlessdark\loading.gif" />
+    <Content Include="css\layerslider\skins\borderlessdark\nothumb.png" />
+    <Content Include="css\layerslider\skins\borderlessdark\shadow.png" />
+    <Content Include="css\layerslider\skins\borderlessdark\skin.css" />
+    <Content Include="css\layerslider\skins\borderlessdark\skin.png" />
+    <Content Include="css\layerslider\skins\borderlesslight3d\loading.gif" />
+    <Content Include="css\layerslider\skins\borderlesslight3d\nothumb.png" />
+    <Content Include="css\layerslider\skins\borderlesslight3d\shadow.png" />
+    <Content Include="css\layerslider\skins\borderlesslight3d\skin.css" />
+    <Content Include="css\layerslider\skins\borderlesslight3d\skin.png" />
+    <Content Include="css\layerslider\skins\borderlesslight\loading.gif" />
+    <Content Include="css\layerslider\skins\borderlesslight\nothumb.png" />
+    <Content Include="css\layerslider\skins\borderlesslight\shadow.png" />
+    <Content Include="css\layerslider\skins\borderlesslight\skin.css" />
+    <Content Include="css\layerslider\skins\borderlesslight\skin.png" />
+    <Content Include="css\layerslider\skins\carousel\loading.gif" />
+    <Content Include="css\layerslider\skins\carousel\nothumb.png" />
+    <Content Include="css\layerslider\skins\carousel\skin.css" />
+    <Content Include="css\layerslider\skins\carousel\skin.png" />
+    <Content Include="css\layerslider\skins\darkskin\loading.gif" />
+    <Content Include="css\layerslider\skins\darkskin\nothumb.png" />
+    <Content Include="css\layerslider\skins\darkskin\skin.css" />
+    <Content Include="css\layerslider\skins\darkskin\skin.png" />
+    <Content Include="css\layerslider\skins\defaultskin\loading.gif" />
+    <Content Include="css\layerslider\skins\defaultskin\nothumb.png" />
+    <Content Include="css\layerslider\skins\defaultskin\skin.css" />
+    <Content Include="css\layerslider\skins\defaultskin\skin.png" />
+    <Content Include="css\layerslider\skins\fullwidthdark\loading.gif" />
+    <Content Include="css\layerslider\skins\fullwidthdark\nothumb.png" />
+    <Content Include="css\layerslider\skins\fullwidthdark\skin.css" />
+    <Content Include="css\layerslider\skins\fullwidthdark\skin.png" />
+    <Content Include="css\layerslider\skins\fullwidth\loading.gif" />
+    <Content Include="css\layerslider\skins\fullwidth\nothumb.png" />
+    <Content Include="css\layerslider\skins\fullwidth\skin.css" />
+    <Content Include="css\layerslider\skins\fullwidth\skin.png" />
+    <Content Include="css\layerslider\skins\glass\loading.gif" />
+    <Content Include="css\layerslider\skins\glass\nothumb.png" />
+    <Content Include="css\layerslider\skins\glass\shadow.png" />
+    <Content Include="css\layerslider\skins\glass\skin.css" />
+    <Content Include="css\layerslider\skins\glass\skin.png" />
+    <Content Include="css\layerslider\skins\lightskin\loading.gif" />
+    <Content Include="css\layerslider\skins\lightskin\nothumb.png" />
+    <Content Include="css\layerslider\skins\lightskin\skin.css" />
+    <Content Include="css\layerslider\skins\lightskin\skin.png" />
+    <Content Include="css\layerslider\skins\minimal\loading.gif" />
+    <Content Include="css\layerslider\skins\minimal\nothumb.png" />
+    <Content Include="css\layerslider\skins\minimal\skin.css" />
+    <Content Include="css\layerslider\skins\minimal\skin.png" />
+    <Content Include="css\layerslider\skins\noskin\loading.gif" />
+    <Content Include="css\layerslider\skins\noskin\nothumb.png" />
+    <Content Include="css\layerslider\skins\noskin\skin.css" />
+    <Content Include="css\layerslider\skins\noskin\skin.png" />
+    <Content Include="css\layerslider\skins\v5\loading.gif" />
+    <Content Include="css\layerslider\skins\v5\nothumb.png" />
+    <Content Include="css\layerslider\skins\v5\skin.css" />
+    <Content Include="css\layerslider\skins\v5\skin.png" />
+    <Content Include="css\morris.css" />
+    <Content Include="css\responsive.css" />
+    <Content Include="css\royalslider\royalslider.css" />
+    <Content Include="css\royalslider\skins\default-inverted\rs-default-inverted.css" />
+    <Content Include="css\royalslider\skins\default-inverted\rs-default-inverted.png" />
+    <Content Include="css\royalslider\skins\default\rs-default.css" />
+    <Content Include="css\royalslider\skins\default\rs-default.png" />
+    <Content Include="css\royalslider\skins\minimal-white\rs-minimal-white.css" />
+    <Content Include="css\royalslider\skins\minimal-white\rs-minimal-white.png" />
+    <Content Include="css\royalslider\skins\preloaders\preloader-white.gif" />
+    <Content Include="css\royalslider\skins\preloaders\preloader.gif" />
+    <Content Include="css\royalslider\skins\universal\rs-universal.css" />
+    <Content Include="css\royalslider\skins\universal\rs-universal.png" />
+    <Content Include="css\settings.css" />
+    <Content Include="css\style-child.bak03.css" />
+    <Content Include="css\style-child.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\stylesortable.css" />
+    <Content Include="css\video-js.min.css" />
+    <Content Include="Datasets\designtime.aspx" />
+    <Content Include="Datasets\runtimedataset.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="DemoSamplePage.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Flash\flexflash.aspx" />
+    <Content Include="Flash\FlexFlashChart.swf" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Footer.aspx" />
+    <Content Include="FrameNavigation.htm" />
+    <Content Include="FrameSample.htm" />
+    <Content Include="Gauges\ActivityGauge.aspx" />
+    <Content Include="Gauges\CircularGauge.aspx" />
+    <Content Include="Gauges\KnobGauge.aspx" />
+    <Content Include="Gauges\LinearGauge.aspx" />
+    <Content Include="Gauges\VerticalGauge.aspx" />
+    <Content Include="GetChart.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="App_Data\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="App_Data\PublishProfiles\IISProfile.pubxml" />
+    <Content Include="Header.htm" />
+    <Content Include="HeaderSampleTitle.aspx" />
+    <Content Include="index.aspx" />
+    <Content Include="Interacting with Charts\Mapping\Maps\USAStates.dbf" />
+    <Content Include="Interacting with Charts\Mapping\Maps\USAStates.shp" />
+    <Content Include="Interacting with Charts\Mapping\Maps\USAStates.shx" />
+    <Content Include="Interacting with Charts\Mapping\Maps\World.dbf" />
+    <Content Include="Interacting with Charts\Mapping\Maps\World.shp" />
+    <Content Include="Interacting with Charts\Mapping\Maps\World.shx" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Images\chip.png" />
+    <Content Include="Images\closed.png" />
+    <Content Include="Images\download.png" />
+    <Content Include="Images\ImSpacer.png" />
+    <Content Include="Images\logos\SteemaLogo190x81.jpg" />
+    <Content Include="Images\logos\TeeChartLogo205x81.jpg" />
+    <Content Include="Images\maq.png" />
+    <Content Include="Images\opened.png" />
+    <Content Include="Images\Overview.png" />
+    <Content Include="Images\sample.png" />
+    <Content Include="Images\shop.png" />
+    <Content Include="Images\steelog.gif" />
+    <Content Include="Interacting with Charts\Chart as Image\seriestypes.aspx" />
+    <Content Include="Interacting with Charts\Chart as Image\showseries.aspx" />
+    <Content Include="Interacting with Charts\Chart events\afterdrawimageandtextchart.aspx" />
+    <Content Include="Interacting with Charts\Chart events\getaxislabelchart.aspx" />
+    <Content Include="Interacting with Charts\Chart events\getlegendchart.aspx" />
+    <Content Include="Interacting with Charts\Drill Down\AggregationAndDrillDown\aggregationanddrilldownchart.aspx" />
+    <Content Include="Interacting with Charts\Drill Down\AggregationAndDrillDown\showseries.aspx" />
+    <Content Include="Interacting with Charts\Drill Down\SegmentingPies\segmentingpieschart.aspx" />
+    <Content Include="Interacting with Charts\Drill Down\SendingClicksCodeBehind\sendingclickscodebehindchart.aspx" />
+    <Content Include="Interacting with Charts\Drill Down\URLLinking\urllinkingchart.aspx" />
+    <Content Include="Interacting with Charts\JScript-HTML5 Live Charts\Introduction.aspx" />
+    <Content Include="Interacting with Charts\JScript-HTML5 Live Charts\JActivityGauge.aspx" />
+    <Content Include="Interacting with Charts\JScript-HTML5 Live Charts\JBarChart.aspx" />
+    <Content Include="Interacting with Charts\JScript-HTML5 Live Charts\JBubbleChart.aspx" />
+    <Content Include="Interacting with Charts\JScript-HTML5 Live Charts\JCandleChart.aspx" />
+    <Content Include="Interacting with Charts\JScript-HTML5 Live Charts\JCircularGauge.aspx" />
+    <Content Include="Interacting with Charts\JScript-HTML5 Live Charts\JDrillDown.aspx" />
+    <Content Include="Interacting with Charts\JScript-HTML5 Live Charts\JLineChart.aspx" />
+    <Content Include="Interacting with Charts\JScript-HTML5 Live Charts\JPieChart.aspx" />
+    <Content Include="Interacting with Charts\JScript-HTML5 Live Charts\JPointsChart.aspx" />
+    <Content Include="Interacting with Charts\JScript-HTML5 Live Charts\JScrollerChart.aspx" />
+    <Content Include="Interacting with Charts\Mapping\mapheader.aspx" />
+    <Content Include="Interacting with Charts\Mapping\mapindex.htm" />
+    <Content Include="Interacting with Charts\Mapping\Maps\Coordinates.mdb" />
+    <Content Include="Interacting with Charts\Mapping\Maps\USACities.txt" />
+    <Content Include="Interacting with Charts\Mapping\Maps\WorldCities.txt" />
+    <Content Include="Interacting with Charts\Mapping\teemapweb.aspx" />
+    <Content Include="Interacting with Charts\Mouseover Hints\ClickElements\clickelementschart.aspx" />
+    <Content Include="Interacting with Charts\Mouseover Hints\CustomisingMouseoverMarks\customisingmouseovermarkschart.aspx" />
+    <Content Include="Interacting with Charts\Mouseover Hints\CustomisingMouseoverMarks\images\image1.GIF" />
+    <Content Include="Interacting with Charts\Mouseover Hints\CustomisingMouseoverMarks\images\image2.GIF" />
+    <Content Include="Interacting with Charts\Mouseover Hints\CustomisingMouseoverMarks\images\image3.GIF" />
+    <Content Include="Interacting with Charts\Mouseover Hints\CustomisingMouseoverMarks\showchart.aspx" />
+    <Content Include="Interacting with Charts\Mouseover Hints\ModifyStandardMarkText\modifystandardmarktextchart.aspx" />
+    <Content Include="Interacting with Charts\Mouseover Hints\standardmouseovermarkformatschart.aspx" />
+    <Content Include="Interacting with Charts\Mouseover Hints\triggertestingmouseovermarkscontentchart.aspx" />
+    <Content Include="Interacting with Charts\Scrolling\scrolltool.aspx" />
+    <Content Include="Interacting with Charts\Zooming\webappzoomchart.aspx" />
+    <Content Include="Overview\Overview.htm" />
+    <Content Include="SampleList.xml" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Site.Master" />
+    <Content Include="Styles\ContentStyles.css" />
+    <Content Include="Styles\ItemsStyles.css" />
+    <Content Include="TabSample.htm" />
+    <Content Include="TabTree.htm" />
+    <Content Include="Tree.htm" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Web.config" />
+    <Content Include="Bundle.config" />
+    <Content Include="Site.Mobile.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Code\AssemblyInfo.cs" />
+    <Content Include="App_Code\Chart Styles\Extended\GridSUtil.cs" />
+    <Compile Include="App_Code\DemoSamplePage.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Content Include="App_Code\Interacting with Charts\Mapping\TeeSHP.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Chart Styles\Extended\ContourChart.aspx.cs">
+      <DependentUpon>contourchart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Chart Styles\Extended\DonutChart.aspx.cs">
+      <DependentUpon>donutchart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Chart Styles\Extended\Point3DChart.aspx.cs">
+      <DependentUpon>point3dchart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Chart Styles\Extended\PolarChart.aspx.cs">
+      <DependentUpon>polarchart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Chart Styles\Extended\PyramidChart.aspx.cs">
+      <DependentUpon>pyramidchart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Chart Styles\Extended\RadarChart.aspx.cs">
+      <DependentUpon>radarchart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Chart Styles\Extended\SmithChart.aspx.cs">
+      <DependentUpon>smithchart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Chart Styles\Extended\SurfaceChart.aspx.cs">
+      <DependentUpon>surfacechart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Chart Styles\Extended\TowerChart.aspx.cs">
+      <DependentUpon>towerchart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Chart Styles\Extended\TriSurfaceChart.aspx.cs">
+      <DependentUpon>trisurfacechart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Chart Styles\Financial\CandleChart.aspx.cs">
+      <DependentUpon>candlechart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Chart Styles\Financial\darvaschart.aspx.cs">
+      <DependentUpon>darvaschart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Chart Styles\Financial\equivolume.aspx.cs">
+      <DependentUpon>equivolume.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Chart Styles\Financial\indicators.aspx.cs">
+      <DependentUpon>indicators.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Chart Styles\Financial\kagichart.aspx.cs">
+      <DependentUpon>kagichart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Chart Styles\Financial\PointFigureChart.aspx.cs">
+      <DependentUpon>pointfigurechart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Chart Styles\Financial\renkochart.aspx.cs">
+      <DependentUpon>renkochart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Chart Styles\Financial\VolumeChart.aspx.cs">
+      <DependentUpon>volumechart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Chart Styles\Other\Bar3DChart.aspx.cs">
+      <DependentUpon>bar3dchart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Chart Styles\Other\BarJoinChart.aspx.cs">
+      <DependentUpon>barjoinchart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Chart Styles\Other\CalendarChart.aspx.cs">
+      <DependentUpon>calendarchart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Chart Styles\Other\ClockChart.aspx.cs">
+      <DependentUpon>clockchart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Chart Styles\Standard\BubbleChart.aspx.cs">
+      <DependentUpon>bubblechart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Chart Styles\Standard\FastLineChart.aspx.cs">
+      <DependentUpon>fastlinechart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Chart Styles\Standard\PieChart.aspx.cs">
+      <DependentUpon>piechart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Chart Styles\Standard\ShapeChart.aspx.cs">
+      <DependentUpon>shapechart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Chart Styles\Standard\VHAreaChart.aspx.cs">
+      <DependentUpon>vhareachart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Chart Styles\Standard\VHBarChart.aspx.cs">
+      <DependentUpon>vhbarchart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Chart Styles\Standard\VHLineChart.aspx.cs">
+      <DependentUpon>vhlinechart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Chart Styles\Statistical\ColorGridChart.aspx.cs">
+      <DependentUpon>colorgridchart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Chart Styles\Statistical\ErrorBarChart.aspx.cs">
+      <DependentUpon>errorbarchart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Chart Styles\Statistical\ErrorChart.aspx.cs">
+      <DependentUpon>errorchart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Chart Styles\Statistical\FunnelChart.aspx.cs">
+      <DependentUpon>funnelchart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Chart Styles\Statistical\HighLowChart.aspx.cs">
+      <DependentUpon>highlowchart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Chart Styles\Statistical\VHBoxPlotChart.aspx.cs">
+      <DependentUpon>vhboxplotchart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Chart Styles\Statistical\VHHistogramChart.aspx.cs">
+      <DependentUpon>vhhistogramchart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Chart Styles\Statistical\volumepipechart.aspx.cs">
+      <DependentUpon>volumepipechart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Chart Styles\Statistical\WaterfallChart.aspx.cs">
+      <DependentUpon>waterfallchart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Codes\Code.aspx.cs">
+      <DependentUpon>code.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Codes\SourceUtils.cs" />
+    <Compile Include="Content2.aspx.cs">
+      <DependentUpon>Content2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Content2.aspx.designer.cs">
+      <DependentUpon>Content2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContentIdx.aspx.cs">
+      <DependentUpon>ContentIdx.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Datasets\designtime.aspx.cs">
+      <DependentUpon>designtime.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Datasets\runtimedataset.aspx.cs">
+      <DependentUpon>runtimedataset.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Flash\flexflash.aspx.cs">
+      <DependentUpon>flexflash.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Footer.aspx.cs">
+      <DependentUpon>Footer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gauges\ActivityGauge.aspx.cs">
+      <DependentUpon>ActivityGauge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gauges\CircularGauge.aspx.cs">
+      <DependentUpon>CircularGauge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gauges\KnobGauge.aspx.cs">
+      <DependentUpon>KnobGauge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gauges\LinearGauge.aspx.cs">
+      <DependentUpon>LinearGauge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gauges\VerticalGauge.aspx.cs">
+      <DependentUpon>VerticalGauge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GetChart.aspx.cs">
+      <DependentUpon>GetChart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="HeaderSampleTitle.aspx.cs">
+      <DependentUpon>HeaderSampleTitle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interacting with Charts\Chart as Image\SeriesTypes.aspx.cs">
+      <DependentUpon>seriestypes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interacting with Charts\Chart as Image\ShowSeries.aspx.cs">
+      <DependentUpon>showseries.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interacting with Charts\Chart events\AfterDrawImageAndTextChart.aspx.cs">
+      <DependentUpon>afterdrawimageandtextchart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interacting with Charts\Chart events\GetAxisLabelChart.aspx.cs">
+      <DependentUpon>getaxislabelchart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interacting with Charts\Chart events\GetLegendChart.aspx.cs">
+      <DependentUpon>getlegendchart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interacting with Charts\Drill Down\AggregationAndDrillDown\AggregationAndDrillDownChart.aspx.cs">
+      <DependentUpon>aggregationanddrilldownchart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interacting with Charts\Drill Down\AggregationAndDrillDown\ShowSeries.aspx.cs">
+      <DependentUpon>showseries.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interacting with Charts\Drill Down\SegmentingPies\SegmentingPiesChart.aspx.cs">
+      <DependentUpon>segmentingpieschart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interacting with Charts\Drill Down\SendingClicksCodeBehind\SendingClicksCodeBehindChart.aspx.cs">
+      <DependentUpon>sendingclickscodebehindchart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interacting with Charts\Drill Down\URLLinking\URLLinkingChart.aspx.cs">
+      <DependentUpon>urllinkingchart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interacting with Charts\JScript-HTML5 Live Charts\Introduction.aspx.cs">
+      <DependentUpon>Introduction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interacting with Charts\JScript-HTML5 Live Charts\JActivityGauge.aspx.cs">
+      <DependentUpon>JActivityGauge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interacting with Charts\JScript-HTML5 Live Charts\JBarChart.aspx.cs">
+      <DependentUpon>JBarChart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interacting with Charts\JScript-HTML5 Live Charts\JBubbleChart.aspx.cs">
+      <DependentUpon>JBubbleChart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interacting with Charts\JScript-HTML5 Live Charts\JCandleChart.aspx.cs">
+      <DependentUpon>JCandleChart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interacting with Charts\JScript-HTML5 Live Charts\JCircularGauge.aspx.cs">
+      <DependentUpon>JCircularGauge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interacting with Charts\JScript-HTML5 Live Charts\JDrillDown.aspx.cs">
+      <DependentUpon>JDrillDown.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interacting with Charts\JScript-HTML5 Live Charts\JLineChart.aspx.cs">
+      <DependentUpon>JLineChart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interacting with Charts\JScript-HTML5 Live Charts\JPieChart.aspx.cs">
+      <DependentUpon>JPieChart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interacting with Charts\JScript-HTML5 Live Charts\JPointsChart.aspx.cs">
+      <DependentUpon>JPointsChart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interacting with Charts\JScript-HTML5 Live Charts\JScrollerChart.aspx.cs">
+      <DependentUpon>JScrollerChart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interacting with Charts\Mapping\MapHeader.aspx.cs">
+      <DependentUpon>mapheader.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interacting with Charts\Mapping\TeeMapWeb.aspx.cs">
+      <DependentUpon>teemapweb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interacting with Charts\Mapping\TeeSHP.cs" />
+    <Compile Include="Interacting with Charts\Mouseover Hints\ClickElements\ClickElementsChart.aspx.cs">
+      <DependentUpon>clickelementschart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interacting with Charts\Mouseover Hints\CustomisingMouseoverMarks\CustomisingMouseoverMarksChart.aspx.cs">
+      <DependentUpon>customisingmouseovermarkschart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interacting with Charts\Mouseover Hints\CustomisingMouseoverMarks\ShowChart.aspx.cs">
+      <DependentUpon>showchart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interacting with Charts\Mouseover Hints\ModifyStandardMarkText\ModifyStandardMarkTextChart.aspx.cs">
+      <DependentUpon>modifystandardmarktextchart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interacting with Charts\Mouseover Hints\StandardMouseoverMarkFormatsChart.aspx.cs">
+      <DependentUpon>standardmouseovermarkformatschart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interacting with Charts\Mouseover Hints\TriggerTestingMouseoverMarksContentChart.aspx.cs">
+      <DependentUpon>triggertestingmouseovermarkscontentchart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interacting with Charts\Scrolling\scrolltool.aspx.cs">
+      <DependentUpon>scrolltool.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interacting with Charts\Zooming\WebAppZoomChart.aspx.cs">
+      <DependentUpon>webappzoomchart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Code\Codes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Chart Styles\Extended\ContourChart.aspx.resx">
+      <DependentUpon>ContourChart.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chart Styles\Extended\DonutChart.aspx.resx">
+      <DependentUpon>DonutChart.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chart Styles\Extended\Point3DChart.aspx.resx">
+      <DependentUpon>Point3DChart.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chart Styles\Extended\PolarChart.aspx.resx">
+      <DependentUpon>PolarChart.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chart Styles\Extended\PyramidChart.aspx.resx">
+      <DependentUpon>PyramidChart.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chart Styles\Extended\RadarChart.aspx.resx">
+      <DependentUpon>RadarChart.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chart Styles\Extended\SmithChart.aspx.resx">
+      <DependentUpon>SmithChart.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chart Styles\Extended\SurfaceChart.aspx.resx">
+      <DependentUpon>SurfaceChart.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chart Styles\Extended\TowerChart.aspx.resx">
+      <DependentUpon>TowerChart.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chart Styles\Extended\TriSurfaceChart.aspx.resx">
+      <DependentUpon>TriSurfaceChart.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chart Styles\Financial\CandleChart.aspx.resx">
+      <DependentUpon>CandleChart.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chart Styles\Financial\DarvasChart.aspx.resx">
+      <DependentUpon>darvaschart.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chart Styles\Financial\KagiChart.aspx.resx">
+      <DependentUpon>kagichart.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chart Styles\Financial\PointFigureChart.aspx.resx">
+      <DependentUpon>PointFigureChart.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chart Styles\Financial\RenkoChart.aspx.resx">
+      <DependentUpon>renkochart.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chart Styles\Financial\VolumeChart.aspx.resx">
+      <DependentUpon>VolumeChart.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chart Styles\Other\Bar3DChart.aspx.resx">
+      <DependentUpon>Bar3DChart.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chart Styles\Other\BarJoinChart.aspx.resx">
+      <DependentUpon>BarJoinChart.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chart Styles\Other\CalendarChart.aspx.resx">
+      <DependentUpon>CalendarChart.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chart Styles\Other\ClockChart.aspx.resx">
+      <DependentUpon>ClockChart.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chart Styles\Standard\BubbleChart.aspx.resx">
+      <DependentUpon>BubbleChart.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chart Styles\Standard\FastLineChart.aspx.resx">
+      <DependentUpon>FastLineChart.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chart Styles\Standard\PieChart.aspx.resx">
+      <DependentUpon>PieChart.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chart Styles\Standard\ShapeChart.aspx.resx">
+      <DependentUpon>ShapeChart.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chart Styles\Standard\VHAreaChart.aspx.resx">
+      <DependentUpon>VHAreaChart.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chart Styles\Standard\VHBarChart.aspx.resx">
+      <DependentUpon>VHBarChart.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chart Styles\Standard\VHLineChart.aspx.resx">
+      <DependentUpon>VHLineChart.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chart Styles\Statistical\ColorGridChart.aspx.resx">
+      <DependentUpon>ColorGridChart.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chart Styles\Statistical\ErrorBarChart.aspx.resx">
+      <DependentUpon>ErrorBarChart.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chart Styles\Statistical\ErrorChart.aspx.resx">
+      <DependentUpon>ErrorChart.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chart Styles\Statistical\FunnelChart.aspx.resx">
+      <DependentUpon>FunnelChart.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chart Styles\Statistical\HighLowChart.aspx.resx">
+      <DependentUpon>HighLowChart.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chart Styles\Statistical\VHBoxPlotChart.aspx.resx">
+      <DependentUpon>VHBoxPlotChart.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chart Styles\Statistical\VHHistogramChart.aspx.resx">
+      <DependentUpon>VHHistogramChart.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chart Styles\Statistical\VolumepipeChart.aspx.resx">
+      <DependentUpon>volumepipechart.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chart Styles\Statistical\WaterfallChart.aspx.resx">
+      <DependentUpon>WaterfallChart.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Codes\Code.aspx.resx">
+      <DependentUpon>Code.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContentIdx.aspx.resx">
+      <DependentUpon>ContentIdx.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DemoSamplePage.aspx.resx" />
+    <EmbeddedResource Include="Footer.aspx.resx">
+      <DependentUpon>Footer.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GetChart.aspx.resx">
+      <DependentUpon>GetChart.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeaderSampleTitle.aspx.resx">
+      <DependentUpon>HeaderSampleTitle.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="index.aspx.resx">
+      <DependentUpon>index.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interacting with Charts\Chart as Image\SeriesTypes.aspx.resx">
+      <DependentUpon>SeriesTypes.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interacting with Charts\Chart as Image\ShowSeries.aspx.resx">
+      <DependentUpon>ShowSeries.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interacting with Charts\Chart events\AfterDrawImageAndTextChart.aspx.resx">
+      <DependentUpon>AfterDrawImageAndTextChart.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interacting with Charts\Chart events\GetAxisLabelChart.aspx.resx">
+      <DependentUpon>GetAxisLabelChart.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interacting with Charts\Chart events\GetLegendChart.aspx.resx">
+      <DependentUpon>GetLegendChart.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interacting with Charts\Drill Down\AggregationAndDrillDown\AggregationAndDrillDownChart.aspx.resx">
+      <DependentUpon>AggregationAndDrillDownChart.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interacting with Charts\Drill Down\AggregationAndDrillDown\ShowSeries.aspx.resx">
+      <DependentUpon>ShowSeries.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interacting with Charts\Drill Down\SegmentingPies\SegmentingPiesChart.aspx.resx">
+      <DependentUpon>SegmentingPiesChart.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interacting with Charts\Drill Down\SendingClicksCodeBehind\SendingClicksCodeBehindChart.aspx.resx">
+      <DependentUpon>SendingClicksCodeBehindChart.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interacting with Charts\Drill Down\URLLinking\URLLinkingChart.aspx.resx">
+      <DependentUpon>URLLinkingChart.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interacting with Charts\Mapping\MapHeader.aspx.resx">
+      <DependentUpon>MapHeader.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interacting with Charts\Mapping\TeeMapWeb.aspx.resx">
+      <DependentUpon>TeeMapWeb.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interacting with Charts\Mouseover Hints\ClickElements\ClickElementsChart.aspx.resx">
+      <DependentUpon>ClickElementsChart.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interacting with Charts\Mouseover Hints\CustomisingMouseoverMarks\CustomisingMouseoverMarksChart.aspx.resx">
+      <DependentUpon>CustomisingMouseoverMarksChart.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interacting with Charts\Mouseover Hints\CustomisingMouseoverMarks\ShowChart.aspx.resx">
+      <DependentUpon>ShowChart.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interacting with Charts\Mouseover Hints\ModifyStandardMarkText\ModifyStandardMarkTextChart.aspx.resx">
+      <DependentUpon>ModifyStandardMarkTextChart.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interacting with Charts\Mouseover Hints\StandardMouseoverMarkFormatsChart.aspx.resx">
+      <DependentUpon>StandardMouseoverMarkFormatsChart.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interacting with Charts\Mouseover Hints\TriggerTestingMouseoverMarksContentChart.aspx.resx">
+      <DependentUpon>TriggerTestingMouseoverMarksContentChart.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interacting with Charts\Zooming\WebAppZoomChart.aspx.resx">
+      <DependentUpon>WebAppZoomChart.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3556</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:3556/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('packages\System.ValueTuple.4.6.2\build\net471\System.ValueTuple.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\System.ValueTuple.4.6.2\build\net471\System.ValueTuple.targets'))" />
+  </Target>
+  <Import Project="packages\System.ValueTuple.4.6.2\build\net471\System.ValueTuple.targets" Condition="Exists('packages\System.ValueTuple.4.6.2\build\net471\System.ValueTuple.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

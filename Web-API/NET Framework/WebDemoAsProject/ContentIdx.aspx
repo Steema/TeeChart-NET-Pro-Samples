@@ -1,0 +1,1 @@
+<%@ Page Title="Content Page" language="c#" MasterPageFile="~/Site.Master" AutoEventWireup="true" Inherits="WebDemo.ContentIDX" CodeBehind="ContentIdx.aspx.cs" %>

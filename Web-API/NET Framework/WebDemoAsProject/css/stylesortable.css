@@ -1,0 +1,28 @@
+* {	margin: 0; padding: 0; }
+
+body {
+	font: 0.9em Arial;
+	padding: 40px; 
+}
+
+#info {
+	display: block;
+	padding: 10px; margin-bottom: 20px;
+	border: 1px solid #333;
+	background-color: #efefef;
+}
+
+#test-list {
+	list-style: none;
+}
+
+#test-list li {
+	display: block;
+	padding: 20px 10px; margin-bottom: 3px;
+	background-color: #efefef;
+}
+
+#test-list li img.handle {
+	margin-right: 20px;
+	cursor: move;
+}
