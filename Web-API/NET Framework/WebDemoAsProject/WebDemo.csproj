@@ -473,6 +473,7 @@
     <Content Include="Styles\ItemsStyles.css" />
     <Content Include="TabSample.htm" />
     <Content Include="TabTree.htm" />
+    <Content Include="App_LocalResources\Steema.resx" />
     <Content Include="Tree.htm" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
