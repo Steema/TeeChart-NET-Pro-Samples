@@ -126,38 +126,38 @@ function oldResizeC(chart) {
 
 window.addEventListener('mousemove', function (evt) {
 
-    if ((hostChart != undefined) && (hostChart.tools != undefined)) {
+  if ((hostChart != undefined) && (hostChart.tools != undefined)) {
 
-        var p = new Tee.Point(evt.clientX, evt.clientY);
-        var overChart = -1;
+    var p = new Tee.Point(evt.clientX, evt.clientY);
+    var overChart = -1;
 
-        var tooltip = undefined;
-        hostChart.tools.items.forEach(tool => {
-            if (tool instanceof Tee.ToolTip)
-                tooltip = tool;
-        });
+    var tooltip = undefined;
+    hostChart.tools.items.forEach(tool => {
+      if (tool instanceof Tee.ToolTip)
+        tooltip = tool;
+    });
 
-        if (tooltip != undefined) {
+    if (tooltip != undefined) {
 
-            tooltip.isDom = tooltip.render === "dom";
+      tooltip.isDom = tooltip.render === "dom";
 
-            var rect = hostChart.canvas.getBoundingClientRect();
-            rect = new Tee.Rectangle(rect.x, rect.y, rect.width, rect.height);
-            if (!rect.contains(p)) {
-                if (!tooltip.isDom) {
-                    tooltip.hide();
-                }
-            }
-            else {
-                if (tooltip.isDom) {
-                    overChart = -1; // idx;
-                    return true;
-                }
-            }
-
-            if ((overChart == -1) && (tooltip !== undefined)) {
-                tooltip.hide();
-            }
+      var rect = hostChart.canvas.getBoundingClientRect();
+      rect = new Tee.Rectangle(rect.x, rect.y, rect.width, rect.height);
+      if (!rect.contains(p)) {
+        if (!tooltip.isDom) {
+          tooltip.hide();
         }
+      }
+      else {
+        if (tooltip.isDom) {
+          overChart = -1; // idx;
+          return true;
+        }
+      }
+
+      if ((overChart == -1) && (tooltip !== undefined)) {
+        tooltip.hide();
+      }
     }
+  }
 });
