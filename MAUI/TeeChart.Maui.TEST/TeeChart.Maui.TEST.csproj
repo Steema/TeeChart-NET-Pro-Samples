@@ -36,6 +36,7 @@
     <!-- TeeChart.Maui bundles the core assembly for NuGet packaging and marks
          that reference private. The source demo also uses the public Styles
          and Tools namespaces, so reference the core project explicitly. -->
-    <ProjectReference Include="..\..\..\..\Sources\TeeChart.PCL.NET10\Headless\TeeChart\TeeChart.csproj" />
+    <ProjectReference Include="..\..\..\..\Sources\TeeChart.PCL.NET10\Headless\TeeChart\TeeChart.csproj"
+                      AdditionalProperties="TeeChartMauiBuild=true" />
   </ItemGroup>
 </Project>
