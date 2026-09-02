@@ -158,7 +158,7 @@ namespace TeeChart.Maui.TEST
             chartTitleLabel.Text = $"Tool · {demo.Name}";
             chartSubtitleLabel.Text = tool is null
                 ? $"{demo.Description} (no disponible en este target)"
-                : $"{demo.Description} · Serie recomendada: {demo.SeriesType}";
+                : $"{demo.Description} · Recommended series: {demo.SeriesType}";
             chart1.Chart.Header.Text = $"TeeChart MAUI - Tool: {demo.Name}";
             chart1.Chart.Header.Visible = true;
             chart1.InvalidateChart();
@@ -213,7 +213,7 @@ namespace TeeChart.Maui.TEST
             }
             else if (demo.TypeName == "PageNumber")
             {
-                SetToolProperty(tool, "Text", "Página 1");
+                SetToolProperty(tool, "Text", "Page 1");
             }
             else if (demo.TypeName == "ColorBand")
             {
@@ -231,7 +231,7 @@ namespace TeeChart.Maui.TEST
             }
             else if (demo.TypeName == "MarksTip")
             {
-                SetToolProperty(tool, "Text", "Valor: {value}");
+                SetToolProperty(tool, "Text", "Value: {value}");
             }
         }
 
@@ -293,7 +293,7 @@ namespace TeeChart.Maui.TEST
         {
             propertiesPanel.IsVisible = !propertiesPanel.IsVisible;
             togglePropertiesButton.Text = propertiesPanel.IsVisible
-                ? "Ocultar opciones" : "⚙ Opciones";
+                ? "Hide options" : "⚙ Options";
             if (propertiesPanel.IsVisible) SyncPropertyControls();
         }
 
@@ -484,7 +484,7 @@ namespace TeeChart.Maui.TEST
             UpdateSelectedSeriesMenu(seriesType);
             UpdateSelectedToolMenu(string.Empty);
             var values = new[] { 1250, 1580, 2100, 1890, 2340, 2580 };
-            var labels = new[] { "Ene", "Feb", "Mar", "Abr", "May", "Jun" };
+            var labels = new[] { "Jan", "Feb", "Mar", "Apr", "May", "Jun" };
             Steema.TeeChart.Styles.Series series = seriesType switch
             {
                 "Line" => new Line(chart1.Chart),
@@ -550,7 +550,7 @@ namespace TeeChart.Maui.TEST
             else if (series is Tornado tornado)
             {
                 string[] factors =
-                    { "Precio", "Disponibilidad", "Entrega", "Calidad", "Soporte", "Marca" };
+                    { "Price", "Availability", "Delivery", "Quality", "Support", "Brand" };
                 double[] leftImpact = { 18, 24, 31, 28, 21, 16 };
                 double[] rightImpact = { 86, 74, 68, 63, 57, 49 };
 
@@ -574,7 +574,7 @@ namespace TeeChart.Maui.TEST
             else if (series is Steema.TeeChart.Styles.Pyramid pyramid)
             {
                 string[] funnelStages =
-                    { "Visitas", "Interés", "Evaluación", "Propuesta", "Clientes" };
+                    { "Visits", "Interest", "Evaluation", "Proposal", "Customers" };
                 double[] stageVolumes = { 4200, 2850, 1760, 940, 510 };
                 for (int i = 0; i < stageVolumes.Length; i++)
                     pyramid.Add(stageVolumes[i], funnelStages[i]);
@@ -587,8 +587,8 @@ namespace TeeChart.Maui.TEST
             }
             else if (series is Steema.TeeChart.Styles.Arrow arrow)
             {
-                // Flujo mensual de demanda: cada vector parte del valor previsto y
-                // termina en la revisión del mes siguiente.
+                // Monthly demand flow: each vector starts at the forecast value
+                // and ends at the following month's review.
                 double[] revisedValues = { 3320, 3710, 3540, 4210, 4480, 4740 };
                 for (int i = 0; i < values.Length; i++)
                     arrow.Add(i, values[i], i + 0.72, revisedValues[i], labels[i]);
@@ -695,8 +695,8 @@ namespace TeeChart.Maui.TEST
                 || isOrganizationDemoWithoutGantt;
             series.Marks.Visible = !hideDemoMarks;
 
-            chart1.Chart.Axes.Left.Title.Text = "Ventas ($)";
-            chart1.Chart.Axes.Bottom.Title.Text = "Mes";
+            chart1.Chart.Axes.Left.Title.Text = "Sales ($)";
+            chart1.Chart.Axes.Bottom.Title.Text = "Month";
             // Keep category labels horizontal in every gallery sample. This
             // avoids clipped labels on narrow MAUI windows.
             chart1.Chart.Axes.Bottom.Labels.Angle = 0;
@@ -726,8 +726,8 @@ namespace TeeChart.Maui.TEST
                 ConfigureViolinAxes(series is HorizViolin);
             else if (isTornadoDemo)
             {
-                chart1.Chart.Axes.Left.Title.Text = "Factor de decisión";
-                chart1.Chart.Axes.Bottom.Title.Text = "Impacto relativo (%)";
+                chart1.Chart.Axes.Left.Title.Text = "Decision factor";
+                chart1.Chart.Axes.Bottom.Title.Text = "Relative impact (%)";
             }
 
             ApplyGlobalFontSize();
@@ -742,7 +742,7 @@ namespace TeeChart.Maui.TEST
         {
             var code = new StringBuilder();
             string className = series.GetType().Name;
-            code.AppendLine("// TeeChart MAUI · configuración esencial");
+            code.AppendLine("// TeeChart MAUI · essential configuration");
             code.AppendLine("var chart = new TChart();");
             code.AppendLine("chart.Chart.Series.RemoveAllSeries();");
             code.AppendLine($"var series = new {className}(chart.Chart);");
@@ -855,7 +855,7 @@ namespace TeeChart.Maui.TEST
 
         private void ConfigureViolinDemo(CustomViolin primary, bool horizontal)
         {
-            string[] channels = { "Chat", "Web", "Teléfono" };
+            string[] channels = { "Chat", "Web", "Phone" };
             System.Drawing.Color[] colors =
             {
                 System.Drawing.Color.FromArgb(54, 162, 154),
@@ -911,13 +911,13 @@ namespace TeeChart.Maui.TEST
             categoryAxis.Labels.Items.Clear();
             categoryAxis.Labels.Items.Add(1, "Chat");
             categoryAxis.Labels.Items.Add(2, "Web");
-            categoryAxis.Labels.Items.Add(3, "Teléfono");
+            categoryAxis.Labels.Items.Add(3, "Phone");
             categoryAxis.Labels.Angle = 0;
             categoryAxis.Increment = 1;
             categoryAxis.Grid.Visible = false;
-            categoryAxis.Title.Text = "Canal de soporte";
+            categoryAxis.Title.Text = "Support channel";
 
-            valueAxis.Title.Text = "Tiempo de resolución (min)";
+            valueAxis.Title.Text = "Resolution time (min)";
             valueAxis.Grid.Visible = true;
 
             chart1.Chart.Legend.Visible = false;
@@ -931,7 +931,7 @@ namespace TeeChart.Maui.TEST
         private Steema.TeeChart.Styles.Series CreateCatalogSeries(string seriesType)
         {
             SeriesDemo demo = SeriesDemoCatalog.Find(seriesType)
-                ?? throw new InvalidOperationException($"Tipo de serie no registrado: {seriesType}");
+                ?? throw new InvalidOperationException($"Series type is not registered: {seriesType}");
 
             return Steema.TeeChart.Styles.Series.CreateNewSeries(
                 chart1.Chart, demo.SeriesType, null, 0);
@@ -965,45 +965,45 @@ namespace TeeChart.Maui.TEST
 
         private static string GetScenarioTitle(string seriesType) => seriesType switch
         {
-            "Violin" or "HorizViolin" => "Tiempos de resolución por canal",
-            "Tornado" => "Factores que impulsan la compra",
-            "Candle" or "HighLow" or "Volume" => "Evolución del mercado",
-            "Gantt" => "Planificación de proyecto",
-            "Bubble" => "Rendimiento por segmento",
-            "Pie" or "Donut" => "Distribución de ingresos",
-            "Polar" or "Radar" => "Indicadores de rendimiento",
-            "Error" => "Mediciones con incertidumbre",
-            "Vector3D" or "Points3D" or "Bar3D" => "Análisis tridimensional",
-            "Histogram" or "HorizontalHistogram" or "Box" or "HorizBox" or "Violin" or "HorizViolin" or "BeeSwarm" or "HorizBeeSwarm" => "Distribución de resultados",
-            "Surface" or "Contour" or "ColorGrid" or "Tower" or "TriSurface" or "IsoSurface" or "Waterfall" => "Modelo topográfico",
-            "Map" or "World" => "Indicadores por región",
-            "OrgSeries" or "TreeMap" or "SquarifiedMap" or "Sankey" => "Estructura y flujo de recursos",
-            "CircularGauge" or "ActivityGauge" or "KnobGauge" or "LinearGauge" or "VerticalLinearGauge" or "NumericGauge" or "Gauges" => "Panel de indicadores",
-            "Calendar" or "Clock" or "ClockGauge" => "Planificación temporal",
-            "TagCloud" => "Tendencias de producto",
-            _ => SeriesDemoCatalog.Find(seriesType)?.Name ?? "Ventas mensuales"
+            "Violin" or "HorizViolin" => "Resolution times by channel",
+            "Tornado" => "Purchase drivers",
+            "Candle" or "HighLow" or "Volume" => "Market performance",
+            "Gantt" => "Project planning",
+            "Bubble" => "Performance by segment",
+            "Pie" or "Donut" => "Revenue distribution",
+            "Polar" or "Radar" => "Performance indicators",
+            "Error" => "Measurements with uncertainty",
+            "Vector3D" or "Points3D" or "Bar3D" => "Three-dimensional analysis",
+            "Histogram" or "HorizontalHistogram" or "Box" or "HorizBox" or "Violin" or "HorizViolin" or "BeeSwarm" or "HorizBeeSwarm" => "Results distribution",
+            "Surface" or "Contour" or "ColorGrid" or "Tower" or "TriSurface" or "IsoSurface" or "Waterfall" => "Topographic model",
+            "Map" or "World" => "Indicators by region",
+            "OrgSeries" or "TreeMap" or "SquarifiedMap" or "Sankey" => "Resource structure and flow",
+            "CircularGauge" or "ActivityGauge" or "KnobGauge" or "LinearGauge" or "VerticalLinearGauge" or "NumericGauge" or "Gauges" => "KPI dashboard",
+            "Calendar" or "Clock" or "ClockGauge" => "Time planning",
+            "TagCloud" => "Product trends",
+            _ => SeriesDemoCatalog.Find(seriesType)?.Name ?? "Monthly sales"
         };
 
         private static string GetScenarioSubtitle(string seriesType) => seriesType switch
         {
-            "Violin" or "HorizViolin" => "Densidad y dispersión de incidencias resueltas en Chat, Web y Teléfono",
-            "Tornado" => "Comparativa del impacto percibido: segmento amarillo con mayor peso relativo",
-            "Candle" or "HighLow" or "Volume" => "Datos diarios de apertura, máximo, mínimo y cierre",
-            "Gantt" => "Calendario de tareas y entregas del proyecto",
-            "Bubble" => "Comparativa de volumen, valor y tamaño de mercado",
-            "Pie" or "Donut" => "Peso relativo de cada línea de negocio",
-            "Polar" or "Radar" => "Comparativa de métricas normalizadas",
-            "Error" or "ErrorBar" or "ErrorPoint" or "ErrorPoint3D" => "Valores observados con margen de error",
-            "Surface" or "Contour" or "ColorGrid" or "Tower" or "TriSurface" or "IsoSurface" or "Waterfall" => "Elevación y variación sobre una malla de observaciones",
-            "Map" or "World" => "Comparación geográfica de actividad y crecimiento",
-            "OrgSeries" or "TreeMap" or "SquarifiedMap" => "Distribución jerárquica de equipos y presupuesto",
-            "Sankey" => "Flujo de recursos desde origen hasta destino",
-            "CircularGauge" or "ActivityGauge" or "KnobGauge" or "LinearGauge" or "VerticalLinearGauge" or "NumericGauge" or "Gauges" => "Estado actual frente al objetivo operativo",
-            "Box" or "HorizBox" or "Violin" or "HorizViolin" or "BeeSwarm" or "HorizBeeSwarm" => "Distribución de una muestra de mediciones",
-            "Calendar" => "Actividad diaria del calendario",
-            "Clock" or "ClockGauge" => "Hora y progreso de la jornada",
-            "TagCloud" => "Popularidad relativa de conceptos y productos",
-            _ => $"Ejemplo profesional de serie {seriesType}"
+            "Violin" or "HorizViolin" => "Density and spread of resolved incidents across Chat, Web and Phone",
+            "Tornado" => "Perceived impact comparison: the yellow segment carries greater relative weight",
+            "Candle" or "HighLow" or "Volume" => "Daily open, high, low and close data",
+            "Gantt" => "Project task and delivery schedule",
+            "Bubble" => "Comparison of volume, value and market size",
+            "Pie" or "Donut" => "Relative share of each business line",
+            "Polar" or "Radar" => "Comparison of normalized metrics",
+            "Error" or "ErrorBar" or "ErrorPoint" or "ErrorPoint3D" => "Observed values with a margin of error",
+            "Surface" or "Contour" or "ColorGrid" or "Tower" or "TriSurface" or "IsoSurface" or "Waterfall" => "Elevation and variation across an observation grid",
+            "Map" or "World" => "Geographic comparison of activity and growth",
+            "OrgSeries" or "TreeMap" or "SquarifiedMap" => "Hierarchical distribution of teams and budget",
+            "Sankey" => "Resource flow from source to destination",
+            "CircularGauge" or "ActivityGauge" or "KnobGauge" or "LinearGauge" or "VerticalLinearGauge" or "NumericGauge" or "Gauges" => "Current status against the operational target",
+            "Box" or "HorizBox" or "Violin" or "HorizViolin" or "BeeSwarm" or "HorizBeeSwarm" => "Distribution of a measurement sample",
+            "Calendar" => "Daily calendar activity",
+            "Clock" or "ClockGauge" => "Time and daily progress",
+            "TagCloud" => "Relative popularity of concepts and products",
+            _ => $"Professional {seriesType} series example"
         };
     }
 }
