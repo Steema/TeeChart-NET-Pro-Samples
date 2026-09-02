@@ -12,6 +12,10 @@
     <ApplicationId>com.steema.teechart.maui.test</ApplicationId>
     <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
     <ApplicationVersion>1</ApplicationVersion>
+    <!-- Keep the direct core reference aligned with the MAUI assembly. -->
+    <Version Condition="'$(Version)' == ''">6.$([System.DateTime]::UtcNow.Year).$([System.DateTime]::UtcNow.Month).$([System.DateTime]::UtcNow.Day)</Version>
+    <AssemblyVersion Condition="'$(AssemblyVersion)' == ''">$(Version)</AssemblyVersion>
+    <FileVersion Condition="'$(FileVersion)' == ''">$(Version)</FileVersion>
     <WindowsPackageType>None</WindowsPackageType>
     <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">14.2</SupportedOSPlatformVersion>
     <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">14.0</SupportedOSPlatformVersion>
@@ -37,6 +41,6 @@
          that reference private. The source demo also uses the public Styles
          and Tools namespaces, so reference the core project explicitly. -->
     <ProjectReference Include="..\..\..\..\Sources\TeeChart.PCL.NET10\Headless\TeeChart\TeeChart.csproj"
-                      AdditionalProperties="TeeChartMauiBuild=true" />
+                      AdditionalProperties="TeeChartMauiBuild=true;Version=$(Version);AssemblyVersion=$(AssemblyVersion);FileVersion=$(FileVersion)" />
   </ItemGroup>
 </Project>
