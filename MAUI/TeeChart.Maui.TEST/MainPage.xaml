@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:teechart="clr-namespace:Steema.TeeChart.Maui;assembly=TeeChart.Maui"
+             x:Class="TeeChart.Maui.TEST.MainPage"
+             BackgroundColor="#F4F7FB">
+    <Grid x:Name="rootLayout" ColumnSpacing="0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition x:Name="sideMenuColumn" Width="285" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Column="0" x:Name="sideMenuPanel" BackgroundColor="White"
+                Stroke="#D8E0EC" StrokeThickness="1" Padding="16">
+            <Grid RowDefinitions="Auto,Auto,*" RowSpacing="12">
+                <Grid ColumnDefinitions="*,Auto">
+                    <VerticalStackLayout Spacing="2">
+                        <Label Text="TeeChart" FontSize="24" FontAttributes="Bold" />
+                        <Label Text="Galería de ejemplos" FontSize="12" TextColor="#667085" />
+                    </VerticalStackLayout>
+                    <Button Grid.Column="1" Text="‹" FontSize="26" WidthRequest="42"
+                            Clicked="OnToggleSeriesMenu" HorizontalOptions="End" />
+                </Grid>
+
+                <Label Grid.Row="1" Text="EXPLORADOR" FontSize="11" FontAttributes="Bold"
+                       TextColor="#667085" />
+
+                <ScrollView Grid.Row="2">
+                    <VerticalStackLayout Spacing="1">
+                        <Label Text="SERIES" FontSize="11" FontAttributes="Bold"
+                               TextColor="#667085" Margin="8,8,0,4" />
+                        <VerticalStackLayout x:Name="menuItemsLayout" Spacing="1" />
+                        <BoxView HeightRequest="1" Color="#E2E8F0" Margin="0,14,0,8" />
+                        <Label Text="TOOLS" FontSize="11" FontAttributes="Bold"
+                               TextColor="#667085" Margin="8,0,0,4" />
+                        <Label Text="Herramientas interactivas y de análisis" FontSize="11"
+                               TextColor="#98A2B3" Margin="8,0,0,6" />
+                        <VerticalStackLayout x:Name="toolMenuItemsLayout" Spacing="1" />
+                    </VerticalStackLayout>
+                </ScrollView>
+            </Grid>
+        </Border>
+
+        <Grid Grid.Column="1" RowDefinitions="Auto,Auto,*" RowSpacing="0">
+            <Grid Grid.Row="0" Padding="22,18" ColumnDefinitions="Auto,*,Auto" BackgroundColor="White">
+                <Button x:Name="openMenuButton" Text="☰" FontSize="24" WidthRequest="44"
+                        Clicked="OnToggleSeriesMenu" IsVisible="False" />
+                <VerticalStackLayout Grid.Column="1" Spacing="2" Margin="10,0">
+                    <Label x:Name="chartTitleLabel" Text="Ventas mensuales" FontSize="22" FontAttributes="Bold" />
+                    <Label x:Name="chartSubtitleLabel" Text="Ejemplo de serie Bar" FontSize="13" TextColor="#667085" />
+                </VerticalStackLayout>
+                <Button Grid.Column="2" x:Name="togglePropertiesButton" Text="⚙ Opciones"
+                        Clicked="OnToggleProperties" WidthRequest="135" HorizontalOptions="End" />
+            </Grid>
+
+            <BoxView Grid.Row="1" HeightRequest="1" Color="#E2E8F0" />
+
+            <Grid Grid.Row="2" Margin="18" RowDefinitions="Auto,*" BackgroundColor="White">
+                <Grid Grid.Row="0" ColumnDefinitions="*,*" HeightRequest="42" Padding="4,4,4,0">
+                    <Button x:Name="chartTabButton" Text="Chart" Clicked="OnChartTabClicked"
+                            FontAttributes="Bold" FontSize="13" CornerRadius="7" Padding="12,0"
+                            BackgroundColor="#E8F0FF" TextColor="#1D4ED8" />
+                    <Button Grid.Column="1" x:Name="codeTabButton" Text="Code" Clicked="OnCodeTabClicked"
+                            FontAttributes="Bold" FontSize="13" CornerRadius="7" Padding="12,0"
+                            BackgroundColor="Transparent" TextColor="#667085" />
+                </Grid>
+                <Border Grid.Row="1" x:Name="chartTabContent" BackgroundColor="White" Stroke="#D8E0EC" StrokeThickness="1" Padding="8" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <teechart:TChart x:Name="chart1" BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" MinimumHeightRequest="220" SizeChanged="OnChartSizeChanged" />
+                </Border>
+                <ScrollView Grid.Row="1" x:Name="codeTabContent" IsVisible="False" BackgroundColor="#0F172A" Padding="18,14">
+                    <Label x:Name="codeLabel" TextColor="#E2E8F0" FontFamily="Consolas" FontSize="13" LineBreakMode="WordWrap" />
+                </ScrollView>
+            </Grid>
+
+            <Border Grid.Row="1" Grid.RowSpan="2" x:Name="propertiesPanel" IsVisible="False"
+                    HorizontalOptions="End" VerticalOptions="Start" Margin="0,12,28,0"
+                    BackgroundColor="White" Stroke="#D8E0EC" StrokeThickness="1" Padding="14" WidthRequest="330">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Propiedades del chart" FontSize="18" FontAttributes="Bold" />
+                    <HorizontalStackLayout Spacing="12"><Label Text="Aspect 3D" VerticalOptions="Center" HorizontalOptions="FillAndExpand" /><Switch x:Name="view3DSwitch" Toggled="OnView3DToggled" /></HorizontalStackLayout>
+                    <HorizontalStackLayout Spacing="12"><Label Text="Clip points (recortar al área del chart)" VerticalOptions="Center" HorizontalOptions="FillAndExpand" /><Switch x:Name="clipPointsSwitch" Toggled="OnClipPointsToggled" /></HorizontalStackLayout>
+                    <HorizontalStackLayout Spacing="12"><Label Text="Touch zoom (desactivado = panning)" VerticalOptions="Center" HorizontalOptions="FillAndExpand" /><Switch x:Name="touchZoomSwitch" Toggled="OnTouchZoomToggled" /></HorizontalStackLayout>
+                    <HorizontalStackLayout Spacing="12"><Label Text="Axes visibles" VerticalOptions="Center" HorizontalOptions="FillAndExpand" /><Switch x:Name="axesVisibleSwitch" Toggled="OnAxesVisibleToggled" /></HorizontalStackLayout>
+                    <HorizontalStackLayout Spacing="12"><Label Text="Walls visibles" VerticalOptions="Center" HorizontalOptions="FillAndExpand" /><Switch x:Name="wallsVisibleSwitch" Toggled="OnWallsVisibleToggled" /></HorizontalStackLayout>
+                    <HorizontalStackLayout Spacing="12"><Label Text="Grid eje izquierdo" VerticalOptions="Center" HorizontalOptions="FillAndExpand" /><Switch x:Name="leftGridVisibleSwitch" Toggled="OnLeftGridVisibleToggled" /></HorizontalStackLayout>
+                    <HorizontalStackLayout Spacing="12"><Label Text="Color por punto (ColorEach)" VerticalOptions="Center" HorizontalOptions="FillAndExpand" /><Switch x:Name="colorEachSwitch" Toggled="OnColorEachToggled" /></HorizontalStackLayout>
+                    <HorizontalStackLayout Spacing="12"><Label Text="Marks visibles" VerticalOptions="Center" HorizontalOptions="FillAndExpand" /><Switch x:Name="marksVisibleSwitch" Toggled="OnMarksVisibleToggled" /></HorizontalStackLayout>
+                    <HorizontalStackLayout Spacing="12"><Label Text="Legend visible" VerticalOptions="Center" HorizontalOptions="FillAndExpand" /><Switch x:Name="legendVisibleSwitch" Toggled="OnLegendVisibleToggled" /></HorizontalStackLayout>
+                    <Grid ColumnDefinitions="*,150" ColumnSpacing="12">
+                        <Label Text="Posición de Legend" VerticalOptions="Center" />
+                        <Picker Grid.Column="1" x:Name="legendAlignmentPicker" Title="Posición"
+                                HorizontalOptions="Fill" SelectedIndexChanged="OnLegendAlignmentChanged" />
+                    </Grid>
+                    <Grid ColumnDefinitions="*,Auto,120" ColumnSpacing="10">
+                        <Label Text="Tamaño global de fuente" VerticalOptions="Center" />
+                        <Label Grid.Column="1" x:Name="globalFontSizeLabel" VerticalOptions="Center"
+                               FontAttributes="Bold" TextColor="#344054" />
+                        <Stepper Grid.Column="2" x:Name="globalFontSizeStepper" Minimum="6" Maximum="24"
+                                 Increment="1" ValueChanged="OnGlobalFontSizeChanged" />
+                    </Grid>
+                    <BoxView HeightRequest="1" Color="#E2E8F0" />
+                    <Label Text="Color del panel" FontAttributes="Bold" />
+                    <HorizontalStackLayout Spacing="8"><Button Text="Blanco" Clicked="OnWhitePanel" /><Button Text="Azul claro" Clicked="OnLightBluePanel" /></HorizontalStackLayout>
+                    <Label x:Name="panelColorLabel" FontSize="12" TextColor="#667085" />
+                </VerticalStackLayout>
+            </Border>
+        </Grid>
+    </Grid>
+</ContentPage>
