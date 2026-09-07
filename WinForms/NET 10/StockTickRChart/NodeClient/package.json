@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "tslib": "^1.9.3"
+  },
+  "files": [
+    "src/**/*"
+  ],
+  "devDependencies": {
+    "@microsoft/signalr": "3.0.0",
+    "@types/node": "^8.0.32"
+  }
+}
