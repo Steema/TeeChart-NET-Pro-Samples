@@ -4,6 +4,8 @@
 This demo is an adaptation of Micrososft's example linked here:
 <a href="https://github.com/aspnet/SignalR-samples/tree/main/StockTickR">Microsoft SignalR-samples</a>. 
 
+![screenshot](https://www.steema.com/docs/gallery/charts/assets/charts/financial/SignalRStock_TeeChart.png".NET 10 SignalR Stock TeeChart web project")
+
 To run:
 ```
 $ dotnet restore
