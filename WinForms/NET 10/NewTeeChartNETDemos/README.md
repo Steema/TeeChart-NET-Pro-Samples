@@ -51,23 +51,17 @@ The pie chart example presents a country comparison with point labels and a matc
 
 ![Pie Chart](./media/demo7.png ".NET 10 Pie Chart demo")
 
-## Real-time demo recordings
+### Dow Jones Live Ticker
 
-The recordings show the animated dashboards running in the WinForms demo navigator:
+The Dow Jones Live Ticker simulates an intraday market monitor with animated index values, market breadth, volatility, largest movers and a live stock table.
 
-<video controls preload="metadata" width="900">
-  <source src="./media/demo1.mp4" type="video/mp4">
-  Your browser does not support embedded video.
-</video>
+![Dow Jones Live Ticker](./media/DowJonesLiveTicker.png ".NET 10 Dow Jones Live Ticker demo")
 
-[Download demo1.mp4](./media/demo1.mp4)
+### Multi-channel Real-Time Monitoring
 
-<video controls preload="metadata" width="900">
-  <source src="./media/demo5.mp4" type="video/mp4">
-  Your browser does not support embedded video.
-</video>
+The multi-channel monitor streams five simulated signals at 1000 Hz. Each channel uses its own axis band so the waveforms can be compared clearly while the visible data window stays bounded for smooth rendering.
 
-[Download demo5.mp4](./media/demo5.mp4)
+![Multi-channel Real-Time Monitoring](./media/MultiChannelRealTimeMonitoring.png ".NET 10 Multi-channel Real-Time Monitoring demo")
 
 ## References
 
