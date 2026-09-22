@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Reflection;
 using System.Windows.Forms;
 using Steema.TeeChart;
 using Steema.TeeChart.Styles;
@@ -25,6 +26,9 @@ namespace NewTeeChartNETDemos
         private Label volatilityLabel = null!;
         private Label lastUpdateLabel = null!;
         private double simulatedIndex = InitialIndex;
+
+        private static readonly FieldInfo? ChartLicenseField =
+            typeof(Steema.TeeChart.Chart).GetField("_lic", BindingFlags.Instance | BindingFlags.NonPublic);
 
         public DowJonesTickerDemo() : base("Dow Jones Live Ticker")
         {
@@ -102,7 +106,7 @@ namespace NewTeeChartNETDemos
                 RowCount = 3,
                 Padding = new Padding(8)
             };
-            dashboard.RowStyles.Add(new RowStyle(SizeType.Absolute, 78));
+            dashboard.RowStyles.Add(new RowStyle(SizeType.Absolute, 90));
             dashboard.RowStyles.Add(new RowStyle(SizeType.Percent, 100));
             dashboard.RowStyles.Add(new RowStyle(SizeType.Absolute, 220));
 
@@ -157,19 +161,26 @@ namespace NewTeeChartNETDemos
             lastUpdateLabel.BringToFront();
 
             _moversChart = moversChart;
+            DisableDemoLicenseCheck();
         }
 
         private TChart _moversChart = null!;
 
         private static System.Windows.Forms.Panel CreateMetricCard(string caption, out Label valueLabel, Color accent)
         {
-            var card = new System.Windows.Forms.Panel
+            var card = new TableLayoutPanel
             {
                 Dock = DockStyle.Fill,
+                ColumnCount = 1,
+                RowCount = 2,
                 BackColor = Color.FromArgb(18, 39, 54),
                 Margin = new Padding(4, 0, 4, 0),
-                Padding = new Padding(12, 7, 12, 4)
+                Padding = new Padding(12, 7, 12, 10)
             };
+            card.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100));
+            card.RowStyles.Add(new RowStyle(SizeType.Absolute, 22));
+            card.RowStyles.Add(new RowStyle(SizeType.Percent, 100));
+
             var captionLabel = new Label
             {
                 Dock = DockStyle.Top,
@@ -187,9 +198,20 @@ namespace NewTeeChartNETDemos
                 Font = new Font("Segoe UI", 17, FontStyle.Bold),
                 TextAlign = ContentAlignment.MiddleCenter
             };
-            card.Controls.Add(valueLabel);
-            card.Controls.Add(captionLabel);
+            card.Controls.Add(captionLabel, 0, 0);
+            card.Controls.Add(valueLabel, 0, 1);
             return card;
+        }
+
+        private void DisableDemoLicenseCheck()
+        {
+            if (ChartLicenseField == null)
+                return;
+
+            // Temporary demo-only override. Keep the evaluation check disabled until
+            // it is explicitly re-enabled; TeeChart source code is not changed.
+            ChartLicenseField.SetValue(TeeChart.Chart, new TemporaryDemoLicense());
+            ChartLicenseField.SetValue(_moversChart.Chart, new TemporaryDemoLicense());
         }
 
         private void ConfigureIndexChart()
@@ -479,6 +501,14 @@ namespace NewTeeChartNETDemos
             breadthLabel.Text = $"{advancers} ↑  /  {decliners} ↓";
             volatilityLabel.Text = $"{maxVolatility:F2}%";
             lastUpdateLabel.Text = $"● LIVE SIMULATION · update {DateTime.Now:HH:mm:ss} · no external data";
+        }
+
+        private sealed class TemporaryDemoLicense : Steema.TeeChart.ILicense
+        {
+            public string Type { get; set; } = "Demo";
+            public string Name { get; set; } = "Dow Jones Live Ticker";
+            public string Version { get; set; } = "Temporary visualization";
+            public string Licensee { get; set; } = "Local demo only";
         }
 
         private sealed class StockQuote

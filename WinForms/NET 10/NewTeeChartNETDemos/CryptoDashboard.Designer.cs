@@ -30,18 +30,18 @@
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
             this.splitContainer1.Name = "splitContainer1";
-            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Vertical;
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             this.splitContainer1.Size = new System.Drawing.Size(1200, 800);
-            this.splitContainer1.SplitterDistance = 400;
+            this.splitContainer1.SplitterDistance = 570;
             this.splitContainer1.TabIndex = 0;
 
-            // Panel1 - DataGrid
+            // Panel1 - Chart
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.splitContainer1.Panel1.Controls.Add(this.dataGridViewCryptos);
+            this.splitContainer1.Panel1.Controls.Add(this.tChart1);
 
-            // Panel2 - Chart
+            // Panel2 - DataGrid below the chart
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.splitContainer1.Panel2.Controls.Add(this.tChart1);
+            this.splitContainer1.Panel2.Controls.Add(this.dataGridViewCryptos);
 
             // dataGridViewCryptos
             this.dataGridViewCryptos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
@@ -53,7 +53,7 @@
             this.dataGridViewCryptos.Name = "dataGridViewCryptos";
             this.dataGridViewCryptos.RowHeadersVisible = false;
             this.dataGridViewCryptos.RowTemplate.Height = 25;
-            this.dataGridViewCryptos.Size = new System.Drawing.Size(1200, 400);
+            this.dataGridViewCryptos.Size = new System.Drawing.Size(1200, 230);
             this.dataGridViewCryptos.TabIndex = 0;
             this.dataGridViewCryptos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewCryptos_CellClick);
             this.dataGridViewCryptos.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewCryptos_CellMouseEnter);
@@ -63,7 +63,7 @@
             this.tChart1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tChart1.Location = new System.Drawing.Point(0, 0);
             this.tChart1.Name = "tChart1";
-            this.tChart1.Size = new System.Drawing.Size(1200, 396);
+            this.tChart1.Size = new System.Drawing.Size(1200, 566);
             this.tChart1.TabIndex = 0;
 
             // CryptoDashboard

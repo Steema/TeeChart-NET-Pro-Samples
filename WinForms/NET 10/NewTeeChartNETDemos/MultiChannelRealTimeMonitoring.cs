@@ -131,9 +131,11 @@ namespace NewTeeChartNETDemos
 
             axisY.Ticks.Visible = true;
 
-            // Adjust EndPosition to where the first custom axis starts (20%)
-            axisY.EndPosition = 100-(100 * 1) / CHANNEL_COUNT;
-            axisY.StartPosition = 100;
+            // Keep CH1 in the same top band as the custom axes below it.
+            // StartPosition must be lower than EndPosition; the previous
+            // reversed values caused the CH1 left axis to render incorrectly.
+            axisY.StartPosition = 100 - (100 / CHANNEL_COUNT);
+            axisY.EndPosition = 100;
 
             tChart1.Legend.Visible = true;
             tChart1.Legend.Font.Color = Color.White;
@@ -256,6 +258,11 @@ namespace NewTeeChartNETDemos
                 {
                     double xMax = channels[0].XValues[channels[0].Count - 1];
                     double xMin = xMax - DEFAULT_X_RANGE_MS;
+
+                    // Keep the streaming buffer bounded to the visible window.
+                    // Without this cleanup, every channel retained the complete
+                    // history and rendering became progressively slower.
+                    TrimPointsOutsideVisibleWindow(xMin);
                     tChart1.Axes.Bottom.SetMinMax(xMin, xMax);
                 }
             }
@@ -271,6 +278,19 @@ namespace NewTeeChartNETDemos
             }
 
             tChart1.Invalidate();
+        }
+
+        private void TrimPointsOutsideVisibleWindow(double xMin)
+        {
+            foreach (Line series in channels)
+            {
+                while (series.Count > 0 && series.XValues[0] < xMin)
+                    series.Delete(0);
+
+                // Safety cap in case the visible range is changed later.
+                while (series.Count > MAX_POINTS)
+                    series.Delete(0);
+            }
         }
 
         private void BtnReset_Click(object sender, EventArgs e)
